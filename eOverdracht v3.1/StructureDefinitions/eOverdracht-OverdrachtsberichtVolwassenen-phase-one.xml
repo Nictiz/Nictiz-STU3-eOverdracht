@@ -18,7 +18,7 @@
   <description value="Profile on the Composition resource which represents a part of the Overdrachtsbericht Volwassenen for eOverdracht and is used in phase one of the eOverdracht pilot. More information on the standard eOverdracht: https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Verpleegkundige_Zorg" />
   <purpose value="The purpose of an Overdrachtsbericht Volwassenen is to enable the health organization that receives it to continue the care of patient/clients of 18 years and older." />
   <copyright value="CC0" />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-patient-v3.1-2017EN" />
     <uri value="https://zibs.nl/wiki/Patient-v3.1(2017EN)" />
@@ -97,8 +97,8 @@
       <path value="Composition.section" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="code.coding.code"/>
+          <type value="value" />
+          <path value="code.coding.code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -186,8 +186,8 @@
       <path value="Composition.section.section" />
       <slicing>
         <discriminator>
-          <type value="value"/>
-          <path value="code.coding.code"/>
+          <type value="value" />
+          <path value="code.coding.code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -281,38 +281,35 @@
       </mapping>
     </element>
     <element id="Composition.section:administrativeData.section:sendingOrganization.title">
-      <path value="Composition.section.section.title"/>
-      <short value="Sending organization"/>
-      <defaultValueString value="Sending organization"/>
+      <path value="Composition.section.section.title" />
+      <short value="Sending organization" />
+      <defaultValueString value="Sending organization" />
     </element>
     <element id="Composition.section:administrativeData.section:sendingOrganization.code">
-      <path value="Composition.section.section.code"/>
-      <min value="1"/>
+      <path value="Composition.section.section.code" />
+      <min value="1" />
     </element>
     <element id="Composition.section:administrativeData.section:sendingOrganization.code.coding">
-      <path value="Composition.section.section.code.coding"/>
-      <min value="1"/>
-      <max value="1"/>
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
     </element>
-    <element
-      id="Composition.section:administrativeData.section:sendingOrganization.code.coding.system">
-      <path value="Composition.section.section.code.coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://snomed.info/sct"/>
+    <element id="Composition.section:administrativeData.section:sendingOrganization.code.coding.system">
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element
-      id="Composition.section:administrativeData.section:sendingOrganization.code.coding.code">
-      <path value="Composition.section.section.code.coding.code"/>
-      <min value="1"/>
-      <fixedCode value="185362004"/>
+    <element id="Composition.section:administrativeData.section:sendingOrganization.code.coding.code">
+      <path value="Composition.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="185362004" />
     </element>
-    <element
-      id="Composition.section:administrativeData.section:sendingOrganization.code.coding.display">
+    <element id="Composition.section:administrativeData.section:sendingOrganization.code.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
+        <valueBoolean value="true" />
       </extension>
-      <path value="Composition.section.section.code.coding.display"/>
-      <defaultValueString value="Referred by nurse (finding)"/>
+      <path value="Composition.section.section.code.coding.display" />
+      <defaultValueString value="Referred by nurse (finding)" />
     </element>
     <element id="Composition.section:administrativeData.section:sendingOrganization.entry">
       <path value="Composition.section.section.entry" />
@@ -367,43 +364,38 @@
       </mapping>
     </element>
     <element id="Composition.section:administrativeData.section:receivingOrganization.title">
-      <path value="Composition.section.section.title"/>
-      <short value="Receiving organization"/>
-      <defaultValueString value="Receiving organization"/>
+      <path value="Composition.section.section.title" />
+      <short value="Receiving organization" />
+      <defaultValueString value="Receiving organization" />
     </element>
     <element id="Composition.section:administrativeData.section:receivingOrganization.code">
-      <path value="Composition.section.section.code"/>
-      <min value="1"/>
+      <path value="Composition.section.section.code" />
+      <min value="1" />
     </element>
-    <element
-      id="Composition.section:administrativeData.section:receivingOrganization.code.coding">
-      <path value="Composition.section.section.code.coding"/>
-      <min value="1"/>
-      <max value="1"/>
+    <element id="Composition.section:administrativeData.section:receivingOrganization.code.coding">
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
     </element>
-    <element
-      id="Composition.section:administrativeData.section:receivingOrganization.code.coding.system">
-      <path value="Composition.section.section.code.coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://snomed.info/sct"/>
+    <element id="Composition.section:administrativeData.section:receivingOrganization.code.coding.system">
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element
-      id="Composition.section:administrativeData.section:receivingOrganization.code.coding.code">
-      <path value="Composition.section.section.code.coding.code"/>
-      <min value="1"/>
-      <fixedCode value="275645009"/>
+    <element id="Composition.section:administrativeData.section:receivingOrganization.code.coding.code">
+      <path value="Composition.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="275645009" />
     </element>
-    <element
-      id="Composition.section:administrativeData.section:receivingOrganization.code.coding.display">
+    <element id="Composition.section:administrativeData.section:receivingOrganization.code.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
+        <valueBoolean value="true" />
       </extension>
-      <path value="Composition.section.section.code.coding.display"/>
-      <defaultValueString value="Nurse: referred to (finding)"/>
+      <path value="Composition.section.section.code.coding.display" />
+      <defaultValueString value="Nurse: referred to (finding)" />
     </element>
     <element id="Composition.section:administrativeData.section:receivingOrganization.entry">
       <path value="Composition.section.section.entry" />
-      <short value="A reference to data about the receiving organization" />
       <slicing>
         <discriminator>
           <type value="profile" />
@@ -411,6 +403,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <short value="A reference to data about the receiving organization" />
     </element>
     <element id="Composition.section:administrativeData.section:receivingOrganization.entry:organization">
       <path value="Composition.section.section.entry" />

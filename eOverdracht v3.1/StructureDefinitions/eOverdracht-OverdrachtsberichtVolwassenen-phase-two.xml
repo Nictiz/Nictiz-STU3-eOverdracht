@@ -18,7 +18,7 @@
   <description value="Profile on the Composition resource which represents the Overdrachtsbericht Volwassenen Phase Two for eOverdracht conform information standard ['Verpleegkundige zorg'](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Verpleegkundige_Zorg)" />
   <purpose value="The purpose of an Overdrachtsbericht Volwassenen Phase Two is to enable the health organization that receives it to assess the patient/client's care demands and accept or reject the application." />
   <copyright value="CC0" />
-  <fhirVersion value="3.0.1" />
+  <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="hcim-patient-v3.1-2017EN" />
     <uri value="https://zibs.nl/wiki/Patient-v3.1(2017EN)" />
@@ -692,30 +692,30 @@
       <defaultValueString value="Pay attention" />
     </element>
     <element id="Composition.section:medicalContext.section:payAttention.code">
-      <path value="Composition.section.section.code"/>
-      <min value="1"/>
+      <path value="Composition.section.section.code" />
+      <min value="1" />
     </element>
     <element id="Composition.section:medicalContext.section:payAttention.code.coding">
-      <path value="Composition.section.section.code.coding"/>
-      <min value="1"/>
-      <max value="1"/>
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Composition.section:medicalContext.section:payAttention.code.coding.system">
-      <path value="Composition.section.section.code.coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://snomed.info/sct"/>
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Composition.section:medicalContext.section:payAttention.code.coding.code">
-      <path value="Composition.section.section.code.coding.code"/>
-      <min value="1"/>
-      <fixedCode value="308813009"/>
+      <path value="Composition.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="308813009" />
     </element>
     <element id="Composition.section:medicalContext.section:payAttention.code.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
+        <valueBoolean value="true" />
       </extension>
-      <path value="Composition.section.section.code.coding.display"/>
-      <defaultValueString value="Notification status (finding)"/>
+      <path value="Composition.section.section.code.coding.display" />
+      <defaultValueString value="Notification status (finding)" />
     </element>
     <element id="Composition.section:medicalContext.section:payAttention.entry">
       <path value="Composition.section.section.entry" />
@@ -746,34 +746,34 @@
       </mapping>
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.title">
-      <path value="Composition.section.section.title"/>
-      <short value="Freedom restriction"/>
-      <defaultValueString value="Freedom restriction"/>
+      <path value="Composition.section.section.title" />
+      <short value="Freedom restriction" />
+      <defaultValueString value="Freedom restriction" />
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.code">
-      <path value="Composition.section.section.code"/>
-      <min value="1"/>
+      <path value="Composition.section.section.code" />
+      <min value="1" />
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.code.coding">
-      <path value="Composition.section.section.code.coding"/>
-      <min value="1"/>
-      <max value="1"/>
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.code.coding.system">
-      <path value="Composition.section.section.code.coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://snomed.info/sct"/>
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.code.coding.code">
-      <path value="Composition.section.section.code.coding.code"/>
-      <fixedCode value="225317005"/>
+      <path value="Composition.section.section.code.coding.code" />
+      <fixedCode value="225317005" />
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.code.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
+        <valueBoolean value="true" />
       </extension>
-      <path value="Composition.section.section.code.coding.display"/>
-      <defaultValueString value="beperking van bewegingsvrijheid (regime/therapie)"/>
+      <path value="Composition.section.section.code.coding.display" />
+      <defaultValueString value="beperking van bewegingsvrijheid (regime/therapie)" />
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.entry">
       <path value="Composition.section.section.entry" />
@@ -833,10 +833,10 @@
     </element>
     <element id="Composition.section:carePlan.code.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
+        <valueBoolean value="true" />
       </extension>
-      <path value="Composition.section.code.coding.display"/>
-      <defaultValueString value="Nursing care plan (record artifact)"/>
+      <path value="Composition.section.code.coding.display" />
+      <defaultValueString value="Nursing care plan (record artifact)" />
     </element>
     <element id="Composition.section:carePlan.entry">
       <path value="Composition.section.entry" />
@@ -866,34 +866,34 @@
       </mapping>
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.title">
-      <path value="Composition.section.section.title"/>
-      <defaultValueString value="Current patient problems"/>
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Current patient problems" />
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.code">
-      <path value="Composition.section.section.code"/>
-      <min value="1"/>
+      <path value="Composition.section.section.code" />
+      <min value="1" />
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.code.coding">
-      <path value="Composition.section.section.code.coding"/>
-      <min value="1"/>
-      <max value="1"/>
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.code.coding.system">
-      <path value="Composition.section.section.code.coding.system"/>
-      <min value="1"/>
-      <fixedUri value="http://snomed.info/sct"/>
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.code.coding.code">
-      <path value="Composition.section.section.code.coding.code"/>
-      <min value="1"/>
-      <fixedCode value="86644006"/>
+      <path value="Composition.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="86644006" />
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.code.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true"/>
+        <valueBoolean value="true" />
       </extension>
-      <path value="Composition.section.section.code.coding.display"/>
-      <defaultValueString value="Nursing diagnosis (finding)"/>
+      <path value="Composition.section.section.code.coding.display" />
+      <defaultValueString value="Nursing diagnosis (finding)" />
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.entry">
       <path value="Composition.section.section.entry" />
@@ -1164,8 +1164,8 @@
       <path value="Composition.section.section.entry" />
       <slicing>
         <discriminator>
-          <type value="profile"/>
-          <path value="resolve()"/>
+          <type value="profile" />
+          <path value="resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>
