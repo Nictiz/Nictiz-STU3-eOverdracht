@@ -4,7 +4,7 @@ This repository contains HL7 FHIR STU3 compliant profiles for to the [eOverdrach
 
 Note that the materials in this repository have a draft status and might be subject to change. Draft materials are differentiated from normative materials by a FHIR status of 'draft' and a business version lower than 1.0.0. Normative materials will have an 'active' FHIR status and are considered stable.
 
-The primary distribution mechanism for these materials is by FHIR packages. Packages conveniently bundle profiles, examples and other materials and automatically handle dependencies. The eOverdracht packages can be found at [Simplifier](https://simplifier.net/eOverdracht-STU3/~packages).
+The primary distribution mechanism for these materials is by FHIR packages. Packages conveniently bundle profiles, examples and other materials and automatically handle dependencies. The eOverdracht packages can be found at [Simplifier](https://simplifier.net/Nictiz-STU3-eOverdracht/~packages).
 
 ## Dependencies
 
