@@ -93,8 +93,20 @@
 						<valueDateTime value="2019-05-01"/>
 					</extension>
 					<title value="Administrative data"/>
+					<code>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<code value="405624007"/>
+						</coding>
+					</code>
 					<section>
 						<title value="Personal data"/>
+						<code>
+							<coding>
+								<system value="http://snomed.info/sct"/>
+								<code value="302147001"/>
+							</coding>
+						</code>
 						<entry>
 							<reference value="Coverage/zib-payer-01"/>
 							<display value="Basisverzekerd Menzis Zorgverzekeraar N.V."/>
@@ -102,6 +114,12 @@
 					</section>
 					<section>
 						<title value="Sending organization"/>
+						<code>
+							<coding>
+								<system value="http://snomed.info/sct"/>
+								<code value="185362004"/>
+							</coding>
+						</code>
 						<entry>
 							<reference value="Organization/nl-core-organization-05"/>
 							<display value="Ziekenhuis Gooi en Overvecht"/>
@@ -109,6 +127,12 @@
 					</section>
 					<section>
 						<title value="Receiving organization"/>
+						<code>
+							<coding>
+								<system value="http://snomed.info/sct"/>
+								<code value="275645009"/>	
+							</coding>
+						</code>
 						<entry>
 							<reference value="Organization/nl-core-organization-03"/>
 							<display value="Test Medisch Centrum"/>
@@ -117,8 +141,20 @@
 				</section>
 				<section>
 					<title value="Medical context"/>
+					<code>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<code value="371524004"/>
+						</coding>
+					</code>
 					<section>
 						<title value="Medical diagnosis"/>
+						<code>
+							<coding>
+								<system value="http://snomed.info/sct"/>
+								<code value="52870002"/>
+							</coding>
+						</code>
 						<entry>
 							<reference value="Condition/zib-problem-01"/>
 							<display value="Amyotrofe laterale sclerose"/>
@@ -126,6 +162,12 @@
 					</section>
 					<section>
 						<title value="Pay attention"/>
+						<code>
+							<coding>
+								<system value="http://snomed.info/sct"/>
+								<code value="308813009"/>	
+							</coding>
+						</code>
 						<entry>
 							<reference value="Flag/zib-alert-01"/>
 							<display value="MRSA carrier"/>
@@ -133,9 +175,23 @@
 					</section>
 				</section>
 				<section>
-					<title value="Nursing context - planned care"/>
+					<title value="Nursing context - carePlan"/>
 					<section>
 						<title value="Patient problems"/>
+						<code>
+							<coding>
+								<system value="http://snomed.info/sct"/>
+								<code value="773130005"/>
+							</coding>
+						</code>
+						<section>
+							<title value="currentPatientProblems"/>
+							<code>
+								<coding>
+									<system value="http://snomed.info/sct"/>
+									<code value="86644006"/>
+								</coding>
+							</code>
 						<entry>
 							<reference value="Condition/zib-problem-04"/>
 							<display value="Presbycusis"/>
@@ -145,6 +201,7 @@
 							<display value="Arthropathy"/>
 						</entry>
 					</section>
+				</section>
 					<section>
 						<title value="Patient's needs and preferences"/>
 						<text>
@@ -178,7 +235,7 @@
 	</entry> 
 	<!--      The Patient who is the subject of the document.      -->
 	<entry> 
-		<fullUrl value="/Patient/nl-core-patient-01"/> 
+		<fullUrl value="Patient/nl-core-patient-01"/> 
 		<resource> 
 			<Patient xmlns="http://hl7.org/fhir">
 				<id value="nl-core-patient-01"/>
@@ -348,7 +405,7 @@
 	</entry> 
 	<!--      The Practitioner Resource. In this document they are the author of the document -->
 	<entry> 
-		<fullUrl value="/Practitioner/nl-core-practitioner-03"/> 
+		<fullUrl value="Practitioner/nl-core-practitioner-03"/> 
 		<resource> 
 			<Practitioner>
 				<id value="nl-core-practitioner-03"/>
@@ -375,7 +432,7 @@
 	</entry> 
 	<!--      The rest of the referenced resources    -->
 	<entry> 
-		<fullUrl value="/Coverage/zib-Payer-01"/> 
+		<fullUrl value="Coverage/zib-Payer-01"/> 
 		<resource> 
 			<Coverage xmlns="http://hl7.org/fhir">
 				<id value="zib-Payer-01"/>
@@ -411,7 +468,7 @@
 		</resource> 
 	</entry>
 	<entry> 
-		<fullUrl value="/Organization/nl-core-organization"/> 
+		<fullUrl value="Organization/nl-core-organization"/> 
 		<resource> 
 			<Organization xmlns="http://hl7.org/fhir">
 				<id value="nl-core-organization-05"/>
@@ -545,7 +602,7 @@
 		</resource> 
 	</entry> 
 	<entry> 
-		<fullUrl value="/Organization/nl-core-organization-03"/> 
+		<fullUrl value="Organization/nl-core-organization-03"/> 
 		<resource> 
 			<Organization xmlns="http://hl7.org/fhir">
 				<id value="nl-core-organization-03"/>
@@ -559,7 +616,7 @@
 		</resource> 
 	</entry> 
 	<entry> 
-		<fullUrl value="/Condition/zib-problem-01"/> 
+		<fullUrl value="Condition/zib-problem-01"/> 
 		<resource> 
 			<Condition xmlns="http://hl7.org/fhir">
 				<id value="zib-problem-01"/>
@@ -584,7 +641,7 @@
 		</resource> 
 	</entry> 
 	<entry> 
-		<fullUrl value="/Organization/nl-core-organization-04"/> 
+		<fullUrl value="Organization/nl-core-organization-04"/> 
 		<resource> 
 			<Organization xmlns="http://hl7.org/fhir">
 				<id value="nl-core-organization-04"/>
@@ -600,7 +657,7 @@
 		</resource> 
 	</entry>  
 	<entry> 
-		<fullUrl value="/Flag/zib-alert-01"/> 
+		<fullUrl value="Flag/zib-alert-01"/> 
 		<resource> 
 			<Flag xmlns="http://hl7.org/fhir">
 				<id value="zib-alert-01"/>
@@ -635,7 +692,7 @@
 		</resource> 
 	</entry> 
 	<entry> 
-		<fullUrl value="/Condition/zib-problem-04"/> 
+		<fullUrl value="Condition/zib-problem-04"/> 
 		<resource> 
 			<Condition xmlns="http://hl7.org/fhir">
 				<id value="zib-problem-04"/>
@@ -661,7 +718,7 @@
 		</resource> 
 	</entry> 
 	<entry> 
-		<fullUrl value="/Condition/zib-problem-02"/> 
+		<fullUrl value="Condition/zib-problem-02"/> 
 		<resource> 
 			<Condition xmlns="http://hl7.org/fhir">
 				<id value="zib-problem-02"/>
@@ -690,7 +747,7 @@
 		</resource> 
 	</entry> 
 	<entry> 
-		<fullUrl value="/DeviceUseStatement/infusion"/> 
+		<fullUrl value="DeviceUseStatement/infusion"/> 
 		<resource> 
 			<DeviceUseStatement xmlns="http://hl7.org/fhir">
 				<id value="zib-infusion-01"/>

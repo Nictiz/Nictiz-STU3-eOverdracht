@@ -19,7 +19,7 @@
 				<type>
 					<coding>
 						<system value="http://loinc.org"/>
-						<code value="MISSING"/>
+						<code value="68482-9"/>
 					</coding>
 				</type>
 				<subject>
@@ -37,8 +37,20 @@
 						<valueDateTime value="2019-05-01"/>
 					</extension>
 					<title value="Administrative data"/>
+					<code>
+						<coding>
+							<system value="http://snomed.info/sct"/>
+							<code value="405624007"/>
+						</coding>
+					</code>
 					<section>
 						<title value="Personal data"/>
+						<code>
+							<coding>
+								<system value="http://snomed.info/sct"/>
+								<code value="302147001"/>
+							</coding>
+						</code>
 						<entry>
 							<reference value="Coverage/zib-payer-01"/>
 							<display value="Basisverzekerd Menzis Zorgverzekeraar N.V."/>
@@ -46,6 +58,12 @@
 					</section>
 					<section>
 						<title value="Sending organization"/>
+						<code>
+							<coding>
+								<system value="http://snomed.info/sct"/>
+								<code value="185362004"></code>
+							</coding>
+						</code>
 						<entry>
 							<reference value="Organization/nl-core-organization-05"/>
 							<display value="Ziekenhuis Gooi en Overvecht"/>
@@ -53,6 +71,12 @@
 					</section>
 					<section>
 						<title value="Receiving organization"/>
+						<code>
+							<coding>
+								<system value="http://snomed.info/sct"/>
+								<code value="275645009"></code>
+							</coding>
+						</code>
 						<entry>
 							<reference value="Organization/nl-core-organization-03"/>
 							<display value="Test Medisch Centrum"/>
@@ -71,7 +95,7 @@
 	</entry> 
 	<!--      The Patient who is the subject of the document.      -->
 	<entry> 
-		<fullUrl value="/Patient/nl-core-patient-01"/> 
+		<fullUrl value="Patient/nl-core-patient-01"/> 
 		<resource> 
 			<Patient xmlns="http://hl7.org/fhir">
 				<id value="nl-core-patient-01"/>
@@ -241,7 +265,7 @@
 	</entry> 
 	<!--      The Practitioner Resource. In this document they are the author of the document -->
 	<entry> 
-		<fullUrl value="/Practitioner/nl-core-practitioner-03"/> 
+		<fullUrl value="Practitioner/nl-core-practitioner-03"/> 
 		<resource> 
 			<Practitioner>
 				<id value="nl-core-practitioner-03"/>
@@ -268,7 +292,7 @@
 	</entry> 
 	<!--      The rest of the referenced resources    -->
 	<entry> 
-		<fullUrl value="/Coverage/zib-Payer-01"/> 
+		<fullUrl value="Coverage/zib-Payer-01"/> 
 		<resource> 
 			<Coverage xmlns="http://hl7.org/fhir">
 				<id value="zib-Payer-01"/>
@@ -304,7 +328,7 @@
 		</resource> 
 	</entry>
 	<entry> 
-		<fullUrl value="/Organization/nl-core-organization"/> 
+		<fullUrl value="Organization/nl-core-organization"/> 
 		<resource> 
 			<Organization xmlns="http://hl7.org/fhir">
 				<id value="nl-core-organization-05"/>
@@ -388,7 +412,7 @@
 		</resource> 
 	</entry> 
 	<entry> 
-		<fullUrl value="/Organization/nl-core-organization-03"/> 
+		<fullUrl value="Organization/nl-core-organization-03"/> 
 		<resource> 
 			<Organization xmlns="http://hl7.org/fhir">
 				<id value="nl-core-organization-03"/>
@@ -402,7 +426,7 @@
 		</resource> 
 	</entry>  
 	<entry> 
-		<fullUrl value="/Organization/nl-core-organization-04"/> 
+		<fullUrl value="Organization/nl-core-organization-04"/> 
 		<resource> 
 			<Organization xmlns="http://hl7.org/fhir">
 				<id value="nl-core-organization-04"/>
