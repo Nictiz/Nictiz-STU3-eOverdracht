@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="eOverdracht-zib-NursingIntervention" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-zib-NursingIntervention" />
+  <version value="0.0.1" />
+  <name value="eOverdracht Zib NursingIntervention" />
+  <title value="eOverdracht HCIM NursingIntervention" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <description value="NursingIntervention as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 3.1, release 2017 with an addaption by the 'VNN redactieraad 2018', where a informationmodel is proposed without the NursingProcedure container and attached mandatory Activity concept.      &#xD;&#xA;&#xD;&#xA;A nursing intervention is the care and/or treatment carried out by a nurse based on an expert opinion and clinical knowledge. It is part of the nursing process; interventions are determined as a result of indexed healthcare problems (nursing diagnoses) and based on treatment goals. The interventions are outlined in the nursing procedures.&#xD;&#xA;In a home care situation some actions can also be performed by the patient or a caregiver after a relevant instruction." />
+  <purpose value="Derived profile from zib-NursingIntervention to add a reference to a specialised profile for Problem, eOverdracht-zib-Problem, on Procedure.reasonReference" />
+  <copyright value="CCO" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-nursingintervention-v3.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/NursingIntervention-v3.1(2017EN)" />
+    <name value="HCIM NursingIntervention-v3.1(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v1.2.1-2015EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v1.2.1(2015EN)" />
+    <name value="HCIM HealthProfessional-v1.2.1(2015EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v3.0-2016EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.0(2016EN)" />
+    <name value="HCIM HealthProfessional-v3.0(2016EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-healthprofessional-v3.2-2017EN" />
+    <uri value="https://zibs.nl/wiki/HealthProfessional-v3.2(2017EN)" />
+    <name value="HCIM HealthProfessional-v3.2(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-outcomeofcare-v3.2-2018EN" />
+    <uri value="https://zibs.nl/wiki/OutcomeOfCare-v3.1(2017EN)" />
+    <name value="HCIM OutcomeOfCare-v3.1 (2017EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Procedure" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-NursingIntervention" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Procedure.extension:Frequency">
+      <path value="Procedure.extension" />
+      <sliceName value="Frequency" />
+    </element>
+    <element id="Procedure.extension:Frequency.valueTiming:valueTiming">
+      <path value="Procedure.extension.valueTiming" />
+      <sliceName value="valueTiming" />
+    </element>
+    <element id="Procedure.reasonReference">
+      <path value="Procedure.reasonReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-zib-Problem_PatientProbleem" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

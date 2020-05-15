@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="eOverdracht-zib-TreatmentObjective" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-zib-TreatmentObjective" />
+  <version value="0.0.1" />
+  <name value="eOverdracht Zib TreatmentObjective" />
+  <title value="eOverdracht HCIM TreatmentObjective" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <description value="TreatmentObjective as defined by the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) version 3.1, release 2017. The treatment objective describes the desired result of the treatment/interventions in terms of the patient’s diagnosed problem. The objective and target date are entered in addition to the target value. Comparing the healthcare results to the treatment objective provides insight into the effectivity of the treatment/interventions." />
+  <purpose value="Derived profile from zib-TreatmentObjective to add a reference to a specialised profile for zib-Problem, eOverdracht-zib-Problem-PatientProbleem, on Goal.adresses" />
+  <copyright value="CCO" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-treatmentobjective-v3.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/TreatmentObjective-v3.1(2017EN)" />
+    <name value="HCIM TreatmentObjective-v3.1(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Goal" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentObjective" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Goal.addresses">
+      <path value="Goal.addresses" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-zib-Problem_PatientProbleem" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ProcedureRequest" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RiskAssessment" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

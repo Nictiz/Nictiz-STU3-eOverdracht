@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="eOverdracht-zib-OutcomeOfCare" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-zib-OutcomeOfCare" />
+  <version value="0.0.1" />
+  <name value="eOverdracht-zib-OutcomeOfCare" />
+  <title value="eOverdracht HCIM OutcomeOfCare" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <description value="A derived profile on Zib-TextResult to represent the the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB) OutcomeOfCare version 3.1, release 2017. The OutcomeOfCare concept describes the determined status of the patient in terms of a certain problem. Comparing the healthcare result with the treatment objective provides insight into the effectively of the nursing interventions/activities carried out for this problem. It is a part of the nursing process, together with nursing diagnoses/problems, the treatment objective and nursing interventions." />
+  <purpose value="Derived profile from zib-OutcomeOfCare to add a reference to a specialised profile for NursingIntervention, eOverdracht-zib-NursingIntervention, on extension:Intervention.valuereference" />
+  <copyright value="CCO" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-outcomeofcare-v3.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/OutcomeOfCare-v3.1(2017EN)" />
+    <name value="HCIM OutcomeOfCare-v3.1 (2017EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DiagnosticReport" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-OutcomeOfCare" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DiagnosticReport.extension:Intervention">
+      <path value="DiagnosticReport.extension" />
+      <sliceName value="Intervention" />
+    </element>
+    <element id="DiagnosticReport.extension:Intervention.valueReference:valueReference">
+      <path value="DiagnosticReport.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-zib-NursingIntervention" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
