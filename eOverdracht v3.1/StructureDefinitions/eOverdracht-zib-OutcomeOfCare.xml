@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://example.org/fhir/StructureDefinition/eOverdracht-zib-OutcomeOfCare" />
+  <name value="eOverdracht-zib-OutcomeOfCare" />
+  <status value="draft" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-outcomeofcare-v3.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/OutcomeOfCare-v3.1(2017EN)" />
+    <name value="HCIM OutcomeOfCare-v3.1 (2017EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="DiagnosticReport" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-OutcomeOfCare" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="DiagnosticReport.extension:Intervention">
+      <path value="DiagnosticReport.extension" />
+      <sliceName value="Intervention" />
+    </element>
+    <element id="DiagnosticReport.extension:Intervention.valueReference:valueReference">
+      <path value="DiagnosticReport.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-zib-NursingIntervention" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

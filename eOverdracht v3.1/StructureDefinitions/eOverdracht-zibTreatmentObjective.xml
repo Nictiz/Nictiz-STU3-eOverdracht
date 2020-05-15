@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://example.org/fhir/StructureDefinition/eOverdracht-zibTreatmentObjective" />
+  <name value="eOverdracht-zibTreatmentObjective" />
+  <status value="draft" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-treatmentobjective-v3.1-2017EN" />
+    <uri value="https://zibs.nl/wiki/TreatmentObjective-v3.1(2017EN)" />
+    <name value="HCIM TreatmentObjective-v3.1(2017EN)" />
+  </mapping>
+  <mapping>
+    <identity value="hcim-basicelements-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
+    <name value="HCIM BasicElements-v1.0(2017EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Goal" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentObjective" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Goal.addresses">
+      <path value="Goal.addresses" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-zib-Problem_PatientProbleem" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionOrder" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ProcedureRequest" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RiskAssessment" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

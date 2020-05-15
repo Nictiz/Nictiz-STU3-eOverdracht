@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://example.org/fhir/StructureDefinition/eOverdracht-zib-AbilityToPerformNursingActivities" />
+  <name value="eOverdracht-zib-AbilityToPerformNursingActivities" />
+  <status value="draft" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="hcim-abilitytoperformnursingactivities-v1.0-2017EN" />
+    <uri value="https://zibs.nl/wiki/AbilityToPerformNursingActivities-v1.0(2017EN)" />
+    <name value="HCIM AbilityToPerformNursingActivities-v1.0(2017EN)" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToPerformNursingActivities" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.extension:nursingIntervention">
+      <path value="Observation.extension" />
+      <sliceName value="nursingIntervention" />
+      <binding>
+        <strength value="extensible" />
+        <valueSetReference>
+          <reference value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-zib-NursingIntervention" />
+        </valueSetReference>
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>
