@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://example.org/fhir/StructureDefinition/eOverdracht-Task" />
+  <name value="eOverdracht-Task" />
+  <status value="draft" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="workflow" />
+    <uri value="http://hl7.org/fhir/workflow" />
+    <name value="Workflow Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/w5" />
+    <name value="W5 Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Task" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Task" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Task.status">
+      <path value="Task.status" />
+      <short value="draft | requested | received | accepted |" />
+      <definition value="The current state of the Task. States that can be used: &#xD;&#xA;- requested: Placer has made the registration available&#xD;&#xA;- received: filler has received the request and is juding the request&#xD;&#xA;- accepted: filler accepts the registration, and can provide the care asked for&#xD;&#xA;- on-hold: filler proposes a different date&#xD;&#xA;- in-progress: placer confirms to the filler it proceeds with the transfer&#xD;&#xA;- rejected: filler rejects the registration&#xD;&#xA;- cancelled: placer or filler has cancelled the transfer&#xD;&#xA;- completed: filler recieved the overdrachtsbericht&#xD;&#xA;- ready,  failed, will not be used" />
+    </element>
+    <element id="Task.intent">
+      <path value="Task.intent" />
+      <comment value="This element is immutable.  Proposed tasks, planned tasks, etc. must be distinct instances.&#xA;&#xA;In the case the Task has the intent &quot;order&quot;" />
+    </element>
+    <element id="Task.code">
+      <path value="Task.code" />
+      <min value="1" />
+    </element>
+    <element id="Task.code.coding.system">
+      <path value="Task.code.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Task.code.coding.code">
+      <path value="Task.code.coding.code" />
+      <fixedCode value="308292007" />
+    </element>
+    <element id="Task.for">
+      <path value="Task.for" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
+      </type>
+    </element>
+    <element id="Task.requester">
+      <path value="Task.requester" />
+      <min value="1" />
+    </element>
+    <element id="Task.requester.agent">
+      <path value="Task.requester.agent" />
+      <definition value="The practitioner or organisation who initiated the task." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole" />
+      </type>
+    </element>
+    <element id="Task.input">
+      <path value="Task.input" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type.coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Task.input:Aanmeldbericht">
+      <path value="Task.input" />
+      <sliceName value="Aanmeldbericht" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:Aanmeldbericht.type.coding.system">
+      <path value="Task.input.type.coding.system" />
+      <fixedUri value="http://loinc.org" />
+    </element>
+    <element id="Task.input:Aanmeldbericht.type.coding.code">
+      <path value="Task.input.type.coding.code" />
+      <fixedCode value="57830-2" />
+    </element>
+    <element id="Task.input:Aanmeldbericht.value[x]:valueReference">
+      <path value="Task.input.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-aanmeldbericht" />
+      </type>
+    </element>
+    <element id="Task.input:Overdrachtbericht">
+      <path value="Task.input" />
+      <sliceName value="Overdrachtbericht" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:Overdrachtbericht.type.coding.system">
+      <path value="Task.input.type.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Task.input:Overdrachtbericht.type.coding.code">
+      <path value="Task.input.type.coding.code" />
+      <fixedCode value="11511000146104" />
+    </element>
+    <element id="Task.input:Overdrachtbericht.value[x]:valueReference">
+      <path value="Task.input.valueReference" />
+      <sliceName value="valueReference" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-overdrachtsbericht-volwassenen" />
+      </type>
+    </element>
+    <element id="Task.output">
+      <path value="Task.output" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type.coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Task.output:AlternativeDate">
+      <path value="Task.output" />
+      <sliceName value="AlternativeDate" />
+    </element>
+    <element id="Task.output:AlternativeDate.type.coding.system">
+      <path value="Task.output.type.coding.system" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Task.output:AlternativeDate.type.coding.code">
+      <path value="Task.output.type.coding.code" />
+      <fixedCode value="MISSING" />
+    </element>
+  </differential>
+</StructureDefinition>

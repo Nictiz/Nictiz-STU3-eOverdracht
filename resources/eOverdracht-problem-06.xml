@@ -1,0 +1,61 @@
+<?xml-model href="http://hl7.org/fhir/STU3/condition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><Condition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/condition.xsd">
+    <id value="eOverdracht-problem-06"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem"/>
+    </meta>
+    <text>
+        <status value="extensions"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <table>
+                <caption>Aandoening. Subject: <a href="Patient/medmij-bgz-ext-nl-core-patient-01">S. XXX_Bakkerz</a>. Categorie: <span title="Diagnose (282291009 - SNOMED CT)">Diagnose</span>, Status: actief / bevestigd</caption>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Diagnose vastgesteld op basis van progressief klinisch beeld en bijpassende afwijkingen aan het centraal en perifeer motorische neuron bij EMG</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <th>Code</th>
+                        <td>
+                            <span title="Amyotrofische laterale sclerose (86044005 - SNOMED CT)">Amyotrofische laterale sclerose</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Eerste symptomen</th>
+                        <td>${DATE, T, D, -750}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </text>
+    <clinicalStatus value="active">
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="55561003"/>
+                    <display value="Actueel"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+    </clinicalStatus>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="248536006"/>
+            <display value="Functionele Beperking"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="228158008"/>
+            <display value="probleem met lopen"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/eOverdracht-patient-01"/>
+        <display value="Erik Altenborg"/>
+    </subject>
+    <onsetDateTime value="2018-11-01"/>
+</Condition>

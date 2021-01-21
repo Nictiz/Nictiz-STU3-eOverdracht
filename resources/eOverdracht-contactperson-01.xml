@@ -1,0 +1,84 @@
+<?xml-model href="http://hl7.org/fhir/STU3/relatedperson.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><RelatedPerson xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/relatedperson.xsd">
+    <id value="eOverdracht-contactperson-01"/>
+    <meta>
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
+    </meta>
+    <text>
+        <status value="extensions"/>
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <div>Petra Jeanette P.J. van den Herik-XXX_Bakkerz (Petra)</div>
+            <div>
+                <a href="tel:06-12345670">06-12345670</a> (Tel Mobiel), <a href="mailto:pjvanherik123@hotmail.com">pjvanherik123@hotmail.com</a> (E-mail Privé)</div>
+            <div>Knolweg 1003 A 1 Gebouw B, 9999ZA Stitswerd Almelo, NLD (Bezoek)</div>
+            <div>
+                <span title="Eerste relatie/contactpersoon (1 - RoleCodeLijst (COD472-VEKT))">Eerste relatie/contactpersoon</span>, <span title="Wife (WIFE - v3/RoleCode)">Wife</span> van <a href="Patient/medmij-bgz-ext-nl-core-patient-01">S. XXX-Bakkerz</a>
+            </div>
+        </div>
+    </text>
+    <extension url="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson-role">
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.22.472"/>
+                <code value="1"/>
+                <display value="Eerste relatie/contactpersoon"/>
+            </coding>
+        </valueCodeableConcept>
+    </extension>
+    <active value="true"/>
+    <patient>
+        <reference value="Patient/eOverdracht-patient-01"/>
+        <display value="E.Alterborg"/>
+    </patient>
+    <relationship>
+        <coding>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="DAUC"/>
+            <display value="Daughter"/>
+        </coding>
+    </relationship>
+    <name>
+        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
+            <valueCode value="NL4"/>
+        </extension>
+        <use value="official"/>
+        <family value="Bakker">
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                <valueString value="Bakker"/>
+            </extension>
+        </family>
+        <given value="Johanna">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                <valueCode value="BR"/>
+            </extension>
+        </given>
+        <given value="Hanna">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                <valueCode value="CL"/>
+            </extension>
+        </given>
+        <given value="J">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                <valueCode value="IN"/>
+            </extension>
+        </given>
+    </name>
+    <telecom>
+	    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-ContactInformation-TelecomType">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://hl7.org/fhir/v3/AddressUse"/>
+                    <code value="MC"/>
+                    <display value="Mobiel telefoonnummer"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <system value="phone"/>
+        <value value="06-45678912"/>
+        <use value="mobile"/>
+    </telecom>
+    <telecom>
+        <system value="email"/>
+        <value value="jbakker@123net.nl"/>
+        <use value="home"/>
+    </telecom>
+</RelatedPerson>

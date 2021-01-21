@@ -1,0 +1,18 @@
+<DeviceUseStatement xmlns="http://hl7.org/fhir">
+    <id value="eOverdracht-medischhulpmiddel-03"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice"/>
+    </meta>
+    <status value="active"/>
+    <subject>
+        <reference value="Patient/eOverdracht-patient-01"/>
+        <display value="Erik Altenborg"/>
+    </subject>
+    <device>
+        <reference value="Device/eOverdracht-medischhulpmiddelproduct-03"/>
+        <display value="rollator"/>
+    </device>
+    <note>
+        <text value='lopen is stuk verbeterd, rechter been minder krachtig'/>
+    </note>
+</DeviceUseStatement>
