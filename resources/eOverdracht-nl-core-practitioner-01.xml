@@ -3,15 +3,6 @@
     <meta>
         <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner"/>
     </meta>
-    <text>
-        <status value="extensions"/>
-        <div xmlns="http://www.w3.org/1999/xhtml">
-            <div>Vaste Huisarts 1</div>
-            <div>
-                <a href="tel:+31434073576">+31434073576</a> (Tel Werk), <a href="mailto:huisarts@huisarts.nl">huisarts@huisarts.nl</a> (E-mail Werk)</div>
-            <div>Valkendael 45, 6245HK Maastricht, NLD (Werk)</div>
-        </div>
-    </text>
     <name>
         <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
             <valueCode value="NL4"/>
