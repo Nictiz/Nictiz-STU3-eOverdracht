@@ -146,7 +146,11 @@
     </element>
     <element id="Task.output:AlternativeDate.type.coding.code">
       <path value="Task.output.type.coding.code" />
-      <fixedCode value="MISSING" />
+      <fixedCode value="146851000146105" />
+    </element>
+    <element id="Task.output:AlternativeDate.type.coding.display">
+      <path value="Task.output.type.coding.display" />
+      <defaultValueString value="Alternative date for transfer of care (waarneembare entiteit)" />
     </element>
   </differential>
 </StructureDefinition>
