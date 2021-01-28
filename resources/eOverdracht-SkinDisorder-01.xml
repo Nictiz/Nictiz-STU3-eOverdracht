@@ -3,39 +3,19 @@
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-SkinDisorder"/>
     </meta>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/condition-dateOfLastDressingChange">
-        <valueDateTime value="2018-01-19"/>
-    </extension>
-    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-BurnWound-Extent">
-        <valueQuantity>
-            <value value="1"/>
-            <unit value="%"/>
-            <system value="http://unitsofmeasure.org"/>
-            <code value="%"/>
-        </valueQuantity>
-    </extension>
     <clinicalStatus value="active"/>
     <category>
         <coding>
-            <system value="http://hl7.org/fhir/condition-category"/>
-            <code value="encounter-diagnosis"/>
-            <display value="Encounter Diagnosis"/>
+            <system value="http://snomed.info/sct"/>
+            <code value="95320005"/>
+            <display value="Disorder of skin"/>
         </coding>
     </category>
     <code>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-BurnWound-BurnWoundType">
-            <valueCodeableConcept>
-                <coding>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="105594005"/>
-                    <display value="Thermische brandwond"/>
-                </coding>
-            </valueCodeableConcept>
-        </extension>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="125666000"/>
-            <display value="Brandwond"/>
+            <code value="58759008"/>
+            <display value="	Intertrigo/smetten"/>
         </coding>
     </code>
     <bodySite>
@@ -50,25 +30,16 @@
         </extension>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="362741001"/>
-            <display value="onderarm"/>
+            <code value="26893007"/>
+            <display value="lies"/>
         </coding>
     </bodySite>
     <subject>
         <reference value="Patient/eOverdracht-patient-01"/>
-        <display value="Erik ALtenborg"/>
+        <display value="Erik Altenborg"/>
     </subject>
-    <onsetDateTime value="2018-01-19"/>
-    <stage>
-        <summary>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="77140003"/>
-                <display value="1e graad"/>
-            </coding>
-        </summary>
-    </stage>
+    <onsetDateTime value="2018-01-13"/>
     <note>
-        <text value="Meneer kreeg hete thee over zich heen, wond is ongeveer 2 bij 2 cm; geen verband nodig."/>
+        <text value="Smetten zonder natten of infectie, 15-1-2018 genezen."/>
     </note>
 </Condition>

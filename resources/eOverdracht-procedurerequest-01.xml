@@ -3,50 +3,17 @@
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-ProcedureRequest"/>
     </meta>
-    <text>
-        <status value="extensions">
-            <extension url="ProcedureRequest.status.extension:orderStatus.url">
-                <valueCodeableConcept>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="385651009"/>
-                        <display value="in uitvoering"/>
-                    </coding>
-                </valueCodeableConcept>
-            </extension>
-        </status>
-        <div xmlns="http://www.w3.org/1999/xhtml">
-            <table>
-                <caption>Verrichtingaanvraag. Subject: <a href="Patient/medmij-bgz-ext-nl-core-patient-01">S. XXX_Bakkerz</a>. Status: actief<span style="display: block;">Intentie: aanvraag</span>
-                </caption>
-                <tbody>
-                    <tr>
-                        <td>
-                            <span title="Implantatie van totale knieprothese (609588000 - SNOMED CT)">Implantatie van totale knieprothese</span>
-                        </td>
-                        <td/>
-                    </tr>
-                    <tr>
-                        <th>Beoogde uitvoerende</th>
-                        <td>
-                            <div>
-                                <a href="Practitioner/medmij-bgz-ext-nl-core-practitioner-02">O. Orthopeed</a>
-                                <div>Zorgverlenerrol: <a href="PractitionerRole/medmij-bgz-ext-nl-core-practitionerrole-02">Medisch specialisten, orthopedie</a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Reden</th>
-                        <td>
-                            <a href="Condition/medmij-bgz-ext-problem-06">Gonartrose / artrose van knie</a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </text>
-    <status value="active"/>
+    <status>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="385644000"/>
+                    <display value="Aangevraagd"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+    </status>
     <intent value="order"/>
     <code>
         <coding>
@@ -62,15 +29,15 @@
     <performer>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
             <valueReference>
-                <reference value="PractitionerRole/medmij-bgz-ext-nl-core-practitionerrole-02"/>
-                <display value="Medisch specialisten, orthopedie"/>
+                <reference value="PractitionerRole/eOverdracht-practitionerrole-02"/>
+                <display value="Verpleegkundige, niet nader gespecificeerd"/>
             </valueReference>
         </extension>
         <reference value="Practitioner/medmij-bgz-ext-nl-core-practitioner-02"/>
-        <display value="O. Orthopeed"/>
+        <display value="Mark van Laren"/>
     </performer>
     <reasonReference>
-        <reference value="Condition/medmij-bgz-ext-problem-06"/>
-        <display value="Gonartrose / artrose van knie"/>
+        <reference value="Condition/eOverdracht-problem-17"/>
+        <display value="overbelaste mantelzorg"/>
     </reasonReference>
 </ProcedureRequest>

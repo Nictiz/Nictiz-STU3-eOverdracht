@@ -3,6 +3,11 @@
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Respiration"/>
     </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-Respiration-AdministeredOxygen">
+        <extension url="extraOxygenAdministration">
+            <valueBoolean value="false"/>
+        </extension>
+    </extension>
     <status value="final"/>
     <category>
         <coding>

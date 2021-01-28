@@ -25,11 +25,11 @@
     </extension>
     <status value="active"/>
     <subject>
-        <reference value="Patient/eOverdracht"/>
+        <reference value="Patient/eOverdracht-Patient-01"/>
         <display value="Erik Altenborg"/>
     </subject>
     <device>
-        <valuereference value="Device/eOverdracht-InfusionProduct-02"/>
+        <valuereference value="Device/eOverdracht-InfusionProduct-01"/>
         <display value="Port-a-cath"/>
     </device>
 </DeviceUseStatement>
