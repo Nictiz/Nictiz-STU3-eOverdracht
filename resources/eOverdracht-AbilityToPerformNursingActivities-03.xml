@@ -1,0 +1,35 @@
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/observation.xsd">
+    <id value="eOverdracht-AbilityToPerformNursingActivities-03"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToPerformNursingActivities"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-zibNursingInterventionReference">
+        <valueReference>
+            <reference value="Procedure/eOverdracht-NursingIntervention-06"/>
+            <display value="toedienen van sondevoeding"/>
+        </valueReference>
+    </extension>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="303074009"/>
+            <display value="Ability to manage personal health care"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/eOverdracht-patient-02"/>
+        <display value="Felix Sauter"/>
+    </subject>
+    <performer>
+        <reference value="RelatedPerson/eOverdracht-contactperson-03"/>
+        <display value="Vader"/>
+    </performer>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="27911000146108"/>
+            <display value="onafhankelijk"/>
+        </coding>
+    </valueCodeableConcept>
+</Observation>

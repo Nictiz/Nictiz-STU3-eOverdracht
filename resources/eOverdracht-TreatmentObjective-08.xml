@@ -1,0 +1,19 @@
+<Goal xmlns="http://hl7.org/fhir">
+    <id value="eOverdracht-TreatmentObjective-07"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentObjective"/>
+    </meta>
+    <status value="accepted"/>
+    <description>
+        <text value="veilige medicatietoediening"/>
+    </description>
+    <subject>
+        <reference value="Patient/eOverdracht-Patient-02"/>
+        <display value="Felix Sauter"/>
+    </subject>
+    <adresses>
+        <reference value="Problem/eOverdracht-problem-15"/>
+        <display value="probleem met het beheer van eigen medicatie"/>
+    </adresses>
+</Goal>
+

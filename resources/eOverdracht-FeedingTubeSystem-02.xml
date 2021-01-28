@@ -1,0 +1,31 @@
+<?xml-model href="http://hl7.org/fhir/STU3/deviceusestatement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<DeviceUseStatement xmlns="http://hl7.org/fhir"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://hl7.org/fhir/STU3/deviceusestatement.xsd">
+    <id value="eOverdracht-FeedingTubeSystem-02"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-FeedingTubeSystem"/>
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/extension-medicaldevice">
+        <valuereference>
+            <reference value="Device/eOverdracht-MedicalDeviceProduct-04"/>
+            <display value="spuitenpomp"/>
+        </valuereference>
+    </extension>
+    <status value="active"/>
+    <subject>
+        <reference value="Patient/eOverdracht-Patient-02"/>
+        <display value="Felix Sauter"/>
+    </subject>
+    <device>
+        <valuereference value="Device/eOverdracht-MedicalDeviceProduct-05"/>
+        <display value="PEG sonde"/>
+    </device>
+    <bodysite>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="181246003"/>
+            <display value="maag"/>
+        </coding>
+    </bodysite>
+</DeviceUseStatement>

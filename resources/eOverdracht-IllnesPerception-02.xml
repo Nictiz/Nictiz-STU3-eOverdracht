@@ -1,0 +1,28 @@
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/observation.xsd">
+    <id value="eOverdracht-IllnesPerception-02"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-IllnessPerception"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="363910003"/>
+            <display value="kenmerk van psychosociaal functioneren"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/eOverdracht-patient-02"/>
+        <display value="Felix Sauter"/>
+    </subject>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="405199009"/>
+                <display value="copinggedrag van familie"/>
+            </coding>
+        </code>
+        <valueString value="Ouders proberen zorg zo goed mogelijk te organiseren, zijn vooral nog bezig met praktische zaken."/>
+    </component>
+</Observation>

@@ -1,0 +1,87 @@
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/observation.xsd">
+    <id value="eOverdracht-StrongKidsScore-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-StrongKidsScore"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="108341000146107"/>
+            <display value="STRONGkids risk screening tool (assessment scale)"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/eOverdracht-patient-02"/>
+        <display value="Felix Sauter"/>
+    </subject>
+    <effectiveDateTime value="2018-02-26T16:00:00"/>
+    <valueQuantity>
+        <value value="2"/>
+    </valueQuantity>
+    <comment value="verbetering van score voor ontslag"/>
+    <component>
+        <code>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0"/>
+                <code value="4.28.3"/>
+                <display value="Weight loss score"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.17.1"/>
+                <code value="G0"/>
+                <display value="Geen gewichtsverlies of stilstand in groei/ gewicht"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0"/>
+                <code value="4.28.4"/>
+                <display value="Condition score"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.17.2"/>
+                <code value="R0"/>
+                <display value="Geen ziektebeeld met verhoogd risico"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0"/>
+                <code value="4.28.5"/>
+                <display value="Nutrition score"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.17.2"/>
+                <code value="Z1"/>
+                <display value="Verminderde voedselinname"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.0"/>
+                <code value="4.28.8"/>
+                <display value="Nutrition score"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.17.4"/>
+                <code value="T1"/>
+                <display value="	Slechte voedingstoestand"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+</Observation>

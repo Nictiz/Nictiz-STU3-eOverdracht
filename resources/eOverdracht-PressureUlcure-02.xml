@@ -1,0 +1,44 @@
+<?xml-model href="http://hl7.org/fhir/STU3/condition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><Condition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/condition.xsd">
+    <id value="eOverdracht-PressureUlcer-02"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-PressureUlcer"/>
+    </meta>
+    <clinicalStatus value="active"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="399912005"/>
+            <display value="Pressure ulcer"/>
+        </coding>
+    </code>
+    <bodySite>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="51440002"/>
+                    <display value="Rechts en links"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="46862004"/>
+            <display value="bil"/>
+        </coding>
+    </bodySite>
+    <subject>
+        <reference value="Patient/eOverdracht-patient-02"/>
+        <display value="Felix Sauter"/>
+    </subject>
+    <onsetDateTime value="2018-01-29"/>
+    <stage>
+        <summary>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="421076008"/>
+                <display value="Decubitus categorie 1"/>
+            </coding>
+        </summary>
+    </stage>
+</Condition>

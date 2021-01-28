@@ -1,0 +1,25 @@
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/observation.xsd">
+    <id value="eOverdracht-VisualFunction-02"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-VisualFunction"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="281004000"/>
+            <display value="Visual function"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/eOverdracht-patient-02"/>
+        <display value="Felix Sauter"/>
+    </subject>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="45089002"/>
+            <display value="Geen visuele stoornis"/>
+        </coding>
+    </valueCodeableConcept>
+</Observation>

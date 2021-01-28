@@ -1,0 +1,18 @@
+<NutritionOrder xmlns="http://hl7.org/fhir">
+    <id value="eOverdracht-NutritionAdvice-02" />
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice" />
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice-Explanation">
+        <valueAsString value="sondevoeding"/>
+    </extension>
+    <patient>
+        <reference value="Patient/eOverdracht-Patient-01" />
+        <display value="Erik Altenborg" />
+    </patient>
+    <oralDiet>
+        <type>
+            <text value="niet per os"/>
+        </type>
+    </oralDiet>
+</NutritionOrder>

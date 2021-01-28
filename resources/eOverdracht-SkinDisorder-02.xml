@@ -1,0 +1,45 @@
+<?xml-model href="http://hl7.org/fhir/STU3/condition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><Condition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/condition.xsd">
+    <id value="eOverdracht-SkinDisorder-02"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-SkinDisorder"/>
+    </meta>
+    <clinicalStatus value="active"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="95320005"/>
+            <display value="Disorder of skin"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="402276007"/>
+            <display value="Huidletsel door incontinentie"/>
+        </coding>
+    </code>
+    <bodySite>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier">
+            <valueCodeableConcept>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="51440002"/>
+                    <display value="Rechts en links"/>
+                </coding>
+            </valueCodeableConcept>
+        </extension>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="264104007"/>
+            <display value="luiergebied"/>
+        </coding>
+    </bodySite>
+    <subject>
+        <reference value="Patient/eOverdracht-patient-02"/>
+        <display value="Felix Sauter"/>
+    </subject>
+    <onsetDateTime value="2018-01-30"/>
+    <note>
+        <text value="niet actueel meer"/>
+    </note>
+</Condition>
