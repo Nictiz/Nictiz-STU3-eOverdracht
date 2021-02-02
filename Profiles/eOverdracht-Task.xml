@@ -4,21 +4,6 @@
   <name value="eOverdracht-Task" />
   <status value="draft" />
   <fhirVersion value="3.0.2" />
-  <mapping>
-    <identity value="workflow" />
-    <uri value="http://hl7.org/fhir/workflow" />
-    <name value="Workflow Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="rim" />
-    <uri value="http://hl7.org/v3" />
-    <name value="RIM Mapping" />
-  </mapping>
-  <mapping>
-    <identity value="w5" />
-    <uri value="http://hl7.org/fhir/w5" />
-    <name value="W5 Mapping" />
-  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Task" />
@@ -84,20 +69,20 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Task.input:Aanmeldbericht">
+    <element id="Task.input:aanmeldbericht">
       <path value="Task.input" />
-      <sliceName value="Aanmeldbericht" />
+      <sliceName value="aanmeldbericht" />
       <max value="1" />
     </element>
-    <element id="Task.input:Aanmeldbericht.type.coding.system">
+    <element id="Task.input:aanmeldbericht.type.coding.system">
       <path value="Task.input.type.coding.system" />
       <fixedUri value="http://loinc.org" />
     </element>
-    <element id="Task.input:Aanmeldbericht.type.coding.code">
+    <element id="Task.input:aanmeldbericht.type.coding.code">
       <path value="Task.input.type.coding.code" />
       <fixedCode value="57830-2" />
     </element>
-    <element id="Task.input:Aanmeldbericht.value[x]:valueReference">
+    <element id="Task.input:aanmeldbericht.value[x]:valueReference">
       <path value="Task.input.valueReference" />
       <sliceName value="valueReference" />
       <type>
@@ -105,20 +90,20 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-aanmeldbericht" />
       </type>
     </element>
-    <element id="Task.input:Overdrachtbericht">
+    <element id="Task.input:overdrachtbericht">
       <path value="Task.input" />
-      <sliceName value="Overdrachtbericht" />
+      <sliceName value="overdrachtbericht" />
       <max value="1" />
     </element>
-    <element id="Task.input:Overdrachtbericht.type.coding.system">
+    <element id="Task.input:overdrachtbericht.type.coding.system">
       <path value="Task.input.type.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Task.input:Overdrachtbericht.type.coding.code">
+    <element id="Task.input:overdrachtbericht.type.coding.code">
       <path value="Task.input.type.coding.code" />
       <fixedCode value="11511000146104" />
     </element>
-    <element id="Task.input:Overdrachtbericht.value[x]:valueReference">
+    <element id="Task.input:overdrachtbericht.value[x]:valueReference">
       <path value="Task.input.valueReference" />
       <sliceName value="valueReference" />
       <type>
@@ -136,21 +121,28 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Task.output:AlternativeDate">
+    <element id="Task.output:alternativeDate">
       <path value="Task.output" />
-      <sliceName value="AlternativeDate" />
+      <sliceName value="alternativeDate" />
     </element>
-    <element id="Task.output:AlternativeDate.type.coding.system">
+    <element id="Task.output:alternativeDate.type.coding.system">
       <path value="Task.output.type.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Task.output:AlternativeDate.type.coding.code">
+    <element id="Task.output:alternativeDate.type.coding.code">
       <path value="Task.output.type.coding.code" />
       <fixedCode value="146851000146105" />
     </element>
-    <element id="Task.output:AlternativeDate.type.coding.display">
+    <element id="Task.output:alternativeDate.type.coding.display">
       <path value="Task.output.type.coding.display" />
       <defaultValueString value="Alternative date for transfer of care (waarneembare entiteit)" />
+    </element>
+    <element id="Task.output:alternativeDate.value[x]:valueDateTime">
+      <path value="Task.output.valueDateTime" />
+      <sliceName value="valueDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>
