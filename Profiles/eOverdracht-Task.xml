@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://example.org/fhir/StructureDefinition/eOverdracht-Task" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-Task" />
   <name value="eOverdracht-Task" />
   <status value="draft" />
   <fhirVersion value="3.0.2" />
