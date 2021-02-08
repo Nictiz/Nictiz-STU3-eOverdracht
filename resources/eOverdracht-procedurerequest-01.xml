@@ -15,12 +15,19 @@
         </extension>
     </status>
     <intent value="order"/>
-    <code>
+    <category>
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="9632001"/>
             <display value="Verpleegkundige actie"/>
         </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="62013009"/>
+            <display value="Patiënt mobiliseren"/>
+        </coding> 
     </code>
     <subject>
         <reference value="Patient/eOverdracht-patient-01"/>

@@ -8,8 +8,8 @@
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/extension-medicaldevice">
         <valuereference>
-            <reference value="Device/eOverdracht-MedicalDeviceProduct-04"/>
-            <display value="spuitenpomp"/>
+            <reference value="Device/eOverdracht-MedicalDeviceProduct-05"/>
+            <display value="PEG sonde"/>
         </valuereference>
     </extension>
     <status value="active"/>
@@ -18,8 +18,8 @@
         <display value="Felix Sauter"/>
     </subject>
     <device>
-        <valuereference value="Device/eOverdracht-MedicalDeviceProduct-05"/>
-        <display value="PEG sonde"/>
+        <valuereference value="Device/eOverdracht-FeedingTubeSystemProduct-02"/>
+        <display value="spuitenpomp"/>
     </device>
     <bodysite>
         <coding>
