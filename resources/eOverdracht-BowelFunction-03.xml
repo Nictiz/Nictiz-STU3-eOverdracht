@@ -1,0 +1,69 @@
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/observation.xsd">
+    <id value="eOverdracht-BowelFunction-03"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-BowelFunction"/>
+    </meta>
+    <status value="final"/>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="111989001"/>
+            <display value="Bowel function"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/eOverdracht-patient-03"/>
+        <display value="Adam Buckle"/>
+    </subject>
+    <valueCodeableConcept>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="24029004"/>
+            <display value="Continent"/>
+        </coding>
+    </valueCodeableConcept>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="162098000"/>
+                <display value="frequentie"/>
+            </coding>
+        </code>
+        <valueQuantity>
+            <value value="2"/>
+        </valueQuantity>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="443172007"/>
+                <display value="Defecatie consistentie"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4.3.1"/>
+                <code value="Type 1"/>
+                <display value="Losse harde keutels, zoals noten"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+    <component>
+        <code>
+            <coding>
+                <system value="http://loinc.org"/>
+                <code value="9397-1"/>
+                <display value="Defecatie kleur"/>
+            </coding>
+        </code>
+        <valueCodeableConcept>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="167605001"/>
+                <display value="normaal"/>
+            </coding>
+        </valueCodeableConcept>
+    </component>
+</Observation>

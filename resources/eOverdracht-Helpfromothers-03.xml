@@ -1,0 +1,39 @@
+<?xml-model href="http://hl7.org/fhir/STU3/careplan.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><CarePlan xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/careplan.xsd">
+    <id value="eOverdracht-helpfromothers-03"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-HelpFromOthers"/>
+    </meta>
+    <status value="active"/>
+    <intent value="plan"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="243114000"/>
+            <display value="Ondersteuning (regime/therapie)"/>
+        </coding>
+    </category>
+    <subject>
+        <reference value="Patient/eOverdracht-patient-03"/>
+        <display value="Adam Buckle"/>
+    </subject>
+    <activity>
+        <detail>
+            <category>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="386229000"/>
+                    <display value="Mantelzorg"/>
+                </coding>
+            </category>
+            <code>
+                <text value="past af en toe op patiënt en broertje"/>
+            </code>
+            <status value="in-progress"/>
+            <scheduledString value="Incidentieel"/>
+            <performer>
+                <reference value="RelatedPerson/eOverdracht-contactperson-11"/>
+                <display value="Amber Buckle"/>
+            </performer>
+        </detail>
+    </activity>
+</CarePlan>

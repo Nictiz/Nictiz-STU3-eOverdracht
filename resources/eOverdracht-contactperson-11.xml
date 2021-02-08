@@ -1,0 +1,39 @@
+<?xml-model href="http://hl7.org/fhir/STU3/relatedperson.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><RelatedPerson xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/relatedperson.xsd">
+    <id value="eOverdracht-contactperson-11"/>
+    <meta>
+        <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson"/>
+    </meta>
+    <active value="true"/>
+    <patient>
+        <reference value="Patient/eOverdracht-patient-03"/>
+        <display value="Adam Buckle"/>
+    </patient>
+    <relationship>
+        <coding>
+            <system value="http://hl7.org/fhir/v3/RoleCode"/>
+            <code value="Aunt"/>
+            <display value="Tante"/>
+        </coding>
+    </relationship>
+    <name>
+        <extension url="http://hl7.org/fhir/StructureDefinition/humanname-assembly-order">
+            <valueCode value="NL4"/>
+        </extension>
+        <use value="official"/>
+        <family value="Buckle">
+            <extension url="http://hl7.org/fhir/StructureDefinition/humanname-own-name">
+                <valueString value="Buckle"/>
+            </extension>
+        </family>
+        <given value="Amber">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                <valueCode value="BR"/>
+            </extension>
+        </given>
+        <given value="A">
+            <extension url="http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier">
+                <valueCode value="IN"/>
+            </extension>
+        </given>
+    </name>
+</RelatedPerson>

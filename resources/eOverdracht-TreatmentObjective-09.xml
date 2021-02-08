@@ -1,0 +1,19 @@
+<Goal xmlns="http://hl7.org/fhir">
+    <id value="eOverdracht-TreatmentObjective-09"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentObjective"/>
+    </meta>
+    <status value="accepted"/>
+    <description>
+        <text value="eet momenten verlopen zonder stress"/>
+    </description>
+    <subject>
+        <reference value="Patient/eOverdracht-Patient-03"/>
+        <display value="Adam Buckle"/>
+    </subject>
+    <adresses>
+        <reference value="Problem/eOverdracht-problem-20"/>
+        <display value="probleem met eetgedrag"/>
+    </adresses>
+</Goal>
+

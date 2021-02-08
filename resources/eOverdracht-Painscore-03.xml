@@ -1,0 +1,36 @@
+<Observation xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/observation.xsd">
+    <id value="eOverdracht-PainScore-03"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-PainScore"/>
+    </meta>
+    <status value="final"/>
+    <category>
+        <coding>
+            <system value="http://hl7.org/fhir/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="225908003"/>
+            <display value="Pain score"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/eOverdracht-patient-03"/>
+        <display value="Adam Buckle"/>
+    </subject>
+    <effectiveDateTime value="${DATE, T, D, -15}"/>
+    <valueQuantity>
+        <value value="2"/>
+    </valueQuantity>
+    <method>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="NRS"/>
+            <display value="NRS"/>
+        </coding>
+    </method>
+</Observation>

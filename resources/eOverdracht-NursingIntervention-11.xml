@@ -1,0 +1,47 @@
+<?xml-model href="http://hl7.org/fhir/STU3/procedure.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Procedure xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/procedure.xsd">
+    <id value="eOverdracht-NursingIntervention-11"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-NursingIntervention"/>
+    </meta>
+    <extension url="http://hl7.org/fhir/StructureDefinition/goal-pertainsToGoal">
+        <valueReference>
+            <reference value="Goal/eOverdracht-TreatmentObjective-11"/>
+            <display value="verstoring van balans tussen draagkracht en draaglast"/>
+        </valueReference>
+    </extension>
+    <status value="in-progress"/>
+    <category>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="9632001"/>
+            <display value="Nursing procedure (procedure)"/>
+        </coding>
+    </category>
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="243115004"/>
+            <display value="ondersteuning van gezin"/>
+        </coding>
+    </code>
+    <subject>
+        <reference value="Patient/eOverdracht-patient-03"/>
+        <display value="Adam Buckle"/>
+    </subject>
+    <performedDateTime value="2018-03-21"/>
+    <performer>
+        <actor>
+            <reference value="practitioner/eOverdracht-Practitioner-07"/>
+            <display value="Jasmijn Hooijmans"/>
+        </actor>
+    </performer>
+    <reasonReference>
+        <reference value="Problem/eOverdracht-problem-21"/>
+        <display value="ondergewicht"/>
+    </reasonReference>
+    <note>
+        <text value="Ook orthopedagogische begeleiding"/>
+    </note>
+</Procedure>

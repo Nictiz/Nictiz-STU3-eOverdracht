@@ -1,0 +1,19 @@
+<Goal xmlns="http://hl7.org/fhir">
+    <id value="eOverdracht-TreatmentObjective-11"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentObjective"/>
+    </meta>
+    <status value="accepted"/>
+    <description>
+        <text value="ouders komen tot rust; ontspannen en veilige gezinssituatie"/>
+    </description>
+    <subject>
+        <reference value="Patient/eOverdracht-Patient-03"/>
+        <display value="Adam Buckle"/>
+    </subject>
+    <adresses>
+        <reference value="Problem/eOverdracht-problem-22"/>
+        <display value="verstoring van balans tussen draagkracht en draaglast"/>
+    </adresses>
+</Goal>
+

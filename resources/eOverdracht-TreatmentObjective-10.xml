@@ -1,0 +1,19 @@
+<Goal xmlns="http://hl7.org/fhir">
+    <id value="eOverdracht-TreatmentObjective-10"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentObjective"/>
+    </meta>
+    <status value="accepted"/>
+    <description>
+        <text value="gewicht niet lager dan 20kg"/>
+    </description>
+    <subject>
+        <reference value="Patient/eOverdracht-Patient-03"/>
+        <display value="Adam Buckle"/>
+    </subject>
+    <adresses>
+        <reference value="Problem/eOverdracht-problem-21"/>
+        <display value="ondergewicht"/>
+    </adresses>
+</Goal>
+

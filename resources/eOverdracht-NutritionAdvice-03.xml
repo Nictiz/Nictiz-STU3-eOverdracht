@@ -1,0 +1,13 @@
+<NutritionOrder xmlns="http://hl7.org/fhir">
+    <id value="eOverdracht-NutritionAdvice-03"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice" />
+    </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice-Explanation">
+        <valueAsString value="gericht op wat mogelijk is; zoals brood met pindakaas, pasta"/>
+    </extension>
+    <patient>
+        <reference value="Patient/eOverdracht-Patient-03"/>
+        <display value="Adam Buckle"/>
+    </patient>
+</NutritionOrder>
