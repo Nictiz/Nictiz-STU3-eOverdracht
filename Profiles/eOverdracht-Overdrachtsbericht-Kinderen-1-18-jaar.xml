@@ -48,12 +48,16 @@
     <element id="Composition.type.coding.system">
       <path value="Composition.type.coding.system" />
       <min value="1" />
-      <fixedUri value="http://loinc.org" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Composition.type.coding.code">
       <path value="Composition.type.coding.code" />
       <min value="1" />
-      <fixedCode value="MISSING" />
+      <fixedCode value="371535009" />
+    </element>
+    <element id="Composition.type.coding.display">
+      <path value="Composition.type.coding.display" />
+      <fixedString value="verslag van overdracht" />
     </element>
     <element id="Composition.subject">
       <path value="Composition.subject" />

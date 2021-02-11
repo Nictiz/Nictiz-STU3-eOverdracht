@@ -31,6 +31,10 @@
       <path value="Task.code.coding.code" />
       <fixedCode value="308292007" />
     </element>
+    <element id="Task.code.coding.display">
+      <path value="Task.code.coding.display" />
+      <fixedString value="Overdracht van zorg" />
+    </element>
     <element id="Task.for">
       <path value="Task.for" />
       <min value="1" />
@@ -101,7 +105,11 @@
     </element>
     <element id="Task.input:overdrachtbericht.type.coding.code">
       <path value="Task.input.type.coding.code" />
-      <fixedCode value="11511000146104" />
+      <fixedCode value="371535009" />
+    </element>
+    <element id="Task.input:overdrachtbericht.type.coding.display">
+      <path value="Task.input.type.coding.display" />
+      <fixedString value="verslag van overdracht" />
     </element>
     <element id="Task.input:overdrachtbericht.value[x]:valueReference">
       <path value="Task.input.valueReference" />
