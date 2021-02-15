@@ -5,8 +5,8 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/event-partOf">
         <valueReference>
-            <reference value="Procedure/eOverdracht-NursingIntervention-07"/>
-            <display value="intraveneus toedienen van medicatie via infuus"/>
+            <reference value="Procedure/eOverdracht-NursingIntervention-03"/>
+            <display value="patient mobiliseren"/>
         </valueReference>
     </extension>
     <status value="final">
@@ -28,8 +28,8 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/eOverdracht-patient-02"/>
-        <display value="Felix Sauter"/>
+        <reference value="Patient/eOverdracht-patient-01"/>
+        <display value="Erik Altenborg"/>
     </subject>
-    <conclusion value="veilig medicatietoediening"/>
+    <conclusion value="zie specificatie gezondheidstoestand: Mobiliteit"/>
 </DiagnosticReport>

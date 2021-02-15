@@ -1,12 +1,12 @@
 <DiagnosticReport xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/diagnosticreport.xsd">
-    <id value="eOverdracht-OutcomeOfCare-01"/>
+    <id value="eOverdracht-OutcomeOfCare-08"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-OutcomeOfCare"/>
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/event-partOf">
         <valueReference>
-            <reference value="Procedure/eOverdracht-NursingIntervention-01"/>
-            <display value="ondersteunen bij wassen en afdrogen"/>
+            <reference value="Procedure/eOverdracht-NursingIntervention-10"/>
+            <display value="toediening van zondevoeding"/>
         </valueReference>
     </extension>
     <status value="final">
@@ -28,8 +28,8 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/eOverdracht-patient-01"/>
-        <display value="Erik Altenborg"/>
+        <reference value="Patient/eOverdracht-patient-03"/>
+        <display value="Adam Buckle"/>
     </subject>
-    <conclusion value="zie specificatie gezondheidstoestand: VermogenTotZichWassen"/>
+    <conclusion value="zie specificatie gezondheidstoestand: Voeding/vocht"/>
 </DiagnosticReport>

@@ -23,8 +23,8 @@
     <code>
         <coding>
             <system value="http://snomed.info/sct"/>
-            <code value="313332003"/>
-            <display value="patient mobiliseren"/>
+            <code value="182531007"/>
+            <display value="aanleggen verband op wond"/>
         </coding>
     </code>
     <subject>

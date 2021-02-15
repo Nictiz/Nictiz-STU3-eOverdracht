@@ -1,5 +1,5 @@
 <?xml-model href="http://hl7.org/fhir/STU3/procedurerequest.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><ProcedureRequest xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/procedurerequest.xsd">
-    <id value="medmij-bgz-ext-procedurerequest-03"/>
+    <id value="eOverdracht-procedurerequest-03"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-ProcedureRequest"/>
     </meta>
@@ -26,23 +26,27 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="386229000"/>
-            <display value="ondersteuning voor verzorger"/>
-        </coding>
+            <display value="Ondersteuning voor verzorger"/>
+        </coding> 
     </code>
     <subject>
-        <reference value="Patient/eOverdracht-patient-03"/>
-        <display value="Adam Buckle"/>
+        <reference value="Patient/eOverdracht-patient-02"/>
+        <display value="Felix Sauter"/>
     </subject>
     <performer>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
             <valueReference>
-                <reference value="PractitionerRole/eOverdracht-practitionerrole-08"/>
+                <reference value="PractitionerRole/eOverdracht-practitionerrole-05"/>
                 <display value="Verpleegkundigen, niet nader gespecificeerd"/>
             </valueReference>
         </extension>
-        <reference value="Practitioner/eOverdracht-practitioner-08"/>
-        <display value="Karin Smits"/>
+        <reference value="Practitioner/eOverdracht-practitioner-05"/>
+        <display value="Pieter van Dijk"/>
     </performer>
+    <reasonReference>
+        <reference value="Condition/eOverdracht-problem-16"/>
+        <display value="overbelaste mantelzorg"/>
+    </reasonReference>
     <note>
         <text value="Thuiszorg is aangevraagd voor continuering van zorgtaken en huishoudelijke hulp."/>
     </note>

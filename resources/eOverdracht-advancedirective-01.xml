@@ -19,8 +19,8 @@
         </coding>
     </category>
     <patient>
-        <reference value="Patient/medmij-bgz-ext-nl-core-patient-01"/>
-        <display value="S. XXX_Bakkerz"/>
+        <reference value="Patient/eOverdracht-patient-01"/>
+        <display value="Erik Altenborg"/>
     </patient>
     <dateTime value="2014-01-02"/>
 </Consent>

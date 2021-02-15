@@ -25,7 +25,7 @@
         <coding>
             <system value="http://snomed.info/sct"/>
             <code value="313332003"/>
-            <display value="ondersteunen bij aankleden"/>
+            <display value="probleem met zichzelf kleden"/>
         </coding>
     </code>
     <subject>
