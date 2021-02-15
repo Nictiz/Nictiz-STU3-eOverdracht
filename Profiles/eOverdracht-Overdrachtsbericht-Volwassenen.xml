@@ -1108,6 +1108,7 @@
     </element>
     <element id="Composition.section:medicalContext.section:allergy.title">
       <path value="Composition.section.section.title" />
+      <short value="Allergy" />
       <defaultValueString value="Pay attention" />
     </element>
     <element id="Composition.section:medicalContext.section:allergy.code">
@@ -2568,7 +2569,7 @@
     <element id="Composition.section:healthState.section:senses.code.coding.code">
       <path value="Composition.section.section.code.coding.code" />
       <min value="1" />
-      <fixedCode value="284465006" />
+      <fixedCode value="106147001" />
     </element>
     <element id="Composition.section:healthState.section:senses.code.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
