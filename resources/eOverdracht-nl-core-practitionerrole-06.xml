@@ -5,7 +5,7 @@
     </meta>
     <practitioner>
         <reference value="Practitioner/eOverdracht-nl-core-practitioner-06"/>
-        <display value="Pieter van Dijk"/>
+        <display value="Naomi Duvelaar"/>
     </practitioner>
     <organization>
         <reference value="Organization/eOverdracht-nl-core-organization-02"/>
