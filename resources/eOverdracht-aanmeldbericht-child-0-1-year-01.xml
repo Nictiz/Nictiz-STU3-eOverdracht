@@ -1,7 +1,7 @@
 <?xml-model href="http://hl7.org/fhir/STU3/composition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><Composition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/fhir-all.xsd">
-    <id value="eOverdracht-overdrachtsbericht-child-0-1-year-01"/>
+    <id value="eOverdracht-aanmeldbericht-child-0-1-year-01"/>
     <meta>
-        <profile value=" http://nictiz.nl/fhir/StructureDefinition/eOverdracht-overdrachtsbericht-kinderen-0-1-jaar"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-aanmeldbericht"/>
     </meta>
     <status value="final"/>
     <type>
@@ -26,7 +26,7 @@
         <reference value="Practitioner/eOverdracht-nl-core-practitioner-04"/>
         <display value="Sophie Hobbema"/>
     </author>
-    <title value="Overdrachtsbericht kinderen 0-1 jaar"/>
+    <title value="Aanmeldbericht"/>
     <section>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate">
             <valueDateTime value="2018-02-27"/>
@@ -102,59 +102,6 @@
             </entry>
         </section>
     </section>
-    <!-- General patient context -->
-    <section>
-        <title value="General patient context"/>
-        <code>
-            <coding>
-                <system value="http://snomed.info/sct"/>
-                <code value="109481000146101"/>
-                <display value="Personal and social history section (record artifact)"/>
-            </coding>
-        </code>
-        <section>
-            <title value="Family situation"/>
-            <code>
-                <coding>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="365474007"/>
-                    <display value="Finding of details of family (finding)"/>
-                </coding>
-            </code>
-           <entry>
-               <reference value="Observation\eOverdracht-familysituation-02"/>
-               <display value="Woont bij ouders"/>
-           </entry> 
-        </section>
-        <section>
-            <title value="Living situation"/>
-            <code>
-                <coding>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="365512000"/>
-                    <display value="Finding of characteristics of home environment (finding)"/>
-                </coding>
-            </code>
-            <entry>
-                <reference value="Observation\eOverdracht-livingsituation-02"/>
-                <display value="Eengezinswoning"/>
-            </entry>
-        </section>
-        <section>
-            <title value="Social environment"/>
-            <code>
-                <coding>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="365448001"/>
-                    <display value="Social and personal history finding (finding)"/>
-                </coding>
-            </code>
-            <entry>
-                <reference value="CarePlan\eOverdracht-helpfromothers-02"/>
-                <display value="Helpen met opvang andere kinderen"/>
-            </entry>
-        </section>
-    </section>
     <!-- Medical Context-->
     <section>
         <title value="Medical context"/>
@@ -165,24 +112,6 @@
                 <display value="Clinical report (record artifact)"/>
             </coding>
         </code>
-        <section>
-            <title value="Practitioner"/>
-            <code>
-                <coding>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="405623001"/>
-                    <display value="Assigned practitioner (occupation)"/>
-                </coding>
-            </code>
-            <entry>
-                <reference value="Practitioner\eOverdracht-nl-core-practitioner-06"/>
-                <display value="Naomi Duvelaar"/>
-            </entry>
-            <entry>
-                <reference value="PractitionerRole\eOverdracht-nl-core-practitionerrole-06"/>
-                <display value="Medisch specialist, kindergeneeskunde"/>
-            </entry>
-        </section>
         <section>
             <title value="Medical diagnosis"/>
             <code>
@@ -223,70 +152,6 @@
             <entry>
                 <reference value="Flag\eOverdracht-alert-02"/>
                 <display value="Drager MRSA"/>
-            </entry>
-        </section>
-        <section>
-            <title value="Measurements"/>
-            <code>
-                <coding>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="MISSING"/>
-                    <display value="MISSING"/>
-                </coding>
-            </code>
-            <entry>
-                <reference value="Observation\eOverdracht-Bloodpressure-02"/>
-                <display value="Blood pressure"/>
-            </entry>
-            <entry>
-                <reference value="Observation\eOverdracht-PulseRate-02"/>
-                <display value="pulse rate"/>
-            </entry>
-            <entry>
-                <reference value="Observation\eOverdracht-Bodytemperature-02"/>
-                <display value="pulse rate"/>
-            </entry>
-            <entry>
-                <reference value="Observation\eOverdracht-Respiration-02"/>
-                <display value="pulse rate"/>
-            </entry>
-            <entry>
-                <reference value="Observation\eOverdracht-Bodyweight-02"/>
-                <display value="pulse rate"/>
-            </entry>
-            <entry>
-                <reference value="Observation\eOverdracht-BodyLength-02"/>
-                <display value="pulse rate"/>
-            </entry>
-            <entry>
-                <reference value="Observation\eOverdracht-HeadCircumference-01"/>
-                <display value="Meten van schedelomvang m.b.v. meetlint"/>
-            </entry>
-        </section>
-        <section>
-            <title value="Pain Score"/>
-            <code>
-                <coding>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="11011000146108"/>
-                    <display value="Score list pain (record artifact)"/>
-                </coding>
-            </code>
-            <entry>
-                <reference value="Observation\eOverdracht-PainScore-02"/>
-                <display value="Pain Score"/>
-            </entry>
-            <entry>
-                <reference value="Observation\eOverdracht-ComfortScale-01"/>
-                <display value="Comfort Score"/>
-            </entry>
-            <entry>
-                <reference value="Observation\eOverdracht-FLACCpijnscore-01"/>
-                <display value="FLACC Pain Score"/>
-            </entry>
-            <entry>
-                <reference value="Observation\eOverdracht-ChecklistPainbehaviour-01"/>
-                <display value="Checklist pain behaviour"/>
             </entry>
         </section>
     </section>
@@ -339,24 +204,6 @@
                 </entry>
             </section>
             <section>
-                <title value="Outcome of Care"/>
-                <code>
-                    <coding>
-                        <system value="http://snomed.info/sct"/>
-                        <code value="722091001"/>
-                        <display value="Conclusion interpretation document (record artifact)"/>
-                    </coding>
-                </code>
-                <entry>
-                    <reference value="DiagnosticReport\eOverdracht-OutcomeOfCare-05"/>
-                    <display value="zie specificatie gezondheidstoestand: Voeding/vocht"/>
-                </entry>
-                <entry>
-                    <reference value="DiagnosticReport\eOverdracht-OutcomeOfCare-06"/>
-                    <display value="veilig medicatietoediening"/>
-                </entry>
-            </section>
-            <section>
                 <title value="Patient appointments"/>
                 <code>
                     <coding>
@@ -374,7 +221,7 @@
                 <title value="Patient's needs and preferences"/>
                 <text>
                     <status value="additional"/>
-                    <div xmlns="http://www.w3.org/1999/xhtml">Felix heeft vanaf geboorte 5 maanden in ziekenhuis gelegen. De laatste opname is er een PEG-sonde geplaatst. Voor ouders belangrijk om gezinsleven weer op te bouwen, waarin zorg voor Felix een belangrijke plaats inneemt, maar ook in balans is met de zorg voor andere kinderen</div>
+                    <div xmlns="http://www.w3.org/1999/xhtml"></div>
                 </text>
             </section>
         </section>
@@ -388,27 +235,6 @@
                 <display value="Nursing report (record artifact)"/>
             </coding>
         </code>
-        <section>
-            <title value="Self care"/>
-            <code>
-                <coding>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="365178001"/>
-                    <display value="Finding related to ability to perform personal care activity (finding)"/>
-                </coding>
-            </code>
-            <entry>
-                <reference value="Observation\eOverdracht-AbilityToPerformNursingActivities-02"/>
-                <display value="hulp nodig"/>
-            </entry>
-            <section>
-                <title value="Self care comment"/>
-                <text>
-                    <status value="additional"/>
-                    <div xmlns="http://www.w3.org/1999/xhtml">Ouders zijn getraind om kind te verzorgen; moeder heeft aftekenlijst met verzorgpunten ontwikkeld</div>
-                </text>
-            </section>
-        </section>
         <section>
             <title value="Nutrition or fluid"/>
             <code>
@@ -451,71 +277,6 @@
             <entry>
                 <reference value="Observation\eOverdracht-BowelFunction-02"/>
                 <display value="helemaal vloeibaar"/>
-            </entry>
-        </section>
-        <section>
-            <title value="Skin"/>
-            <code>
-                <coding>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="36456004"/>
-                    <display value="bevinding betreffende huid (bevinding)"/>
-                </coding>
-            </code>
-            <entry>
-                <reference value="Condition\eOverdracht-BurnWound-02"/>
-                <display value="thermische brandwond"/>
-            </entry>
-            <entry>
-                <reference value="Condition\eOverdracht-PressureUlcer-02"/>
-                <display value="Cat. 1"/>
-            </entry>
-            <entry>
-                <reference value="Condition\eOverdracht-SkinDisorder-02"/>
-                <display value="Huidletsel door incontinentie"/>
-            </entry>
-            <entry>
-                <reference value="Condition\eOverdracht-Wound-02"/>
-                <display value="Traumatische wond"/>
-            </entry>
-        </section>
-        <section>
-            <title value="Senses"/>
-            <code>
-                <coding>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="106147001"/>
-                    <display value="bevinding betreffende sensorisch zenuwstelsel (bevinding)"/>
-                </coding>
-            </code>
-            <entry>
-                <reference value="Observation\eOverdracht-HearingFunction-02"/>
-                <display value="geen gehoorstoornis"/>
-            </entry>
-            <entry>
-                <reference value="Observation\eOverdracht-VisualFunction-02"/>
-                <display value="geen visuele stoornis"/>
-            </entry>
-        </section>
-        <section>
-            <title value="Illness perception"/>
-            <code>
-                <coding>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="284465006"/> 
-                    <display value="bevinding betreffende psychosociaal functioneren (bevinding)"/>
-                </coding>
-            </code>
-            <entry>
-                <reference value="Observation\eOverdracht-IllnesPerception-02"/>
-                <display value="Ouders proberen zorg zo goed mogelijk te organiseren, zijn vooral nog bezig met praktische zaken."/>
-            </entry>
-        </section>
-        <section>
-            <title value="Development child"/>
-            <entry>
-                <reference value="Observation\eOverdracht-DevelopmentChild-01"/>
-                <display value="ontwikkeling kind"/>
             </entry>
         </section>
     </section>

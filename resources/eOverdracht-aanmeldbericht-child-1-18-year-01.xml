@@ -1,0 +1,291 @@
+<?xml-model href="http://hl7.org/fhir/STU3/composition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><Composition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/fhir-all.xsd">
+    <id value="eOverdracht-aanmeldbericht-child-1-18-year-01"/>
+    <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-aanmeldbericht"/>
+    </meta>
+    <status value="final"/>
+    <type>
+        <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="371535009"/>
+            <display value="verslag van overdracht"/>
+        </coding>
+    </type>
+    <subject>
+        <reference value="Patient/eOverdracht-Patient-03"/>
+        <display value="Adam Buckle"/>
+    </subject>
+    <date value="${DATE, T, D, -0}"/>
+    <author>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+            <valueReference>
+                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-07"/>
+                <display value="Verpleegkundige, niet nader gespecificeerd"/>
+            </valueReference>
+        </extension>
+        <reference value="Practitioner/eOverdracht-nl-core-practitioner-07"/>
+        <display value="Jasmijn Hooijmans"/>
+    </author>
+    <title value="Aanmeldbericht"/>
+    <section>
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate">
+            <valueDateTime value="2018-03-29"/>
+        </extension>
+        <title value="Administrative data"/>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="405624007"/>
+                <display value="Administrative documentation (record artifact)"/>
+            </coding>
+        </code>
+        <section>
+            <title value="Personal data"/>
+            <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="302147001"/>
+                    <display value="Demographic history detail (observable entity)"/>
+                </coding>
+            </code>
+            <entry>
+                <reference value="Coverage/eOverdracht-payer-03"/>
+                <display value="Basisverzekerd Trias"/>
+            </entry>
+            <entry>
+                <reference value="RelatedPerson/eOverdracht-contactperson-08"/>
+                <display value="Lianne de Wit-Buckle"/>
+            </entry>
+        </section>
+        <section>
+            <title value="Sending organization"/>
+            <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="185362004"/>
+                <display value="Referred by nurse (finding)"/>
+            </coding>
+            </code>
+            <entry>
+                <reference value="Organization/eOverdracht-nl-core-organization-04"/>
+                <display value="AB-zkh"/>
+            </entry>
+            <entry>
+                <reference value="Practitioner/eOverdracht-nl-core-practitioner-07"/>
+                <display value="Jasmijn Hooijmans"/>
+            </entry>
+            <entry>
+                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-07"/>
+                <display value="Verpleegkundige, niet nader gespecificeerd"/>
+            </entry>
+        </section>
+        <section>
+            <title value="Receiving organization"/>
+            <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="275645009"/>
+                    <display value="Nurse: referred to (finding)"/>
+                </coding>
+            </code>
+            <entry>
+                <reference value="Organization/eOverdracht-nl-core-organization-03"/>
+                <display value="ThuiszorgOrg"/>
+            </entry>
+            <entry>
+                <reference value="Practitioner/eOverdracht-nl-core-practitioner-08"/>
+                <display value="Karin Smits"/>
+            </entry>
+            <entry>
+                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-08"/>
+                <display value="Verpleegkundige, niet nader gespecificeerd"/>
+            </entry>
+        </section>
+    </section>
+    <!-- Medical Context-->
+    <section>
+        <title value="Medical context"/>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="371524004"/>
+                <display value="Clinical report (record artifact)"/>
+            </coding>
+        </code>
+        <section>
+            <title value="Medical diagnosis"/>
+            <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="52870002"/>
+                    <display value="Referral diagnosis (qualifier value)"/>
+                </coding>
+            </code>
+            <entry>
+                <reference value="Condition\eOverdracht-problem-18"/>
+                <display value="eetstoornis"/>
+            </entry>
+        </section>
+        <section>
+            <title value="Medical history"/>
+            <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="417662000"/>
+                    <display value="klinische bevinding in voorgeschiedenis (situatie)"/>
+                </coding>
+            </code>
+            <entry>
+                <reference value="Condition\eOverdracht-problem-19"/>
+                <display value="allergisch astma"/>
+            </entry>
+        </section>
+        <section>
+            <title value="Pay attention"/>
+            <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="308813009"/>
+                    <display value="Notification status (finding)"/>
+                </coding>
+            </code>
+            <entry>
+                <reference value="Flag\eOverdracht-alert-03"/>
+                <display value="Drager MRSA"/>
+            </entry>
+        </section>
+    </section>
+        <!-- Care Plan -->
+        <section>
+            <title value="CarePlan"/>
+            <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="773130005"/>
+                    <display value="Nursing care plan (record artifact)"/>
+                </coding>
+            </code>
+            <section>
+                <title value="Current patient problems"/>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="86644006"/>
+                        <display value="Nursing diagnosis (finding)"/>
+                    </coding>
+                </code>
+            <entry>
+                <reference value="Condition\eOverdracht-problem-20"/>
+                <display value="probleem met eetgedrag"/>
+            </entry>
+                <entry>
+                    <reference value="Condition\eOverdracht-problem-21"/>
+                    <display value="ondergewicht"/>
+                </entry>
+                <entry>
+                    <reference value="Condition\eOverdracht-problem-22"/>
+                    <display value="verstoring van balans tussen draagkracht en draaglast"/>
+                </entry>
+            <entry>
+                <reference value="Procedure\eOverdracht-NursingIntervention-09"/>
+                <display value="ondersteunen bij eten en drinken"/>
+            </entry>
+                <entry>
+                    <reference value="Procedure\eOverdracht-NursingIntervention-10"/>
+                    <display value="toedienen van sondevoeding"/>
+                </entry>
+                <entry>
+                    <reference value="Procedure\eOverdracht-NursingIntervention-11"/>
+                    <display value="ondersteuning van gezin"/>
+                </entry>
+                <entry>
+                    <reference value="Goal\eOverdracht-TreatmentObjective-09"/>
+                    <display value="eet momenten verlopen zonder stress"/>
+                </entry>
+                <entry>
+                    <reference value="Goal\eOverdracht-TreatmentObjective-10"/>
+                    <display value="gewicht niet lager dan 20 kg"/>
+                </entry>
+                <entry>
+                    <reference value="Goal\eOverdracht-TreatmentObjective-11"/>
+                    <display value="ouders komen tot rust; ontspannen en veilige gezinssituatie"/>
+                </entry>
+            </section>
+            <section>
+                <title value="Patient appointments"/>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="305058001"/>
+                        <display value="Patient encounter status (finding)"/>
+                    </coding>
+                </code>
+                <entry>
+                    <reference value="ProcedureRequest\eOverdracht-procedurerequest-04"/>
+                    <display value="ondersteuning voor verzorger"/>
+                </entry>
+            </section>
+            <section>
+                <title value="Patient's needs and preferences"/>
+                <text>
+                    <status value="additional"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"></div>
+                </text>
+            </section>
+        </section>
+    <!-- Health State -->
+    <section>
+        <title value="Health state"/>
+        <code>
+            <coding>
+                <system value="http://snomed.info/sct"/>
+                <code value="5531000179105"/>
+                <display value="Nursing report (record artifact)"/>
+            </coding>
+        </code>
+        <section>
+            <title value="Nutrition or fluid"/>
+            <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="300893006"/>
+                    <display value="bevinding betreffende nutritie (bevinding)"/>
+                </coding>
+            </code>
+            <entry>
+                <reference value="NutritionOrder\eOverdracht-NutritionAdvice-03"/>
+                <display value="gericht op wat mogelijk is; zoals brood met pindakaas, pasta"/>
+            </entry>
+            <entry>
+                <reference value="Observation\eOverdracht-StrongKidsScore-02"/>
+                <display value="Slechte voedingstoestand"/>
+            </entry>
+            <entry>
+                <reference value="Observation\eOverdracht-fluidBalance-03"/>
+                <display value="vochtbalans"/>
+            </entry>
+            <entry>
+                <reference value="DeviceUseStatement\eOverdracht-FeedingTubeSystem-03"/>
+                <display value="neus-maagsonde"/>
+            </entry>
+        </section>
+        <section>
+            <title value="Excretion"/>
+            <code>
+                <coding>
+                    <system value="http://snomed.info/sct"/>
+                    <code value="106019003"/>
+                    <display value="bevinding betreffende uitscheidingspatroon (bevinding)"/>
+                </coding>
+            </code>
+            <entry>
+                <reference value="Observation\eOverdracht-BladderFunction-02"/>
+                <display value="Continent"/>
+            </entry>
+            <entry>
+                <reference value="Observation\eOverdracht-BowelFunction-03"/>
+                <display value="Continent"/>
+            </entry>
+        </section>
+    </section>
+</Composition>

@@ -384,7 +384,7 @@
                 <title value="Patient's needs and preferences"/>
                 <text>
                     <status value="additional"/>
-                    <div xmlns="http://www.w3.org/1999/xhtml"></div>
+                    <div xmlns="http://www.w3.org/1999/xhtml">ouders willen graag weer tot rust komen zodat ze op termijn weer ontspannen om kunnen gaan met eten geven.</div>
                 </text>
             </section>
         </section>
@@ -447,7 +447,7 @@
                 <title value="Self care comment"/>
                 <text>
                     <status value="additional"/>
-                    <div xmlns="http://www.w3.org/1999/xhtml"></div>
+                    <div xmlns="http://www.w3.org/1999/xhtml">begint met zelf aankleden, hulp nodig i.v.m. sonde</div>
                 </text>
             </section>
         </section>
