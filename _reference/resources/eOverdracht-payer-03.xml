@@ -11,7 +11,7 @@
         </coding>
     </type>
     <subscriber>
-        <reference value="Patient/eOverdracht-patient-03"/>
+        <reference value="Patient/XXX-Buckle"/>
         <display value="Adam Buckle"/>
     </subscriber>
     <subscriberId value="34567890"/>

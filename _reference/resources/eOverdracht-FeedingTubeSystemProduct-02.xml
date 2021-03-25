@@ -11,7 +11,7 @@
         </coding>
     </type>
     <patient>
-        <reference value="Patient/eOverdracht-Patient-02"/>
+        <reference value="Patient/XXX-Sauter"/>
         <display value="Felix Sauter"/>
     </patient>
 </Device>

@@ -13,7 +13,7 @@
         </coding>
     </code>
     <for>
-        <reference value="Patient/eOverdracht-Patient-01"/>
+        <reference value="Patient/XXX-Altenborg"/>
         <display value="Erik Altenborg"/>
     </for>
    <requester>

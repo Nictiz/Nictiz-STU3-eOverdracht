@@ -31,7 +31,7 @@
     </extension>
     <status value="active"/>
     <subject>
-        <reference value="Patient/eOverdracht-Patient-02"/>
+        <reference value="Patient/XXX-Sauter"/>
         <display value="Felix Sauter"/>
     </subject>
     <device>

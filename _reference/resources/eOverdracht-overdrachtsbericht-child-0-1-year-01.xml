@@ -12,7 +12,7 @@
         </coding>
     </type>
     <subject>
-        <reference value="Patient/eOverdracht-Patient-02"/>
+        <reference value="Patient/XXX-Sauter"/>
         <display value="Felix Sauter"/>
     </subject>
     <date value="${DATE, T, D, -0}"/>

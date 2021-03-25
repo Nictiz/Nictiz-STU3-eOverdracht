@@ -52,7 +52,7 @@
         </coding>
     </bodySite>
     <subject>
-        <reference value="Patient/eOverdracht-patient-02"/>
+        <reference value="Patient/XXX-Sauter"/>
         <display value="Felix Sauter"/>
     </subject>
     <onsetDateTime value="2018-01-15"/>

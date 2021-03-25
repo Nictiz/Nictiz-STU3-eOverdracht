@@ -12,7 +12,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/eOverdracht-Patient-01"/>
+        <reference value="Patient/XXX-Altenborg"/>
         <display value="Erik Altenborg"/>
     </subject>
     <component>

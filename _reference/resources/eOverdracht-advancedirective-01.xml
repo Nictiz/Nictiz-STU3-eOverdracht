@@ -19,7 +19,7 @@
         </coding>
     </category>
     <patient>
-        <reference value="Patient/eOverdracht-patient-01"/>
+        <reference value="Patient/XXX-Altenborg"/>
         <display value="Erik Altenborg"/>
     </patient>
     <dateTime value="2014-01-02"/>

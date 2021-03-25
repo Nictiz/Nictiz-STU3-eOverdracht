@@ -8,7 +8,7 @@
         <text value="decubitus wond genezen"/>
     </description>
     <subject>
-        <reference value="Patient/eOverdracht-Patient-01"/>
+        <reference value="Patient/XXX-Altenborg"/>
         <display value="Erik Altenborg"/>
     </subject>
     <adresses>

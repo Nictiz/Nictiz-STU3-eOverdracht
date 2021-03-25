@@ -7,7 +7,7 @@
         <valueAsString value="gericht op wat mogelijk is; zoals brood met pindakaas, pasta"/>
     </extension>
     <patient>
-        <reference value="Patient/eOverdracht-Patient-03"/>
+        <reference value="Patient/XXX-Buckle"/>
         <display value="Adam Buckle"/>
     </patient>
 </NutritionOrder>

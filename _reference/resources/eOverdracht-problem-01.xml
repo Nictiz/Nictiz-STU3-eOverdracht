@@ -29,7 +29,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/eOverdracht-patient-01"/>
+        <reference value="Patient/XXX-Altenborg"/>
         <display value="Erik ALtenborg"/>
     </subject>
     <onsetDateTime value="2018-11-01"/>

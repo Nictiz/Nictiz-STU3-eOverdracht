@@ -8,7 +8,7 @@
         <text value="groei conform groeicurve"/>
     </description>
     <subject>
-        <reference value="Patient/eOverdracht-Patient-02"/>
+        <reference value="Patient/XXX-Sauter"/>
         <display value="Felix Sauter"/>
     </subject>
     <adresses>

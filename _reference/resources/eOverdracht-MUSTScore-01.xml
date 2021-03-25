@@ -12,7 +12,7 @@
         </coding>
     </code>
     <subject>
-        <reference value="Patient/eOverdracht-patient-01"/>
+        <reference value="Patient/XXX-Altenborg"/>
         <display value="Erik Altenborg"/>
     </subject>
     <effectiveDateTime value="2018-11-01T17:00:00"/>

@@ -14,7 +14,7 @@
     </extension>
     <active value="true"/>
     <patient>
-        <reference value="Patient/eOverdracht-patient-01"/>
+        <reference value="Patient/XXX-Altenborg"/>
         <display value="E.Alterborg"/>
     </patient>
     <relationship>
