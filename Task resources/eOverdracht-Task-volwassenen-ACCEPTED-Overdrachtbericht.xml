@@ -1,9 +1,9 @@
 <Task xmlns="http://hl7.org/fhir">
-    <id value="eOverdracht-Task-volwassenen-01"/>
+    <id value="eOverdracht-Task-volwassenen-ACCEPTED-Overdrachtbericht"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-Task"/>
     </meta>
-    <status value="requested"/>
+    <status value="accepted"/>
     <intent value="order"/>
     <code>
         <coding>
@@ -14,14 +14,14 @@
     </code>
     <for>
         <reference value="Patient\eOverdracht-Patient-01"/>
-        <display value="Erik Altenborg"/>
+        <display value="Erik ALtenborg"/>
     </for>
-   <requester>
-    <agent>
-        <reference value="Practitioner\eOverdracht-Practitioner-01"/>
-        <display value="Charlotte Bruinsma"/>
-    </agent>
-   </requester>
+    <requester>
+        <agent>
+            <reference value="Practitioner\eOverdracht-Practitioner-01"/>
+            <display value="Charlotte Bruinsma"/>
+        </agent>
+    </requester>
     <input>
         <type>
             <coding>
@@ -32,7 +32,7 @@
         </type>
         <valuereference>
             <reference value="Composition\eOverdracht-aanmeldbericht-volwassenen-01"/>
-            <display value="Aanmeldbericht Erik Altenborg"/>
+            <display value="Aanmeldbericht"/>
         </valuereference>
     </input>
     <input>

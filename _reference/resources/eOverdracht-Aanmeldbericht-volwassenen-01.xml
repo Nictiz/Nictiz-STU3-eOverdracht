@@ -1,35 +1,35 @@
 <?xml-model href="http://hl7.org/fhir/STU3/composition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><Composition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/fhir-all.xsd">
-    <id value="eOverdracht-aanmeldbericht-child-0-1-year-01"/>
+    <id value="eOverdracht-aanmeldbericht-volwassenen-01"/>
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-aanmeldbericht"/>
     </meta>
     <status value="final"/>
     <type>
         <coding>
-            <system value="http://snomed.info/sct"/>
-            <code value="371535009"/>
-            <display value="verslag van overdracht"/>
+            <system value="http://loinc.org"/>
+            <code value="57830-2"/>
+            <display value="opnameverzoek"/>
         </coding>
     </type>
     <subject>
-        <reference value="Patient/eOverdracht-Patient-02"/>
-        <display value="Felix Sauter"/>
+        <reference value="Patient/eOverdracht-Patient-01"/>
+        <display value="Erik Altenborg"/>
     </subject>
     <date value="${DATE, T, D, -0}"/>
     <author>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
             <valueReference>
-                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-04"/>
+                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-01"/>
                 <display value="Verpleegkundige, niet nader gespecificeerd"/>
             </valueReference>
         </extension>
-        <reference value="Practitioner/eOverdracht-nl-core-practitioner-04"/>
-        <display value="Sophie Hobbema"/>
+        <reference value="Practitioner/eOverdracht-nl-core-practitioner-01"/>
+        <display value="Charlotte Bruinsma"/>
     </author>
-    <title value="Aanmeldbericht"/>
+    <title value="Aanmeldbericht Volwassenen"/>
     <section>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate">
-            <valueDateTime value="2018-02-27"/>
+            <valueDateTime value="2018-01-21"/>
         </extension>
         <title value="Administrative data"/>
         <code>
@@ -49,12 +49,12 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Coverage/eOverdracht-payer-02"/>
+                <reference value="Coverage/eOverdracht-payer-01"/>
                 <display value="Basisverzekerd Trias"/>
             </entry>
             <entry>
-                <reference value="RelatedPerson/eOverdracht-contactperson-03"/>
-                <display value="Tobias Sauter"/>
+                <reference value="RelatedPerson/eOverdracht-contactperson-01"/>
+                <display value="Johanna Bakker"/>
             </entry>
         </section>
         <section>
@@ -67,15 +67,15 @@
             </coding>
             </code>
             <entry>
-                <reference value="Organization/eOverdracht-nl-core-organization-04"/>
+                <reference value="Organization/eOverdracht-nl-core-organization-02"/>
                 <display value="AB-zkh"/>
             </entry>
             <entry>
-                <reference value="Practitioner/eOverdracht-nl-core-practitioner-04"/>
-                <display value="Sophie Hobbema"/>
+                <reference value="Practitioner/eOverdracht-nl-core-practitioner-01"/>
+                <display value="Charlotte Bruinsma"/>
             </entry>
             <entry>
-                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-04"/>
+                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-01"/>
                 <display value="Verpleegkundige, niet nader gespecificeerd"/>
             </entry>
         </section>
@@ -93,16 +93,16 @@
                 <display value="ThuiszorgOrg"/>
             </entry>
             <entry>
-                <reference value="Practitioner/eOverdracht-nl-core-practitioner-05"/>
-                <display value="Pieter van Dijk"/>
+                <reference value="Practitioner/eOverdracht-nl-core-practitioner-02"/>
+                <display value="Mark van Laren"/>
             </entry>
             <entry>
-                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-05"/>
+                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-02"/>
                 <display value="Verpleegkundige, niet nader gespecificeerd"/>
             </entry>
         </section>
     </section>
-    <!-- Medical Context-->
+    <!-- Medical Context -->
     <section>
         <title value="Medical context"/>
         <code>
@@ -122,8 +122,12 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Condition\eOverdracht-problem-12"/>
-                <display value="congenitale natrium diarree"/>
+                <reference value="Condition/eOverdracht-problem-01"/>
+                <display value="ischemisch cerebrovasculair accident"/>
+            </entry>
+            <entry>
+                <reference value="Condition/eOverdracht-problem-02"/>
+                <display value="neoplasma van colon"/>
             </entry>
         </section>
         <section>
@@ -136,8 +140,8 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Condition\eOverdracht-problem-13"/>
-                <display value="choanale atresie"/>
+                <reference value="Condition/eOverdracht-problem-03"/>
+                <display value="diabetes mellitus"/>
             </entry>
         </section>
         <section>
@@ -150,7 +154,7 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Flag\eOverdracht-alert-02"/>
+                <reference value="Flag/eOverdracht-alert-01"/>
                 <display value="Drager MRSA"/>
             </entry>
         </section>
@@ -175,32 +179,60 @@
                     </coding>
                 </code>
             <entry>
-                <reference value="Condition\eOverdracht-problem-14"/>
-                <display value="risico op ondervoeding"/>
+                <reference value="Condition/eOverdracht-problem-04"/>
+                <display value="probleem met zich wassen en afdrogen"/>
             </entry>
                 <entry>
-                    <reference value="Condition\eOverdracht-problem-15"/>
-                    <display value="probleem met het beheer van eigen medicatie"/>
+                    <reference value="Condition/eOverdracht-problem-05"/>
+                    <display value="probleem met zichzelf kleden"/>
                 </entry>
                 <entry>
-                    <reference value="Condition\eOverdracht-problem-16"/>
-                    <display value="overbelaste mantelzorg"/>
+                    <reference value="Condition/eOverdracht-problem-07"/>
+                    <display value="probleem met lopen"/>
+                </entry>
+                <entry>
+                    <reference value="Condition/eOverdracht-problem-08"/>
+                    <display value="afasie"/>
+                </entry>
+                <entry>
+                    <reference value="Condition/eOverdracht-problem-09"/>
+                    <display value="Decubitus"/>
+                </entry>
+                <entry>
+                    <reference value="Condition/eOverdracht-problem-10"/>
+                    <display value="Overbelaste mantelzorg"/>
                 </entry>
             <entry>
-                <reference value="Procedure\eOverdracht-NursingIntervention-06"/>
-                <display value="toediening van sondevoeding"/>
+                <reference value="Procedure/eOverdracht-NursingIntervention-01"/>
+                <display value="ondersteunen bij wassen en afdrogen"/>
             </entry>
                 <entry>
-                    <reference value="Procedure\eOverdracht-NursingIntervention-07"/>
-                    <display value="intraveneus toedienen van medicatie"/>
+                    <reference value="Procedure/eOverdracht-NursingIntervention-02"/>
+                    <display value="ondersteunen bij aankleden"/>
                 </entry>
                 <entry>
-                    <reference value="Goal\eOverdracht-TreatmentObjective-06"/>
-                    <display value="groei comform groeicurve"/>
+                    <reference value="Procedure/eOverdracht-NursingIntervention-03"/>
+                    <display value="patiënt mobiliseren"/>
                 </entry>
                 <entry>
-                    <reference value="Goal\eOverdracht-TreatmentObjective-07"/>
-                    <display value="veilige medicatietoediening"/>
+                    <reference value="Procedure/eOverdracht-NursingIntervention-04"/>
+                    <display value="aanleggen verband op wond"/>
+                </entry>
+                <entry>
+                    <reference value="Goal/eOverdracht-TreatmentObjective-01"/>
+                    <display value="wassen onafhankelijk"/>
+                </entry>
+                <entry>
+                    <reference value="Goal/eOverdracht-TreatmentObjective-02"/>
+                    <display value="kleden onafhankelijk"/>
+                </entry>
+                <entry>
+                    <reference value="Goal/eOverdracht-TreatmentObjective-03"/>
+                    <display value="lopen met hulp"/>
+                </entry>
+                <entry>
+                    <reference value="Goal/eOverdracht-TreatmentObjective-04"/>
+                    <display value="decubitus wond genezen"/>
                 </entry>
             </section>
             <section>
@@ -213,8 +245,12 @@
                     </coding>
                 </code>
                 <entry>
-                    <reference value="ProcedureRequest\eOverdracht-procedurerequest-03"/>
-                    <display value="ondersteuning voor verzorger"/>
+                    <reference value="ProcedureRequest/eOverdracht-procedurerequest-01"/>
+                    <display value="Patient mobiliseren"/>
+                </entry>
+                <entry>
+                    <reference value="ProcedureRequest/eOverdracht-procedurerequest-02"/>
+                    <display value="ondersteunen verzorger"/>
                 </entry>
             </section>
             <section>
@@ -245,24 +281,36 @@
                 </coding>
             </code>
             <entry>
-                <reference value="NutritionOrder\eOverdracht-NutritionAdvice-02"/>
-                <display value="niet per os"/>
+                <reference value="NutritionOrder/eOverdracht-NutritionAdvice-01"/>
+                <display value="suikervrij, diabetes dieet"/>
             </entry>
             <entry>
-                <reference value="Observation\eOverdracht-StrongKidsScore-01"/>
-                <display value="Slechte voedingstoestand"/>
+                <reference value="Observation/eOverdracht-SNAQScore-01"/>
+                <display value="(2) meer dan 3 kg in de laatste maand"/>
             </entry>
             <entry>
-                <reference value="Observation\eOverdracht-fluidBalance-02"/>
+                <reference value="Observation/eOverdracht-SNAQrcScore-01"/>
+                <display value="(2) : Meer dan 6 kg in de laatste 6 maanden"/>
+            </entry>
+            <entry>
+                <reference value="Observation/eOverdracht-SNAQ65-01"/>
+                <display value="(0) : Minder dan 4kg in de laatste maand"/>
+            </entry>
+            <entry>
+                <reference value="Observation/eOverdracht-MUSTScore-01"/>
+                <display value="(0) : BMI >20 kg/m2"/>
+            </entry>
+            <entry>
+                <reference value="Observation/eOverdracht-fluidBalance-01"/>
                 <display value="vochtbalans"/>
             </entry>
             <entry>
-                <reference value="DeviceUseStatement\eOverdracht-FeedingTubeSystem-02"/>
-                <display value="PEG maagsonde"/>
+                <reference value="DeviceUseStatement/eOverdracht-FeedingTubeSystem-01"/>
+                <display value="Neus-maagsonde"/>
             </entry>
             <entry>
-                <reference value="DeviceUseStatement\eOverdracht-Infusion-02"/>
-                <display value="Centraal veneuze katheter"/>
+                <reference value="DeviceUseStatement/eOverdracht-Infusion-01"/>
+                <display value="port-a-cath"/>
             </entry>
         </section>
         <section>
@@ -275,8 +323,16 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Observation\eOverdracht-BowelFunction-02"/>
-                <display value="helemaal vloeibaar"/>
+                <reference value="Observation/eOverdracht-BladderFunction-01"/>
+                <display value="Af en toe een ongelukje (max. 1 keer per 24 uur)"/>
+            </entry>
+            <entry>
+                <reference value="Observation/eOverdracht-BowelFunction-01"/>
+                <display value="Incontinent"/>
+            </entry>
+            <entry>
+                <reference value="Observation/eOverdracht-Stoma-01"/>
+                <display value="eindstandige ileostoma"/>
             </entry>
         </section>
     </section>
