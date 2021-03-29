@@ -4,7 +4,7 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice" />
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice-Explanation">
-        <valueAsString value="gericht op wat mogelijk is; zoals brood met pindakaas, pasta"/>
+        <valueString value="gericht op wat mogelijk is; zoals brood met pindakaas, pasta"/>
     </extension>
     <patient>
         <reference value="Patient/XXX-Buckle"/>

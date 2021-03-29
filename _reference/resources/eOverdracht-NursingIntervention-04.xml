@@ -32,7 +32,7 @@
         <display value="Erik Altenborg"/>
     </subject>
     <reasonReference>
-        <reference value="Problem/eOverdracht-problem-09"/>
+        <reference value="Condition/eOverdracht-problem-09"/>
         <display value="decubitus"/>
     </reasonReference>
 </Procedure>

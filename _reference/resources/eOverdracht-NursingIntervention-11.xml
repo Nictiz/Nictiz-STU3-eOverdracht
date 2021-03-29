@@ -38,7 +38,7 @@
         </actor>
     </performer>
     <reasonReference>
-        <reference value="Problem/eOverdracht-problem-21"/>
+        <reference value="Condition/eOverdracht-problem-21"/>
         <display value="ondergewicht"/>
     </reasonReference>
     <note>

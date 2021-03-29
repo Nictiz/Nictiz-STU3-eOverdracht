@@ -4,7 +4,7 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice" />
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice-Explanation">
-        <valueAsString value="sondevoeding"/>
+        <valueString value="sondevoeding"/>
     </extension>
     <patient>
         <reference value="Patient/XXX-Altenborg" />

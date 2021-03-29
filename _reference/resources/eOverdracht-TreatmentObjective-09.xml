@@ -11,9 +11,9 @@
         <reference value="Patient/XXX-Buckle"/>
         <display value="Adam Buckle"/>
     </subject>
-    <adresses>
-        <reference value="Problem/eOverdracht-problem-20"/>
+    <addresses>
+        <reference value="Condition/eOverdracht-problem-20"/>
         <display value="probleem met eetgedrag"/>
-    </adresses>
+    </addresses>
 </Goal>
 

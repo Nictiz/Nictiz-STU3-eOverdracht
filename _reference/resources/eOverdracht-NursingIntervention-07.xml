@@ -46,7 +46,7 @@
         </actor>
     </performer>
     <reasonReference>
-        <reference value="Problem/eOverdracht-problem-15"/>
+        <reference value="Condition/eOverdracht-problem-15"/>
         <display value="probleem met het beheer van eigen medicatie"/>
     </reasonReference>
     <usedReference>

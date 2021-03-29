@@ -4,7 +4,7 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice" />
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice-Explanation">
-        <valueAsString value="eet naar eigen keuze minder vlees"/>
+        <valueString value="eet naar eigen keuze minder vlees"/>
     </extension>
     <patient>
         <reference value="Patient/XXX-Altenborg" />

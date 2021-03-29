@@ -31,7 +31,7 @@
         </actor>
     </performer>
     <reasonReference>
-        <reference value="Problem/eOverdracht-problem-16"/>
+        <reference value="Condition/eOverdracht-problem-16"/>
         <display value="overbelaste mantelzorg"/>
     </reasonReference>
 </Procedure>

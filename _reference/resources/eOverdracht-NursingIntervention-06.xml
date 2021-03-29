@@ -38,7 +38,7 @@
         <display value="Felix Sauter"/>
     </subject>
     <reasonReference>
-        <reference value="Problem/eOverdracht-problem-03"/>
+        <reference value="Condition/eOverdracht-problem-03"/>
         <display value="Risico op ondervoeding"/>
     </reasonReference>
 </Procedure>

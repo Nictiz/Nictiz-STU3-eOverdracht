@@ -38,7 +38,7 @@
         <display value="Erik Altenborg"/>
     </subject>
     <reasonReference>
-        <reference value="Problem/eOverdracht-problem-03"/>
+        <reference value="Condition/eOverdracht-problem-03"/>
         <display value="diabetus militus"/>
     </reasonReference>
 </Procedure>
