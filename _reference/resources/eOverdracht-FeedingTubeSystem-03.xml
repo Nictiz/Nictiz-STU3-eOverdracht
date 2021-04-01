@@ -25,7 +25,7 @@
             </period>
         </whenUsed>
     <device>
-        <valuereference value="eOverdracht-FeedingTubeSystemProduct-03"/>
+        <reference value="eOverdracht-FeedingTubeSystemProduct-03"/>
         <display value="Neus-maagsonde"/>
     </device>
         <indication>

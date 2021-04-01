@@ -35,7 +35,7 @@
         <display value="Felix Sauter"/>
     </subject>
     <device>
-        <valuereference value="Device/eOverdracht-InfusionProduct-02"/>
+        <reference value="Device/eOverdracht-InfusionProduct-02"/>
         <display value="Centraal veneuze katheter"/>
     </device>
     <indication>

@@ -18,7 +18,7 @@
         <display value="Felix Sauter"/>
     </subject>
     <device>
-        <valuereference value="Device/eOverdracht-FeedingTubeSystemProduct-02"/>
+        <reference value="Device/eOverdracht-FeedingTubeSystemProduct-02"/>
         <display value="spuitenpomp"/>
     </device>
     <bodysite>
