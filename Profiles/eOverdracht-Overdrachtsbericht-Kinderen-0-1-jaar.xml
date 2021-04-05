@@ -3,7 +3,7 @@
   <id value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
   <version value="0.1" />
-  <name value="eOverdrachtOverdrachtsberichtKinderen01jaar" />
+  <name value="eOverdrachtOverdrachtsberichtKinderen0tot1jaar" />
   <title value="eOverdracht Overdrachtsbericht Kinderen 0-1 jaar" />
   <status value="draft" />
   <publisher value="Nictiz" />
