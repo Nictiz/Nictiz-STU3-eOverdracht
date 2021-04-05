@@ -135,6 +135,15 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate" />
       </type>
     </element>
+    <element id="Composition.section:administrativeData.extension:transferDate.valueDateTime:valueDateTime">
+      <path value="Composition.section.extension.valueDateTime" />
+      <sliceName value="valueDateTime" />
+      <mapping>
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-2" />
+        <comment value="Datum overplaatsing" />
+      </mapping>
+    </element>
     <element id="Composition.section:administrativeData.title">
       <path value="Composition.section.title" />
       <short value="Administrative data" />
@@ -739,6 +748,30 @@
       </mapping>
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.section">
+      <path value="Composition.section.section.section" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons">
+      <path value="Composition.section.section" />
+      <sliceName value="needsOfPatientAndOrRelatedPersons" />
+    </element>
+    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.text">
+      <path value="Composition.section.section.text" />
+      <mapping>
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-643" />
+        <comment value="Wensen en behoeften patiënt en/of naasten" />
+      </mapping>
+    </element>
+    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.text.status">
+      <path value="Composition.section.section.text.status" />
+      <fixedCode value="additional" />
+    </element>
+    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.entry">
+      <path value="Composition.section.section.entry" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.section">
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>
