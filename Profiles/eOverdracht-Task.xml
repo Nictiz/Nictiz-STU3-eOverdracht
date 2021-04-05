@@ -155,7 +155,7 @@
       <path value="Task.owner" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-organization" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
       </type>
       <mapping>
         <identity value="eOverdracht-sturen-aanmeldbericht" />
