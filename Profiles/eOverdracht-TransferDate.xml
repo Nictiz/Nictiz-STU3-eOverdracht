@@ -3,7 +3,7 @@
   <id value="eOverdracht-TransferDate" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate" />
   <version value="0.1" />
-  <name value="eOverdracht TransferDate" />
+  <name value="eOverdrachtTransferDate" />
   <title value="eOverdracht TransferDate" />
   <status value="draft" />
   <publisher value="Nictiz" />
@@ -19,6 +19,11 @@
   <purpose value="The date is the date for the transfer of care. In the Aanmeldbericht this is the planned date, which can be different in the actual transfer document." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="eOverdracht-sturen-aanmeldbericht" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.63" />
+    <name value="eOverdracht 4.0 transaction &quot;Sturen aanmeldbericht&quot;" />
+  </mapping>
   <kind value="complex-type" />
   <abstract value="false" />
   <contextType value="resource" />
@@ -37,6 +42,11 @@
       <type>
         <code value="dateTime" />
       </type>
+      <mapping>
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-2" />
+        <comment value="Datum overplaatsing" />
+      </mapping>
     </element>
   </differential>
 </StructureDefinition>

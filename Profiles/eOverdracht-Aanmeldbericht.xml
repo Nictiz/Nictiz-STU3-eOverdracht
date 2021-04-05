@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="eOverdrachtAanmeldbericht" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-aanmeldbericht" />
+  <id value="eOverdracht-Aanmeldbericht" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-Aanmeldbericht" />
   <version value="0.2" />
-  <name value="eOverdracht Aanmeldbericht" />
+  <name value="eOverdrachtAanmeldbericht" />
   <title value="eOverdracht Aanmeldbericht" />
   <status value="draft" />
   <publisher value="Nictiz" />
@@ -30,10 +30,9 @@
     <name value="HCIM BasicElements-v1.0(2017EN)" />
   </mapping>
   <mapping>
-    <identity value="eOverdracht-Aanmeldbericht" />
-    <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.12" />
-    <name value="eOverdracht Transaction 12: send Aanmeldbericht" />
-    <comment value="Source language is in Dutch." />
+    <identity value="eOverdracht-sturen-aanmeldbericht" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.63" />
+    <name value="eOverdracht 4.0 transaction &quot;Sturen aanmeldbericht&quot;" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -67,9 +66,9 @@
         <comment value="Patient" />
       </mapping>
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-39" />
-        <comment value="Persoonsgegevens:Patient" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-4" />
+        <comment value="Patient" />
       </mapping>
     </element>
     <element id="Composition.author">
@@ -91,9 +90,6 @@
       <fixedString value="Aanmeldbericht" />
     </element>
     <element id="Composition.section">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <slicing>
         <discriminator>
@@ -105,9 +101,6 @@
       <min value="1" />
     </element>
     <element id="Composition.section:administrativeData">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="administrativeData" />
       <short value="Administrative data" />
@@ -115,8 +108,8 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-1" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-1" />
         <comment value="Administratieve gegevens" />
       </mapping>
     </element>
@@ -141,11 +134,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate" />
       </type>
-      <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-767" />
-        <comment value="Datum overplaatsing" />
-      </mapping>
     </element>
     <element id="Composition.section:administrativeData.title">
       <path value="Composition.section.title" />
@@ -173,9 +161,6 @@
       <fixedCode value="405624007" />
     </element>
     <element id="Composition.section:administrativeData.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.code.coding.display" />
       <defaultValueString value="Administrative documentation (record artifact)" />
     </element>
@@ -201,8 +186,8 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-6" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-3" />
         <comment value="Persoonsgegevens" />
       </mapping>
     </element>
@@ -232,9 +217,6 @@
       <fixedCode value="302147001" />
     </element>
     <element id="Composition.section:administrativeData.section:personalData.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Demographic history detail (observable entity)" />
     </element>
@@ -259,9 +241,9 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer" />
       </type>
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-52" />
-        <comment value="Persoonsgegevens:Betaler" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-45" />
+        <comment value="Betaler" />
       </mapping>
     </element>
     <element id="Composition.section:administrativeData.section:personalData.entry:contactPerson">
@@ -272,9 +254,9 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
       </type>
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-71" />
-        <comment value="Persoonsgevens:Contactpersoon" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-64" />
+        <comment value="Contactpersoon" />
       </mapping>
     </element>
     <element id="Composition.section:administrativeData.section:sendingOrganization">
@@ -285,8 +267,8 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-7" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-101" />
         <comment value="Sturende organisatie" />
       </mapping>
     </element>
@@ -315,9 +297,6 @@
       <fixedCode value="185362004" />
     </element>
     <element id="Composition.section:administrativeData.section:sendingOrganization.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Referred by nurse (finding)" />
     </element>
@@ -331,73 +310,12 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
       </type>
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-80" />
-        <comment value="Zorgaanbieder" />
-      </mapping>
-    </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization">
-      <path value="Composition.section.section" />
-      <sliceName value="receivingOrganization" />
-      <short value="Receiving organization" />
-      <definition value="Subsection listing data about the receiving organization." />
-      <min value="1" />
-      <max value="1" />
-      <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-8" />
-        <comment value="Ontvangende organisatie" />
-      </mapping>
-    </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization.title">
-      <path value="Composition.section.section.title" />
-      <short value="Receiving organization" />
-      <defaultValueString value="Receiving organization" />
-    </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization.code">
-      <path value="Composition.section.section.code" />
-      <min value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization.code.coding.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization.code.coding.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="275645009" />
-    </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Nurse: referred to (finding)" />
-    </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization.entry">
-      <path value="Composition.section.section.entry" />
-      <short value="A reference to data about the receiving organization" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
-      </type>
-      <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-102" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-102" />
         <comment value="Zorgaanbieder" />
       </mapping>
     </element>
     <element id="Composition.section:medicalContext">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="medicalContext" />
       <short value="Medical context" />
@@ -405,8 +323,8 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-3" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-326" />
         <comment value="Medische context" />
       </mapping>
     </element>
@@ -435,9 +353,6 @@
       <fixedCode value="371524004" />
     </element>
     <element id="Composition.section:medicalContext.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.code.coding.display" />
       <defaultValueString value="Clinical report (record artifact)" />
     </element>
@@ -459,8 +374,8 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-15" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-350" />
         <comment value="Medische diagnose" />
       </mapping>
     </element>
@@ -489,9 +404,6 @@
       <fixedCode value="52870002" />
     </element>
     <element id="Composition.section:medicalContext.section:medicalDiagnosis.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Referral diagnosis (qualifier value)" />
     </element>
@@ -504,8 +416,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
       </type>
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-192" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-351" />
         <comment value="Probleem" />
       </mapping>
     </element>
@@ -516,8 +428,8 @@
       <definition value="Subsection listing relevant medical history." />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-16" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-361" />
         <comment value="Voorgeschiedenis" />
       </mapping>
     </element>
@@ -546,9 +458,6 @@
       <fixedCode value="417662000" />
     </element>
     <element id="Composition.section:medicalContext.section:medicalHistory.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="klinische bevinding in voorgeschiedenis (situatie)" />
     </element>
@@ -561,8 +470,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
       </type>
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-200" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-362" />
         <comment value="Probleem" />
       </mapping>
     </element>
@@ -573,8 +482,8 @@
       <definition value="Subsection listing relevant alerts." />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-18" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-388" />
         <comment value="Let op" />
       </mapping>
     </element>
@@ -603,9 +512,6 @@
       <fixedCode value="308813009" />
     </element>
     <element id="Composition.section:medicalContext.section:payAttention.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Notification status (finding)" />
     </element>
@@ -618,8 +524,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Alert" />
       </type>
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-223" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-389" />
         <comment value="Alert" />
       </mapping>
     </element>
@@ -630,8 +536,8 @@
       <definition value="Subsection listing relevant freedom restricting measures." />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-19" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-395" />
         <comment value="Vrijheidsbeperking" />
       </mapping>
     </element>
@@ -659,39 +565,32 @@
       <fixedCode value="225317005" />
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="beperking van bewegingsvrijheid (regime/therapie)" />
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.entry">
       <path value="Composition.section.section.entry" />
-      <short value="A reference to data concerning freedom restricting measures" />
+      <short value="A reference to data concerning freedom restricting interventions" />
       <min value="1" />
-      <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FreedomRestrictingMeasures" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FreedomRestrictingIntervention" />
       </type>
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-229" />
-        <comment value="VrijheidsbeperkendeMaatregelen" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-1130" />
+        <comment value="VrijheidsbeperkendeInterventie" />
       </mapping>
     </element>
     <element id="Composition.section:carePlan">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="carePlan" />
       <short value="Care Plan" />
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-volwassenen" />
-        <map value="e-overdracht-dataelement-v3-4" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-1130" />
         <comment value="Verpleegkundige context: zorgplan" />
       </mapping>
     </element>
@@ -719,9 +618,6 @@
       <fixedCode value="773130005" />
     </element>
     <element id="Composition.section:carePlan.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.code.coding.display" />
       <defaultValueString value="Nursing care plan (record artifact)" />
     </element>
@@ -740,6 +636,28 @@
       </slicing>
       <min value="1" />
     </element>
+    <element id="Composition.section:carePlan.section:carePlanUnstructured">
+      <path value="Composition.section.section" />
+      <sliceName value="carePlanUnstructured" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-1162" />
+        <comment value="Verpleegkundig zorgplan ongestructureerd" />
+      </mapping>
+    </element>
+    <element id="Composition.section:carePlan.section:carePlanUnstructured.text">
+      <path value="Composition.section.section.text" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:carePlan.section:carePlanUnstructured.text.status">
+      <path value="Composition.section.section.text.status" />
+      <fixedCode value="additional" />
+    </element>
+    <element id="Composition.section:carePlan.section:carePlanUnstructured.entry">
+      <path value="Composition.section.section.entry" />
+      <max value="0" />
+    </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems">
       <path value="Composition.section.section" />
       <sliceName value="currentPatientProblems" />
@@ -747,8 +665,8 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-volwassenen" />
-        <map value="e-overdracht-dataelement-v3-22" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-530" />
         <comment value="Actuele patiëntproblemen" />
       </mapping>
     </element>
@@ -776,9 +694,6 @@
       <fixedCode value="86644006" />
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Nursing care plan (record artifact)" />
     </element>
@@ -803,8 +718,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-volwassenen" />
-        <map value="e-overdracht-dataelement-v3-360" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-532" />
         <comment value="Probleem" />
       </mapping>
     </element>
@@ -818,149 +733,24 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-NursingIntervention" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-volwassenen" />
-        <map value="e-overdracht-dataelement-v3-376" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-542" />
         <comment value="VerpleegkundigeInterventie" />
-      </mapping>
-    </element>
-    <element id="Composition.section:carePlan.section:currentPatientProblems.entry:treatmentObjective">
-      <path value="Composition.section.section.entry" />
-      <sliceName value="treatmentObjective" />
-      <short value="Treatment Objective" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentObjective" />
-      </type>
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-volwassenen" />
-        <map value="e-overdracht-dataelement-v3-1100" />
-        <comment value="Behandeldoel" />
       </mapping>
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.section">
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>
-    <element id="Composition.section:carePlan.section:patientAppointments">
-      <path value="Composition.section.section" />
-      <sliceName value="patientAppointments" />
-      <short value="Patient Appointments" />
-      <max value="1" />
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-volwassenen" />
-        <map value="e-overdracht-dataelement-v3-26" />
-        <comment value="Afspraken patient" />
-      </mapping>
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.title">
-      <path value="Composition.section.section.title" />
-      <defaultValueString value="Patient appointments" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.code">
-      <path value="Composition.section.section.code" />
-      <min value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.code.coding.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.code.coding.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="305058001" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Patient encounter status (finding)" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.entry">
-      <path value="Composition.section.section.entry" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-ProcedureRequest" />
-      </type>
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-volwassenen" />
-        <map value="e-overdracht-dataelement-v3-409" />
-        <comment value="GeplandeZorgActiviteit" />
-      </mapping>
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.section">
-      <path value="Composition.section.section.section" />
-      <max value="0" />
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-volwassenen" />
-        <map value="e-overdracht-dataelement-v3-409" />
-        <comment value="GeplandeZorgActiviteit" />
-      </mapping>
-    </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences">
-      <path value="Composition.section.section" />
-      <sliceName value="patientsNeedsAndPreferences" />
-      <short value="patients Needs And And Preferences" />
-      <comment value="Nictiz terminology centre hasn't found a proper code for Needs and Preferences, to differentiate on this matter, we use title instead." />
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-volwassenen" />
-        <map value="e-overdracht-dataelement-v3-27" />
-        <comment value="Wensen en behoeften en/of naasten" />
-      </mapping>
-    </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences.title">
-      <path value="Composition.section.section.title" />
-      <short value="Patient's needs and preferences" />
-      <defaultValueString value="Patient's needs and preferences" />
-      <fixedString value="Patient's needs and preferences" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences.code.coding.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences.code.coding.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences.text">
-      <path value="Composition.section.section.text" />
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-volwassenen" />
-        <map value="e-overdracht-dataelement-v3-27" />
-        <comment value="Wensen en behoeften en/of naasten" />
-      </mapping>
-    </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences.entry">
-      <path value="Composition.section.section.entry" />
-      <max value="0" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences.section">
-      <path value="Composition.section.section.section" />
-      <max value="0" />
-    </element>
     <element id="Composition.section:healthState">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="healthState" />
       <short value="Nursing context - health situation" />
       <definition value="Section for specifying current health situation regarding existing medical aids that are of interest in the nursing context." />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-5" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-644" />
         <comment value="Verpleegkundige context: specificatie gezondheidstoestand" />
       </mapping>
     </element>
@@ -989,9 +779,6 @@
       <fixedCode value="5531000179105" />
     </element>
     <element id="Composition.section:healthState.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.code.coding.display" />
       <defaultValueString value="Nursing report (record artifact)" />
     </element>
@@ -1016,8 +803,9 @@
       <definition value="This subsection contains information about the patient's infusions and/or feeding tube systems." />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-30" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-787" />
+        <comment value="Voeding/vocht" />
       </mapping>
     </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid.title">
@@ -1045,9 +833,6 @@
       <fixedCode value="300893006" />
     </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="bevinding betreffende nutritie (bevinding)" />
     </element>
@@ -1070,8 +855,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FeedingTubeSystem" />
       </type>
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-537" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-846" />
         <comment value="SondeSysteem" />
       </mapping>
     </element>
@@ -1084,8 +869,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Infusion" />
       </type>
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-560" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-883" />
         <comment value="Infuus" />
       </mapping>
     </element>
@@ -1100,8 +885,8 @@
       <definition value="This subsection contains information about the patient's stomata." />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-31" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-937" />
         <comment value="Uitscheiding" />
       </mapping>
     </element>
@@ -1130,9 +915,6 @@
       <fixedCode value="106019003" />
     </element>
     <element id="Composition.section:healthState.section:excretion.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="bevinding betreffende uitscheidingspatroon (bevinding)" />
     </element>
@@ -1144,8 +926,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Stoma" />
       </type>
       <mapping>
-        <identity value="eOverdracht-Aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v3-622" />
+        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <map value="e-overdracht-dataelement-v4-985" />
         <comment value="Stoma" />
       </mapping>
     </element>
