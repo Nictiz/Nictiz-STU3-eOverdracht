@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
   <version value="0.1" />
-  <name value="eOverdracht Overdrachtsbericht Kinderen 0-1 jaar" />
+  <name value="eOverdrachtOverdrachtsberichtKinderen01jaar" />
   <title value="eOverdracht Overdrachtsbericht Kinderen 0-1 jaar" />
   <status value="draft" />
   <publisher value="Nictiz" />
@@ -20,6 +20,11 @@
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
+    <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.51" />
+    <name value="Overdrachtsbericht kinderen 0-1 jaar" />
+  </mapping>
+  <mapping>
     <identity value="hcim-patient-v3.1-2017EN" />
     <uri value="https://zibs.nl/wiki/Patient-v3.1(2017EN)" />
     <name value="HCIM Patient-v3.1(2017EN)" />
@@ -28,12 +33,6 @@
     <identity value="hcim-basicelements-v1.0-2017EN" />
     <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
     <name value="HCIM BasicElements-v1.0(2017EN)" />
-  </mapping>
-  <mapping>
-    <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-    <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.8" />
-    <name value="Overdrachtsbericht kinderen 0-1 jaar" />
-    <comment value="Source language is in Dutch." />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -71,8 +70,8 @@
         <comment value="Patient" />
       </mapping>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-39" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-4" />
         <comment value="Persoonsgegevens:Patient" />
       </mapping>
     </element>
@@ -80,24 +79,12 @@
       <path value="Composition.author" />
       <short value="Who or what initiated the Overdrachtsbericht" />
       <definition value="The person that initiated the sending of the Overdrachtsbericht. Alternatively, this may be the sending XIS." />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-      </type>
-      <mapping>
-        <identity value="hcim-basicelements-v1.0-2017EN" />
-        <map value="NL-CM:0.0.9" />
-        <comment value="HealthProfessionalAsAuthor::HealthProfessional" />
-      </mapping>
     </element>
     <element id="Composition.title">
       <path value="Composition.title" />
       <fixedString value="Overdrachtsbericht Volwassenen" />
     </element>
     <element id="Composition.section">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <slicing>
         <discriminator>
@@ -109,9 +96,6 @@
       <min value="1" />
     </element>
     <element id="Composition.section:administrativeData">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="administrativeData" />
       <short value="Administrative data" />
@@ -119,8 +103,8 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-1" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-1" />
         <comment value="Administratieve gegevens" />
       </mapping>
     </element>
@@ -145,9 +129,13 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate" />
       </type>
+    </element>
+    <element id="Composition.section:administrativeData.extension:transferDate.valueDateTime:valueDateTime">
+      <path value="Composition.section.extension.valueDateTime" />
+      <sliceName value="valueDateTime" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-767" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-2" />
         <comment value="Datum overplaatsing" />
       </mapping>
     </element>
@@ -177,9 +165,6 @@
       <fixedCode value="405624007" />
     </element>
     <element id="Composition.section:administrativeData.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.code.coding.display" />
       <defaultValueString value="Administrative documentation (record artifact)" />
     </element>
@@ -205,8 +190,8 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-6" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-3" />
         <comment value="Persoonsgegevens" />
       </mapping>
     </element>
@@ -236,9 +221,6 @@
       <fixedCode value="302147001" />
     </element>
     <element id="Composition.section:administrativeData.section:personalData.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Demographic history detail (observable entity)" />
     </element>
@@ -262,8 +244,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-52" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-45" />
         <comment value="Betaler" />
       </mapping>
     </element>
@@ -277,8 +259,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/nl-core-relatedperson" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-71" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-64" />
         <comment value="Contactpersoon" />
       </mapping>
     </element>
@@ -290,12 +272,12 @@
       <path value="Composition.section.section" />
       <sliceName value="sendingOrganization" />
       <short value="Sending Organization" />
-      <definition value="Subsection listing data about the sending organization.[" />
+      <definition value="Subsection listing data about the sending organization." />
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-7" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-101" />
         <comment value="Sturende organisatie" />
       </mapping>
     </element>
@@ -324,9 +306,6 @@
       <fixedCode value="185362004" />
     </element>
     <element id="Composition.section:administrativeData.section:sendingOrganization.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Referred by nurse (finding)" />
     </element>
@@ -353,8 +332,8 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-80" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-102" />
         <comment value="Zorgaanbieder" />
       </mapping>
     </element>
@@ -369,8 +348,8 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-90" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-130" />
         <comment value="Sturende organisatie::Zorgverlener" />
       </mapping>
     </element>
@@ -384,8 +363,8 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-90" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-130" />
         <comment value="Sturende organisatie::Zorgverlener" />
       </mapping>
     </element>
@@ -401,8 +380,8 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-8" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-152" />
         <comment value="Ontvangende organisatie" />
       </mapping>
     </element>
@@ -431,9 +410,6 @@
       <fixedCode value="275645009" />
     </element>
     <element id="Composition.section:administrativeData.section:receivingOrganization.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Nurse: referred to (finding)" />
     </element>
@@ -459,8 +435,8 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-102" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-153" />
         <comment value="Ontvangende organisatie::Zorgaanbieder" />
       </mapping>
     </element>
@@ -475,8 +451,8 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-112" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-181" />
         <comment value="Ontvangende organisatie::Zorgverlener" />
       </mapping>
     </element>
@@ -490,8 +466,8 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-112" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-181" />
         <comment value="Ontvangende organisatie::Zorgverlener" />
       </mapping>
     </element>
@@ -500,17 +476,14 @@
       <max value="0" />
     </element>
     <element id="Composition.section:generalPatientContext">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="generalPatientContext" />
       <short value="General Patient Context" />
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-2" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-203" />
         <comment value="Algemene patiënten context" />
       </mapping>
     </element>
@@ -539,9 +512,6 @@
       <fixedCode value="109481000146101" />
     </element>
     <element id="Composition.section:generalPatientContext.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.code.coding.display" />
       <defaultValueString value="Personal and social history section (record artifact)" />
     </element>
@@ -565,8 +535,8 @@
       <short value="Family Situation" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-9" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-204" />
         <comment value="Gezinssituatie" />
       </mapping>
     </element>
@@ -595,9 +565,6 @@
       <fixedCode value="365474007" />
     </element>
     <element id="Composition.section:generalPatientContext.section:familySituation.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Finding of details of family (finding)" />
     </element>
@@ -608,9 +575,9 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FamilySituationChild" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-768" />
-        <comment value="Gezinssituatie::GezinssituatieKind" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-217" />
+        <comment value="GezinssituatieKind" />
       </mapping>
     </element>
     <element id="Composition.section:generalPatientContext.section:familySituation.section">
@@ -623,8 +590,8 @@
       <short value="Living Situation" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-10" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-267" />
         <comment value="Woonomgeving" />
       </mapping>
     </element>
@@ -653,9 +620,6 @@
       <fixedCode value="365512000" />
     </element>
     <element id="Composition.section:generalPatientContext.section:livingSituation.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Finding of characteristics of home environment (finding)" />
     </element>
@@ -667,8 +631,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LivingSituation" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-143" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-268" />
         <comment value="Woonomgeving::Woonsituatie" />
       </mapping>
     </element>
@@ -682,8 +646,8 @@
       <short value="Life Stance" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-11" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-271" />
         <comment value="Levensovertuiging" />
       </mapping>
     </element>
@@ -712,9 +676,6 @@
       <fixedCode value="108329005" />
     </element>
     <element id="Composition.section:generalPatientContext.section:lifeStance.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Social context finding (finding)" />
     </element>
@@ -739,8 +700,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-148" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-274" />
         <comment value="Levensovertuiging::Wilsverklaring" />
       </mapping>
     </element>
@@ -754,8 +715,8 @@
       <short value="Social Environment" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-12" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-283" />
         <comment value="Sociale omgeving" />
       </mapping>
     </element>
@@ -784,9 +745,6 @@
       <fixedCode value="365448001" />
     </element>
     <element id="Composition.section:generalPatientContext.section:socialEnvironment.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Social and personal history finding (finding)" />
     </element>
@@ -809,9 +767,9 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HelpFromOthers" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-157" />
-        <comment value="Levensovertuiging::Hulp van anderen" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-289" />
+        <comment value="Hulp van anderen" />
       </mapping>
     </element>
     <element id="Composition.section:generalPatientContext.section:socialEnvironment.section">
@@ -819,17 +777,14 @@
       <max value="0" />
     </element>
     <element id="Composition.section:medicalContext">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="medicalContext" />
       <short value="Medical Context" />
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-3" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-326" />
         <comment value="Medische context" />
       </mapping>
     </element>
@@ -858,9 +813,6 @@
       <fixedCode value="371524004" />
     </element>
     <element id="Composition.section:medicalContext.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.code.coding.display" />
       <defaultValueString value="Clinical report (record artifact)" />
     </element>
@@ -886,8 +838,8 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-14" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-327" />
         <comment value="Behandelaar" />
       </mapping>
     </element>
@@ -916,9 +868,6 @@
       <fixedCode value="405623001" />
     </element>
     <element id="Composition.section:medicalContext.section:practitioner.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Assigned practitioner (occupation)" />
     </element>
@@ -932,11 +881,6 @@
         <rules value="open" />
       </slicing>
       <min value="2" />
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-14" />
-        <comment value="Medische context::Behandelaar" />
-      </mapping>
     </element>
     <element id="Composition.section:medicalContext.section:practitioner.entry:practitioner">
       <path value="Composition.section.section.entry" />
@@ -947,6 +891,11 @@
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
+      <mapping>
+        <identity value="eOverdracht-sturen-overdrachtsbericht-volwassenen" />
+        <map value="e-overdracht-dataelement-v4-328" />
+        <comment value="Behandelaar" />
+      </mapping>
     </element>
     <element id="Composition.section:medicalContext.section:practitioner.entry:practitionerRole">
       <path value="Composition.section.section.entry" />
@@ -957,6 +906,11 @@
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerRole" />
       </type>
+      <mapping>
+        <identity value="eOverdracht-sturen-overdrachtsbericht-volwassenen" />
+        <map value="e-overdracht-dataelement-v4-328" />
+        <comment value="Behandelaar" />
+      </mapping>
     </element>
     <element id="Composition.section:medicalContext.section:practitioner.section">
       <path value="Composition.section.section.section" />
@@ -969,8 +923,8 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-15" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-328" />
         <comment value="Medische Diagnose" />
       </mapping>
     </element>
@@ -999,9 +953,6 @@
       <fixedCode value="52870002" />
     </element>
     <element id="Composition.section:medicalContext.section:medicalDiagnosis.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Referral diagnosis (qualifier value)" />
     </element>
@@ -1013,8 +964,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-192" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-351" />
         <comment value="Medische Diagnose::Probleem" />
       </mapping>
     </element>
@@ -1028,8 +979,8 @@
       <short value="Medical History" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-16" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-361" />
         <comment value="Voorgeschiedenis" />
       </mapping>
     </element>
@@ -1058,9 +1009,6 @@
       <fixedCode value="417662000" />
     </element>
     <element id="Composition.section:medicalContext.section:medicalHistory.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="klinische bevinding in voorgeschiedenis (situatie)" />
     </element>
@@ -1072,9 +1020,9 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-200" />
-        <comment value="Voorgeschiedenis::Probleem" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-362" />
+        <comment value="Probleem" />
       </mapping>
     </element>
     <element id="Composition.section:medicalContext.section:medicalHistory.section">
@@ -1087,13 +1035,14 @@
       <short value="Allergy" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-17" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-372" />
         <comment value="Allergie" />
       </mapping>
     </element>
     <element id="Composition.section:medicalContext.section:allergy.title">
       <path value="Composition.section.section.title" />
+      <short value="Allergy" />
       <defaultValueString value="Pay attention" />
     </element>
     <element id="Composition.section:medicalContext.section:allergy.code">
@@ -1116,9 +1065,6 @@
       <fixedCode value="420134006" />
     </element>
     <element id="Composition.section:medicalContext.section:allergy.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="neiging tot ongewenste reactie (bevinding)" />
     </element>
@@ -1130,8 +1076,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AllergyIntolerance" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-208" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-373" />
         <comment value="AllergieIntolerantie" />
       </mapping>
     </element>
@@ -1145,8 +1091,8 @@
       <short value="Pay Attention" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-18" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-388" />
         <comment value="Let op" />
       </mapping>
     </element>
@@ -1174,9 +1120,6 @@
       <fixedCode value="308813009" />
     </element>
     <element id="Composition.section:medicalContext.section:payAttention.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Notification status (finding)" />
     </element>
@@ -1188,8 +1131,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Alert" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-223" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-389" />
         <comment value="Alert" />
       </mapping>
     </element>
@@ -1203,8 +1146,8 @@
       <short value="Freedom Restriction" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-19" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-395" />
         <comment value="Vrijheidsbeperking" />
       </mapping>
     </element>
@@ -1232,9 +1175,6 @@
       <fixedCode value="225317005" />
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="beperking van bewegingsvrijheid (regime/therapie)" />
     </element>
@@ -1244,11 +1184,11 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FreedomRestrictingMeasures" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FreedomRestrictingIntervention" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-229" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-395" />
         <comment value="Vrijheidsbeperkende maatregelen" />
       </mapping>
     </element>
@@ -1262,8 +1202,8 @@
       <short value="Measurements" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-20" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-405" />
         <comment value="Meetwaarden" />
       </mapping>
     </element>
@@ -1291,9 +1231,6 @@
       <fixedCode value="225317005" />
     </element>
     <element id="Composition.section:medicalContext.section:measurements.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="beperking van bewegingsvrijheid (regime/therapie)" />
     </element>
@@ -1317,8 +1254,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-BloodPressure" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-238" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-406" />
         <comment value="Bloeddruk" />
       </mapping>
     </element>
@@ -1332,8 +1269,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-PulseRate" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-249" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-417" />
         <comment value="Polsfrequentie" />
       </mapping>
     </element>
@@ -1347,8 +1284,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-BodyTemperature" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-254" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-422" />
         <comment value="Lichaamstemperatuur" />
       </mapping>
     </element>
@@ -1362,8 +1299,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Respiration" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-259" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-427" />
         <comment value="Ademhaling" />
       </mapping>
     </element>
@@ -1377,8 +1314,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-BodyWeight" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-286" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-454" />
         <comment value="Lichaamsgewicht" />
       </mapping>
     </element>
@@ -1392,8 +1329,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-BodyLength" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-291" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-459" />
         <comment value="Lichaamslengte" />
       </mapping>
     </element>
@@ -1407,8 +1344,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HeadCircumference" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-296" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-464" />
         <comment value="Schedelomvang" />
       </mapping>
     </element>
@@ -1421,23 +1358,9 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-ApgarScore" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-301" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-464" />
         <comment value="ApgarScore" />
-      </mapping>
-    </element>
-    <element id="Composition.section:medicalContext.section:measurements.entry:generalMeasurement">
-      <path value="Composition.section.section.entry" />
-      <sliceName value="generalMeasurement" />
-      <short value="General Measurement" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-GeneralMeasurement" />
-      </type>
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-310" />
-        <comment value="Algemene Meting" />
       </mapping>
     </element>
     <element id="Composition.section:medicalContext.section:painScore">
@@ -1446,8 +1369,8 @@
       <short value="Pain Score" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-21" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-487" />
         <comment value="Pijnscore" />
       </mapping>
     </element>
@@ -1475,9 +1398,6 @@
       <fixedCode value="11011000146108" />
     </element>
     <element id="Composition.section:medicalContext.section:painScore.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Score list pain (record artifact)" />
     </element>
@@ -1495,16 +1415,16 @@
     <element id="Composition.section:medicalContext.section:painScore.entry:painScore">
       <path value="Composition.section.section.entry" />
       <sliceName value="painScore" />
-      <short value="Pain Score" />
+      <short value="PijnScore" />
       <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-PainScore" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-319" />
-        <comment value="Pain Score" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-469" />
+        <comment value="PijnScore" />
       </mapping>
     </element>
     <element id="Composition.section:medicalContext.section:painScore.entry:comfortScore">
@@ -1517,8 +1437,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-ComfortScore" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-326" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-495" />
         <comment value="Comfort Score" />
       </mapping>
     </element>
@@ -1532,8 +1452,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FLACCPainScale" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-337" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-506" />
         <comment value="FLACCpijnScore" />
       </mapping>
     </element>
@@ -1547,8 +1467,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-ChecklistPainBehaviour" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-346" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-515" />
         <comment value="ChecklistPijnGedrag" />
       </mapping>
     </element>
@@ -1557,17 +1477,14 @@
       <max value="0" />
     </element>
     <element id="Composition.section:carePlan">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="carePlan" />
       <short value="Care Plan" />
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-4" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-529" />
         <comment value="Verpleegkundige context: zorgplan" />
       </mapping>
     </element>
@@ -1595,9 +1512,6 @@
       <fixedCode value="773130005" />
     </element>
     <element id="Composition.section:carePlan.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.code.coding.display" />
       <defaultValueString value="Nursing care plan (record artifact)" />
     </element>
@@ -1616,15 +1530,34 @@
       </slicing>
       <min value="1" />
     </element>
+    <element id="Composition.section:carePlan.section:carePlanUnstructured">
+      <path value="Composition.section.section" />
+      <sliceName value="carePlanUnstructured" />
+      <max value="1" />
+    </element>
+    <element id="Composition.section:carePlan.section:carePlanUnstructured.text">
+      <path value="Composition.section.section.text" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:carePlan.section:carePlanUnstructured.text.status">
+      <path value="Composition.section.section.text.status" />
+      <fixedCode value="additional" />
+    </element>
+    <element id="Composition.section:carePlan.section:carePlanUnstructured.entry">
+      <path value="Composition.section.section.entry" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:carePlan.section:carePlanUnstructured.section">
+      <path value="Composition.section.section.section" />
+      <max value="0" />
+    </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems">
       <path value="Composition.section.section" />
       <sliceName value="currentPatientProblems" />
       <short value="Current Patient Problems" />
-      <min value="1" />
-      <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-22" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-530" />
         <comment value="Actuele patiëntproblemen" />
       </mapping>
     </element>
@@ -1652,9 +1585,6 @@
       <fixedCode value="86644006" />
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Nursing diagnosis (finding)" />
     </element>
@@ -1679,8 +1609,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-360" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-532" />
         <comment value="Probleem" />
       </mapping>
     </element>
@@ -1694,23 +1624,9 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-NursingIntervention" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-376" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-542" />
         <comment value="VerpleegkundigeInterventie" />
-      </mapping>
-    </element>
-    <element id="Composition.section:carePlan.section:currentPatientProblems.entry:treatmentObjective">
-      <path value="Composition.section.section.entry" />
-      <sliceName value="treatmentObjective" />
-      <short value="Treatment Objective" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-TreatmentObjective" />
-      </type>
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-1100" />
-        <comment value="Behandeldoel" />
       </mapping>
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.section">
@@ -1723,8 +1639,8 @@
       <short value="Outcome Of Care" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-25" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-586" />
         <comment value="Zorgresultaat" />
       </mapping>
     </element>
@@ -1752,9 +1668,6 @@
       <fixedCode value="722091001" />
     </element>
     <element id="Composition.section:carePlan.section:outcomeOfCare.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Conclusion interpretation document (record artifact)" />
     </element>
@@ -1766,8 +1679,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-OutcomeOfCare" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-401" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-587" />
         <comment value="UitkomstVanZorg" />
       </mapping>
     </element>
@@ -1775,125 +1688,59 @@
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>
-    <element id="Composition.section:carePlan.section:patientAppointments">
+    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons">
       <path value="Composition.section.section" />
-      <sliceName value="patientAppointments" />
-      <short value="Patient Appointments" />
-      <max value="1" />
+      <sliceName value="needsOfPatientAndOrRelatedPersons" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-26" />
-        <comment value="Afspraken patient" />
-      </mapping>
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.title">
-      <path value="Composition.section.section.title" />
-      <defaultValueString value="Patient appointments" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.code">
-      <path value="Composition.section.section.code" />
-      <min value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.code.coding.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.code.coding.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="305058001" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Patient encounter status (finding)" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.entry">
-      <path value="Composition.section.section.entry" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-ProcedureRequest" />
-      </type>
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-409" />
-        <comment value="GeplandeZorgActiviteit" />
-      </mapping>
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.section">
-      <path value="Composition.section.section.section" />
-      <max value="0" />
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-409" />
-        <comment value="GeplandeZorgActiviteit" />
-      </mapping>
-    </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences">
-      <path value="Composition.section.section" />
-      <sliceName value="patientsNeedsAndPreferences" />
-      <short value="patients Needs And And Preferences" />
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-27" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-643" />
         <comment value="Wensen en behoeften en/of naasten" />
       </mapping>
     </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences.title">
+    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.title">
       <path value="Composition.section.section.title" />
       <short value="Patient's needs and preferences" />
       <defaultValueString value="Patient's needs and preferences" />
       <fixedString value="Patient's needs and preferences" />
     </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences.code.coding">
+    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.code.coding">
       <path value="Composition.section.section.code.coding" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences.code.coding.system">
+    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.code.coding.system">
       <path value="Composition.section.section.code.coding.system" />
       <min value="1" />
     </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences.code.coding.code">
+    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.code.coding.code">
       <path value="Composition.section.section.code.coding.code" />
       <min value="1" />
     </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences.text">
+    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.text">
       <path value="Composition.section.section.text" />
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-27" />
-        <comment value="Wensen en behoeften en/of naasten" />
-      </mapping>
+      <min value="1" />
     </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences.entry">
+    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.text.status">
+      <path value="Composition.section.section.text.status" />
+      <fixedCode value="additional" />
+    </element>
+    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.entry">
       <path value="Composition.section.section.entry" />
       <max value="0" />
     </element>
-    <element id="Composition.section:carePlan.section:patientsNeedsAndPreferences.section">
+    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.section">
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>
     <element id="Composition.section:healthState">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="healthState" />
       <short value="Health State" />
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-5" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-644" />
         <comment value="Verpleegkundige context: specificatie gezondheidstoestand" />
       </mapping>
     </element>
@@ -1922,11 +1769,31 @@
       <fixedCode value="5531000179105" />
     </element>
     <element id="Composition.section:healthState.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.code.coding.display" />
       <defaultValueString value="Nursing report (record artifact)" />
+    </element>
+    <element id="Composition.section:healthState.text">
+      <path value="Composition.section.text" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="status" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:healthState.text:otherDetailsChild">
+      <path value="Composition.section.text" />
+      <sliceName value="otherDetailsChild" />
+      <mapping>
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-1128" />
+        <comment value="Overige bijzonderheden kind" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.text:otherDetailsChild.status">
+      <path value="Composition.section.text.status" />
+      <fixedCode value="additional" />
     </element>
     <element id="Composition.section:healthState.section">
       <path value="Composition.section.section" />
@@ -1944,8 +1811,8 @@
       <short value="Self Care" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-28" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-645" />
         <comment value="Zelfzorg" />
       </mapping>
     </element>
@@ -1974,11 +1841,31 @@
       <fixedCode value="365178001" />
     </element>
     <element id="Composition.section:healthState.section:selfCare.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="Finding related to ability to perform personal care activity (finding)" />
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.text">
+      <path value="Composition.section.section.text" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="status" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.text:selfCareComment">
+      <path value="Composition.section.section.text" />
+      <sliceName value="selfCareComment" />
+      <mapping>
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-762" />
+        <comment value="Toelichting zelfzorg" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.text:selfCareComment.status">
+      <path value="Composition.section.section.text.status" />
+      <fixedCode value="additional" />
     </element>
     <element id="Composition.section:healthState.section:selfCare.entry">
       <path value="Composition.section.section.entry" />
@@ -1999,51 +1886,10 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToPerformNursingActivities" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-466" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-685" />
         <comment value="VermogenTotVerpleegtechnischeHandelingen" />
       </mapping>
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section">
-      <path value="Composition.section.section.section" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="title" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section:selfCareComment">
-      <path value="Composition.section.section.section" />
-      <sliceName value="selfCareComment" />
-      <short value="Self Care Comment" />
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-1453" />
-        <comment value="Toelichting zelfzorg" />
-      </mapping>
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section:selfCareComment.title">
-      <path value="Composition.section.section.section.title" />
-      <min value="1" />
-      <fixedString value="Self care comment" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section:selfCareComment.text">
-      <path value="Composition.section.section.section.text" />
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-1453" />
-        <comment value="Toelichting zelfzorg" />
-      </mapping>
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section:selfCareComment.entry">
-      <path value="Composition.section.section.section.entry" />
-      <max value="0" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section:selfCareComment.section">
-      <path value="Composition.section.section.section.section" />
-      <max value="0" />
     </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid">
       <path value="Composition.section.section" />
@@ -2051,8 +1897,8 @@
       <short value="Nutrition or fluid" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-30" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-787" />
         <comment value="Voeding/vocht" />
       </mapping>
     </element>
@@ -2081,9 +1927,6 @@
       <fixedCode value="300893006" />
     </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="bevinding betreffende nutritie (bevinding)" />
     </element>
@@ -2107,8 +1950,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-479" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-788" />
         <comment value="Voedingsadvies" />
       </mapping>
     </element>
@@ -2121,8 +1964,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FeedingPatternInfant" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-757" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-792" />
         <comment value="VoedingspatroonZuigeling" />
       </mapping>
     </element>
@@ -2136,8 +1979,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-StrongKidsScore" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-529" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-832" />
         <comment value="StrongKidsScore" />
       </mapping>
     </element>
@@ -2151,8 +1994,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FluidBalance" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-493" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-840" />
         <comment value="Vochtbalans" />
       </mapping>
     </element>
@@ -2165,8 +2008,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FeedingTubeSystem" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-537" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-846" />
         <comment value="SondeSysteem" />
       </mapping>
     </element>
@@ -2179,8 +2022,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Infusion" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-560" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-883" />
         <comment value="Infuus" />
       </mapping>
     </element>
@@ -2189,8 +2032,8 @@
       <sliceName value="excretion" />
       <short value="Excretion" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-31" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-937" />
         <comment value="Uitscheiding" />
       </mapping>
     </element>
@@ -2219,9 +2062,6 @@
       <fixedCode value="106019003" />
     </element>
     <element id="Composition.section:healthState.section:excretion.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="bevinding betreffende uitscheidingspatroon (bevinding)" />
     </element>
@@ -2245,8 +2085,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-BladderFunction" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-589" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-938" />
         <comment value="Blaasfunctie" />
       </mapping>
     </element>
@@ -2260,8 +2100,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-BowelFunction" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-612" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-975" />
         <comment value="Darmfunctie" />
       </mapping>
     </element>
@@ -2275,8 +2115,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Stoma" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-622" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-985" />
         <comment value="Stoma" />
       </mapping>
     </element>
@@ -2290,8 +2130,8 @@
       <short value="Skin" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-32" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-993" />
         <comment value="Huid" />
       </mapping>
     </element>
@@ -2320,9 +2160,6 @@
       <fixedCode value="36456004" />
     </element>
     <element id="Composition.section:healthState.section:skin.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="bevinding betreffende huid (bevinding)" />
     </element>
@@ -2345,8 +2182,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-BurnWound" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-630" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-994" />
         <comment value="BrandWond" />
       </mapping>
     </element>
@@ -2359,8 +2196,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-PressureUlcer" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-639" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-1003" />
         <comment value="DecubitusWond" />
       </mapping>
     </element>
@@ -2373,8 +2210,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-SkinDisorder" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-650" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-1014" />
         <comment value="Huidaandoening" />
       </mapping>
     </element>
@@ -2387,8 +2224,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Wound" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-650" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-1022" />
         <comment value="Wond" />
       </mapping>
     </element>
@@ -2402,8 +2239,8 @@
       <short value="Senses" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-33" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-1053" />
         <comment value="Zintuigen" />
       </mapping>
     </element>
@@ -2429,12 +2266,9 @@
     <element id="Composition.section:healthState.section:senses.code.coding.code">
       <path value="Composition.section.section.code.coding.code" />
       <min value="1" />
-      <fixedCode value="284465006" />
+      <fixedCode value="106147001" />
     </element>
     <element id="Composition.section:healthState.section:senses.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="bevinding betreffende sensorisch zenuwstelsel (bevinding)" />
     </element>
@@ -2458,8 +2292,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HearingFunction" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-630" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-1054" />
         <comment value="FunctieHoren" />
       </mapping>
     </element>
@@ -2473,8 +2307,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-VisualFunction" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-630" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-1073" />
         <comment value="FunctieZien" />
       </mapping>
     </element>
@@ -2488,8 +2322,8 @@
       <short value="Illness Perception" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-34" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-1092" />
         <comment value="Ziektebeleving" />
       </mapping>
     </element>
@@ -2518,9 +2352,6 @@
       <fixedCode value="284465006" />
     </element>
     <element id="Composition.section:healthState.section:illnessPerception.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="bevinding betreffende psychosociaal functioneren (bevinding)" />
     </element>
@@ -2533,9 +2364,9 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-IllnessPerception" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-727" />
-        <comment value="Ziektebeleving::Ziektebeleving" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-1093" />
+        <comment value="Ziektebeleving" />
       </mapping>
     </element>
     <element id="Composition.section:healthState.section:illnessPerception.section">
@@ -2548,8 +2379,8 @@
       <short value="Mental Status" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-35" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-1097" />
         <comment value="Mentale status" />
       </mapping>
     </element>
@@ -2578,9 +2409,6 @@
       <fixedCode value="36456004" />
     </element>
     <element id="Composition.section:healthState.section:mentalStatus.code.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Composition.section.section.code.coding.display" />
       <defaultValueString value="bevinding betreffende mentale toestand (bevinding)" />
     </element>
@@ -2592,8 +2420,8 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-731" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-1098" />
         <comment value="Mentale status::Probleem" />
       </mapping>
     </element>
@@ -2607,8 +2435,8 @@
       <short value="Development Child" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-36" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-1108" />
         <comment value="Ontwikkeling kind" />
       </mapping>
     </element>
@@ -2626,44 +2454,12 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-DevelopmentChild" />
       </type>
       <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-739" />
+        <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
+        <map value="e-overdracht-dataelement-v4-1109" />
         <comment value="OntwikkelingKind" />
       </mapping>
     </element>
     <element id="Composition.section:healthState.section:developmentChild.section">
-      <path value="Composition.section.section.section" />
-      <max value="0" />
-    </element>
-    <element id="Composition.section:healthState.section:otherDetailsChild">
-      <path value="Composition.section.section" />
-      <sliceName value="otherDetailsChild" />
-      <short value="Other Details Child" />
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-38" />
-        <comment value="Overige bijzonderheden kind" />
-      </mapping>
-    </element>
-    <element id="Composition.section:healthState.section:otherDetailsChild.title">
-      <path value="Composition.section.section.title" />
-      <short value="Other Details Child" />
-      <min value="1" />
-      <fixedString value="Other Details Child" />
-    </element>
-    <element id="Composition.section:healthState.section:otherDetailsChild.text">
-      <path value="Composition.section.section.text" />
-      <mapping>
-        <identity value="eOverdracht-overdrachtsbericht-kinderen-0-1-jaar" />
-        <map value="e-overdracht-dataelement-v3-38" />
-        <comment value="Overige bijzonderheden kind" />
-      </mapping>
-    </element>
-    <element id="Composition.section:healthState.section:otherDetailsChild.entry">
-      <path value="Composition.section.section.entry" />
-      <max value="0" />
-    </element>
-    <element id="Composition.section:healthState.section:otherDetailsChild.section">
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>
