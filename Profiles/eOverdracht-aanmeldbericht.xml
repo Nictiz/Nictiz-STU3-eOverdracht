@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="eOverdracht-Aanmeldbericht" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-Aanmeldbericht" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-aanmeldbericht" />
   <version value="0.2" />
   <name value="eOverdrachtAanmeldbericht" />
   <title value="eOverdracht Aanmeldbericht" />
@@ -134,15 +134,6 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate" />
       </type>
-    </element>
-    <element id="Composition.section:administrativeData.extension:transferDate.valueDateTime:valueDateTime">
-      <path value="Composition.section.extension.valueDateTime" />
-      <sliceName value="valueDateTime" />
-      <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
-        <map value="e-overdracht-dataelement-v4-2" />
-        <comment value="Datum overplaatsing" />
-      </mapping>
     </element>
     <element id="Composition.section:administrativeData.title">
       <path value="Composition.section.title" />
