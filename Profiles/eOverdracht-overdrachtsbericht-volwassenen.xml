@@ -2121,7 +2121,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-SNAQ65+Score" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-SNAQ65plusScore" />
       </type>
       <mapping>
         <identity value="eOverdracht-sturen-overdrachtsbericht-volwassenen" />
