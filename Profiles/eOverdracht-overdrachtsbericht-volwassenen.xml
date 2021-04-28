@@ -1451,6 +1451,29 @@
       <path value="Composition.section.code.coding.display" />
       <defaultValueString value="Nursing care plan (record artifact)" />
     </element>
+    <element id="Composition.section:carePlan.text">
+      <path value="Composition.section.text" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="status" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:carePlan.text:carePlanUnstructured">
+      <path value="Composition.section.text" />
+      <sliceName value="carePlanUnstructured" />
+      <mapping>
+        <identity value="eOverdracht-sturen-overdrachtsbericht-volwassenen" />
+        <map value="e-overdracht-dataelement-v4-1162" />
+        <comment value="Verpleegkundig zorgplan in (opgemaakte) tekst" />
+      </mapping>
+    </element>
+    <element id="Composition.section:carePlan.text:carePlanUnstructured.status">
+      <path value="Composition.section.text.status" />
+      <fixedCode value="additional" />
+    </element>
     <element id="Composition.section:carePlan.entry">
       <path value="Composition.section.entry" />
       <max value="0" />
@@ -1465,27 +1488,6 @@
         <rules value="open" />
       </slicing>
       <min value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:carePlanUnstructured">
-      <path value="Composition.section.section" />
-      <sliceName value="carePlanUnstructured" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:carePlanUnstructured.text">
-      <path value="Composition.section.section.text" />
-      <min value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:carePlanUnstructured.text.status">
-      <path value="Composition.section.section.text.status" />
-      <fixedCode value="additional" />
-    </element>
-    <element id="Composition.section:carePlan.section:carePlanUnstructured.entry">
-      <path value="Composition.section.section.entry" />
-      <max value="0" />
-    </element>
-    <element id="Composition.section:carePlan.section:carePlanUnstructured.section">
-      <path value="Composition.section.section.section" />
-      <max value="0" />
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems">
       <path value="Composition.section.section" />
@@ -1970,7 +1972,6 @@
       <path value="Composition.section.section.section.section" />
       <max value="0" />
     </element>
-
     <element id="Composition.section:healthState.section:mobility">
       <path value="Composition.section.section" />
       <sliceName value="mobility" />
