@@ -1487,7 +1487,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1" />
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems">
       <path value="Composition.section.section" />
