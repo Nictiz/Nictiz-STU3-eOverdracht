@@ -1181,10 +1181,18 @@
     <element id="Composition.section:medicalContext.section:freedomRestriction.entry">
       <path value="Composition.section.section.entry" />
       <min value="1" />
-      <max value="1" />
+      <max value="2" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FreedomRestrictingIntervention" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-LegalStatus" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-Representation" />
       </type>
       <mapping>
         <identity value="eOverdracht-sturen-overdrachtsbericht-kinderen-0-1-jaar" />
@@ -1427,7 +1435,7 @@
         <comment value="PijnScore" />
       </mapping>
     </element>
-    <element id="Composition.section:medicalContext.section:painScore.entry:comfortScore">
+    <element id="Composition.section:medicalContext.section:painScore.entry:comfortScale">
       <path value="Composition.section.section.entry" />
       <sliceName value="comfortScale" />
       <short value="Comfort Scale" />
