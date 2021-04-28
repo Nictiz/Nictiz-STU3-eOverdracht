@@ -29,11 +29,6 @@
     <uri value="https://zibs.nl/wiki/Patient-v3.1(2017EN)" />
     <name value="HCIM Patient-v3.1(2017EN)" />
   </mapping>
-  <mapping>
-    <identity value="hcim-basicelements-v1.0-2017EN" />
-    <uri value="https://zibs.nl/wiki/BasicElements-v1.0(2017EN)" />
-    <name value="HCIM BasicElements-v1.0(2017EN)" />
-  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Composition" />
@@ -64,11 +59,6 @@
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
-      <mapping>
-        <identity value="hcim-patient-v3.1-2017EN" />
-        <map value="NL-CM:0.1.1" />
-        <comment value="Patient" />
-      </mapping>
       <mapping>
         <identity value="eOverdracht-sturen-overdrachtsbericht-volwassenen" />
         <map value="e-overdracht-dataelement-v4-64" />
