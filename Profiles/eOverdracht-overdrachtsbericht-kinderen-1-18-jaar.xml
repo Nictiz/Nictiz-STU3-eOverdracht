@@ -1420,7 +1420,7 @@
         <comment value="Pain Score" />
       </mapping>
     </element>
-    <element id="Composition.section:medicalContext.section:painScore.entry:comfortScore">
+    <element id="Composition.section:medicalContext.section:painScore.entry:comfortScale">
       <path value="Composition.section.section.entry" />
       <sliceName value="comfortScale" />
       <short value="Comfort Scale" />
@@ -2356,6 +2356,15 @@
         <map value="e-overdracht-dataelement-v4-1022" />
         <comment value="Wond" />
       </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:skin.entry:woundCharacteristics">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="woundCharacteristics" />
+      <comment value="Note: this profile is to be used together with the zib-Wound and zib-PressureUlcer profiles." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/WoundCharacteristics" />
+      </type>
     </element>
     <element id="Composition.section:healthState.section:skin.section">
       <path value="Composition.section.section.section" />
