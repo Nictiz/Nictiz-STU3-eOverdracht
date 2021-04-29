@@ -1221,11 +1221,12 @@
     </element>
     <element id="Composition.section:medicalContext.section:measurements.code.coding.code">
       <path value="Composition.section.section.code.coding.code" />
-      <fixedCode value="225317005" />
+      <min value="1" />
+      <fixedCode value="363788007" />
     </element>
     <element id="Composition.section:medicalContext.section:measurements.code.coding.display">
       <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="beperking van bewegingsvrijheid (regime/therapie)" />
+      <defaultValueString value="Clinical history/examination observable (observable entity)" />
     </element>
     <element id="Composition.section:medicalContext.section:measurements.entry">
       <path value="Composition.section.section.entry" />
