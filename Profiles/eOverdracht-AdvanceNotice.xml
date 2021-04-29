@@ -248,62 +248,6 @@
         <comment value="Contactpersoon" />
       </mapping>
     </element>
-    <element id="Composition.section:administrativeData.section:sendingOrganization">
-      <path value="Composition.section.section" />
-      <sliceName value="sendingOrganization" />
-      <short value="Sending Organization" />
-      <definition value="Subsection listing data about the sending organization." />
-      <min value="1" />
-      <max value="1" />
-      <mapping>
-        <identity value="eOverdracht-AdvanceNotice" />
-        <map value="e-overdracht-dataelement-v4-101" />
-        <comment value="Sturende organisatie" />
-      </mapping>
-    </element>
-    <element id="Composition.section:administrativeData.section:sendingOrganization.title">
-      <path value="Composition.section.section.title" />
-      <short value="Sending organization" />
-      <defaultValueString value="Sending organization" />
-    </element>
-    <element id="Composition.section:administrativeData.section:sendingOrganization.code">
-      <path value="Composition.section.section.code" />
-      <min value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.section:sendingOrganization.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.section:sendingOrganization.code.coding.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:administrativeData.section:sendingOrganization.code.coding.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="185362004" />
-    </element>
-    <element id="Composition.section:administrativeData.section:sendingOrganization.code.coding.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Referred by nurse (finding)" />
-    </element>
-    <element id="Composition.section:administrativeData.section:sendingOrganization.entry">
-      <path value="Composition.section.section.entry" />
-      <short value="A reference to data about the sending organization" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
-      </type>
-      <mapping>
-        <identity value="eOverdracht-AdvanceNotice" />
-        <map value="e-overdracht-dataelement-v4-102" />
-        <comment value="Zorgaanbieder" />
-      </mapping>
-    </element>
     <element id="Composition.section:medicalContext">
       <path value="Composition.section" />
       <sliceName value="medicalContext" />
@@ -561,9 +505,18 @@
       <path value="Composition.section.section.entry" />
       <short value="A reference to data concerning freedom restricting interventions" />
       <min value="1" />
+      <max value="2" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FreedomRestrictingIntervention" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-LegalStatus" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-Representation" />
       </type>
       <mapping>
         <identity value="eOverdracht-AdvanceNotice" />
@@ -579,7 +532,7 @@
       <max value="1" />
       <mapping>
         <identity value="eOverdracht-AdvanceNotice" />
-        <map value="e-overdracht-dataelement-v4-529" />
+        <map value="e-overdracht-dataelement-v4-1130" />
         <comment value="Verpleegkundige context: zorgplan" />
       </mapping>
     </element>
@@ -596,8 +549,6 @@
     <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons">
       <path value="Composition.section.extension" />
       <sliceName value="needsOfPatientAndRelatedPersons" />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NeedsOfPatientAndRelatedPersons" />
