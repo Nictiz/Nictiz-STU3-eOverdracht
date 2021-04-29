@@ -592,6 +592,35 @@
         <comment value="Verpleegkundige context: zorgplan" />
       </mapping>
     </element>
+    <element id="Composition.section:carePlan.extension">
+      <path value="Composition.section.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons">
+      <path value="Composition.section.extension" />
+      <sliceName value="needsOfPatientAndRelatedPersons" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NeedsOfPatientAndRelatedPersons" />
+      </type>
+    </element>
+    <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons.valueString:valueString">
+      <path value="Composition.section.extension.valueString" />
+      <sliceName value="valueString" />
+      <mapping>
+        <identity value="eOverdracht-AdvanceNotice" />
+        <map value="e-overdracht-dataelement-v4-643" />
+        <comment value="Wensen en behoeften patiënt en/of naasten" />
+      </mapping>
+    </element>
     <element id="Composition.section:carePlan.title">
       <path value="Composition.section.title" />
       <defaultValueString value="Careplan" />
@@ -737,30 +766,6 @@
       </mapping>
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.section">
-      <path value="Composition.section.section.section" />
-      <max value="0" />
-    </element>
-    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons">
-      <path value="Composition.section.section" />
-      <sliceName value="needsOfPatientAndOrRelatedPersons" />
-    </element>
-    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.text">
-      <path value="Composition.section.section.text" />
-      <mapping>
-        <identity value="eOverdracht-AdvanceNotice" />
-        <map value="e-overdracht-dataelement-v4-643" />
-        <comment value="Wensen en behoeften patiënt en/of naasten" />
-      </mapping>
-    </element>
-    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.text.status">
-      <path value="Composition.section.section.text.status" />
-      <fixedCode value="additional" />
-    </element>
-    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.entry">
-      <path value="Composition.section.section.entry" />
-      <max value="0" />
-    </element>
-    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.section">
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>

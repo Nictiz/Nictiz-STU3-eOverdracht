@@ -1495,8 +1495,6 @@
     <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons">
       <path value="Composition.section.extension" />
       <sliceName value="needsOfPatientAndRelatedPersons" />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NeedsOfPatientAndRelatedPersons" />
@@ -1712,37 +1710,6 @@
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>
-    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons">
-      <path value="Composition.section.section" />
-      <sliceName value="needsOfPatientAndOrRelatedPersons" />
-      <mapping>
-        <identity value="eOverdracht-NursingHandoff-Childcare-0-1yo" />
-        <map value="e-overdracht-dataelement-v4-643" />
-        <comment value="Wensen en behoeften en/of naasten" />
-      </mapping>
-    </element>
-    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.title">
-      <path value="Composition.section.section.title" />
-      <short value="Patient's needs and preferences" />
-      <defaultValueString value="Patient's needs and preferences" />
-      <fixedString value="Patient's needs and preferences" />
-    </element>
-    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.text">
-      <path value="Composition.section.section.text" />
-      <min value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.text.status">
-      <path value="Composition.section.section.text.status" />
-      <fixedCode value="additional" />
-    </element>
-    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.entry">
-      <path value="Composition.section.section.entry" />
-      <max value="0" />
-    </element>
-    <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.section">
-      <path value="Composition.section.section.section" />
-      <max value="0" />
-    </element>
     <element id="Composition.section:healthState">
       <path value="Composition.section" />
       <sliceName value="healthState" />
@@ -1845,7 +1812,6 @@
     <element id="Composition.section:healthState.section:selfCare.extension:commentOnSelfCare">
       <path value="Composition.section.section.extension" />
       <sliceName value="commentOnSelfCare" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
