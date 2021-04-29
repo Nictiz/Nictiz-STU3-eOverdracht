@@ -56,8 +56,18 @@
       </type>
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
-        <map value="e-overdracht-dataelement-v4-64" />
-        <comment value="Persoonsgegevens:Patient" />
+        <map value="e-overdracht-dataelement-v4-4" />
+        <comment value="Patient" />
+      </mapping>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
+        <map value="e-overdracht-dataelement-v4-272" />
+        <comment value="LevensovertuigingRC (extension in Patient resource)" />
+      </mapping>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
+        <map value="e-overdracht-dataelement-v4-320" />
+        <comment value="Taalvaardigheid (on Patient.communication)" />
       </mapping>
     </element>
     <element id="Composition.author">
@@ -783,7 +793,7 @@
       <max value="1" />
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
-        <map value="e-overdracht-dataelement-v4-362" />
+        <map value="e-overdracht-dataelement-v4-326" />
         <comment value="Medische context" />
       </mapping>
     </element>
@@ -923,7 +933,7 @@
       <max value="1" />
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
-        <map value="e-overdracht-dataelement-v4-328" />
+        <map value="e-overdracht-dataelement-v4-350" />
         <comment value="Medische Diagnose" />
       </mapping>
     </element>
@@ -1180,23 +1190,14 @@
     <element id="Composition.section:medicalContext.section:freedomRestriction.entry">
       <path value="Composition.section.section.entry" />
       <min value="1" />
-      <max value="2" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FreedomRestrictingIntervention" />
       </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-LegalStatus" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-Representation" />
-      </type>
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
-        <map value="e-overdracht-dataelement-v4-395" />
-        <comment value="Vrijheidsbeperkende maatregelen" />
+        <map value="e-overdracht-dataelement-v4-1130" />
+        <comment value="VrijheidsbeperkendeInterventie" />
       </mapping>
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.section">
@@ -1695,6 +1696,60 @@
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>
+    <element id="Composition.section:carePlan.section:patientAppointments">
+      <path value="Composition.section.section" />
+      <sliceName value="patientAppointments" />
+      <short value="Patient Appointments" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
+        <map value="e-overdracht-dataelement-v4-595" />
+        <comment value="Afspraken patient" />
+      </mapping>
+    </element>
+    <element id="Composition.section:carePlan.section:patientAppointments.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Patient appointments" />
+    </element>
+    <element id="Composition.section:carePlan.section:patientAppointments.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:carePlan.section:patientAppointments.code.coding">
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Composition.section:carePlan.section:patientAppointments.code.coding.system">
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Composition.section:carePlan.section:patientAppointments.code.coding.code">
+      <path value="Composition.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="308335008" />
+    </element>
+    <element id="Composition.section:carePlan.section:patientAppointments.code.coding.display">
+      <path value="Composition.section.section.code.coding.display" />
+      <defaultValueString value="Patient encounter procedure" />
+    </element>
+    <element id="Composition.section:carePlan.section:patientAppointments.entry">
+      <path value="Composition.section.section.entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Encounter" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
+        <map value="e-overdracht-dataelement-v4-1146" />
+        <comment value="Contact" />
+      </mapping>
+    </element>
+    <element id="Composition.section:carePlan.section:patientAppointments.section">
+      <path value="Composition.section.section.section" />
+      <max value="0" />
+    </element>
     <element id="Composition.section:healthState">
       <path value="Composition.section" />
       <sliceName value="healthState" />
@@ -1984,35 +2039,6 @@
         <comment value="VermogenTotVerpleegtechnischeHandelingen" />
       </mapping>
     </element>
-    <element id="Composition.section:healthState.section:selfCare.section">
-      <path value="Composition.section.section.section" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section.title">
-      <path value="Composition.section.section.section.title" />
-      <defaultValueString value="Toelichting zelfzorg" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section.text">
-      <path value="Composition.section.section.section.text" />
-      <min value="1" />
-      <mapping>
-        <identity value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
-        <map value="e-overdracht-dataelement-v4-762" />
-        <comment value="Toelichting zelfzorg" />
-      </mapping>
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section.text.status">
-      <path value="Composition.section.section.section.text.status" />
-      <fixedCode value="additional" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section.entry">
-      <path value="Composition.section.section.section.entry" />
-      <max value="0" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section.section">
-      <path value="Composition.section.section.section.section" />
-      <max value="0" />
-    </element>
     <element id="Composition.section:healthState.section:mobility">
       <path value="Composition.section.section" />
       <sliceName value="mobility" />
@@ -2062,7 +2088,7 @@
       </type>
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
-        <map value="e-overdracht-dataelement-v4-763" />
+        <map value="e-overdracht-dataelement-v4-764" />
         <comment value="Mobiliteit" />
       </mapping>
     </element>

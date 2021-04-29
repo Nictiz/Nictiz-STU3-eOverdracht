@@ -61,8 +61,18 @@
       </type>
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Adults" />
-        <map value="e-overdracht-dataelement-v4-64" />
-        <comment value="Persoonsgegevens:Patient" />
+        <map value="e-overdracht-dataelement-v4-4" />
+        <comment value="Patient" />
+      </mapping>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-272" />
+        <comment value="LevensovertuigingRC (extension in Patient resource)" />
+      </mapping>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-320" />
+        <comment value="Taalvaardigheid (on Patient.communication)" />
       </mapping>
     </element>
     <element id="Composition.author">
@@ -923,12 +933,12 @@
     <element id="Composition.section:medicalContext.section:medicalDiagnosis">
       <path value="Composition.section.section" />
       <sliceName value="medicalDiagnosis" />
-      <short value="medicalDiagnosis" />
+      <short value="Medical Diagnosis" />
       <min value="1" />
       <max value="1" />
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Adults" />
-        <map value="e-overdracht-dataelement-v4-328" />
+        <map value="e-overdracht-dataelement-v4-350" />
         <comment value="Medische Diagnose" />
       </mapping>
     </element>
@@ -1185,23 +1195,15 @@
     <element id="Composition.section:medicalContext.section:freedomRestriction.entry">
       <path value="Composition.section.section.entry" />
       <min value="1" />
-      <max value="2" />
+      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FreedomRestrictingIntervention" />
       </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-LegalStatus" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-Representation" />
-      </type>
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Adults" />
-        <map value="e-overdracht-dataelement-v4-395" />
-        <comment value="Vrijheidsbeperkende maatregelen" />
+        <map value="e-overdracht-dataelement-v4-1130" />
+        <comment value="VrijheidsbeperkendeInterventie" />
       </mapping>
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.section">
@@ -1395,7 +1397,7 @@
       </type>
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Adults" />
-        <map value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-487" />
         <comment value="PijnScore" />
       </mapping>
     </element>
@@ -1428,8 +1430,6 @@
     <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons">
       <path value="Composition.section.extension" />
       <sliceName value="needsOfPatientAndRelatedPersons" />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NeedsOfPatientAndRelatedPersons" />
@@ -1773,7 +1773,6 @@
     <element id="Composition.section:healthState.section:selfCare.extension:commentOnSelfCare">
       <path value="Composition.section.section.extension" />
       <sliceName value="commentOnSelfCare" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -2010,7 +2009,7 @@
       </type>
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Adults" />
-        <map value="e-overdracht-dataelement-v4-763" />
+        <map value="e-overdracht-dataelement-v4-764" />
         <comment value="Mobiliteit" />
       </mapping>
     </element>

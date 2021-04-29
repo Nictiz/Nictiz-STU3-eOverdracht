@@ -561,18 +561,9 @@
       <path value="Composition.section.section.entry" />
       <short value="A reference to data concerning freedom restricting interventions" />
       <min value="1" />
-      <max value="2" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FreedomRestrictingIntervention" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-LegalStatus" />
-      </type>
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-Representation" />
       </type>
       <mapping>
         <identity value="eOverdracht-AdvanceNotice" />
@@ -588,7 +579,7 @@
       <max value="1" />
       <mapping>
         <identity value="eOverdracht-AdvanceNotice" />
-        <map value="e-overdracht-dataelement-v4-1130" />
+        <map value="e-overdracht-dataelement-v4-529" />
         <comment value="Verpleegkundige context: zorgplan" />
       </mapping>
     </element>
