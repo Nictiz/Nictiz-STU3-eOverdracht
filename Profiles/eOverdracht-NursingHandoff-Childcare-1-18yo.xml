@@ -1524,26 +1524,12 @@
     </element>
     <element id="Composition.section:carePlan.text">
       <path value="Composition.section.text" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="status" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Composition.section:carePlan.text:carePlanUnstructured">
-      <path value="Composition.section.text" />
-      <sliceName value="carePlanUnstructured" />
+      <comment value="This element can be used to communicate an unstructured care plan by setting `.section:carePlan:text.status` to _additional_. If the unstructured care plan is communicated, there should be no structred data in `.section:carePlan:.section`." />
       <mapping>
-        <identity value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
+        <identity value="eOverdracht-Childcare-1-18yo" />
         <map value="e-overdracht-dataelement-v4-1162" />
         <comment value="Verpleegkundig zorgplan in (opgemaakte) tekst" />
       </mapping>
-    </element>
-    <element id="Composition.section:carePlan.text:carePlanUnstructured.status">
-      <path value="Composition.section.text.status" />
-      <fixedCode value="additional" />
     </element>
     <element id="Composition.section:carePlan.entry">
       <path value="Composition.section.entry" />

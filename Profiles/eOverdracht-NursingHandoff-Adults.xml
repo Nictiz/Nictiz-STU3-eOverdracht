@@ -24,11 +24,6 @@
     <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.68" />
     <name value="eOverdracht 4.0 transaction &quot;Sturen overdrachtsbericht volwassenen&quot;" />
   </mapping>
-  <mapping>
-    <identity value="hcim-patient-v3.1-2017EN" />
-    <uri value="https://zibs.nl/wiki/Patient-v3.1(2017EN)" />
-    <name value="HCIM Patient-v3.1(2017EN)" />
-  </mapping>
   <kind value="resource" />
   <abstract value="false" />
   <type value="Composition" />
@@ -1473,26 +1468,12 @@
     </element>
     <element id="Composition.section:carePlan.text">
       <path value="Composition.section.text" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="status" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Composition.section:carePlan.text:carePlanUnstructured">
-      <path value="Composition.section.text" />
-      <sliceName value="carePlanUnstructured" />
+      <comment value="This element can be used to communicate an unstructured care plan by setting `.section:carePlan:text.status` to _additional_. If the unstructured care plan is communicated, there should be no structred data in `.section:carePlan:.section`." />
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Adults" />
         <map value="e-overdracht-dataelement-v4-1162" />
         <comment value="Verpleegkundig zorgplan in (opgemaakte) tekst" />
       </mapping>
-    </element>
-    <element id="Composition.section:carePlan.text:carePlanUnstructured.status">
-      <path value="Composition.section.text.status" />
-      <fixedCode value="additional" />
     </element>
     <element id="Composition.section:carePlan.entry">
       <path value="Composition.section.entry" />
