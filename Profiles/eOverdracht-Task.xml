@@ -18,17 +18,17 @@
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
-    <identity value="eOverdracht-sturen-aanmeldbericht" />
+    <identity value="eOverdracht-AdvanceNotice" />
     <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.63" />
     <name value="eOverdracht 4.0 transaction &quot;Sturen aanmeldbericht&quot;" />
   </mapping>
   <mapping>
-    <identity value="eOverdracht-sturen-antwoord-aanmeldbericht" />
+    <identity value="eOverdracht-AdvanceNotice-Answer" />
     <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.64" />
     <name value="eOverdracht 4.0 transaction &quot;Sturen antwoord aanmeldbericht&quot;" />
   </mapping>
   <mapping>
-    <identity value="eOverdracht-sturen-bevestiging-of-annulering-aanmelding" />
+    <identity value="eOverdracht-AdvanceNotice-AcceptOrReject" />
     <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.68" />
     <name value="eOverdracht 4.0 transaction &quot;Sturen bevestiging of annulering aanmelding&quot;" />
   </mapping>
@@ -41,14 +41,14 @@
     <element id="Task.status">
       <path value="Task.status" />
       <short value="draft | requested | received | accepted |" />
-      <definition value="The current state of the Task. States that can be used: &#xD;&#xA;- requested: Placer has made the registration available&#xD;&#xA;- received: filler has received the request and is juding the request&#xD;&#xA;- accepted: filler accepts the registration, and can provide the care asked for&#xD;&#xA;- on-hold: filler proposes a different date&#xD;&#xA;- in-progress: placer confirms to the filler it proceeds with the transfer&#xD;&#xA;- rejected: filler rejects the registration&#xD;&#xA;- cancelled: placer or filler has cancelled the transfer&#xD;&#xA;- completed: filler recieved the overdrachtsbericht&#xD;&#xA;- ready,  failed, will not be used" />
+      <definition value="The current state of the Task. States that can be used: &#xD;&#xA;- requested: placer has made the registration available&#xD;&#xA;- received: filler has received the request and is juding the request&#xD;&#xA;- accepted: filler accepts the registration, and can provide the care asked for&#xD;&#xA;- on-hold: filler proposes a different date&#xD;&#xA;- in-progress: placer confirms to the filler it proceeds with the transfer&#xD;&#xA;- rejected: filler rejects the registration&#xD;&#xA;- cancelled: placer or filler has cancelled the transfer&#xD;&#xA;- completed: filler recieved the nursing handoff&#xD;&#xA;- ready,  failed, will not be used" />
       <mapping>
-        <identity value="eOverdracht-sturen-antwoord-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice-Answer" />
         <map value="e-overdracht-dataelement-v4-1166" />
         <comment value="Antwoord aanmelding" />
       </mapping>
       <mapping>
-        <identity value="eOverdracht-sturen-bevestiging-of-annulering-aanmelding" />
+        <identity value="eOverdracht-AdvanceNotice-AcceptOrReject" />
         <map value="e-overdracht-dataelement-v4-1167" />
         <comment value="Bevestiging of annulering aanmelding" />
       </mapping>
@@ -56,7 +56,7 @@
     <element id="Task.statusReason.text">
       <path value="Task.statusReason.text" />
       <mapping>
-        <identity value="eOverdracht-sturen-antwoord-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice-Answer" />
         <map value="e-overdracht-dataelement-v4-1168" />
         <comment value="Toelichting antwoord aanmelding" />
       </mapping>
@@ -95,7 +95,7 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-4" />
         <comment value="Persoonsgegevens::Patient" />
       </mapping>
@@ -116,7 +116,7 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-102" />
         <comment value="Sturende organisatie::Zorgaanbieder" />
       </mapping>
@@ -134,7 +134,6 @@
     <element id="Task.requester.agent.extension:practitionerRole">
       <path value="Task.requester.agent.extension" />
       <sliceName value="practitionerRole" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -148,12 +147,12 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-153" />
         <comment value="Ontvangende organisatie::Zorgaanbieder" />
       </mapping>
       <mapping>
-        <identity value="eOverdracht-sturen-antwoord-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice-Answer" />
         <map value="e-overdracht-dataelement-v4-153" />
         <comment value="Ontvangende organisatie::Zorgaanbieder" />
       </mapping>
@@ -168,55 +167,63 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Task.input:aanmeldbericht">
+    <element id="Task.input:advanceNotice">
       <path value="Task.input" />
-      <sliceName value="aanmeldbericht" />
+      <sliceName value="advanceNotice" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-transaction-63" />
-        <comment value="Sturen aanmeldbericht" />
+        <comment value="eOverdracht transaction &quot;Sturen aanmeldbericht&quot;" />
       </mapping>
     </element>
-    <element id="Task.input:aanmeldbericht.type.coding.system">
+    <element id="Task.input:advanceNotice.type.coding.system">
       <path value="Task.input.type.coding.system" />
       <fixedUri value="http://loinc.org" />
     </element>
-    <element id="Task.input:aanmeldbericht.type.coding.code">
+    <element id="Task.input:advanceNotice.type.coding.code">
       <path value="Task.input.type.coding.code" />
       <fixedCode value="57830-2" />
     </element>
-    <element id="Task.input:aanmeldbericht.value[x]:valueReference">
+    <element id="Task.input:advanceNotice.value[x]:valueReference">
       <path value="Task.input.valueReference" />
       <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-aanmeldbericht" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-AdvanceNotice" />
       </type>
     </element>
-    <element id="Task.input:overdrachtbericht">
+    <element id="Task.input:nursingHandoff">
       <path value="Task.input" />
-      <sliceName value="overdrachtbericht" />
+      <sliceName value="nursingHandoff" />
       <max value="1" />
     </element>
-    <element id="Task.input:overdrachtbericht.type.coding.system">
+    <element id="Task.input:nursingHandoff.type.coding.system">
       <path value="Task.input.type.coding.system" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Task.input:overdrachtbericht.type.coding.code">
+    <element id="Task.input:nursingHandoff.type.coding.code">
       <path value="Task.input.type.coding.code" />
       <fixedCode value="371535009" />
     </element>
-    <element id="Task.input:overdrachtbericht.type.coding.display">
+    <element id="Task.input:nursingHandoff.type.coding.display">
       <path value="Task.input.type.coding.display" />
       <fixedString value="verslag van overdracht" />
     </element>
-    <element id="Task.input:overdrachtbericht.value[x]:valueReference">
-      <path value="Task.input.valueReference" />
+    <element id="Task.input:nursingHandoff.value[x]:valueReference">
+      <path value="Task.input.value[x]" />
       <sliceName value="valueReference" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-overdrachtsbericht-volwassenen" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Childcare-0-1yo" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Childcare-1-18yo" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Adults" />
       </type>
     </element>
     <element id="Task.output">
@@ -234,7 +241,7 @@
       <sliceName value="alternativeDate" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-sturen-antwoord-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice-Answer" />
         <map value="e-overdracht-dataelement-v4-1164" />
         <comment value="Alternatieve datum overplaatsing" />
       </mapping>

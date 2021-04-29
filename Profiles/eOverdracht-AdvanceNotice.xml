@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <id value="eOverdracht-Aanmeldbericht" />
-  <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-aanmeldbericht" />
+  <id value="eOverdracht-AdvanceNotice" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-AdvanceNotice" />
   <version value="0.2" />
-  <name value="eOverdrachtAanmeldbericht" />
-  <title value="eOverdracht Aanmeldbericht" />
+  <name value="eOverdrachtAdvanceNotice" />
+  <title value="eOverdracht advance notice" />
   <status value="draft" />
   <publisher value="Nictiz" />
   <contact>
@@ -15,12 +15,12 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description value="Profile on the Composition resource which represents the Aanmeldbericht for eOverdracht conform information standard ['Verpleegkundige zorg'](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Verpleegkundige_Zorg)" />
-  <purpose value="The purpose of an Aanmeldbericht is to enable the health organization that receives it to assess the patient/client's care demands and accept or reject the application." />
+  <description value="Profile on the Composition resource which represents the advance notice (Aanmeldbericht) for eOverdracht conform information standard ['Verpleegkundige zorg'](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Verpleegkundige_Zorg)" />
+  <purpose value="The purpose of an advance notice is to enable the health organization that receives it to assess the patient/client's care demands and accept or reject the application." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
-    <identity value="eOverdracht-sturen-aanmeldbericht" />
+    <identity value="eOverdracht-AdvanceNotice" />
     <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.63" />
     <name value="eOverdracht 4.0 transaction &quot;Sturen aanmeldbericht&quot;" />
   </mapping>
@@ -51,15 +51,15 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-4" />
         <comment value="Patient" />
       </mapping>
     </element>
     <element id="Composition.author">
       <path value="Composition.author" />
-      <short value="Who or what initiated the Aanmeldbericht" />
-      <definition value="The person that initiated the sending of the Aanmeldbericht. Alternatively, this may be the sending XIS." />
+      <short value="Who or what initiated the advance notice" />
+      <definition value="The person that initiated the sending of the advance notice. Alternatively, this may be the sending XIS." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
@@ -88,7 +88,7 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-1" />
         <comment value="Administratieve gegevens" />
       </mapping>
@@ -114,6 +114,15 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate" />
       </type>
+    </element>
+    <element id="Composition.section:administrativeData.extension:transferDate.valueDateTime:valueDateTime">
+      <path value="Composition.section.extension.valueDateTime" />
+      <sliceName value="valueDateTime" />
+      <mapping>
+        <identity value="eOverdracht-AdvanceNotice" />
+        <map value="e-overdracht-dataelement-v4-2" />
+        <comment value="Datum overplaatsing" />
+      </mapping>
     </element>
     <element id="Composition.section:administrativeData.title">
       <path value="Composition.section.title" />
@@ -166,7 +175,7 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-3" />
         <comment value="Persoonsgegevens" />
       </mapping>
@@ -221,7 +230,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Payer" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-45" />
         <comment value="Betaler" />
       </mapping>
@@ -234,7 +243,7 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-64" />
         <comment value="Contactpersoon" />
       </mapping>
@@ -247,7 +256,7 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-101" />
         <comment value="Sturende organisatie" />
       </mapping>
@@ -290,7 +299,7 @@
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-102" />
         <comment value="Zorgaanbieder" />
       </mapping>
@@ -303,7 +312,7 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-326" />
         <comment value="Medische context" />
       </mapping>
@@ -354,7 +363,7 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-350" />
         <comment value="Medische diagnose" />
       </mapping>
@@ -396,7 +405,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-351" />
         <comment value="Probleem" />
       </mapping>
@@ -408,7 +417,7 @@
       <definition value="Subsection listing relevant medical history." />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-361" />
         <comment value="Voorgeschiedenis" />
       </mapping>
@@ -450,7 +459,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-362" />
         <comment value="Probleem" />
       </mapping>
@@ -462,7 +471,7 @@
       <definition value="Subsection listing relevant alerts." />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-388" />
         <comment value="Let op" />
       </mapping>
@@ -504,7 +513,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Alert" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-389" />
         <comment value="Alert" />
       </mapping>
@@ -516,7 +525,7 @@
       <definition value="Subsection listing relevant freedom restricting measures." />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-395" />
         <comment value="Vrijheidsbeperking" />
       </mapping>
@@ -566,7 +575,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-Representation" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-1130" />
         <comment value="VrijheidsbeperkendeInterventie" />
       </mapping>
@@ -578,7 +587,7 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-1130" />
         <comment value="Verpleegkundige context: zorgplan" />
       </mapping>
@@ -624,7 +633,7 @@
       <path value="Composition.section.text" />
       <sliceName value="carePlanUnstructured" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-1162" />
         <comment value="Verpleegkundig zorgplan in (opgemaakte) tekst" />
       </mapping>
@@ -654,7 +663,7 @@
       <min value="1" />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-530" />
         <comment value="Actuele patiëntproblemen" />
       </mapping>
@@ -707,7 +716,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-532" />
         <comment value="Probleem" />
       </mapping>
@@ -722,7 +731,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-NursingIntervention" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-542" />
         <comment value="VerpleegkundigeInterventie" />
       </mapping>
@@ -738,7 +747,7 @@
     <element id="Composition.section:carePlan.section:needsOfPatientAndOrRelatedPersons.text">
       <path value="Composition.section.section.text" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-643" />
         <comment value="Wensen en behoeften patiënt en/of naasten" />
       </mapping>
@@ -762,7 +771,7 @@
       <definition value="Section for specifying current health situation regarding existing medical aids that are of interest in the nursing context." />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-644" />
         <comment value="Verpleegkundige context: specificatie gezondheidstoestand" />
       </mapping>
@@ -816,7 +825,7 @@
       <definition value="This subsection contains information about the patient's infusions and/or feeding tube systems." />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-787" />
         <comment value="Voeding/vocht" />
       </mapping>
@@ -868,7 +877,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FeedingTubeSystem" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-846" />
         <comment value="SondeSysteem" />
       </mapping>
@@ -882,7 +891,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Infusion" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-883" />
         <comment value="Infuus" />
       </mapping>
@@ -898,7 +907,7 @@
       <definition value="This subsection contains information about the patient's stomata." />
       <max value="1" />
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-937" />
         <comment value="Uitscheiding" />
       </mapping>
@@ -939,7 +948,7 @@
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Stoma" />
       </type>
       <mapping>
-        <identity value="eOverdracht-sturen-aanmeldbericht" />
+        <identity value="eOverdracht-AdvanceNotice" />
         <map value="e-overdracht-dataelement-v4-985" />
         <comment value="Stoma" />
       </mapping>
