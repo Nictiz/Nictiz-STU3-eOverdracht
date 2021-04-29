@@ -1482,6 +1482,35 @@
         <comment value="Verpleegkundige context: zorgplan" />
       </mapping>
     </element>
+    <element id="Composition.section:carePlan.extension">
+      <path value="Composition.section.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons">
+      <path value="Composition.section.extension" />
+      <sliceName value="needsOfPatientAndRelatedPersons" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NeedsOfPatientAndRelatedPersons" />
+      </type>
+    </element>
+    <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons.valueString:valueString">
+      <path value="Composition.section.extension.valueString" />
+      <sliceName value="valueString" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Childcare-0-1yo" />
+        <map value="e-overdracht-dataelement-v4-643" />
+        <comment value="Wensen en behoeften patiënt en/of naasten" />
+      </mapping>
+    </element>
     <element id="Composition.section:carePlan.title">
       <path value="Composition.section.title" />
       <defaultValueString value="Careplan" />
@@ -1726,6 +1755,34 @@
         <comment value="Verpleegkundige context: specificatie gezondheidstoestand" />
       </mapping>
     </element>
+    <element id="Composition.section:healthState.extension">
+      <path value="Composition.section.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:healthState.extension:otherDetailsChild">
+      <path value="Composition.section.extension" />
+      <sliceName value="otherDetailsChild" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-OtherDetailsChild" />
+      </type>
+    </element>
+    <element id="Composition.section:healthState.extension:otherDetailsChild.valueString:valueString">
+      <path value="Composition.section.extension.valueString" />
+      <sliceName value="valueString" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Childcare-0-1yo" />
+        <map value="e-overdracht-dataelement-v4-1128" />
+        <comment value="Overige bijzonderheden kind" />
+      </mapping>
+    </element>
     <element id="Composition.section:healthState.title">
       <path value="Composition.section.title" />
       <short value="Nursing context - health situation" />
@@ -1773,6 +1830,35 @@
         <identity value="eOverdracht-NursingHandoff-Childcare-0-1yo" />
         <map value="e-overdracht-dataelement-v4-645" />
         <comment value="Zelfzorg" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.extension">
+      <path value="Composition.section.section.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.extension:commentOnSelfCare">
+      <path value="Composition.section.section.extension" />
+      <sliceName value="commentOnSelfCare" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-CommentOnSelfCare" />
+      </type>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.extension:commentOnSelfCare.valueString:valueString">
+      <path value="Composition.section.section.extension.valueString" />
+      <sliceName value="valueString" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Childcare-0-1yo" />
+        <map value="e-overdracht-dataelement-v4-762" />
+        <comment value="Toelichting zelfzorg" />
       </mapping>
     </element>
     <element id="Composition.section:healthState.section:selfCare.title">
@@ -2442,32 +2528,6 @@
       </mapping>
     </element>
     <element id="Composition.section:healthState.section:developmentChild.section">
-      <path value="Composition.section.section.section" />
-      <max value="0" />
-    </element>
-    <element id="Composition.section:healthState.section:otherDetailsChild">
-      <path value="Composition.section.section" />
-      <sliceName value="otherDetailsChild" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:otherDetailsChild.text">
-      <path value="Composition.section.section.text" />
-      <min value="1" />
-      <mapping>
-        <identity value="eOverdracht-NursingHandoff-Childcare-0-1yo" />
-        <map value="e-overdracht-dataelement-v4-1128" />
-        <comment value="Overige bijzonderheden kind" />
-      </mapping>
-    </element>
-    <element id="Composition.section:healthState.section:otherDetailsChild.text.status">
-      <path value="Composition.section.section.text.status" />
-      <fixedCode value="additional" />
-    </element>
-    <element id="Composition.section:healthState.section:otherDetailsChild.entry">
-      <path value="Composition.section.section.entry" />
-      <max value="0" />
-    </element>
-    <element id="Composition.section:healthState.section:otherDetailsChild.section">
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>

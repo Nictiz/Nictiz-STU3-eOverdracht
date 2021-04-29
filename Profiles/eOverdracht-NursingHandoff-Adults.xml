@@ -1428,9 +1428,11 @@
     <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons">
       <path value="Composition.section.extension" />
       <sliceName value="needsOfPatientAndRelatedPersons" />
+      <min value="0" />
+      <max value="*" />
       <type>
         <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/ext-Composition-sectionComment" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NeedsOfPatientAndRelatedPersons" />
       </type>
     </element>
     <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons.valueString:valueString">
@@ -1758,6 +1760,35 @@
         <comment value="Zelfzorg" />
       </mapping>
     </element>
+    <element id="Composition.section:healthState.section:selfCare.extension">
+      <path value="Composition.section.section.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.extension:commentOnSelfCare">
+      <path value="Composition.section.section.extension" />
+      <sliceName value="commentOnSelfCare" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-CommentOnSelfCare" />
+      </type>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.extension:commentOnSelfCare.valueString:valueString">
+      <path value="Composition.section.section.extension.valueString" />
+      <sliceName value="valueString" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-762" />
+        <comment value="Toelichting zelfzorg" />
+      </mapping>
+    </element>
     <element id="Composition.section:healthState.section:selfCare.title">
       <path value="Composition.section.section.title" />
       <short value="Self Care" />
@@ -1929,35 +1960,6 @@
         <map value="e-overdracht-dataelement-v4-685" />
         <comment value="VermogenTotVerpleegtechnischeHandelingen" />
       </mapping>
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section">
-      <path value="Composition.section.section.section" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section.title">
-      <path value="Composition.section.section.section.title" />
-      <defaultValueString value="Toelichting zelfzorg" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section.text">
-      <path value="Composition.section.section.section.text" />
-      <min value="1" />
-      <mapping>
-        <identity value="eOverdracht-NursingHandoff-Adults" />
-        <map value="e-overdracht-dataelement-v4-762" />
-        <comment value="Toelichting zelfzorg" />
-      </mapping>
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section.text.status">
-      <path value="Composition.section.section.section.text.status" />
-      <fixedCode value="additional" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section.entry">
-      <path value="Composition.section.section.section.entry" />
-      <max value="0" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section.section">
-      <path value="Composition.section.section.section.section" />
-      <max value="0" />
     </element>
     <element id="Composition.section:healthState.section:mobility">
       <path value="Composition.section.section" />
