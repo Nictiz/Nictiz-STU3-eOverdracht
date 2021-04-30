@@ -246,6 +246,91 @@
         <comment value="Contactpersoon" />
       </mapping>
     </element>
+    <element id="Composition.section:generalPatientContext">
+      <path value="Composition.section" />
+      <sliceName value="generalPatientContext" />
+      <short value="General Patient Context" />
+      <min value="1" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-AdvanceNotice" />
+        <map value="e-overdracht-dataelement-v4-203" />
+        <comment value="Algemene patiënten context" />
+      </mapping>
+    </element>
+    <element id="Composition.section:generalPatientContext.title">
+      <path value="Composition.section.title" />
+      <defaultValueString value="General patient context" />
+    </element>
+    <element id="Composition.section:generalPatientContext.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:generalPatientContext.code.coding">
+      <path value="Composition.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Composition.section:generalPatientContext.code.coding.system">
+      <path value="Composition.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Composition.section:generalPatientContext.code.coding.code">
+      <path value="Composition.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="109481000146101" />
+    </element>
+    <element id="Composition.section:generalPatientContext.code.coding.display">
+      <path value="Composition.section.code.coding.display" />
+      <defaultValueString value="Personal and social history section (record artifact)" />
+    </element>
+    <element id="Composition.section:generalPatientContext.entry">
+      <path value="Composition.section.entry" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:generalPatientContext.section">
+      <path value="Composition.section.section" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code.coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:generalPatientContext.section:legalSituation">
+      <path value="Composition.section.section" />
+      <sliceName value="legalSituation" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-AdvanceNotice" />
+        <map value="e-overdracht-dataelement-v4-1140" />
+        <comment value="Juridische situatie" />
+      </mapping>
+    </element>
+    <element id="Composition.section:generalPatientContext.section:legalSituation.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Legal situation" />
+    </element>
+    <element id="Composition.section:generalPatientContext.section:legalSituation.entry">
+      <path value="Composition.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-LegalStatus" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-Representation" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-AdvanceNotice" />
+        <map value="e-overdracht-dataelement-v4-1141" />
+        <comment value="JuridischeSituatie" />
+      </mapping>
+    </element>
     <element id="Composition.section:medicalContext">
       <path value="Composition.section" />
       <sliceName value="medicalContext" />
