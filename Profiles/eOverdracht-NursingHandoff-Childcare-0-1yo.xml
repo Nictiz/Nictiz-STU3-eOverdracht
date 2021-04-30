@@ -77,7 +77,7 @@
     </element>
     <element id="Composition.title">
       <path value="Composition.title" />
-      <fixedString value="Overdrachtsbericht Volwassenen" />
+      <defaultValueString value="Nursing handoff" />
     </element>
     <element id="Composition.section">
       <path value="Composition.section" />
@@ -136,7 +136,6 @@
     </element>
     <element id="Composition.section:administrativeData.title">
       <path value="Composition.section.title" />
-      <short value="Administrative data" />
       <defaultValueString value="Administrative data" />
     </element>
     <element id="Composition.section:administrativeData.code">
@@ -192,7 +191,6 @@
     </element>
     <element id="Composition.section:administrativeData.section:personalData.title">
       <path value="Composition.section.section.title" />
-      <short value="Personal data" />
       <defaultValueString value="Personal data" />
     </element>
     <element id="Composition.section:administrativeData.section:personalData.code">
@@ -278,7 +276,6 @@
     </element>
     <element id="Composition.section:administrativeData.section:sendingOrganization.title">
       <path value="Composition.section.section.title" />
-      <short value="Sending organization" />
       <defaultValueString value="Sending organization" />
     </element>
     <element id="Composition.section:administrativeData.section:sendingOrganization.code">
@@ -382,7 +379,6 @@
     </element>
     <element id="Composition.section:administrativeData.section:receivingOrganization.title">
       <path value="Composition.section.section.title" />
-      <short value="Receiving organization" />
       <defaultValueString value="Receiving organization" />
     </element>
     <element id="Composition.section:administrativeData.section:receivingOrganization.code">
@@ -484,7 +480,6 @@
     </element>
     <element id="Composition.section:generalPatientContext.title">
       <path value="Composition.section.title" />
-      <short value="General Patient Context" />
       <defaultValueString value="General patient context" />
     </element>
     <element id="Composition.section:generalPatientContext.code">
@@ -537,7 +532,6 @@
     </element>
     <element id="Composition.section:generalPatientContext.section:familySituation.title">
       <path value="Composition.section.section.title" />
-      <short value="Family Situation" />
       <defaultValueString value="Family situation" />
     </element>
     <element id="Composition.section:generalPatientContext.section:familySituation.code">
@@ -592,7 +586,6 @@
     </element>
     <element id="Composition.section:generalPatientContext.section:livingSituation.title">
       <path value="Composition.section.section.title" />
-      <short value="Living Situation" />
       <defaultValueString value="Living situation" />
     </element>
     <element id="Composition.section:generalPatientContext.section:livingSituation.code">
@@ -648,7 +641,6 @@
     </element>
     <element id="Composition.section:generalPatientContext.section:lifeStance.title">
       <path value="Composition.section.section.title" />
-      <short value="Life Stance" />
       <defaultValueString value="Life stance" />
     </element>
     <element id="Composition.section:generalPatientContext.section:lifeStance.code">
@@ -717,7 +709,6 @@
     </element>
     <element id="Composition.section:generalPatientContext.section:socialEnvironment.title">
       <path value="Composition.section.section.title" />
-      <short value="Life Stance" />
       <defaultValueString value="Life stance" />
     </element>
     <element id="Composition.section:generalPatientContext.section:socialEnvironment.code">
@@ -785,7 +776,6 @@
     </element>
     <element id="Composition.section:medicalContext.title">
       <path value="Composition.section.title" />
-      <short value="Medical context" />
       <defaultValueString value="Medical context" />
     </element>
     <element id="Composition.section:medicalContext.code">
@@ -840,7 +830,6 @@
     </element>
     <element id="Composition.section:medicalContext.section:practitioner.title">
       <path value="Composition.section.section.title" />
-      <short value="Practitioner" />
       <defaultValueString value="Practitioner" />
     </element>
     <element id="Composition.section:medicalContext.section:practitioner.code">
@@ -925,7 +914,6 @@
     </element>
     <element id="Composition.section:medicalContext.section:medicalDiagnosis.title">
       <path value="Composition.section.section.title" />
-      <short value="Medical diagnosis" />
       <defaultValueString value="Medical diagnosis" />
     </element>
     <element id="Composition.section:medicalContext.section:medicalDiagnosis.code">
@@ -981,7 +969,6 @@
     </element>
     <element id="Composition.section:medicalContext.section:medicalHistory.title">
       <path value="Composition.section.section.title" />
-      <short value="Medical history" />
       <defaultValueString value="Medical history" />
     </element>
     <element id="Composition.section:medicalContext.section:medicalHistory.code">
@@ -1037,7 +1024,6 @@
     </element>
     <element id="Composition.section:medicalContext.section:allergy.title">
       <path value="Composition.section.section.title" />
-      <short value="Allergy" />
       <defaultValueString value="Pay attention" />
     </element>
     <element id="Composition.section:medicalContext.section:allergy.code">
@@ -1148,7 +1134,6 @@
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.title">
       <path value="Composition.section.section.title" />
-      <short value="Freedom restriction" />
       <defaultValueString value="Freedom restriction" />
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.code">
@@ -1203,7 +1188,6 @@
     </element>
     <element id="Composition.section:medicalContext.section:measurements.title">
       <path value="Composition.section.section.title" />
-      <short value="Measurements" />
       <defaultValueString value="Measurements" />
     </element>
     <element id="Composition.section:medicalContext.section:measurements.code">
@@ -1371,7 +1355,6 @@
     </element>
     <element id="Composition.section:medicalContext.section:painScore.title">
       <path value="Composition.section.section.title" />
-      <short value="Pain Score" />
       <defaultValueString value="Pain score" />
     </element>
     <element id="Composition.section:medicalContext.section:painScore.code">
@@ -1655,7 +1638,7 @@
     </element>
     <element id="Composition.section:carePlan.section:outcomeOfCare.title">
       <path value="Composition.section.section.title" />
-      <defaultValueString value="Outcome of Care" />
+      <defaultValueString value="Outcome of care" />
     </element>
     <element id="Composition.section:carePlan.section:outcomeOfCare.code">
       <path value="Composition.section.section.code" />
@@ -1793,7 +1776,6 @@
     </element>
     <element id="Composition.section:healthState.title">
       <path value="Composition.section.title" />
-      <short value="Nursing context - health situation" />
       <defaultValueString value="Health state" />
     </element>
     <element id="Composition.section:healthState.code">
@@ -1870,7 +1852,6 @@
     </element>
     <element id="Composition.section:healthState.section:selfCare.title">
       <path value="Composition.section.section.title" />
-      <short value="Self Care" />
       <defaultValueString value="Self care" />
     </element>
     <element id="Composition.section:healthState.section:selfCare.code">
@@ -1920,35 +1901,6 @@
         <comment value="VermogenTotVerpleegtechnischeHandelingen" />
       </mapping>
     </element>
-    <element id="Composition.section:healthState.section:selfCare.section">
-      <path value="Composition.section.section.section" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section.title">
-      <path value="Composition.section.section.section.title" />
-      <defaultValueString value="Toelichting zelfzorg" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section.text">
-      <path value="Composition.section.section.section.text" />
-      <min value="1" />
-      <mapping>
-        <identity value="eOverdracht-NursingHandoff-Childcare-0-1yo" />
-        <map value="e-overdracht-dataelement-v4-762" />
-        <comment value="Toelichting zelfzorg" />
-      </mapping>
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section.text.status">
-      <path value="Composition.section.section.section.text.status" />
-      <fixedCode value="additional" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section.entry">
-      <path value="Composition.section.section.section.entry" />
-      <max value="0" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.section.section">
-      <path value="Composition.section.section.section.section" />
-      <max value="0" />
-    </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid">
       <path value="Composition.section.section" />
       <sliceName value="nutritionOrFluid" />
@@ -1962,7 +1914,6 @@
     </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid.title">
       <path value="Composition.section.section.title" />
-      <short value="Nutrition or fluid" />
       <defaultValueString value="Nutrition or fluid" />
     </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid.code">
@@ -2097,7 +2048,6 @@
     </element>
     <element id="Composition.section:healthState.section:excretion.title">
       <path value="Composition.section.section.title" />
-      <short value="Excretion" />
       <defaultValueString value="Excretion" />
     </element>
     <element id="Composition.section:healthState.section:excretion.code">
@@ -2195,7 +2145,6 @@
     </element>
     <element id="Composition.section:healthState.section:skin.title">
       <path value="Composition.section.section.title" />
-      <short value="Skin" />
       <defaultValueString value="Skin" />
     </element>
     <element id="Composition.section:healthState.section:skin.code">
@@ -2321,7 +2270,6 @@
     </element>
     <element id="Composition.section:healthState.section:senses.title">
       <path value="Composition.section.section.title" />
-      <short value="Senses" />
       <defaultValueString value="Senses" />
     </element>
     <element id="Composition.section:healthState.section:senses.code">
@@ -2404,7 +2352,6 @@
     </element>
     <element id="Composition.section:healthState.section:illnessPerception.title">
       <path value="Composition.section.section.title" />
-      <short value="Illness Perception" />
       <defaultValueString value="Illness perception" />
     </element>
     <element id="Composition.section:healthState.section:illnessPerception.code">
@@ -2461,8 +2408,7 @@
     </element>
     <element id="Composition.section:healthState.section:mentalStatus.title">
       <path value="Composition.section.section.title" />
-      <short value="Mental Status" />
-      <defaultValueString value="Mental Status" />
+      <defaultValueString value="Mental status" />
     </element>
     <element id="Composition.section:healthState.section:mentalStatus.code">
       <path value="Composition.section.section.code" />
@@ -2517,8 +2463,7 @@
     </element>
     <element id="Composition.section:healthState.section:developmentChild.title">
       <path value="Composition.section.section.title" />
-      <min value="1" />
-      <fixedString value="Development child" />
+      <defaultValueString value="Development child" />
     </element>
     <element id="Composition.section:healthState.section:developmentChild.entry">
       <path value="Composition.section.section.entry" />

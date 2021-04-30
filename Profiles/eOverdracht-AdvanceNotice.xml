@@ -67,7 +67,7 @@
     </element>
     <element id="Composition.title">
       <path value="Composition.title" />
-      <fixedString value="Aanmeldbericht" />
+      <defaultValueString value="Advance notice" />
     </element>
     <element id="Composition.section">
       <path value="Composition.section" />
@@ -126,7 +126,6 @@
     </element>
     <element id="Composition.section:administrativeData.title">
       <path value="Composition.section.title" />
-      <short value="Administrative data" />
       <defaultValueString value="Administrative data" />
     </element>
     <element id="Composition.section:administrativeData.code">
@@ -182,7 +181,6 @@
     </element>
     <element id="Composition.section:administrativeData.section:personalData.title">
       <path value="Composition.section.section.title" />
-      <short value="Personal data" />
       <defaultValueString value="Personal data" />
     </element>
     <element id="Composition.section:administrativeData.section:personalData.code">
@@ -213,8 +211,8 @@
       <path value="Composition.section.section.entry" />
       <slicing>
         <discriminator>
-          <type value="type" />
-          <path value="$this" />
+          <type value="profile" />
+          <path value="resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -263,7 +261,6 @@
     </element>
     <element id="Composition.section:medicalContext.title">
       <path value="Composition.section.title" />
-      <short value="Medical context" />
       <defaultValueString value="Medical context" />
     </element>
     <element id="Composition.section:medicalContext.code">
@@ -314,7 +311,6 @@
     </element>
     <element id="Composition.section:medicalContext.section:medicalDiagnosis.title">
       <path value="Composition.section.section.title" />
-      <short value="Medical diagnosis" />
       <defaultValueString value="Medical diagnosis" />
     </element>
     <element id="Composition.section:medicalContext.section:medicalDiagnosis.code">
@@ -357,7 +353,7 @@
     <element id="Composition.section:medicalContext.section:medicalHistory">
       <path value="Composition.section.section" />
       <sliceName value="medicalHistory" />
-      <short value="Medical History" />
+      <short value="Medical history" />
       <definition value="Subsection listing relevant medical history." />
       <max value="1" />
       <mapping>
@@ -368,7 +364,6 @@
     </element>
     <element id="Composition.section:medicalContext.section:medicalHistory.title">
       <path value="Composition.section.section.title" />
-      <short value="Medical history" />
       <defaultValueString value="Medical history" />
     </element>
     <element id="Composition.section:medicalContext.section:medicalHistory.code">
@@ -422,7 +417,6 @@
     </element>
     <element id="Composition.section:medicalContext.section:payAttention.title">
       <path value="Composition.section.section.title" />
-      <short value="Pay attention" />
       <defaultValueString value="Pay attention" />
     </element>
     <element id="Composition.section:medicalContext.section:payAttention.code">
@@ -476,7 +470,6 @@
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.title">
       <path value="Composition.section.section.title" />
-      <short value="Freedom restriction" />
       <defaultValueString value="Freedom restriction" />
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.code">
@@ -702,7 +695,6 @@
     </element>
     <element id="Composition.section:healthState.title">
       <path value="Composition.section.title" />
-      <short value="Nursing context - health situation" />
       <defaultValueString value="Health state" />
     </element>
     <element id="Composition.section:healthState.code">
@@ -756,7 +748,6 @@
     </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid.title">
       <path value="Composition.section.section.title" />
-      <short value="Nutrition or fluid" />
       <defaultValueString value="Nutrition or fluid" />
     </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid.code">
@@ -786,8 +777,8 @@
       <path value="Composition.section.section.entry" />
       <slicing>
         <discriminator>
-          <type value="type" />
-          <path value="$this" />
+          <type value="profile" />
+          <path value="resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -838,7 +829,6 @@
     </element>
     <element id="Composition.section:healthState.section:excretion.title">
       <path value="Composition.section.section.title" />
-      <short value="Excretion" />
       <defaultValueString value="Excretion" />
     </element>
     <element id="Composition.section:healthState.section:excretion.code">
