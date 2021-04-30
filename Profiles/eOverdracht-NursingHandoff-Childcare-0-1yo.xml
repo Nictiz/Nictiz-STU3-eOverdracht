@@ -1283,6 +1283,20 @@
         <comment value="Ademhaling" />
       </mapping>
     </element>
+    <element id="Composition.section:medicalContext.section:measurements.entry:respiration-AdministrationDevice">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="respiration-AdministrationDevice" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Respiration-AdministeredOxygen-AdministrationDevice" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Childcare-0-1yo" />
+        <map value="e-overdracht-dataelement-v4-438" />
+        <comment value="Ademhaling:ToegediendeZuurstof:ToedieningHulpmiddel" />
+      </mapping>
+    </element>
     <element id="Composition.section:medicalContext.section:measurements.entry:bodyWeight">
       <path value="Composition.section.section.entry" />
       <sliceName value="bodyWeight" />

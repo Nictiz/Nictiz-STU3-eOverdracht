@@ -1298,6 +1298,20 @@
         <comment value="Ademhaling" />
       </mapping>
     </element>
+    <element id="Composition.section:medicalContext.section:measurements.entry:respiration-AdministrationDevice">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="respiration-AdministrationDevice" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Respiration-AdministeredOxygen-AdministrationDevice" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-438" />
+        <comment value="Ademhaling:ToegediendeZuurstof:ToedieningHulpmiddel" />
+      </mapping>
+    </element>
     <element id="Composition.section:medicalContext.section:measurements.entry:bodyWeight">
       <path value="Composition.section.section.entry" />
       <sliceName value="bodyWeight" />
@@ -1831,6 +1845,19 @@
         <identity value="eOverdracht-NursingHandoff-Adults" />
         <map value="e-overdracht-dataelement-v4-652" />
         <comment value="VermogenTotMondVerzorging" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.entry:abilityToPerformMouthcareActivities-Prosthesis">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="abilityToPerformMouthcareActivities-Prosthesis" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToPerformMouthcareActivities-MedicalDeviceProduct" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-654" />
+        <comment value="VermogenTotMonderverzorging:Prothese" />
       </mapping>
     </element>
     <element id="Composition.section:healthState.section:selfCare.entry:abilityToWashOneSelf">
@@ -2420,6 +2447,19 @@
         <comment value="FunctieHoren" />
       </mapping>
     </element>
+    <element id="Composition.section:healthState.section:senses.entry:hearingFunction-HearingAid">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="hearingFunction-HearingAid" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HearingFunction-HearingAid" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1056" />
+        <comment value="FunctieHoren:HorenHulpmiddel" />
+      </mapping>
+    </element>
     <element id="Composition.section:healthState.section:senses.entry:visualFunction">
       <path value="Composition.section.section.entry" />
       <sliceName value="visualFunction" />
@@ -2433,6 +2473,19 @@
         <identity value="eOverdracht-NursingHandoff-Adults" />
         <map value="e-overdracht-dataelement-v4-1073" />
         <comment value="FunctieZien" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:senses.entry:visualFunction-VisualAid">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="visualFunction-VisualAid" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-VisualFunction-VisualAid" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1075" />
+        <comment value="FunctieZien:ZienHulpmiddel" />
       </mapping>
     </element>
     <element id="Composition.section:healthState.section:senses.section">
