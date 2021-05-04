@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="eOverdracht-Encounter" />
+  <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-Encounter" />
+  <name value="eOverdracht Encounter" />
+  <title value="eOverdracht Encounter" />
+  <status value="draft" />
+  <publisher value="Nictiz" />
+  <contact>
+    <name value="Nictiz" />
+    <telecom>
+      <system value="email" />
+      <value value="info@nictiz.nl" />
+      <use value="work" />
+    </telecom>
+  </contact>
+  <description value="An Encounter resource as defined by the eOverdracht program, based on Dutch Health and Care Information model (Dutch: Zorginformatiebouwsteen or ZIB) Encounter v3.1(2017).&#xD;&#xA;&#xD;&#xA;This eOverdracht specific profile differs in two important ways for [the zib profile](http://nictiz.nl/fhir/StructureDefinition/zib-Encounter) that it is based on:&#xD;&#xA;* An option is added to describe the reason for the Encounter in free text (while the option to describe just a deviating result as reason cannot be used). This information can be found on `Condition.reason.text`.&#xD;&#xA;* This resource can be used for future encounters as well as past encounters. This aligns with zib release 2020." />
+  <purpose value="This profile is to be used specifically within the context of eOverdracht care plans." />
+  <copyright value="CC0" />
+  <fhirVersion value="3.0.2" />
+  <mapping>
+    <identity value="eOverdracht-AdvanceNotice" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.63" />
+    <name value="eOverdracht 4.0 transaction &quot;Sturen aanmeldbericht&quot;" />
+  </mapping>
+  <mapping>
+    <identity value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.57" />
+    <name value="eOverdracht 4.0 transaction &quot;Sturen overdrachtsbericht kinderen 1-18 jaar&quot;" />
+  </mapping>
+  <mapping>
+    <identity value="eOverdracht-NursingHandoff-Childcare-0-1yo" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.51" />
+    <name value="eOverdracht 4.0 transaction &quot;Sturen overdrachtsbericht kinderen 0-1 jaar&quot;" />
+  </mapping>
+  <mapping>
+    <identity value="eOverdracht-NursingHandoff-Adults" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.68" />
+    <name value="eOverdracht 4.0 transaction &quot;Sturen overdrachtsbericht volwassenen&quot;" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Encounter" />
+  <baseDefinition value="http://nictiz.nl/fhir/StructureDefinition/zib-Encounter" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Encounter.reason">
+      <path value="Encounter.reason" />
+      <max value="1" />
+    </element>
+    <element id="Encounter.reason.coding">
+      <path value="Encounter.reason.coding" />
+      <max value="0" />
+    </element>
+    <element id="Encounter.reason.text">
+      <path value="Encounter.reason.text" />
+      <short value="ReasonContactText" />
+      <definition value="Addition to HCIM Contact for eOverdracht to describe a broader range of reasons than what's possible with Problem, Procedure or DeviatingResult." />
+      <comment value="Please note that in the base profile this field represent the HCIM Concept DeviatingResult, while its meaning is broadened to any textual description for the Encounter (which could include a deviating result)." />
+      <alias value="RedenContactTekst" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Childcare-0-1yo" />
+        <map value="e-overdracht-dataelement-v4-1740" />
+        <comment value="RedenContactTekst" />
+      </mapping>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
+        <map value="e-overdracht-dataelement-v4-1740" />
+        <comment value="RedenContactTekst" />
+      </mapping>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1740" />
+        <comment value="RedenContactTekst" />
+      </mapping>
+    </element>
+  </differential>
+</StructureDefinition>
