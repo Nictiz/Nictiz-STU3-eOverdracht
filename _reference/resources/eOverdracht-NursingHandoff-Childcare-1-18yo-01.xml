@@ -1,7 +1,7 @@
 <?xml-model href="http://hl7.org/fhir/STU3/composition.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><Composition xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/fhir-all.xsd">
-    <id value="eOverdracht-overdrachtsbericht-volwassenen-01"/>
+    <id value="eOverdracht-NursingHandoff-Childcare-1-18yo-01"/>
     <meta>
-        <profile value=" http://nictiz.nl/fhir/StructureDefinition/eOverdracht-overdrachtsbericht-volwassenen"/>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Childcare-1-18yo"/>
     </meta>
     <status value="final"/>
     <type>
@@ -12,24 +12,24 @@
         </coding>
     </type>
     <subject>
-        <reference value="Patient/XXX-Altenborg"/>
-        <display value="Erik Altenborg"/>
+        <reference value="Patient/XXX-Buckle"/>
+        <display value="Adam Buckle"/>
     </subject>
     <date value="${DATE, T, D, -0}"/>
     <author>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
             <valueReference>
-                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-01"/>
+                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-07"/>
                 <display value="Verpleegkundige, niet nader gespecificeerd"/>
             </valueReference>
         </extension>
-        <reference value="Practitioner/eOverdracht-nl-core-practitioner-01"/>
-        <display value="Charlotte Bruinsma"/>
+        <reference value="Practitioner/eOverdracht-nl-core-practitioner-07"/>
+        <display value="Jasmijn Hooijmans"/>
     </author>
-    <title value="Overdrachtsbericht Volwassenen"/>
+    <title value="Overdrachtsbericht kinderen 1-18 jaar"/>
     <section>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate">
-            <valueDateTime value="2018-01-21"/>
+            <valueDateTime value="2018-03-29"/>
         </extension>
         <title value="Administrative data"/>
         <code>
@@ -49,12 +49,12 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Coverage/eOverdracht-payer-01"/>
+                <reference value="Coverage/eOverdracht-payer-03"/>
                 <display value="Basisverzekerd Trias"/>
             </entry>
             <entry>
-                <reference value="RelatedPerson/eOverdracht-contactperson-01"/>
-                <display value="Johanna Bakker"/>
+                <reference value="RelatedPerson/eOverdracht-contactperson-08"/>
+                <display value="Lianne de Wit-Buckle"/>
             </entry>
         </section>
         <section>
@@ -67,15 +67,15 @@
             </coding>
             </code>
             <entry>
-                <reference value="Organization/eOverdracht-nl-core-organization-02"/>
+                <reference value="Organization/eOverdracht-nl-core-organization-04"/>
                 <display value="AB-zkh"/>
             </entry>
             <entry>
-                <reference value="Practitioner/eOverdracht-nl-core-practitioner-01"/>
-                <display value="Charlotte Bruinsma"/>
+                <reference value="Practitioner/eOverdracht-nl-core-practitioner-07"/>
+                <display value="Jasmijn Hooijmans"/>
             </entry>
             <entry>
-                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-01"/>
+                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-07"/>
                 <display value="Verpleegkundige, niet nader gespecificeerd"/>
             </entry>
         </section>
@@ -93,11 +93,11 @@
                 <display value="ThuiszorgOrg"/>
             </entry>
             <entry>
-                <reference value="Practitioner/eOverdracht-nl-core-practitioner-02"/>
-                <display value="Mark van Laren"/>
+                <reference value="Practitioner/eOverdracht-nl-core-practitioner-08"/>
+                <display value="Karin Smits"/>
             </entry>
             <entry>
-                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-02"/>
+                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-08"/>
                 <display value="Verpleegkundige, niet nader gespecificeerd"/>
             </entry>
         </section>
@@ -122,8 +122,8 @@
                 </coding>
             </code>
            <entry>
-               <reference value="Observation/eOverdracht-familysituation-01"/>
-               <display value="samenwonend met partner"/>
+               <reference value="Observation/eOverdracht-familysituation-03"/>
+               <display value="Woont bij ouders"/>
            </entry> 
         </section>
         <section>
@@ -136,22 +136,8 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Observation/eOverdracht-livingsituation-01"/>
-                <display value="appartement"/>
-            </entry>
-        </section>
-        <section>
-            <title value="Life stance"/>
-            <code>
-                <coding>
-                    <system value="http://snomed.info/sct"/>
-                    <code value="108329005"/>
-                    <display value="Social context finding (finding)"/>
-                </coding>
-            </code>
-            <entry>
-                <reference value="Consent/eOverdracht-advancedirective-01"/>
-                <display value="verklaring donorschap"/>
+                <reference value="Observation/eOverdracht-livingsituation-03"/>
+                <display value="Eengezinswoning"/>
             </entry>
         </section>
         <section>
@@ -164,16 +150,16 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Observation/eOverdracht-participationinsociety-01"/>
-                <display value="veel contact met collega's en buren"/>
+                <reference value="Observation/eOverdracht-participationinsociety-02"/>
+                <display value="veel vriendjes in de buurt"/>
             </entry>
             <entry>
-                <reference value="CarePlan/eOverdracht-helpfromothers-01"/>
-                <display value="Help met ondersteuning van echtgenoot"/>
+                <reference value="CarePlan/eOverdracht-helpfromothers-03"/>
+                <display value="Helpen met opvang andere kinderen"/>
             </entry>
         </section>
     </section>
-    <!-- Medical Context -->
+    <!-- Medical Context-->
     <section>
         <title value="Medical context"/>
         <code>
@@ -193,12 +179,12 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Practitioner/eOverdracht-nl-core-practitioner-03"/>
-                <display value="Joshua Helmond"/>
+                <reference value="Practitioner/eOverdracht-nl-core-practitioner-09"/>
+                <display value="Lieke Sanders"/>
             </entry>
             <entry>
-                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-03"/>
-                <display value="Medisch specialist, neurologie"/>
+                <reference value="PractitionerRole/eOverdracht-nl-core-practitionerrole-09"/>
+                <display value="Medisch specialist, kindergeneeskunde"/>
             </entry>
         </section>
         <section>
@@ -211,12 +197,8 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Condition/eOverdracht-problem-01"/>
-                <display value="ischemisch cerebrovasculair accident"/>
-            </entry>
-            <entry>
-                <reference value="Condition/eOverdracht-problem-02"/>
-                <display value="neoplasma van colon"/>
+                <reference value="Condition/eOverdracht-problem-18"/>
+                <display value="eetstoornis"/>
             </entry>
         </section>
         <section>
@@ -229,8 +211,8 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Condition/eOverdracht-problem-03"/>
-                <display value="diabetes mellitus"/>
+                <reference value="Condition/eOverdracht-problem-19"/>
+                <display value="allergisch astma"/>
             </entry>
         </section>
         <section>
@@ -243,8 +225,8 @@
                 </coding>
             </code>
             <entry>
-                <reference value="AllergyIntolerance/eOverdracht-allergyintolerance-01"/>
-                <display value="nikkelsulfaat"/>
+                <reference value="AllergyIntollerance/eOverdracht-allergyintolerance-02"/>
+                <display value="huisstofallergeen"/>
             </entry>
         </section>
         <section>
@@ -257,7 +239,7 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Flag/eOverdracht-alert-01"/>
+                <reference value="Flag/eOverdracht-alert-03"/>
                 <display value="Drager MRSA"/>
             </entry>
         </section>
@@ -271,27 +253,27 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Observation/eOverdracht-Bloodpressure-01"/>
+                <reference value="Observation/eOverdracht-Bloodpressure-03"/>
                 <display value="Blood pressure"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-PulseRate-01"/>
+                <reference value="Observation/eOverdracht-PulseRate-03"/>
                 <display value="pulse rate"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-Bodytemperature-01"/>
+                <reference value="Observation/eOverdracht-Bodytemperature-03"/>
                 <display value="pulse rate"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-Respiration-01"/>
+                <reference value="Observation/eOverdracht-Respiration-03"/>
                 <display value="pulse rate"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-Bodyweight-01"/>
+                <reference value="Observation/eOverdracht-Bodyweight-03"/>
                 <display value="pulse rate"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-BodyLength-01"/>
+                <reference value="Observation/eOverdracht-BodyLength-03"/>
                 <display value="pulse rate"/>
             </entry>
         </section>
@@ -305,7 +287,7 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Observation/eOverdracht-PainScore-01"/>
+                <reference value="Observation/eOverdracht-PainScore-03"/>
                 <display value="Pain Score"/>
             </entry>
         </section>
@@ -330,60 +312,40 @@
                     </coding>
                 </code>
             <entry>
-                <reference value="Condition/eOverdracht-problem-04"/>
-                <display value="probleem met zich wassen en afdrogen"/>
+                <reference value="Condition/eOverdracht-problem-20"/>
+                <display value="probleem met eetgedrag"/>
             </entry>
                 <entry>
-                    <reference value="Condition/eOverdracht-problem-05"/>
-                    <display value="probleem met zichzelf kleden"/>
+                    <reference value="Condition/eOverdracht-problem-21"/>
+                    <display value="ondergewicht"/>
                 </entry>
                 <entry>
-                    <reference value="Condition/eOverdracht-problem-07"/>
-                    <display value="probleem met lopen"/>
-                </entry>
-                <entry>
-                    <reference value="Condition/eOverdracht-problem-08"/>
-                    <display value="afasie"/>
-                </entry>
-                <entry>
-                    <reference value="Condition/eOverdracht-problem-09"/>
-                    <display value="Decubitus"/>
-                </entry>
-                <entry>
-                    <reference value="Condition/eOverdracht-problem-10"/>
-                    <display value="Overbelaste mantelzorg"/>
+                    <reference value="Condition/eOverdracht-problem-22"/>
+                    <display value="verstoring van balans tussen draagkracht en draaglast"/>
                 </entry>
             <entry>
-                <reference value="Procedure/eOverdracht-NursingIntervention-01"/>
-                <display value="ondersteunen bij wassen en afdrogen"/>
+                <reference value="Procedure/eOverdracht-NursingIntervention-09"/>
+                <display value="ondersteunen bij eten en drinken"/>
             </entry>
                 <entry>
-                    <reference value="Procedure/eOverdracht-NursingIntervention-02"/>
-                    <display value="ondersteunen bij aankleden"/>
+                    <reference value="Procedure/eOverdracht-NursingIntervention-10"/>
+                    <display value="toedienen van sondevoeding"/>
                 </entry>
                 <entry>
-                    <reference value="Procedure/eOverdracht-NursingIntervention-03"/>
-                    <display value="patiënt mobiliseren"/>
+                    <reference value="Procedure/eOverdracht-NursingIntervention-11"/>
+                    <display value="ondersteuning van gezin"/>
                 </entry>
                 <entry>
-                    <reference value="Procedure/eOverdracht-NursingIntervention-04"/>
-                    <display value="aanleggen verband op wond"/>
+                    <reference value="Goal/eOverdracht-TreatmentObjective-09"/>
+                    <display value="eet momenten verlopen zonder stress"/>
                 </entry>
                 <entry>
-                    <reference value="Goal/eOverdracht-TreatmentObjective-01"/>
-                    <display value="wassen onafhankelijk"/>
+                    <reference value="Goal/eOverdracht-TreatmentObjective-10"/>
+                    <display value="gewicht niet lager dan 20 kg"/>
                 </entry>
                 <entry>
-                    <reference value="Goal/eOverdracht-TreatmentObjective-02"/>
-                    <display value="kleden onafhankelijk"/>
-                </entry>
-                <entry>
-                    <reference value="Goal/eOverdracht-TreatmentObjective-03"/>
-                    <display value="lopen met hulp"/>
-                </entry>
-                <entry>
-                    <reference value="Goal/eOverdracht-TreatmentObjective-04"/>
-                    <display value="decubitus wond genezen"/>
+                    <reference value="Goal/eOverdracht-TreatmentObjective-11"/>
+                    <display value="ouders komen tot rust; ontspannen en veilige gezinssituatie"/>
                 </entry>
             </section>
             <section>
@@ -396,20 +358,12 @@
                     </coding>
                 </code>
                 <entry>
-                    <reference value="DiagnosticReport/eOverdracht-OutcomeOfCare-01"/>
-                    <display value="zie specificatie gezondheidstoestand: VermogenTotZichWassen"/>
+                    <reference value="DiagnosticReport/eOverdracht-OutcomeOfCare-07"/>
+                    <display value="zie specificatie gezondheidstoestand: Zelfzorg"/>
                 </entry>
                 <entry>
-                    <reference value="DiagnosticReport/eOverdracht-OutcomeOfCare-02"/>
-                    <display value="zie specificatie gezondheidstoestand: VermogenTotZichKleden"/>
-                </entry>
-                <entry>
-                    <reference value="DiagnosticReport/eOverdracht-OutcomeOfCare-03"/>
-                    <display value="zie specificatie gezondheidstoestand: Mobiliteit"/>
-                </entry>
-                <entry>
-                    <reference value="DiagnosticReport/eOverdracht-OutcomeOfCare-04"/>
-                    <display value="zie specificatie gezondheidstoestand: DecubitusWond"/>
+                    <reference value="DiagnosticReport/eOverdracht-OutcomeOfCare-08"/>
+                    <display value="zie specificatie gezondheidstoestand: Voeding/vocht"/>
                 </entry>
             </section>
             <section>
@@ -422,19 +376,15 @@
                     </coding>
                 </code>
                 <entry>
-                    <reference value="ProcedureRequest/eOverdracht-procedurerequest-01"/>
-                    <display value="Patient mobiliseren"/>
-                </entry>
-                <entry>
-                    <reference value="ProcedureRequest/eOverdracht-procedurerequest-02"/>
-                    <display value="ondersteunen verzorger"/>
+                    <reference value="ProcedureRequest/eOverdracht-procedurerequest-04"/>
+                    <display value="ondersteuning voor verzorger"/>
                 </entry>
             </section>
             <section>
                 <title value="Patient's needs and preferences"/>
                 <text>
                     <status value="additional"/>
-                    <div xmlns="http://www.w3.org/1999/xhtml">meneer wil zo snel mogelijk weer zelfstandig kunnen functioneren en zijn vrouw kunnen verzorgen </div>
+                    <div xmlns="http://www.w3.org/1999/xhtml">ouders willen graag weer tot rust komen zodat ze op termijn weer ontspannen om kunnen gaan met eten geven.</div>
                 </text>
             </section>
         </section>
@@ -458,46 +408,46 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Observation/eOverdracht-AbilityToDrink-01"/>
+                <reference value="Observation/eOverdracht-AbilityToDrink-02"/>
                 <display value="onafhankelijk"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-AbilityToEat-01"/>
+                <reference value="Observation/eOverdracht-AbilityToEat-02"/>
                 <display value="onafhankelijk"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-AbilityToPerformMouthcareActivities-01"/>
+                <reference value="Observation/eOverdracht-AbilityToPerformMouthcareActivities-02"/>
                 <display value="hulp nodig"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-AbilityToWashOneself-01"/>
+                <reference value="Observation/eOverdracht-AbilityToWashOneself-02"/>
                 <display value="hulp nodig"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-AbilityToDressOnseself-01"/>
+                <reference value="Observation/eOverdracht-AbilityToDressOnseself-02"/>
                 <display value="onafhankelijk"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-AbilityToGroome-01"/>
+                <reference value="Observation/eOverdracht-AbilityToGroome-02"/>
                 <display value="hulp nodig"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-AbilityToUseToilet-01"/>
+                <reference value="Observation/eOverdracht-AbilityToUseToilet-02"/>
                 <display value="onafhankelijk"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-AbilityToUseMedication-01"/>
+                <reference value="Observation/eOverdracht-AbilityToUseMedication-02"/>
                 <display value="onafhankelijk"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-AbilityToPerformNursingActivities-01"/>
+                <reference value="Observation/eOverdracht-AbilityToPerformNursingActivities-03"/>
                 <display value="hulp nodig"/>
             </entry>
             <section>
                 <title value="Self care comment"/>
                 <text>
                     <status value="additional"/>
-                    <div xmlns="http://www.w3.org/1999/xhtml">Kan zich steeds beter redden met wassen en kleden, knoopjes dichtdoen en schoenen met hulp</div>
+                    <div xmlns="http://www.w3.org/1999/xhtml">begint met zelf aankleden, hulp nodig i.v.m. sonde</div>
                 </text>
             </section>
         </section>
@@ -511,7 +461,7 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Observation/eOverdracht-Mobility-01"/>
+                <reference value="Observation/eOverdracht-Mobility-02"/>
                 <display value="mobiliteit"/>
             </entry>
         </section>
@@ -525,36 +475,20 @@
                 </coding>
             </code>
             <entry>
-                <reference value="NutritionOrder/eOverdracht-NutritionAdvice-01"/>
-                <display value="suikervrij, diabetes dieet"/>
+                <reference value="NutritionOrder/eOverdracht-NutritionAdvice-03"/>
+                <display value="gericht op wat mogelijk is; zoals brood met pindakaas, pasta"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-SNAQScore-01"/>
-                <display value="(2) meer dan 3 kg in de laatste maand"/>
+                <reference value="Observation/eOverdracht-StrongKidsScore-02"/>
+                <display value="Slechte voedingstoestand"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-SNAQrcScore-01"/>
-                <display value="(2) : Meer dan 6 kg in de laatste 6 maanden"/>
-            </entry>
-            <entry>
-                <reference value="Observation/eOverdracht-SNAQ65-01"/>
-                <display value="(0) : Minder dan 4kg in de laatste maand"/>
-            </entry>
-            <entry>
-                <reference value="Observation/eOverdracht-MUSTScore-01"/>
-                <display value="(0) : BMI >20 kg/m2"/>
-            </entry>
-            <entry>
-                <reference value="Observation/eOverdracht-fluidBalance-01"/>
+                <reference value="Observation/eOverdracht-fluidBalance-03"/>
                 <display value="vochtbalans"/>
             </entry>
             <entry>
-                <reference value="DeviceUseStatement/eOverdracht-FeedingTubeSystem-01"/>
-                <display value="Neus-maagsonde"/>
-            </entry>
-            <entry>
-                <reference value="DeviceUseStatement/eOverdracht-Infusion-01"/>
-                <display value="port-a-cath"/>
+                <reference value="DeviceUseStatement/eOverdracht-FeedingTubeSystem-03"/>
+                <display value="neus-maagsonde"/>
             </entry>
         </section>
         <section>
@@ -567,16 +501,12 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Observation/eOverdracht-BladderFunction-01"/>
-                <display value="Af en toe een ongelukje (max. 1 keer per 24 uur)"/>
+                <reference value="Observation/eOverdracht-BladderFunction-02"/>
+                <display value="Continent"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-BowelFunction-01"/>
-                <display value="Incontinent"/>
-            </entry>
-            <entry>
-                <reference value="Observation/eOverdracht-Stoma-01"/>
-                <display value="eindstandige ileostoma"/>
+                <reference value="Observation/eOverdracht-BowelFunction-03"/>
+                <display value="Continent"/>
             </entry>
         </section>
         <section>
@@ -589,20 +519,16 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Condition/eOverdracht-BurnWound-01"/>
+                <reference value="Condition/eOverdracht-BurnWound-03"/>
                 <display value="thermische brandwond"/>
             </entry>
             <entry>
-                <reference value="Condition/eOverdracht-PressureUlcer-01"/>
-                <display value="Cat. 2"/>
+                <reference value="Condition/eOverdracht-SkinDisorder-03"/>
+                <display value="Eczeem"/>
             </entry>
             <entry>
-                <reference value="Condition/eOverdracht-SkinDisorder-01"/>
-                <display value="Intertrigo/smetten"/>
-            </entry>
-            <entry>
-                <reference value="Condition/eOverdracht-Wound-01"/>
-                <display value="Traumatische brandwond"/>
+                <reference value="Condition/eOverdracht-Wound-03"/>
+                <display value="Traumatische wond"/>
             </entry>
         </section>
         <section>
@@ -615,12 +541,12 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Observation/eOverdracht-HearingFunction-01"/>
-                <display value="verminderd gehoor"/>
+                <reference value="Observation/eOverdracht-HearingFunction-03"/>
+                <display value="geen gehoorstoornis"/>
             </entry>
             <entry>
-                <reference value="Observation/eOverdracht-VisualFunction-01"/>
-                <display value="verminderd gezichtsvermogen"/>
+                <reference value="Observation/eOverdracht-VisualFunction-03"/>
+                <display value="geen visuele stoornis"/>
             </entry>
         </section>
         <section>
@@ -633,8 +559,8 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Observation/eOverdracht-IllnesPerception-01"/>
-                <display value="meneer kan niet overzien wat de ziekte betekent in het dagelijkse leven"/>
+                <reference value="Observation/eOverdracht-IllnesPerception-03"/>
+                <display value="kind lijkt niet goed te beseffen dat problemen met eten en ondergewicht samenhangen"/>
             </entry>
         </section>
         <section>
@@ -642,13 +568,20 @@
             <code>
                 <coding>
                     <system value="http://snomed.info/sct"/>
-                    <code value="36456004"/>
+                    <code value="36456004"/> 
                     <display value="bevinding betreffende mentale toestand (bevinding)"/>
                 </coding>
             </code>
             <entry>
-                <reference value="Condition/eOverdracht-problem-11"/>
-                <display value="verminderde alertheid"/>
+                <reference value="Condition/eOverdracht-problem-23"/>
+                <display value="onrust"/>
+            </entry>
+        </section>
+        <section>
+            <title value="Development child"/>
+            <entry>
+                <reference value="Observation/eOverdracht-DevelopmentChild-02"/>
+                <display value="ontwikkeling kind"/>
             </entry>
         </section>
     </section>
