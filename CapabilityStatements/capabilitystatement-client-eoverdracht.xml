@@ -24,13 +24,13 @@
     <format value="application/fhir+json"/>
     <rest>
         <mode value="client"/>
-        <documentation value="Task resource to negotiate the transfer of a patient and track the subsequent nursing handoff"/>
         <resource>
             <type value="Task"/>
             <profile>
                 <reference value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-Task"/>
                 <display value="eOverdracht Task"/>
             </profile>
+            <documentation value="Task resource to negotiate the transfer of a patient and track the subsequent nursing handoff"/>
             <interaction>
                 <code value="search-type"/>
                 <code value="read"/>
@@ -40,55 +40,9 @@
                 <type value="token"/>
             </searchParam>
         </resource>
-    </rest>
-    <rest>
-        <mode value="client"/>
-        <documentation value="Composition resource which represents the advance notice for eOverdracht." />
         <resource>
             <type value="Composition"/>
-        <profile>
-            <reference value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-AdvanceNotice"/>
-            <display value="eOverdracht advance notice (Aanmeldbericht)"/>
-        </profile>       
-            <interaction>
-                <code value="read"/>
-            </interaction>
-        </resource>
-    </rest>
-    <rest>
-        <mode value="client"/>
-        <documentation value="Composition resource which represents the nursing handoff for adults for eOverdracht." />
-        <resource>
-        <profile>
-            <reference value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Adults"/>
-            <display value="eOverdracht nursing handoff adults (Overdrachtsbericht volwassenen)"/>
-        </profile>       
-            <interaction>
-                <code value="read"/>
-            </interaction>
-        </resource>
-    </rest>
-    <rest>
-        <mode value="client"/>
-        <documentation value="Composition resource which represents the ursing handoff for childcare age 0-1 yo (Overdrachtsbericht kinderen 0-1 jaar) for eOverdracht." />
-        <resource>
-        <profile>
-            <reference value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Childcare-0-1yo"/>
-            <display value="eOverdracht nursing handoff childcare 0-1 yo (Overdrachtsbericht kinderen 0 tot 1 jaar)"/>
-        </profile>       
-            <interaction>
-                <code value="read"/>
-            </interaction>
-        </resource>
-    </rest>
-    <rest>
-        <mode value="client"/>
-        <documentation value="Composition resource which represents the nursing handoff for childcare age 1-18 yo (Overdrachtsbericht kinderen 1-18 jaar) for eOverdracht." />
-        <resource>
-        <profile>
-            <reference value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Childcare-1-18yo"/>
-            <display value="eOverdracht nursing handoff childcare 1-18 yo (Overdrachtsbericht kinderen 1 tot 18 jaar)"/>
-        </profile>       
+            <documentation value="Composition resources are used for the advance notice and nursing handoff within eOverdracht." />
             <interaction>
                 <code value="read"/>
             </interaction>
