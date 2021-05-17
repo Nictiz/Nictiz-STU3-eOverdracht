@@ -2,9 +2,10 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="eOverdracht-CommentOnSelfCare" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-CommentOnSelfCare" />
+  <version value="1.0.0-rc1" />
   <name value="eOverdrachtCommentOnSelfCare" />
   <title value="eOverdracht CommentOnSelfCare" />
-  <status value="draft" />
+  <status value="active" />
   <publisher value="Nictiz" />
   <contact>
     <name value="Nictiz" />

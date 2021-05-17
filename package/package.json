@@ -1,15 +1,15 @@
 {
   "name": "nictiz.fhir.nl.stu3.eoverdracht",
-  "version": "0.2.0-beta4",
+  "version": "1.0.0-rc1",
   "web": "https://informatiestandaarden.nictiz.nl/wiki/vpk:Landingspagina_eOverdracht",
-  "title": "Nictiz FHIR NL STU3 eOverdracht",
-  "description": "Nictiz NL package of FHIR STU3 conformance resources for eOverdracht information standard. Includes dependency on Zib2017.\\n\\nHCIMs: https://zibs.nl/wiki/HCIM_Release_2017(EN)",
+  "title": "Nictiz FHIR NL STU3 eOverdracht v4.0",
+  "description": "Nictiz NL package of FHIR STU3 conformance resources for eOverdracht information standard, version 4.0. Includes dependency on Zib2017.\\n\\nHCIMs: https://zibs.nl/wiki/HCIM_Release_2017(EN)",
   "keywords": [
     "nl",
     "Nictiz",
     "eOverdracht",
     "Cure",
-    "Care",
+    "Care"
   ],
   "author": "Nictiz",
   "maintainers": [
