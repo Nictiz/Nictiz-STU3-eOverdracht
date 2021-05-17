@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://hl7.org/fhir/STU3/capabilitystatement.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<CapabilityStatement xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/STU3/capabilitystatement.xsd">
+<CapabilityStatement xmlns="http://hl7.org/fhir">
     <url value="http://nictiz.nl/fhir/CapabilityStatement/eOverdracht-clientcapabilities"/>
-    <version value="1.0.0"/>
+    <version value="1.0.0-rc1"/>
     <name value="eOverdrachtClient"/>
     <status value="draft"/>
-    <date value="2019-10-28"/>
+    <date value="2021-05-17"/>
     <publisher value="Nictiz"/>
     <contact>
         <name value="Nictiz"/>
@@ -15,43 +14,84 @@
             <use value="work"/>
         </telecom>
     </contact>
-    <description value="This CapabilityStatement describes the minimal requirements for a client to send eOverdacht documents based on the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB), release 2017. The eOverdracht project is divided in multiple phases. This CapabilityStatement describes the minimal capabilities to comply to phase 1. "/>
+    <description value="This CapabilityStatement describes the minimal requirements for a client  to retrieve eOverdacht information based on the Dutch Health and Care Information models (Dutch: Zorginformatiebouwsteen or ZIB), release 2017. More information on eOverdracht standard: https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Verpleegkundige_Zorg"/>
+    <purpose value="This CapabilityStatement is informative in nature and does not represent the minimum or maximum set of capabilities the client or server should support. The aim is to design the CapabilityStatement as complete as possible, however for the exact set of capabilities the implementation guide of the corresponding information standard should be consulted."/>
     <copyright value="CC0"/>
     <kind value="requirements"/>
-    <fhirVersion value="3.0.1"/>
+    <fhirVersion value="3.0.2"/>
     <acceptUnknown value="both"/>
     <format value="application/fhir+xml"/>
     <format value="application/fhir+json"/>
-    <document>
-        <mode value="producer"/>
-        <documentation value="Composition resource which represents the advance notice (Aanmeldbericht) for eOverdracht. More information on eOverdracht standard: https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Verpleegkundige_Zorg" />
+    <rest>
+        <mode value="client"/>
+        <documentation value="Task resource to negotiate the transfer of a patient and track the subsequent nursing handoff"/>
+        <resource>
+            <type value="Task"/>
+            <profile>
+                <reference value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-Task"/>
+                <display value="eOverdracht Task"/>
+            </profile>
+            <interaction>
+                <code value="search-type"/>
+                <code value="read"/>
+            </interaction>
+            <searchParam>
+                <name value="code"/>
+                <type value="token"/>
+            </searchParam>
+        </resource>
+    </rest>
+    <rest>
+        <mode value="client"/>
+        <documentation value="Composition resource which represents the advance notice for eOverdracht." />
+        <resource>
+            <type value="Composition"/>
         <profile>
             <reference value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-AdvanceNotice"/>
             <display value="eOverdracht advance notice (Aanmeldbericht)"/>
         </profile>       
-    </document>
-    <document>
-        <mode value="producer"/>
-        <documentation value="Composition resource which represents the nursing handoff for adults for eOverdracht. More information on eOverdracht standard: https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Verpleegkundige_Zorg" />
+            <interaction>
+                <code value="read"/>
+            </interaction>
+        </resource>
+    </rest>
+    <rest>
+        <mode value="client"/>
+        <documentation value="Composition resource which represents the nursing handoff for adults for eOverdracht." />
+        <resource>
         <profile>
             <reference value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Adults"/>
             <display value="eOverdracht nursing handoff adults (Overdrachtsbericht volwassenen)"/>
         </profile>       
-    </document>
-    <document>
-        <mode value="producer"/>
-        <documentation value="Composition resource which represents the nursing handoff for childcare age 0-1 yo (Overdrachtsbericht kinderen 0-1 jaar) for eOverdracht. More information on eOverdracht standard: https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Verpleegkundige_Zorg" />
+            <interaction>
+                <code value="read"/>
+            </interaction>
+        </resource>
+    </rest>
+    <rest>
+        <mode value="client"/>
+        <documentation value="Composition resource which represents the ursing handoff for childcare age 0-1 yo (Overdrachtsbericht kinderen 0-1 jaar) for eOverdracht." />
+        <resource>
         <profile>
             <reference value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Childcare-0-1yo"/>
             <display value="eOverdracht nursing handoff childcare 0-1 yo (Overdrachtsbericht kinderen 0 tot 1 jaar)"/>
         </profile>       
-    </document>
-    <document>
-        <mode value="producer"/>
-        <documentation value="Composition resource which represents the nursing handoff for childcare age 1-18 yo (Overdrachtsbericht kinderen 1-18 jaar) for eOverdracht. More information on eOverdracht standard: https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Verpleegkundige_Zorg" />
+            <interaction>
+                <code value="read"/>
+            </interaction>
+        </resource>
+    </rest>
+    <rest>
+        <mode value="client"/>
+        <documentation value="Composition resource which represents the nursing handoff for childcare age 1-18 yo (Overdrachtsbericht kinderen 1-18 jaar) for eOverdracht." />
+        <resource>
         <profile>
             <reference value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Childcare-1-18yo"/>
             <display value="eOverdracht nursing handoff childcare 1-18 yo (Overdrachtsbericht kinderen 1 tot 18 jaar)"/>
         </profile>       
-    </document>
+            <interaction>
+                <code value="read"/>
+            </interaction>
+        </resource>
+    </rest>
 </CapabilityStatement>
