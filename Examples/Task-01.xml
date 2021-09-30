@@ -1,0 +1,48 @@
+<Task xmlns="http://hl7.org/fhir">
+    <id value="task-01" />
+    <meta>
+        <versionId value="502826168" />
+        <lastUpdated value="2021-09-16T11:27:09.024748+00:00" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-Task" />
+    </meta>
+    <implicitRules value="http://hl7.org/fhir/reference" />
+    <status value="accepted" />
+    <statusReason>
+        <text value="abc" />
+    </statusReason>
+    <intent value="order" />
+    <code>
+        <coding>
+            <system value="http://snomed.info/sct" />
+            <code value="308292007" />
+            <display value="overdracht van zorg" />
+        </coding>
+    </code>
+    <for>
+        <reference value="Patient/nl-core-patient-01" />
+        <display value="Test patientje" />
+    </for>
+    <requester>
+        <agent>
+            <reference value="Practitioner/nl-core-practitioner-01" />
+            <display value="Test zorgverlener" />
+        </agent>
+    </requester>
+    <owner>
+        <reference value="Organization/nl-core-organization-03" />
+        <display value="Test organisatie" />
+    </owner>
+    <input>
+        <type>
+            <coding>
+                <system value="http://snomed.info/sct" />
+                <code value="371535009" />
+                <display value="verslag van overdracht" />
+            </coding>
+        </type>
+        <valueReference>
+            <reference value="Composition/nursing-handoff-01" />
+            <display value="Test gegevens" />
+        </valueReference>
+    </input>
+</Task>
