@@ -1,15 +1,6 @@
 <Task xmlns="http://hl7.org/fhir">
     <id value="task-01" />
-    <meta>
-        <versionId value="502826168" />
-        <lastUpdated value="2021-09-16T11:27:09.024748+00:00" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-Task" />
-    </meta>
-    <implicitRules value="http://hl7.org/fhir/reference" />
     <status value="accepted" />
-    <statusReason>
-        <text value="abc" />
-    </statusReason>
     <intent value="order" />
     <code>
         <coding>
@@ -20,17 +11,23 @@
     </code>
     <for>
         <reference value="Patient/nl-core-patient-01" />
-        <display value="Test patientje" />
+        <display value="Johan XXX_Helleman" />
     </for>
     <requester>
         <agent>
+            <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
+                <valueReference>
+                    <reference value="Patient/nl-core-pracitionerrole-02" />
+                    <display value="huisarts" />
+                </valueReference>
+            </extension>
             <reference value="Practitioner/nl-core-practitioner-01" />
-            <display value="Test zorgverlener" />
+            <display value="Henk de Vries" />
         </agent>
     </requester>
     <owner>
         <reference value="Organization/nl-core-organization-03" />
-        <display value="Test organisatie" />
+        <display value="Test Medisch Centrum" />
     </owner>
     <input>
         <type>
@@ -42,7 +39,7 @@
         </type>
         <valueReference>
             <reference value="Composition/nursing-handoff-01" />
-            <display value="Test gegevens" />
+            <display value="Verpleegkundig dossier Johan XXX_Helleman" />
         </valueReference>
     </input>
 </Task>
