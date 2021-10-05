@@ -1,0 +1,684 @@
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="eOverdracht-NursingHandoff-02" />
+  <meta>
+    <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Adults" />
+  </meta>
+  <status value="final" />
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct" />
+      <code value="371535009" />
+      <display value="verslag van overdracht" />
+    </coding>
+  </type>
+  <subject>
+    <reference value="Patient/nl-core-patient-01" />
+    <display value="Erik XXX_Altenborg" />
+  </subject>
+  <date value="2021-09-05T21:20:00+00:00" />
+  <author>
+    <reference value="Practitioner/nl-core-practitioner-02" />
+    <display value="C.M. Bruinsma" />
+  </author>
+  <title value="Nursing handoff" />
+  <section>
+    <extension url="https://simplifier.net/nictiz-stu3-eoverdracht/eoverdracht-transferdate">
+      <valueDateTime value="2021-09-06T21:20:00+00:00" />
+    </extension>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="405624007" />
+        <display value="Administrative documentation (record artifact)" />
+      </coding>
+    </code>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="302147001" />
+          <display value="Demographic history detail (observable entity)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Coverage/zib-payer-01" />
+        <display value="Trias" />
+      </entry>
+      <entry>
+        <reference value="RelatedPerson/nl-core-relatedperson-01" />
+        <display value="Hanna Bakker" />
+      </entry>
+      <entry>
+        <reference value="RelatedPerson/nl-core-relatedperson-02" />
+        <display value="Hans van Dijk" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="185362004" />
+          <display value="Referred by nurse (finding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Organization/nl-core-organization-01" />
+        <display value="AB-Zkh" />
+      </entry>
+      <entry>
+        <reference value="Practitioner/nl-core-practioner-02" />
+        <display value="C.M. Bruinsma" />
+      </entry>
+      <entry>
+        <reference value="Practitionerrole/nl-core-practitionerrole-01" />
+        <display value="Verpleegkundigen, niet nader gespecificeerd" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="275645009" />
+          <display value="Nurse: referred to (finding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Organization/nl-core-organization-02" />
+        <display value="ThuiszorgOrg" />
+      </entry>
+      <entry>
+        <reference value="Practitioner/nl-core-practioner-01" />
+        <display value="M.P. van Laren" />
+      </entry>
+      <entry>
+        <reference value="Practitionerrole/nl-core-practitionerrole-02" />
+        <display value="Verpleegkundigen, niet nader gespecificeerd" />
+      </entry>
+    </section>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="109481000146101" />
+        <display value="Personal and social history section (record artifact)" />
+      </coding>
+    </code>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="365474007" />
+          <display value="Finding of details of family (finding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Observation/zib-familysituation-01" />
+        <display value="Gehuwd" />
+      </entry>
+    </section>
+    <section>
+      <title value="Legal Situation" />
+      <entry>
+        <reference value="Condition/zib-legalsituation-01" />
+        <display value="Onder curatele stelling" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="365512000" />
+          <display value="Finding of characteristics of home environment (finding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Observation/zib-livingsituation-01" />
+        <display value="Appartement of flatwoning" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="108329005" />
+          <display value="Social context finding (finding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Consent/zib-advancedirective-01" />
+        <display value="Verklaring donorschap" />
+      </entry>
+      <entry>
+        <reference value="Consent/zib-advancedirective-02" />
+        <display value="Wil niet gevaccineerd worden" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="365448001" />
+          <display value="Social and personal history finding (finding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Observation/zib-participationinsociety-01" />
+      </entry>
+      <entry>
+        <reference value="Careplan/zib-helpfromothers-01" />
+        <display value="Mantelzorg" />
+      </entry>
+      <entry>
+        <reference value="Careplan/zib-helpfromothers-02" />
+        <display value="Professionele Thuiszorg" />
+      </entry>
+      <entry>
+        <reference value="Careplan/zib-helpfromothers-03" />
+        <display value="Professionele Thuiszorg" />
+      </entry>
+    </section>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="371524004" />
+        <display value="Clinical report (record artifact)" />
+      </coding>
+    </code>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="405623001" />
+          <display value="Assigned practitioner (occupation)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Practitioner/nl-core-practioner-02" />
+        <display value="J.P. Helmond" />
+      </entry>
+      <entry>
+        <reference value="Practitionerrole/nl-core-practitionerrole-02" />
+        <display value="Medisch specialisten, neurologie" />
+      </entry>
+      <entry>
+        <reference value="Practitioner/nl-core-practioner-03" />
+        <display value="G. Spijkerman" />
+      </entry>
+      <entry>
+        <reference value="Practitionerrole/nl-core-practitionerrole-03" />
+        <display value="Medisch specialisten, gastro-enterologie (maag-darm-lever-arts)" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="52870002" />
+          <display value="Referral diagnosis (qualifier value)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Condition/zib-problem-01" />
+        <display value="ischemisch cerebrovasculair accident" />
+      </entry>
+      <entry>
+        <reference value="Condition/zib-problem-02" />
+        <display value="neoplasma van colon" />
+      </entry>
+      <entry>
+        <reference value="Condition/zib-problem-03" />
+        <display value="inverse psoriasis" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="417662000" />
+          <display value="klinische bevinding in voorgeschiedenis (situatie)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Condition/zib-problem-04" />
+        <display value="diabetes mellitus" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="420134006" />
+          <display value="neiging tot ongewenste reactie (bevinding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Allergyintolerance/zib-allergyintolerance-01" />
+        <display value="nikkelsulfaat" />
+      </entry>
+      <entry>
+        <reference value="Allergyintolerance/zib-allergyintolerance-02" />
+        <display value="pollen" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="308813009" />
+          <display value="Notification status (finding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Alert/zib-alert-01" />
+        <display value="Drager MRSA" />
+      </entry>
+      <entry>
+        <reference value="Alert/zib-alert-02" />
+        <display value="ernstige claustrofobie" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="225317005" />
+          <display value="beperking van bewegingsvrijheid (regime/therapie)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Procedure/zib-freedomrestrictingintervention-01" />
+        <display value="geforceerd toedienen van voeding bij patiënt" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="363788007" />
+          <display value="Clinical history/examination observable (observable entity)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Observation/zib-bloodpressure-01" />
+        <display value="Bloeddruk" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-pulserate-01" />
+        <display value="Polsfrequentie" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-bodytemperature-01" />
+        <display value="Lichaamstemperatuur" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-respiration-01" />
+        <display value="Ademhaling" />
+      </entry>
+      <entry>
+        <reference value="DeviceUseStatement/zib-RespirationAdministeredOxygenAdministrationDevice-01" />
+        <display value="Neusbril" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-bodyweight-01" />
+        <display value="Lichaamsgewicht" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-bodyheight-01" />
+        <display value="Lichaamslengte" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="11011000146108" />
+          <display value="Score list pain (record artifact)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Observatin/zib-painscore-01" />
+        <display value="Pijnscore" />
+      </entry>
+    </section>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="773130005" />
+        <display value="Nursing care plan (record artifact)" />
+      </coding>
+    </code>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="86644006" />
+          <display value="Nursing diagnosis (finding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Condition/zib-problem-05" />
+        <display value="probleem met zichzelf wassen en afdrogen" />
+      </entry>
+      <entry>
+        <reference value="Procedure/zib-nursingintervention-01" />
+        <display value="ondersteunen bij wassen en/of persoonlijke hygiëne" />
+      </entry>
+      <entry>
+        <reference value="Condition/zib-problem-06" />
+        <display value="probleem met zichzelf kleden" />
+      </entry>
+      <entry>
+        <reference value="Procedure/zib-nursingintervention-02" />
+        <display value="ondersteunen bij aankleden" />
+      </entry>
+      <entry>
+        <reference value="Condition/zib-problem-07" />
+        <display value="decubitus" />
+      </entry>
+      <entry>
+        <reference value="Procedure/zib-nursingintervention-03" />
+        <display value="aanleggen van verband op wond" />
+      </entry>
+      <entry>
+        <reference value="Procedure/zib-nursingintervention-04" />
+        <display value="wisselen van positie van patiënt" />
+      </entry>
+      <entry>
+        <reference value="Condition/zib-problem-08" />
+        <display value="loopt risico op delier" />
+      </entry>
+      <entry>
+        <reference value="Procedure/zib-nursingintervention-05" />
+        <display value="wisselen van positie van patiënt" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="722091001" />
+          <display value="Conclusion interpretation document (record artifact)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="DiagnosticReport/zib-outcomeofcare-01" />
+        <display value="doel deels behaald: kan nog niet rug wassen" />
+      </entry>
+      <entry>
+        <reference value="DiagnosticReport/zib-outcomeofcare-02" />
+        <display value="doel deels behaald, kan nog niet zelf veters strikken" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="308335008" />
+          <display value="Patient encounter procedure" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Encounter/eOverdracht-encounter-01" />
+        <display value="Poliklinische afspraak" />
+      </entry>
+      <entry>
+        <reference value="Encounter/eOverdracht-encounter-02" />
+        <display value="Telefonische afspraak" />
+      </entry>
+      <entry>
+        <reference value="Encounter/eOverdracht-encounter-03" />
+        <display value="Thuis afspraak" />
+      </entry>
+    </section>
+  </section>
+  <section>
+    <code>
+      <coding>
+        <system value="http://snomed.info/sct" />
+        <code value="5531000179105" />
+        <display value="Nursing report (record artifact)" />
+      </coding>
+    </code>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="365178001" />
+          <display value="Finding related to ability to perform personal care activity (finding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Observation/zib-abilitytodrink-01" />
+        <display value="Hulp nodig" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-abilitytoeat-01" />
+        <display value="Hulp nodig" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-abilityToPerformMouthCareActivities-01" />
+        <display value="Hulp nodig" />
+      </entry>
+      <entry>
+        <reference value="Device/zib-zib-abilityToPerformMouthCareActivitiesDeviceproductt-01" />
+        <display value="Gebitsprothese bovenkaak" />
+      </entry>
+      <entry>
+        <reference value="Device/zib-abilityToPerformMouthCareActivitiesDeviceproduct-02" />
+        <display value="Gebitsprothese onderkaak" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-abilityToWashOneSelf-01" />
+        <display value="Hulp nodig" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-abilityToDressOneSelf-01" />
+        <display value="Hulp nodig" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-abilityToGroome-01" />
+        <display value="Hulp nodig" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-abilityToUseToilet-01" />
+        <display value="Onafhankelijk" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-abilityToManageMedication-01" />
+        <display value="Hulp nodig" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-abilityToPerformNursingActivities-01" />
+        <display value="Hulp nodig met Stoma" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="364832000" />
+          <display value="bevinding betreffende vermogen tot grove motoriek (bevinding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Observation/zib-mobility-01" />
+        <display value="Hulp nodig bij mobiliteit" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="300893006" />
+          <display value="bevinding betreffende nutritie (bevinding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="NutritionOrder/zib-nutritionAdivce-01" />
+        <display value="Diabetes dieet" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-snaqscore-01" />
+        <display value="geen verminderde eetlust ondanks chemotherapie" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-snaqrcscore-01" />
+        <display value="geen verminderde eetlust ondanks chemotherapie" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-snaq65plusScore-01" />
+        <display value="geen verminderde eetlust ondanks chemotherapie" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-Mustscore-01" />
+        <display value="Mustscore: 2" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-fluidbalance-01" />
+        <display value="Vochtbalans start op 7 uur stopt om 7 uur" />
+      </entry>
+      <entry>
+        <reference value="DeviceUseStatement/zib-feedingtubeSystem-01" />
+        <display value="Neus-maagsonde" />
+      </entry>
+      <entry>
+        <reference value="DeviceUseStatement/zib-feedingtubeSystem-02" />
+        <display value="enterale voedingspomp" />
+      </entry>
+      <entry>
+        <reference value="DeviceUseStatement/zib-infusion-01" />
+        <display value="Infuuspomp voor algemene doeleinden" />
+      </entry>
+      <entry>
+        <reference value="DeviceUseStatement/zib-infusion-02" />
+        <display value="Perifeer intraveneus infuus" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="106019003" />
+          <display value="bevinding betreffende uitscheidingspatroon (bevinding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Observation/zib-bladderfunction-01" />
+        <display value="Af en toe een ongelukje (max. 1 keer per 24 uur)" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-bowelfunction-01" />
+        <display value="Incontinent" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-stoma-01" />
+        <display value="Eindstandige ileostoma" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-stoma-02" />
+        <display value="Urostoma" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="106076001" />
+          <display value="bevinding betreffende huid (bevinding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Condition/zib-BurnWound-01" />
+        <display value="1e graad thermische brandwond" />
+      </entry>
+      <entry>
+        <reference value="Condition/zib-BurnWound-02" />
+        <display value="2e graad oppervlakkige brandwond" />
+      </entry>
+      <entry>
+        <reference value="Condition/zib-PressureUlcer-01" />
+        <display value="Decubitus categorie 2" />
+      </entry>
+      <entry>
+        <reference value="Condition/zib-PressureUlcer-02" />
+        <display value="Decubitus categorie 1" />
+      </entry>
+      <entry>
+        <reference value="Condition/zib-SkinDisorder-01" />
+        <display value="Intertrigo/smetten" />
+      </entry>
+      <entry>
+        <reference value="Condition/zib-SkinDisorder-02" />
+        <display value="Inverse psoriasis" />
+      </entry>
+      <entry>
+        <reference value="Condition/zib-wound-01" />
+        <display value="Traumatische wond" />
+      </entry>
+      <entry>
+        <reference value="Condition/zib-wound-02" />
+        <display value="Chirurgische wond" />
+      </entry>
+      <entry>
+        <reference value="Condition/zib-wound-03" />
+        <display value="Oncologische ulcer" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="106147001" />
+          <display value="bevinding betreffende sensorisch zenuwstelsel (bevinding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Observation/zib-HearingFunction-01" />
+        <display value="Verminderde gehoorfunctie" />
+      </entry>
+      <entry>
+        <reference value="DeviceUseStatement/zib-HearingFunctionAid-01" />
+        <display value="Gehoorapparaat" />
+      </entry>
+      <entry>
+        <reference value="Observation/zib-VisualFunction-01" />
+        <display value="Verminderd gezichtsvermogen" />
+      </entry>
+      <entry>
+        <reference value="DeviceUseStatement/zib-VisualFunctionAid-01" />
+        <display value="Bril" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="284465006" />
+          <display value="bevinding betreffende psychosociaal functioneren (bevinding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Observation/zib-IllnessPerception-01" />
+        <display value="Meneer kan niet overzien wat de ziekte betekent in het dagelijkse leven" />
+      </entry>
+    </section>
+    <section>
+      <code>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="36456004" />
+          <display value="bevinding betreffende mentale toestand (bevinding)" />
+        </coding>
+      </code>
+      <entry>
+        <reference value="Condition/zib-problem-09" />
+        <display value="Gedaald bewustzijn" />
+      </entry>
+    </section>
+  </section>
+</Composition>
