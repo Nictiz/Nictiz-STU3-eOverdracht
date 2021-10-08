@@ -114,7 +114,7 @@
       </code>
       <entry>
         <reference value="Observation/zib-familysituation-01" />
-        <display value="Gehuwd" />
+        <display value="Samenwonend met partner" />
       </entry>
     </section>
     <section>
@@ -196,11 +196,11 @@
         </coding>
       </code>
       <entry>
-        <reference value="Practitioner/nl-core-practioner-02" />
+        <reference value="Practitioner/nl-core-practioner-04" />
         <display value="J.P. Helmond" />
       </entry>
       <entry>
-        <reference value="Practitionerrole/nl-core-practitionerrole-02" />
+        <reference value="Practitionerrole/nl-core-practitionerrole-04" />
         <display value="Medisch specialisten, neurologie" />
       </entry>
       <entry>
