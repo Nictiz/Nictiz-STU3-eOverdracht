@@ -3,6 +3,24 @@
   <meta>
     <profile value="http://fhir.nl/fhir/StructureDefinition/nl-core-patient" />
   </meta>
+   <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-patient-legalstatus">
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.22.232" />
+                <code value="9" />
+                <display value="Onder curatele stelling" />
+            </coding>
+        </valueCodeableConcept>
+    </extension>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-LifeStance">
+        <valueCodeableConcept>
+            <coding>
+                <system value="urn:oid:2.16.840.1.113883.2.4.3.11.60.40.4" />
+                <code value="GeenGeloof" />
+                <display value="Geen Geloof" />
+            </coding>
+        </valueCodeableConcept>
+    </extension>
   <identifier>
     <use value="official" />
     <system value="http://fhir.nl/fhir/NamingSystem/bsn" />
@@ -44,7 +62,7 @@
     <value value="evertaltenborg@hotmail.com" />
     <use value="home" />
   </telecom>
-  <gender value="female">
+  <gender value="male">
     <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
       <valueCodeableConcept>
         <coding>
