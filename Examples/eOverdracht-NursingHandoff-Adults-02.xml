@@ -45,11 +45,11 @@
         <display value="Trias" />
       </entry>
       <entry>
-        <reference value="RelatedPerson/nl-core-relatedperson-01" />
+        <reference value="RelatedPerson/nl-core-relatedperson-02" />
         <display value="Hanna Bakker" />
       </entry>
       <entry>
-        <reference value="RelatedPerson/nl-core-relatedperson-02" />
+        <reference value="RelatedPerson/nl-core-relatedperson-03" />
         <display value="Hans van Dijk" />
       </entry>
     </section>
