@@ -10,7 +10,7 @@
             <code value="11341000146107" />
             <display value="Living will and advance directive record (record artifact)" />
         </coding>
-    </category>
+    </category>þ
     <category>
         <coding>
             <system value="http://hl7.org/fhir/v3/NullFlavor" />
