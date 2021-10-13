@@ -5,8 +5,8 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/goal-pertainsToGoal">
         <valueReference>
-            <reference value="Goal/zib-treatmentobjective-01" />
-            <display value="Zich wassen" />
+            <reference value="Goal/zib-treatmentobjective-02" />
+            <display value="Zich aankleden" />
         </valueReference>
     </extension>
     <extension url="http://hl7.org/fhir/StructureDefinition/procedure-schedule">
