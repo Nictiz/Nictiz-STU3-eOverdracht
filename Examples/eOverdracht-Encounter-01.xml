@@ -30,7 +30,7 @@
                     <display value="Medisch specialisten, neurologie" />
                 </valueReference>
             </extension>
-            <reference value="Practitioner/nl-core-practitioner-03" />
+            <reference value="Practitioner/nl-core-practitioner-06" />
             <display value="P. van Neurenberg" />
         </individual>
     </participant>
@@ -42,7 +42,7 @@
                     <display value="Medisch specialisten, neurochirurgie" />
                 </valueReference>
             </extension>
-            <reference value="Practitioner/nl-core-practitioner-04" />
+            <reference value="Practitioner/nl-core-practitioner-07" />
             <display value="F. Snijder" />
         </individual>
     </participant>
@@ -50,17 +50,14 @@
         <start value="2021-09-11T10:00:00+00:00" />
         <end value="2021-09-11T10:30:00+00:00" />
     </period>
-    <reason>
-        <text value="Pati&#235;nt heeft afwijkende situatie, met veel complicaties" />
-    </reason>
     <diagnosis>
         <condition>
-            <reference value="Condition/zib-problem-01" />
+            <reference value="Condition/zib-problem-04" />
             <display value="ischemisch cerebrovasculair accident" />
         </condition>
     </diagnosis>
     <serviceProvider>
-        <reference value="nl-core-organization-03" />
+        <reference value="nl-core-organization-05" />
         <display value="Poliorg" />
     </serviceProvider>
 </Encounter>
