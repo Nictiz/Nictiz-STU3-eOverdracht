@@ -188,7 +188,7 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Observation/zib-abilitytodrink-01" />
+                <reference value="Observation/zib-AbilityToDrink-01" />
                 <display value="Hulp nodig bij drinken" />
             </entry>
         </section>

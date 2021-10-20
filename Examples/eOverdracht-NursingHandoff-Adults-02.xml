@@ -272,11 +272,11 @@
         </coding>
       </code>
       <entry>
-        <reference value="Flag/zib-alert-01" />
+        <reference value="Flag/zib-Alert-01" />
         <display value="Drager MRSA" />
       </entry>
       <entry>
-        <reference value="Flag/zib-alert-02" />
+        <reference value="Flag/zib-Alert-02" />
         <display value="ernstige claustrofobie" />
       </entry>
     </section>
@@ -318,7 +318,7 @@
         <display value="Ademhaling" />
       </entry>
       <entry>
-        <reference value="DeviceUseStatement/zib-RespirationAdministeredOxygenAdministrationDevice-01" />
+        <reference value="DeviceUseStatement/zib-Respiration-AdministeredOxygen-AdministrationDevice-01" />
         <display value="Neusbril" />
       </entry>
       <entry>
@@ -473,11 +473,11 @@
         <display value="Gebitsprothese onderkaak" />
       </entry>
       <entry>
-        <reference value="Observation/zib-AbilityToWashOneSelf-01" />
+        <reference value="Observation/zib-AbilityToWashOneself-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
-        <reference value="Observation/zib-AbilityToDressOneSelf-01" />
+        <reference value="Observation/zib-AbilityToDressOneself-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
@@ -519,7 +519,7 @@
         </coding>
       </code>
       <entry>
-        <reference value="NutritionOrder/zib-nutritionAdivce-01" />
+        <reference value="NutritionOrder/zib-NutritionAdvice-01" />
         <display value="Diabetes dieet" />
       </entry>
       <entry>
@@ -531,11 +531,11 @@
         <display value="geen verminderde eetlust ondanks chemotherapie" />
       </entry>
       <entry>
-        <reference value="Observation/zib-snaq65plusScore-01" />
+        <reference value="Observation/zib-SNAQ65PlusScore-01" />
         <display value="geen verminderde eetlust ondanks chemotherapie" />
       </entry>
       <entry>
-        <reference value="Observation/zib-Mustscore-01" />
+        <reference value="Observation/zib-MUSTScore-01" />
         <display value="Mustscore: 2" />
       </entry>
       <entry>
