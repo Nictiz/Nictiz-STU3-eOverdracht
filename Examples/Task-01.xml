@@ -20,7 +20,7 @@
         <agent>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
                 <valueReference>
-                    <reference value="Patient/nl-core-pracitionerrole-02" />
+                    <reference value="PractitionerRole/nl-core-practitionerrole-02" />
                     <display value="huisarts" />
                 </valueReference>
             </extension>
@@ -41,7 +41,7 @@
             </coding>
         </type>
         <valueReference>
-            <reference value="Composition/nursing-handoff-01" />
+            <reference value="Composition/eOverdracht-NursingHandoff-Adults-01" />
             <display value="Verpleegkundig dossier Johan XXX_Helleman" />
         </valueReference>
     </input>

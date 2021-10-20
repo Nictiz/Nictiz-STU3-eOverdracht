@@ -1,5 +1,5 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="zib-abilitytogroome-01" />
+    <id value="zib-AbilityToGroome-01" />
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToGroome" />
     </meta>

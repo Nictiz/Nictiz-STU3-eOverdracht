@@ -19,14 +19,14 @@
         <display value="ambulatory" />
     </class>
     <subject>
-        <reference value="nl-core-patient-01" />
+        <reference value="Patient/nl-core-patient-01" />
         <display value="Erik XXX_Altenborg" />
     </subject>
     <participant>
         <individual>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
                 <valueReference>
-                    <reference value="PractionerRole/nl-core-practitionerrole-04" />
+                    <reference value="PractitionerRole/nl-core-practitionerrole-04" />
                     <display value="Medisch specialisten, neurologie" />
                 </valueReference>
             </extension>
@@ -38,7 +38,7 @@
         <individual>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
                 <valueReference>
-                    <reference value="PractionerRole/nl-core-practitionerrole-05" />
+                    <reference value="PractitionerRole/nl-core-practitionerrole-05" />
                     <display value="Medisch specialisten, neurochirurgie" />
                 </valueReference>
             </extension>
@@ -57,7 +57,7 @@
         </condition>
     </diagnosis>
     <serviceProvider>
-        <reference value="nl-core-organization-05" />
+        <reference value="Organization/nl-core-organization-05" />
         <display value="Poliorg" />
     </serviceProvider>
 </Encounter>
