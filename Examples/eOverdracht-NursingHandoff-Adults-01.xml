@@ -22,7 +22,7 @@
     </author>
     <title value="Nursing handoff" />
     <section>
-        <extension url="https://simplifier.net/nictiz-stu3-eoverdracht/eoverdracht-transferdate">
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate">
             <valueDateTime value="2021-09-06T21:20:00+00:00" />
         </extension>
         <code>
