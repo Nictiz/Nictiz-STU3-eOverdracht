@@ -5,7 +5,7 @@
     </meta>
     <status value="accepted" />
     <description>
-        <text value="wondlengte < 1cm, wondbreedte < 1 cm" />
+        <text value="wondlengte &lt; 1cm, wondbreedte &lt; 1 cm" />
     </description>
     <subject>
         <reference value="Patient/nl-core-patient-01" />
