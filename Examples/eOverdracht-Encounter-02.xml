@@ -20,14 +20,14 @@
         <display value="other" />
     </class>
     <subject>
-        <reference value="nl-core-patient-01" />
+        <reference value="Patient/nl-core-patient-01" />
         <display value="Erik XXX_Altenborg" />
     </subject>
     <participant>
         <individual>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
                 <valueReference>
-                    <reference value="PractionerRole/nl-core-practitionerrole-07" />
+                    <reference value="PractitionerRole/nl-core-practitionerrole-07" />
                     <display value="Medisch specialisten, inwendige geneeskunde" />
                 </valueReference>
             </extension>

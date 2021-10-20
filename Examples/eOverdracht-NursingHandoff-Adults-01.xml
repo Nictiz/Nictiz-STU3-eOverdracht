@@ -1,5 +1,5 @@
 <Composition xmlns="http://hl7.org/fhir">
-    <id value="eOverdracht-NursingHandoff-01" />
+    <id value="eOverdracht-NursingHandoff-Adults-01" />
       <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Adults" />
     </meta>
@@ -22,7 +22,7 @@
     </author>
     <title value="Nursing handoff" />
     <section>
-        <extension url="https://simplifier.net/nictiz-stu3-eoverdracht/eoverdracht-transferdate">
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate">
             <valueDateTime value="2021-09-06T21:20:00+00:00" />
         </extension>
         <code>
@@ -58,11 +58,11 @@
                 <display value="Maatschap Vaste Huisarts" />
             </entry>
             <entry>
-                <reference value="Practitioner/nl-core-practioner-02" />
+                <reference value="Practitioner/nl-core-practitioner-02" />
                 <display value="Vaste Huisarts 1" />
             </entry>
             <entry>
-                <reference value="Practitionerrole/nl-core-practitionerrole-02" />
+                <reference value="PractitionerRole/nl-core-practitionerrole-02" />
                 <display value="Huisartsen, niet nader gespecificeerd" />
             </entry>
         </section>
@@ -79,11 +79,11 @@
                 <display value="Orthopedie UMCG" />
             </entry>
             <entry>
-                <reference value="Practitioner/nl-core-practioner-01" />
+                <reference value="Practitioner/nl-core-practitioner-01" />
                 <display value="Henk de Vries" />
             </entry>
             <entry>
-                <reference value="Practitionerrole/nl-core-practitionerrole-02" />
+                <reference value="PractitionerRole/nl-core-practitionerrole-02" />
                 <display value="Huisarts" />
             </entry>
         </section>
@@ -127,11 +127,11 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Practitioner/nl-core-practioner-01" />
+                <reference value="Practitioner/nl-core-practitioner-01" />
                 <display value="Henk de Vries" />
             </entry>
             <entry>
-                <reference value="Practitionerrole/nl-core-practitionerrole-02" />
+                <reference value="PractitionerRole/nl-core-practitionerrole-02" />
                 <display value="Vaste Huisarts" />
             </entry>
         </section>
@@ -166,7 +166,7 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Encounter/eOverdracht-encounter-01" />
+                <reference value="Encounter/eOverdracht-Encounter-01" />
                 <display value="Afspraak van Johan XXX_Helleman" />
             </entry>
         </section>
@@ -188,7 +188,7 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Observation/zib-abilitytodrink-01" />
+                <reference value="Observation/zib-AbilityToDrink-01" />
                 <display value="Hulp nodig bij drinken" />
             </entry>
         </section>

@@ -6,7 +6,7 @@
     <extension url="http://hl7.org/fhir/StructureDefinition/goal-pertainsToGoal">
         <valueReference>
             <reference value="Goal/zib-treatmentobjective-03" />
-            <display value="wondlengte < 1cm, wondbreedte < 1 cm" />
+            <display value="wondlengte &lt; 1cm, wondbreedte &lt; 1 cm" />
         </valueReference>
     </extension>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-NursingIntervention-Interval">

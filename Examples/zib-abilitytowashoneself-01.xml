@@ -1,5 +1,5 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="zib-abilitytowashoneself-01" />
+    <id value="zib-AbilityToWashOneself-01" />
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToWashOneSelf" />
     </meta>

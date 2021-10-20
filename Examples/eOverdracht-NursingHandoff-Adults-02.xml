@@ -1,5 +1,5 @@
 <Composition xmlns="http://hl7.org/fhir">
-  <id value="eOverdracht-NursingHandoff-02" />
+  <id value="eOverdracht-NursingHandoff-Adults-02" />
   <meta>
     <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Adults" />
   </meta>
@@ -22,7 +22,7 @@
   </author>
   <title value="Nursing handoff" />
   <section>
-    <extension url="https://simplifier.net/nictiz-stu3-eoverdracht/eoverdracht-transferdate">
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate">
       <valueDateTime value="2021-09-06T21:20:00+00:00" />
     </extension>
     <code>
@@ -66,11 +66,11 @@
         <display value="AB-Zkh" />
       </entry>
       <entry>
-        <reference value="Practitioner/nl-core-practioner-02" />
+        <reference value="Practitioner/nl-core-practitioner-02" />
         <display value="C.M. Bruinsma" />
       </entry>
       <entry>
-        <reference value="Practitionerrole/nl-core-practitionerrole-01" />
+        <reference value="PractitionerRole/nl-core-practitionerrole-01" />
         <display value="Verpleegkundigen, niet nader gespecificeerd" />
       </entry>
     </section>
@@ -87,11 +87,11 @@
         <display value="ThuiszorgOrg" />
       </entry>
       <entry>
-        <reference value="Practitioner/nl-core-practioner-01" />
+        <reference value="Practitioner/nl-core-practitioner-01" />
         <display value="M.P. van Laren" />
       </entry>
       <entry>
-        <reference value="Practitionerrole/nl-core-practitionerrole-02" />
+        <reference value="PractitionerRole/nl-core-practitionerrole-02" />
         <display value="Verpleegkundigen, niet nader gespecificeerd" />
       </entry>
     </section>
@@ -166,15 +166,15 @@
         <reference value="Observation/zib-participationinsociety-01" />
       </entry>
       <entry>
-        <reference value="Careplan/zib-helpfromothers-01" />
+        <reference value="CarePlan/zib-helpfromothers-01" />
         <display value="Mantelzorg" />
       </entry>
       <entry>
-        <reference value="Careplan/zib-helpfromothers-02" />
+        <reference value="CarePlan/zib-helpfromothers-02" />
         <display value="Professionele Thuiszorg" />
       </entry>
       <entry>
-        <reference value="Careplan/zib-helpfromothers-03" />
+        <reference value="CarePlan/zib-helpfromothers-03" />
         <display value="Professionele Thuiszorg" />
       </entry>
     </section>
@@ -196,19 +196,19 @@
         </coding>
       </code>
       <entry>
-        <reference value="Practitioner/nl-core-practioner-04" />
+        <reference value="Practitioner/nl-core-practitioner-04" />
         <display value="J.P. Helmond" />
       </entry>
       <entry>
-        <reference value="Practitionerrole/nl-core-practitionerrole-04" />
+        <reference value="PractitionerRole/nl-core-practitionerrole-04" />
         <display value="Medisch specialisten, neurologie" />
       </entry>
       <entry>
-        <reference value="Practitioner/nl-core-practioner-03" />
+        <reference value="Practitioner/nl-core-practitioner-03" />
         <display value="G. Spijkerman" />
       </entry>
       <entry>
-        <reference value="Practitionerrole/nl-core-practitionerrole-03" />
+        <reference value="PractitionerRole/nl-core-practitionerrole-03" />
         <display value="Medisch specialisten, gastro-enterologie (maag-darm-lever-arts)" />
       </entry>
     </section>
@@ -255,11 +255,11 @@
         </coding>
       </code>
       <entry>
-        <reference value="Allergyintolerance/zib-allergyintolerance-01" />
+        <reference value="AllergyIntolerance/zib-allergyintolerance-01" />
         <display value="nikkelsulfaat" />
       </entry>
       <entry>
-        <reference value="Allergyintolerance/zib-allergyintolerance-02" />
+        <reference value="AllergyIntolerance/zib-allergyintolerance-02" />
         <display value="pollen" />
       </entry>
     </section>
@@ -272,11 +272,11 @@
         </coding>
       </code>
       <entry>
-        <reference value="Alert/zib-alert-01" />
+        <reference value="Flag/zib-Alert-01" />
         <display value="Drager MRSA" />
       </entry>
       <entry>
-        <reference value="Alert/zib-alert-02" />
+        <reference value="Flag/zib-Alert-02" />
         <display value="ernstige claustrofobie" />
       </entry>
     </section>
@@ -318,7 +318,7 @@
         <display value="Ademhaling" />
       </entry>
       <entry>
-        <reference value="DeviceUseStatement/zib-RespirationAdministeredOxygenAdministrationDevice-01" />
+        <reference value="DeviceUseStatement/zib-Respiration-AdministeredOxygen-AdministrationDevice-01" />
         <display value="Neusbril" />
       </entry>
       <entry>
@@ -339,7 +339,7 @@
         </coding>
       </code>
       <entry>
-        <reference value="Observatin/zib-painscore-01" />
+        <reference value="Observation/zib-painscore-01" />
         <display value="Pijnscore" />
       </entry>
     </section>
@@ -423,15 +423,15 @@
         </coding>
       </code>
       <entry>
-        <reference value="Encounter/eOverdracht-encounter-01" />
+        <reference value="Encounter/eOverdracht-Encounter-01" />
         <display value="Poliklinische afspraak" />
       </entry>
       <entry>
-        <reference value="Encounter/eOverdracht-encounter-02" />
+        <reference value="Encounter/eOverdracht-Encounter-02" />
         <display value="Telefonische afspraak" />
       </entry>
       <entry>
-        <reference value="Encounter/eOverdracht-encounter-03" />
+        <reference value="Encounter/eOverdracht-Encounter-03" />
         <display value="Thuis afspraak" />
       </entry>
     </section>
@@ -453,47 +453,47 @@
         </coding>
       </code>
       <entry>
-        <reference value="Observation/zib-abilitytodrink-01" />
+        <reference value="Observation/zib-AbilityToDrink-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
-        <reference value="Observation/zib-abilitytoeat-01" />
+        <reference value="Observation/zib-AbilityToEat-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
-        <reference value="Observation/zib-abilityToPerformMouthCareActivities-01" />
+        <reference value="Observation/zib-AbilityToPerformMouthCareActivities-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
-        <reference value="Device/zib-zib-abilityToPerformMouthCareActivitiesDeviceproductt-01" />
+        <reference value="Device/zib-AbilityToPerformMouthCareActivities-MedicalDeviceProduct-01" />
         <display value="Gebitsprothese bovenkaak" />
       </entry>
       <entry>
-        <reference value="Device/zib-abilityToPerformMouthCareActivitiesDeviceproduct-02" />
+        <reference value="Device/zib-AbilityToPerformMouthCareActivities-MedicalDeviceProduct-02" />
         <display value="Gebitsprothese onderkaak" />
       </entry>
       <entry>
-        <reference value="Observation/zib-abilityToWashOneSelf-01" />
+        <reference value="Observation/zib-AbilityToWashOneself-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
-        <reference value="Observation/zib-abilityToDressOneSelf-01" />
+        <reference value="Observation/zib-AbilityToDressOneself-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
-        <reference value="Observation/zib-abilityToGroome-01" />
+        <reference value="Observation/zib-AbilityToGroome-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
-        <reference value="Observation/zib-abilityToUseToilet-01" />
+        <reference value="Observation/zib-AbilityToUseToilet-01" />
         <display value="Onafhankelijk" />
       </entry>
       <entry>
-        <reference value="Observation/zib-abilityToManageMedication-01" />
+        <reference value="Observation/zib-AbilityToManageMedication-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
-        <reference value="Observation/zib-abilityToPerformNursingActivities-01" />
+        <reference value="Observation/zib-AbilityToPerformNursingActivities-01" />
         <display value="Hulp nodig met Stoma" />
       </entry>
     </section>
@@ -519,7 +519,7 @@
         </coding>
       </code>
       <entry>
-        <reference value="NutritionOrder/zib-nutritionAdivce-01" />
+        <reference value="NutritionOrder/zib-NutritionAdvice-01" />
         <display value="Diabetes dieet" />
       </entry>
       <entry>
@@ -531,11 +531,11 @@
         <display value="geen verminderde eetlust ondanks chemotherapie" />
       </entry>
       <entry>
-        <reference value="Observation/zib-snaq65plusScore-01" />
+        <reference value="Observation/zib-SNAQ65PlusScore-01" />
         <display value="geen verminderde eetlust ondanks chemotherapie" />
       </entry>
       <entry>
-        <reference value="Observation/zib-Mustscore-01" />
+        <reference value="Observation/zib-MUSTScore-01" />
         <display value="Mustscore: 2" />
       </entry>
       <entry>

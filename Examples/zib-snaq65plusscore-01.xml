@@ -1,5 +1,5 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="zib-snaq65plusscore-01" />
+    <id value="zib-SNAQ65PlusScore-01" />
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-SNAQ65plusScore" />
     </meta>

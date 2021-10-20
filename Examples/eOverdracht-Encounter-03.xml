@@ -15,19 +15,19 @@
                 <text value="telefonisch" />
             </valueCodeableConcept>
         </extension>
-        <system value="hhttp://hl7.org/fhir/v3/ActCode" />
+        <system value="http://hl7.org/fhir/v3/ActCode" />
         <code value="HH" />
         <display value="Home" />
     </class>
     <subject>
-        <reference value="nl-core-patient-01" />
+        <reference value="Patient/nl-core-patient-01" />
         <display value="Erik XXX_Altenborg" />
     </subject>
     <participant>
         <individual>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
                 <valueReference>
-                    <reference value="PractionerRole/nl-core-practitionerrole-08" />
+                    <reference value="PractitionerRole/nl-core-practitionerrole-08" />
                     <display value="Medisch specialisten, inwendige geneeskunde" />
                 </valueReference>
             </extension>
