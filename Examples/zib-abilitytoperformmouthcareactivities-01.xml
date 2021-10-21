@@ -1,14 +1,14 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="zib-abilitytogroome-01" />
+    <id value="zib-abilitytoperformmouthcareactivities-01" />
     <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToGroome" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToPerformMouthcareActivities" />
     </meta>
     <status value="final" />
     <code>
         <coding>
             <system value="http://snomed.info/sct" />
-            <code value="704434006" />
-            <display value="UiterlijkeVerzorging" />
+            <code value="288470005" />
+            <display value="VerzorgenTanden" />
         </coding>
     </code>
     <subject>
@@ -18,8 +18,8 @@
     <valueCodeableConcept>
         <coding>
             <system value="http://snomed.info/sct" />
-            <code value="27941000146109" />
-            <display value="Hulp Nodig" />
+            <code value="900000000000013009" />
+            <display value="Hulp nodig" />
         </coding>
     </valueCodeableConcept>
 </Observation>

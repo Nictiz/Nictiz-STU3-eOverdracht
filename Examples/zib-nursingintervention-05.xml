@@ -33,7 +33,7 @@
     </subject>
     <performer>
         <actor>
-            <reference value="RelatedPerson/nl=core-relatedperson-02" />
+            <reference value="RelatedPerson/nl-core-relatedperson-02" />
             <display value="Echtgenoot" />
         </actor>
     </performer>

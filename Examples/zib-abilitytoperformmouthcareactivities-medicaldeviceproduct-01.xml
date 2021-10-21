@@ -1,5 +1,5 @@
 <Device xmlns="http://hl7.org/fhir">
-    <id value="zib-AbilityToPerformMouthcareActivities-MedicalDeviceProduct-01" />
+    <id value="zib-abilitytoperformmouthcareactivities-medicaldeviceproduct-01" />
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToPerformMouthcareActivities-MedicalDeviceProduct" />
     </meta>
