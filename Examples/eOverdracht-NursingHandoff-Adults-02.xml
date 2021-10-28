@@ -45,11 +45,11 @@
         <display value="Trias" />
       </entry>
       <entry>
-        <reference value="RelatedPerson/nl-core-relatedperson-02" />
+        <reference value="RelatedPerson/nl-core-relatedperson-03" />
         <display value="Hanna Bakker" />
       </entry>
       <entry>
-        <reference value="RelatedPerson/nl-core-relatedperson-03" />
+        <reference value="RelatedPerson/nl-core-relatedperson-04" />
         <display value="Hans van Dijk" />
       </entry>
     </section>
@@ -221,15 +221,15 @@
         </coding>
       </code>
       <entry>
-        <reference value="Condition/zib-problem-01" />
+        <reference value="Condition/zib-problem-04" />
         <display value="ischemisch cerebrovasculair accident" />
       </entry>
       <entry>
-        <reference value="Condition/zib-problem-02" />
+        <reference value="Condition/zib-problem-01" />
         <display value="neoplasma van colon" />
       </entry>
       <entry>
-        <reference value="Condition/zib-problem-03" />
+        <reference value="Condition/zib-problem-02" />
         <display value="inverse psoriasis" />
       </entry>
     </section>
@@ -242,7 +242,7 @@
         </coding>
       </code>
       <entry>
-        <reference value="Condition/zib-problem-04" />
+        <reference value="Condition/zib-problem-03" />
         <display value="diabetes mellitus" />
       </entry>
     </section>
@@ -318,7 +318,7 @@
         <display value="Ademhaling" />
       </entry>
       <entry>
-        <reference value="DeviceUseStatement/zib-Respiration-AdministeredOxygen-AdministrationDevice-01" />
+        <reference value="DeviceUseStatement/zib-respiration-administeredoxygen-administrationdevice-01" />
         <display value="Neusbril" />
       </entry>
       <entry>
@@ -345,6 +345,9 @@
     </section>
   </section>
   <section>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NeedsOfPatientAndRelatedPersons">
+        <valueString value="meneer wil zo snel mogelijk weer zelfstandig kunnen functioneren en zijn vrouw kunnen verzorgen" />
+    </extension>
     <code>
       <coding>
         <system value="http://snomed.info/sct" />
@@ -394,7 +397,7 @@
       </entry>
       <entry>
         <reference value="Procedure/zib-nursingintervention-05" />
-        <display value="wisselen van positie van patiënt" />
+        <display value="bevorderen van vochtinname" />
       </entry>
     </section>
     <section>
@@ -453,47 +456,47 @@
         </coding>
       </code>
       <entry>
-        <reference value="Observation/zib-AbilityToDrink-01" />
+        <reference value="Observation/zib-abilitytodrink-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
-        <reference value="Observation/zib-AbilityToEat-01" />
+        <reference value="Observation/zib-abilitytoeat-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
-        <reference value="Observation/zib-AbilityToPerformMouthCareActivities-01" />
+        <reference value="Observation/zib-abilitytoperformmouthcareactivities-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
-        <reference value="Device/zib-AbilityToPerformMouthCareActivities-MedicalDeviceProduct-01" />
+        <reference value="DeviceUseStatement/zib-abilitytoperformmouthcareactivities-medicaldevice-01" />
         <display value="Gebitsprothese bovenkaak" />
       </entry>
       <entry>
-        <reference value="Device/zib-AbilityToPerformMouthCareActivities-MedicalDeviceProduct-02" />
+        <reference value="DeviceUseStatement/zib-abilitytoperformmouthcareactivities-medicaldevice-02" />
         <display value="Gebitsprothese onderkaak" />
       </entry>
       <entry>
-        <reference value="Observation/zib-AbilityToWashOneself-01" />
+        <reference value="Observation/zib-abilitytowashoneself-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
-        <reference value="Observation/zib-AbilityToDressOneself-01" />
+        <reference value="Observation/zib-abilitytodressoneself-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
-        <reference value="Observation/zib-AbilityToGroome-01" />
+        <reference value="Observation/zib-abilitytogroome-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
-        <reference value="Observation/zib-AbilityToUseToilet-01" />
+        <reference value="Observation/zib-abilitytousetoilet-01" />
         <display value="Onafhankelijk" />
       </entry>
       <entry>
-        <reference value="Observation/zib-AbilityToManageMedication-01" />
+        <reference value="Observation/zib-abilitytomanagemedication-01" />
         <display value="Hulp nodig" />
       </entry>
       <entry>
-        <reference value="Observation/zib-AbilityToPerformNursingActivities-01" />
+        <reference value="Observation/zib-abilitytoPerformnursingactivities-01" />
         <display value="Hulp nodig met Stoma" />
       </entry>
     </section>
@@ -519,7 +522,7 @@
         </coding>
       </code>
       <entry>
-        <reference value="NutritionOrder/zib-NutritionAdvice-01" />
+        <reference value="NutritionOrder/zib-nutritionadvice-01" />
         <display value="Diabetes dieet" />
       </entry>
       <entry>
@@ -593,27 +596,27 @@
         </coding>
       </code>
       <entry>
-        <reference value="Condition/zib-BurnWound-01" />
+        <reference value="Condition/zib-burnwound-01" />
         <display value="1e graad thermische brandwond" />
       </entry>
       <entry>
-        <reference value="Condition/zib-BurnWound-02" />
+        <reference value="Condition/zib-burnwound-02" />
         <display value="2e graad oppervlakkige brandwond" />
       </entry>
       <entry>
-        <reference value="Condition/zib-PressureUlcer-01" />
+        <reference value="Condition/zib-pressureulcer-01" />
         <display value="Decubitus categorie 2" />
       </entry>
       <entry>
-        <reference value="Condition/zib-PressureUlcer-02" />
+        <reference value="Condition/zib-pressureulcer-02" />
         <display value="Decubitus categorie 1" />
       </entry>
       <entry>
-        <reference value="Condition/zib-SkinDisorder-01" />
+        <reference value="Condition/zib-skindisorder-01" />
         <display value="Intertrigo/smetten" />
       </entry>
       <entry>
-        <reference value="Condition/zib-SkinDisorder-02" />
+        <reference value="Condition/zib-skindisorder-02" />
         <display value="Inverse psoriasis" />
       </entry>
       <entry>
@@ -638,19 +641,19 @@
         </coding>
       </code>
       <entry>
-        <reference value="Observation/zib-HearingFunction-01" />
+        <reference value="Observation/zib-hearingfunction-01" />
         <display value="Verminderde gehoorfunctie" />
       </entry>
       <entry>
-        <reference value="DeviceUseStatement/zib-HearingFunctionAid-01" />
+        <reference value="DeviceUseStatement/zib-hearingfunctionaid-01" />
         <display value="Gehoorapparaat" />
       </entry>
       <entry>
-        <reference value="Observation/zib-VisualFunction-01" />
+        <reference value="Observation/zib-visualfunction-01" />
         <display value="Verminderd gezichtsvermogen" />
       </entry>
       <entry>
-        <reference value="DeviceUseStatement/zib-VisualFunctionAid-01" />
+        <reference value="DeviceUseStatement/zib-visualfunctionaid-01" />
         <display value="Bril" />
       </entry>
     </section>
@@ -663,7 +666,7 @@
         </coding>
       </code>
       <entry>
-        <reference value="Observation/zib-IllnessPerception-01" />
+        <reference value="Observation/zib-illnessperception-01" />
         <display value="Meneer kan niet overzien wat de ziekte betekent in het dagelijkse leven" />
       </entry>
     </section>
