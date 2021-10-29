@@ -37,7 +37,7 @@
     <effectiveDateTime value="2021-09-08T14:45:00Z" />
     <comment value="meneer lijkt angstig" />
     <device>
-        <reference value="Device/zib-respiration-administeredoxygen-administrationdeviceproduct-01" />
+        <reference value="Device/zib-respiration-administeredoxygen-administrationproduct-01" />
         <display value="Neusbril" />
     </device>
     <component>
