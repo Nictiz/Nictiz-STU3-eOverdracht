@@ -4,13 +4,8 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-HearingFunction-HearingAid-Product" />
     </meta>
     <identifier>
-        <type>
-            <coding>
-                <system value="urn:oid:1.3.160" />
-                <code value="012345678905" />
-                <display value="Global Trade Item Number" />
-            </coding>
-        </type>
+        <system value="urn:oid:1.3.160" />
+        <value value="012345678905" />
     </identifier>
     <type>
         <coding>

@@ -24,7 +24,7 @@
         </extension>
         <extension url="AdministeringSystem">
             <valueReference>
-                <reference value="zib-infusion-administeringsystem-01" />
+                <reference value="MedicationAdministration/zib-infusion-administeringsystem-01" />
                 <display value="Voor TPV" />
             </valueReference>
         </extension>
