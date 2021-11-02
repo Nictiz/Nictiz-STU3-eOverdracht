@@ -41,6 +41,7 @@
         <extension url="http://nictiz.nl/fhir/StructureDefinition/extension-medicaldevice">
             <valueReference>
                 <reference value="DeviceUseStatement/zib-medicaldevice-01" />
+                <display value="medicatierol" />
             </valueReference>
         </extension>
     </usedReference>
