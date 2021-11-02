@@ -5,7 +5,7 @@
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/deviceUseStatement-reasonReferenceSTU3">
         <valueReference>
-            <reference value="Observation/zib-wound-02" />
+            <reference value="Condition/zib-wound-02" />
             <display value="Chirurgische wond" />
         </valueReference>
     </extension>

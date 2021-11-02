@@ -3,6 +3,9 @@
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective" />
     </meta>
+    <extension url="http://nictiz.nl/fhir/StructureDefinition/Comment">
+        <valueString value="wilsverklaring bevindt zich in de portemonnee." />
+    </extension>
     <status value="active" />
     <category>
         <coding>
