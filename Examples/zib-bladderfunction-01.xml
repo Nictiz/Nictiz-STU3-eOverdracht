@@ -28,8 +28,4 @@
             <display value="Af en toe een ongelukje (max. 1 keer per 24 uur)" />
         </coding>
     </valueCodeableConcept>
-    <device>
-        <reference value="Device/zib-medicaldeviceproduct-07" />
-        <display value="Inlegger" />
-    </device>
 </Observation>
