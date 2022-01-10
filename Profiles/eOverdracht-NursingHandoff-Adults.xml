@@ -112,6 +112,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
     </element>
     <element id="Composition.section:administrativeData.extension:transferDate">
       <path value="Composition.section.extension" />
@@ -1450,10 +1451,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons">
       <path value="Composition.section.extension" />
       <sliceName value="needsOfPatientAndRelatedPersons" />
+      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NeedsOfPatientAndRelatedPersons" />
@@ -1778,10 +1781,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Composition.section:healthState.section:selfCare.extension:commentOnSelfCare">
       <path value="Composition.section.section.extension" />
       <sliceName value="commentOnSelfCare" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -2331,7 +2336,7 @@
     <element id="Composition.section:healthState.section:skin.code.coding.code">
       <path value="Composition.section.section.code.coding.code" />
       <min value="1" />
-      <fixedCode value="36456004" />
+      <fixedCode value="106076001" />
     </element>
     <element id="Composition.section:healthState.section:skin.code.coding.display">
       <path value="Composition.section.section.code.coding.display" />
