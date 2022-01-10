@@ -112,6 +112,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
     </element>
     <element id="Composition.section:administrativeData.extension:transferDate">
       <path value="Composition.section.extension" />
@@ -1450,10 +1451,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons">
       <path value="Composition.section.extension" />
       <sliceName value="needsOfPatientAndRelatedPersons" />
+      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NeedsOfPatientAndRelatedPersons" />
@@ -1778,10 +1781,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Composition.section:healthState.section:selfCare.extension:commentOnSelfCare">
       <path value="Composition.section.section.extension" />
       <sliceName value="commentOnSelfCare" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -1838,7 +1843,6 @@
       <path value="Composition.section.section.entry" />
       <sliceName value="abilityToDrink" />
       <short value="Ability To Drink" />
-      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToDrink" />
@@ -1853,7 +1857,6 @@
       <path value="Composition.section.section.entry" />
       <sliceName value="abilityToEat" />
       <short value="Ability To Eat" />
-      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToEat" />
@@ -1896,7 +1899,6 @@
       <path value="Composition.section.section.entry" />
       <sliceName value="abilityToWashOneSelf" />
       <short value="Ability To Wash One Self" />
-      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToWashOneSelf" />
@@ -1911,7 +1913,6 @@
       <path value="Composition.section.section.entry" />
       <sliceName value="abilityToDressOneSelf" />
       <short value="Ability To Dress One Self" />
-      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToDressOneself" />
