@@ -2393,7 +2393,7 @@
     <element id="Composition.section:healthState.section:skin.code.coding.code">
       <path value="Composition.section.section.code.coding.code" />
       <min value="1" />
-      <fixedCode value="36456004" />
+      <fixedCode value="106076001" />
     </element>
     <element id="Composition.section:healthState.section:skin.code.coding.display">
       <path value="Composition.section.section.code.coding.display" />
