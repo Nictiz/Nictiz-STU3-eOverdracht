@@ -112,6 +112,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
     </element>
     <element id="Composition.section:administrativeData.extension:transferDate">
       <path value="Composition.section.extension" />
@@ -707,13 +708,11 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <max value="1" />
     </element>
     <element id="Composition.section:generalPatientContext.section:lifeStance.entry:advanceDirective">
       <path value="Composition.section.section.entry" />
       <sliceName value="advanceDirective" />
       <short value="Advance directive" />
-      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective" />
@@ -1521,10 +1520,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons">
       <path value="Composition.section.extension" />
       <sliceName value="needsOfPatientAndRelatedPersons" />
+      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NeedsOfPatientAndRelatedPersons" />
@@ -1801,10 +1802,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Composition.section:healthState.extension:otherDetailsChild">
       <path value="Composition.section.extension" />
       <sliceName value="otherDetailsChild" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -1877,10 +1880,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Composition.section:healthState.section:selfCare.extension:commentOnSelfCare">
       <path value="Composition.section.section.extension" />
       <sliceName value="commentOnSelfCare" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -2163,7 +2168,6 @@
       <path value="Composition.section.section.entry" />
       <sliceName value="stoma" />
       <short value="Stoma" />
-      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Stoma" />
