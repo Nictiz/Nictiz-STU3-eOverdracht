@@ -716,13 +716,11 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <max value="1" />
     </element>
     <element id="Composition.section:generalPatientContext.section:lifeStance.entry:advanceDirective">
       <path value="Composition.section.section.entry" />
       <sliceName value="advanceDirective" />
       <short value="Advance directive" />
-      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective" />
@@ -2348,7 +2346,6 @@
       <path value="Composition.section.section.entry" />
       <sliceName value="stoma" />
       <short value="Stoma" />
-      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Stoma" />
