@@ -1,7 +1,7 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="zib-AbilityToWashOneSelf-01" />
+    <id value="zib-AbilityToWashOneself-01" />
     <meta>
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToWashOneSelf" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToWashOneself" />
     </meta>
     <status value="final" />
     <code>
