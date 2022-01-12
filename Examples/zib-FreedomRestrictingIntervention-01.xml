@@ -47,7 +47,7 @@
         </coding>
     </reasonCode>
     <reasonReference>
-        <reference value="Condition/zib-legalsituationlegalstatus-01" />
+        <reference value="Condition/zib-LegalSituation-LegalStatus-01" />
         <display value="Onder curatele stelling" />
     </reasonReference>
 </Procedure>

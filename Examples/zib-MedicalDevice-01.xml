@@ -5,7 +5,7 @@
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/deviceUseStatement-reasonReferenceSTU3">
         <valueReference>
-            <reference value="Observation/zib-abilitytomanagemedication-01" />
+            <reference value="Observation/zib-AbilityToManageMedication-01" />
             <display value="Zelfstandig medicatiegebruik" />
         </valueReference>
     </extension>
@@ -15,7 +15,7 @@
         <display value="Erik XXX_Altenborg" />
     </subject>
     <device>
-        <reference value="Device/zib-medicaldeviceproduct-03" />
+        <reference value="Device/zib-MedicalDeviceProduct-03" />
         <display value="medicatierol" />
     </device>
 </DeviceUseStatement>

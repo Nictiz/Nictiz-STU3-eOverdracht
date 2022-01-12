@@ -52,7 +52,7 @@
     </period>
     <diagnosis>
         <condition>
-            <reference value="Condition/zib-problem-04" />
+            <reference value="Condition/zib-Problem-04" />
             <display value="ischemisch cerebrovasculair accident" />
         </condition>
     </diagnosis>

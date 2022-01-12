@@ -5,7 +5,7 @@
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-zibStomaReference">
         <valueReference>
-            <reference value="Observation/zib-stoma-01" />
+            <reference value="Observation/zib-Stoma-01" />
             <display value="Stoma (morphologic abnormality)" />
         </valueReference>
     </extension>

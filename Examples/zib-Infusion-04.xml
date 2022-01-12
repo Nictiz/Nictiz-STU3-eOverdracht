@@ -15,13 +15,13 @@
         </extension>
         <extension url="AdministeringSystem">
             <valueReference>
-                <reference value="MedicationAdministration/zib-infusion-administeringsystem-03" />
+                <reference value="MedicationAdministration/zib-Infusion-AdministeringSystem-03" />
                 <display value="Voor heparine" />
             </valueReference>
         </extension>
         <extension url="AdministeringSystem">
             <valueReference>
-                <reference value="MedicationAdministration/zib-infusion-administeringsystem-04" />
+                <reference value="MedicationAdministration/zib-Infusion-AdministeringSystem-04" />
                 <display value="Voor NaCL/gluc" />
             </valueReference>
         </extension>
@@ -35,7 +35,7 @@
         <start value="2021-08-15" />
     </whenUsed>
     <device>
-        <reference value="Device/zib-infusion-product-03" />
+        <reference value="Device/zib-Infusion-Product-03" />
         <display value="Perifeer intraveneus infuus" />
     </device>
     <bodySite>

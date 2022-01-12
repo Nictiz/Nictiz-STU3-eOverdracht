@@ -12,7 +12,7 @@
         </coding>
     </category>
     <medicationReference>
-        <reference value="Medication/zib-product-04" />
+        <reference value="Medication/zib-Product-04" />
         <display value="NaCL/gluc" />
     </medicationReference>
     <subject>
@@ -25,7 +25,7 @@
     <device>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/extension-medicaldevice">
             <valueReference>
-                <reference value="DeviceUseStatement/zib-infusion-06" />
+                <reference value="DeviceUseStatement/zib-Infusion-06" />
                 <display value="infuuspomp" />
             </valueReference>
         </extension>

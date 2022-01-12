@@ -12,7 +12,7 @@
         <start value="2021-08-15" />
     </whenUsed>
     <device>
-        <reference value="Device/zib-infusion-product-05" />
+        <reference value="Device/zib-Infusion-Product-05" />
         <display value="Infuuspomp" />
     </device>
     <note>

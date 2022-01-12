@@ -5,7 +5,7 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/event-partOf">
         <valueReference>
-            <reference value="Procedure/zib-nursingintervention-02" />
+            <reference value="Procedure/zib-NursingIntervention-02" />
             <display value="ondersteunen bij aankleden" />
         </valueReference>
     </extension>

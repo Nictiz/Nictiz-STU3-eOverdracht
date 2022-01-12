@@ -5,7 +5,7 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/event-reasonReference">
         <valueReference>
-            <reference value="Condition/zib-pressureulcer-01" />
+            <reference value="Condition/zib-PressureUlcer-01" />
             <display value="PressureUlcer" />
         </valueReference>
     </extension>

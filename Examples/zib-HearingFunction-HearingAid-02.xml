@@ -5,7 +5,7 @@
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/deviceUseStatement-reasonReferenceSTU3">
         <valueReference>
-            <reference value="Observation/zib-hearingfunction-01" />
+            <reference value="Observation/zib-HearingFunction-01" />
             <display value="Verminderde gehoorfunction" />
         </valueReference>
     </extension>
@@ -15,7 +15,7 @@
         <display value="Erik XXX_Altenborg" />
     </subject>
     <device>
-        <reference value="Device/zib-hearingfunction-hearingaidproduct-02" />
+        <reference value="Device/zib-HearingFunction-HearingAid-Product-02" />
         <display value="Gehoorapparaat" />
     </device>
     <bodySite>

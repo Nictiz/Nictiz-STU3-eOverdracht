@@ -41,7 +41,7 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Coverage/zib-payer-01" />
+                <reference value="Coverage/zib-Payer-01" />
                 <display value="Verzekering Johan XXX_Helleman" />
             </entry>
         </section>
@@ -105,7 +105,7 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Observation/zib-familysituation-01" />
+                <reference value="Observation/zib-FamilySituation-01" />
                 <display value="Familie details van Johan XXX_Helleman" />
             </entry>
         </section>
@@ -144,7 +144,7 @@
                 </coding>
             </code>
             <entry>
-                <reference value="Condition/zib-problem-01" />
+                <reference value="Condition/zib-Problem-01" />
                 <display value="Amyotrofe laterale sclerose" />
             </entry>
         </section>

@@ -5,7 +5,7 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/goal-pertainsToGoal">
         <valueReference>
-            <reference value="Goal/zib-treatmentobjective-06" />
+            <reference value="Goal/zib-TreatmentObjective-06" />
             <display value="goede hygiene met betrekking tot stoma" />
         </valueReference>
     </extension>

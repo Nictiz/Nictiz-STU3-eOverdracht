@@ -5,7 +5,7 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/goal-pertainsToGoal">
         <valueReference>
-            <reference value="Goal/zib-treatmentobjective-05" />
+            <reference value="Goal/zib-TreatmentObjective-05" />
             <display value="therapietrouw" />
         </valueReference>
     </extension>
@@ -40,7 +40,7 @@
     <usedReference>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/extension-medicaldevice">
             <valueReference>
-                <reference value="DeviceUseStatement/zib-medicaldevice-01" />
+                <reference value="DeviceUseStatement/zib-MedicalDevice-01" />
                 <display value="medicatierol" />
             </valueReference>
         </extension>

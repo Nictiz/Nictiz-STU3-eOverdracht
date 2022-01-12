@@ -5,7 +5,7 @@
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/deviceUseStatement-reasonReferenceSTU3">
         <valueReference>
-            <reference value="Observation/zib-abilitytoperformmouthcareactivities-01" />
+            <reference value="Observation/zib-AbilityToPerformMouthcareActivities-01" />
             <display value="Hulp nodig" />
         </valueReference>
     </extension>
@@ -15,7 +15,7 @@
         <display value="Erik XXX_Altenborg" />
     </subject>
     <device>
-        <reference value="Device/zib-abilitytoperformmouthcareactivities-medicaldeviceproduct-01" />
+        <reference value="Device/zib-AbilityToPerformMouthcareActivities-MedicalDeviceProduct-01" />
         <display value="Gebitsprothese" />
     </device>
 </DeviceUseStatement>

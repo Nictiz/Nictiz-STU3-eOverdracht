@@ -32,7 +32,7 @@
         <start value="2021-08-15" />
     </whenUsed>
     <device>
-        <reference value="Device/zib-infusion-product-02" />
+        <reference value="Device/zib-Infusion-Product-02" />
         <display value="Infuuspomp voor algemene doeleinden" />
     </device>
 </DeviceUseStatement>

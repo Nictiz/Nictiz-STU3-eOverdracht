@@ -12,7 +12,7 @@
         <start value="2021-09-06" />
     </whenUsed>
     <device>
-        <reference value="Device/zib-medicaldeviceproduct-05" />
+        <reference value="Device/zib-MedicalDevice-Product-05" />
         <display value="Enterale voedingspomp" />
     </device>
 </DeviceUseStatement>

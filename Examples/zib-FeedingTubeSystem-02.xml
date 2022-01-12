@@ -5,7 +5,7 @@
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/extension-medicaldevice">
         <valueReference>
-            <reference value="DeviceUseStatement/zib-medicaldevice-03" />
+            <reference value="DeviceUseStatement/zib-MedicalDevice-03" />
             <display value="Enterale voedingspomp" />
         </valueReference>
     </extension>
@@ -18,7 +18,7 @@
         <start value="2021-09-06" />
     </whenUsed>
     <device>
-        <reference value="Device/zib-feedingtubesystem-product-02" />
+        <reference value="Device/zib-FeedingTubeSystem-Product-02" />
         <display value="PEJ sonde" />
     </device>
 </DeviceUseStatement>

@@ -5,7 +5,7 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/goal-pertainsToGoal">
         <valueReference>
-            <reference value="Goal/zib-treatmentobjective-01" />
+            <reference value="Goal/zib-TreatmentObjective-01" />
             <display value="Zich wassen" />
         </valueReference>
     </extension>
@@ -44,7 +44,7 @@
         <start value="2021-06-05" />
     </performedPeriod>
     <reasonReference>
-        <reference value="Condition/zib-problem-05" />
+        <reference value="Condition/zib-Problem-05" />
         <display value="probleem met zichzelf wassen en afdrogen" />
     </reasonReference>
 </Procedure>

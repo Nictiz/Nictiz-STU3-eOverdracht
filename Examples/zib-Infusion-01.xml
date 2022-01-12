@@ -24,13 +24,13 @@
         </extension>
         <extension url="AdministeringSystem">
             <valueReference>
-                <reference value="MedicationAdministration/zib-infusion-administeringsystem-01" />
+                <reference value="MedicationAdministration/zib-Infusion-AdministeringSystem-01" />
                 <display value="Voor TPV" />
             </valueReference>
         </extension>
         <extension url="AdministeringSystem">
             <valueReference>
-                <reference value="MedicationAdministration/zib-infusion-administeringsystem-02" />
+                <reference value="MedicationAdministration/zib-Infusion-AdministeringSystem-02" />
                 <display value="Voor NaCl 0,9%" />
             </valueReference>
         </extension>
@@ -44,7 +44,7 @@
         <start value="2021-08-15" />
     </whenUsed>
     <device>
-        <reference value="Device/zib-infusion-product-01" />
+        <reference value="Device/zib-Infusion-Product-01" />
         <display value="Centraal veneuze katheter" />
     </device>
     <bodySite>

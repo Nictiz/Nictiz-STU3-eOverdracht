@@ -5,7 +5,7 @@
     </meta>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/observation-zibStomaReference">
         <valueReference>
-            <reference value="Observation/zib-stoma-02" />
+            <reference value="Observation/zib-Stoma-02" />
             <display value="Urostoma" />
         </valueReference>
     </extension>

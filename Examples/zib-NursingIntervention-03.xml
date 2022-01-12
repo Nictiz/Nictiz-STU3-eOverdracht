@@ -32,15 +32,15 @@
         <display value="Erik XXX_Altenborg" />
     </subject>
     <reasonReference>
-        <reference value="Condition/zib-problem-07" />
+        <reference value="Condition/zib-Problem-07" />
         <display value="decubitus" />
     </reasonReference>
     <usedReference>
-        <reference value="Device/zib-medicaldeviceproduct-01" />
+        <reference value="Device/zib-MedicalDevice-Product-01" />
         <display value="schuimverband" />
     </usedReference>
     <usedReference>
-        <reference value="Device/zib-medicaldeviceproduct-02" />
+        <reference value="Device/zib-MedicalDevice-Product-02" />
         <display value="huidvervangende wondbedekkers" />
     </usedReference>
 </Procedure>

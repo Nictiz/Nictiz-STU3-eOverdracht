@@ -24,7 +24,7 @@
         <display value="G. Spijkerman" />
     </source>
     <device>
-        <reference value="Device/zib-feedingtubesystem-product-01" />
+        <reference value="Device/zib-FeedingTubeSystem-Product-01" />
         <display value="Neus-maagsonde" />
     </device>
     <bodySite>

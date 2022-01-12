@@ -12,7 +12,7 @@
         </coding>
     </category>
     <medicationReference>
-        <reference value="Medication/zib-product-01" />
+        <reference value="Medication/zib-Product-01" />
         <display value="Tipranavir (TPV)" />
     </medicationReference>
     <subject>
@@ -25,7 +25,7 @@
     <device>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/extension-medicaldevice">
             <valueReference>
-                <reference value="DeviceUseStatement/zib-infusion-02" />
+                <reference value="DeviceUseStatement/zib-Infusion-02" />
                 <display value="Infuuspomp voor algemene doeleinden" />
             </valueReference>
         </extension>

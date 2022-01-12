@@ -5,7 +5,7 @@
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/goal-pertainsToGoal">
         <valueReference>
-            <reference value="Goal/zib-treatmentobjective-04" />
+            <reference value="Goal/zib-TreatmentObjective-04" />
             <display value="vochtinname > 1,5 liter/dag" />
         </valueReference>
     </extension>
@@ -38,7 +38,7 @@
         </actor>
     </performer>
     <reasonReference>
-        <reference value="Condition/zib-problem-08" />
+        <reference value="Condition/zib-Problem-08" />
         <display value="loopt risico op delier" />
     </reasonReference>
 </Procedure>
