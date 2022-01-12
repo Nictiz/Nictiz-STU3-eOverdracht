@@ -1,5 +1,5 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="woundcharacteristics-01" />
+    <id value="WoundCharacteristics-01" />
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/WoundCharacteristics" />
     </meta>
