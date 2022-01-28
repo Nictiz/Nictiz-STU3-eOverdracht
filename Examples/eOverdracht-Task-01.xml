@@ -1,33 +1,36 @@
 <Task xmlns="http://hl7.org/fhir">
-    <id value="eOverdracht-task-01" />
+    <id value="eOverdracht-Task-01" />
+     <meta>
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-Task" />
+    </meta>
     <status value="accepted" />
     <intent value="order" />
     <code>
         <coding>
             <system value="http://snomed.info/sct" />
             <code value="308292007" />
-            <display value="Overdracht van zorg" />
+            <display value="overdracht van zorg" />
         </coding>
     </code>
     <for>
         <reference value="Patient/nl-core-patient-01" />
-        <display value="Erik XXX_Altenborg" />
+        <display value="Johan XXX_Helleman" />
     </for>
     <requester>
         <agent>
             <extension url="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference">
                 <valueReference>
-                    <reference value="PractitionerRole/nl-core-pracitionerrole-01" />
-                    <display value="Verpleegkundigen, niet nader gespecificeerd" />
+                    <reference value="PractitionerRole/nl-core-practitionerrole-02" />
+                    <display value="huisarts" />
                 </valueReference>
             </extension>
-            <reference value="Practitioner/nl-core-practitioner-02" />
-            <display value="Charlotte Bruinsma" />
+            <reference value="Practitioner/nl-core-practitioner-01" />
+            <display value="Henk de Vries" />
         </agent>
     </requester>
     <owner>
-        <reference value="Organization/nl-core-organization-01" />
-        <display value="AB-zkh Noord" />
+        <reference value="Organization/nl-core-organization-03" />
+        <display value="Test Medisch Centrum" />
     </owner>
     <input>
         <type>
@@ -38,8 +41,8 @@
             </coding>
         </type>
         <valueReference>
-            <reference value="Composition/nursing-handoff-01" />
-            <display value="Verpleegkundig Dossier Erik XXX_Altenborg" />
+            <reference value="Composition/eOverdracht-NursingHandoff-Adults-01" />
+            <display value="Verpleegkundig dossier Johan XXX_Helleman" />
         </valueReference>
     </input>
 </Task>

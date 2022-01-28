@@ -1,11 +1,11 @@
 <Observation xmlns="http://hl7.org/fhir">
-    <id value="woundcharacteristics-02" />
+    <id value="WoundCharacteristics-02" />
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/WoundCharacteristics" />
     </meta>
     <extension url="http://hl7.org/fhir/StructureDefinition/event-reasonReference">
         <valueReference>
-            <reference value="Condition/zib-pressureulcer-02" />
+            <reference value="Condition/zib-PressureUlcer-02" />
             <display value="PressureUlcer" />
         </valueReference>
     </extension>
