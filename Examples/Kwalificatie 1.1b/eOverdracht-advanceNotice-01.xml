@@ -20,7 +20,7 @@
         <reference value="Practitioner/nl-core-practitioner-01" />
         <display value="Julia van den Bos" />
     </author>
-    <title value="Nursing handoff" />
+    <title value="Aanmeldbericht Maria XXX_Molog" />
     <section>
         <extension url="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate">
             <valueDateTime value="2022-02-02T21:20:00+00:00" />
