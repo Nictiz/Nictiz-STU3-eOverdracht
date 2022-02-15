@@ -1,5 +1,5 @@
 <Condition xmlns="http://hl7.org/fhir">
-    <id value="zib-Problem-eov-test-1.1-03" />
+    <id value="zib-Problem-eov-test-1.1b-01" />
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
     </meta>
@@ -14,39 +14,30 @@
             </valueCodeableConcept>
         </extension>
     </clinicalStatus>
-    <category>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="282291009" />
-            <display value="Diagnose" />
-        </coding>
-    </category>
-    <code>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="238600001" />
-            <display value="inverse psoriasis" />
-        </coding>
-    </code>
-    <bodySite>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier">
+    <verificationStatus value="confirmed">
+        <extension url="http://nictiz.nl/fhir/StructureDefinition/code-specification">
             <valueCodeableConcept>
                 <coding>
                     <system value="http://snomed.info/sct" />
-                    <code value="51440002" />
-                    <display value="Rechts en links" />
+                    <code value="410605003" />
+                    <display value="Bevestigd" />
                 </coding>
             </valueCodeableConcept>
         </extension>
+    </verificationStatus>
+    <code>
         <coding>
             <system value="http://snomed.info/sct" />
-            <code value="91470000" />
-            <display value="oksel" />
+            <code value="422504002" />
+            <display value="ischemisch cerebrovasculair accident" />
         </coding>
-    </bodySite>
+    </code>
     <subject>
-        <reference value="Patient/nl-core-patient-test-1.1-01" />
+        <reference value="Patient/nl-core-patient-eov-test-1.1b-01" />
         <display value="Erik XXX_Altenborg" />
     </subject>
-    <onsetDateTime value="${DATE, T, Y, -10}" />
+    <onsetDateTime value="${DATE, T, d, -100}" />
+    <note>
+        <text value="niet bekend met neurologische klachten" />
+    </note>
 </Condition>

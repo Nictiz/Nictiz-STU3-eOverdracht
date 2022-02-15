@@ -1,5 +1,5 @@
 <Condition xmlns="http://hl7.org/fhir">
-    <id value="zib-Problem-eov-test-1.1-03" />
+    <id value="zib-Problem-eov-test-1.1b-02" />
     <meta>
         <profile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
     </meta>
@@ -24,29 +24,13 @@
     <code>
         <coding>
             <system value="http://snomed.info/sct" />
-            <code value="238600001" />
-            <display value="inverse psoriasis" />
+            <code value="126838000" />
+            <display value="neoplasma van colon" />
         </coding>
     </code>
-    <bodySite>
-        <extension url="http://nictiz.nl/fhir/StructureDefinition/BodySite-Qualifier">
-            <valueCodeableConcept>
-                <coding>
-                    <system value="http://snomed.info/sct" />
-                    <code value="51440002" />
-                    <display value="Rechts en links" />
-                </coding>
-            </valueCodeableConcept>
-        </extension>
-        <coding>
-            <system value="http://snomed.info/sct" />
-            <code value="91470000" />
-            <display value="oksel" />
-        </coding>
-    </bodySite>
     <subject>
-        <reference value="Patient/nl-core-patient-test-1.1-01" />
+        <reference value="Patient/nl-core-patient-eov-test-1.1b-01" />
         <display value="Erik XXX_Altenborg" />
     </subject>
-    <onsetDateTime value="${DATE, T, Y, -10}" />
+    <onsetDateTime value="${DATE, T, d, -150}" />
 </Condition>
