@@ -470,7 +470,6 @@
       <path value="Composition.section" />
       <sliceName value="generalPatientContext" />
       <short value="General Patient Context" />
-      <min value="1" />
       <max value="1" />
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Childcare-0-1yo" />
@@ -1784,7 +1783,6 @@
       <path value="Composition.section" />
       <sliceName value="healthState" />
       <short value="Health State" />
-      <min value="1" />
       <max value="1" />
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Childcare-0-1yo" />
