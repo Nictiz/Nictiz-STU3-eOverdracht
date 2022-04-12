@@ -2004,7 +2004,6 @@
       <path value="Composition.section.section.entry" />
       <sliceName value="nutritionAdvice" />
       <short value="Nutrition Advice" />
-      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice" />
