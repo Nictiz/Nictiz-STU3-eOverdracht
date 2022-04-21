@@ -1,8 +1,8 @@
 {
   "name": "nictiz.fhir.nl.stu3.eoverdracht",
-  "version": "1.0.0-rc3",
+  "version": "1.0.0-rc5",
   "web": "https://informatiestandaarden.nictiz.nl/wiki/vpk:Landingspagina_eOverdracht",
-  "title": "Nictiz FHIR NL STU3 eOverdracht v4.0",
+  "title": "Nictiz FHIR NL STU3 eOverdracht v4.0-RC5",
   "description": "Nictiz NL package of FHIR STU3 conformance resources for eOverdracht information standard, version 4.0. Includes dependency on Zib2017.\\n\\nHCIMs: https://zibs.nl/wiki/HCIM_Release_2017(EN)",
   "keywords": [
     "nl",
