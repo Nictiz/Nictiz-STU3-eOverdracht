@@ -37,12 +37,12 @@
     <element id="Composition.type.coding.system">
       <path value="Composition.type.coding.system" />
       <min value="1" />
-      <fixedUri value="http://loinc.org" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Composition.type.coding.code">
       <path value="Composition.type.coding.code" />
       <min value="1" />
-      <fixedCode value="57830-2" />
+      <fixedCode value="721915006" />
     </element>
     <element id="Composition.subject">
       <path value="Composition.subject" />
@@ -102,6 +102,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
     </element>
     <element id="Composition.section:administrativeData.extension:transferDate">
       <path value="Composition.section.extension" />
@@ -613,10 +614,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons">
       <path value="Composition.section.extension" />
       <sliceName value="needsOfPatientAndRelatedPersons" />
+      <min value="0" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NeedsOfPatientAndRelatedPersons" />

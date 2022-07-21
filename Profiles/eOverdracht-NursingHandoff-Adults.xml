@@ -42,11 +42,7 @@
     <element id="Composition.type.coding.code">
       <path value="Composition.type.coding.code" />
       <min value="1" />
-      <fixedCode value="371535009" />
-    </element>
-    <element id="Composition.type.coding.display">
-      <path value="Composition.type.coding.display" />
-      <fixedString value="verslag van overdracht" />
+      <fixedCode value="11171000146100" />
     </element>
     <element id="Composition.subject">
       <path value="Composition.subject" />
