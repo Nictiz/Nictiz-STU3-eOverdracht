@@ -130,10 +130,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="0" />
     </element>
     <element id="Task.requester.agent.extension:practitionerRole">
       <path value="Task.requester.agent.extension" />
       <sliceName value="practitionerRole" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -179,11 +181,11 @@
     </element>
     <element id="Task.input:advanceNotice.type.coding.system">
       <path value="Task.input.type.coding.system" />
-      <fixedUri value="http://loinc.org" />
+      <fixedUri value="http://snomed.info/sct" />
     </element>
     <element id="Task.input:advanceNotice.type.coding.code">
       <path value="Task.input.type.coding.code" />
-      <fixedCode value="57830-2" />
+      <fixedCode value="721915006" />
     </element>
     <element id="Task.input:advanceNotice.value[x]:valueReference">
       <path value="Task.input.valueReference" />
@@ -204,11 +206,7 @@
     </element>
     <element id="Task.input:nursingHandoff.type.coding.code">
       <path value="Task.input.type.coding.code" />
-      <fixedCode value="371535009" />
-    </element>
-    <element id="Task.input:nursingHandoff.type.coding.display">
-      <path value="Task.input.type.coding.display" />
-      <fixedString value="verslag van overdracht" />
+      <fixedCode value="11171000146100" />
     </element>
     <element id="Task.input:nursingHandoff.value[x]:valueReference">
       <path value="Task.input.value[x]" />
