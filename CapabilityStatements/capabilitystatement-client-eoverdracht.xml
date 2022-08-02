@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir">
     <url value="http://nictiz.nl/fhir/CapabilityStatement/eOverdracht-clientcapabilities"/>
-    <version value="1.0.0-rc1"/>
+    <version value="1.0.0-rc6"/>
     <name value="eOverdrachtClient"/>
     <status value="draft"/>
     <date value="2021-05-17"/>
