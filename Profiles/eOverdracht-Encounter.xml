@@ -10,9 +10,9 @@
   <contact>
     <name value="Nictiz" />
     <telecom>
-      <system value="email" />
-      <value value="info@nictiz.nl" />
-      <use value="work" />
+      <system value="url"/>
+      <value value="https://www.nictiz.nl"/>
+      <use value="work"/>
     </telecom>
   </contact>
   <description value="An Encounter resource as defined by the eOverdracht program, based on Dutch Health and Care Information model (Dutch: Zorginformatiebouwsteen or ZIB) Encounter v3.1(2017).&#xD;&#xA;&#xD;&#xA;This eOverdracht specific profile differs in two important ways for [the zib profile](http://nictiz.nl/fhir/StructureDefinition/zib-Encounter) that it is based on:&#xD;&#xA;* An option is added to describe the reason for the Encounter in free text (while the option to describe just a deviating result as reason cannot be used). This information can be found on `Condition.reason.text`.&#xD;&#xA;* This resource can be used for future encounters as well as past encounters. This aligns with zib release 2020." />
