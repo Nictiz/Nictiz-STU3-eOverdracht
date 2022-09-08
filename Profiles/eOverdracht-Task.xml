@@ -10,9 +10,9 @@
   <contact>
     <name value="Nictiz" />
     <telecom>
-      <system value="url"/>
-      <value value="https://www.nictiz.nl"/>
-      <use value="work"/>
+      <system value="url" />
+      <value value="https://www.nictiz.nl" />
+      <use value="work" />
     </telecom>
   </contact>
   <description value="The use cases within eOverdracht form a workflow that may include the negotiation of the transfer of the patient, and ends with the transfer of the medical record. This Task resource is used to track the worflow and acts as the entry point for all data exchanges within eOverdracht." />
