@@ -8,7 +8,7 @@
             <valueBoolean value="false" />
         </extension>
         <extension url="LegallyCapableComment">
-            <valueBoolean value="Wegens psychose" />
+            <valueString value="Wegens psychose" />
         </extension>
     </extension>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-FreedomRestrictingIntervention-Assent">

@@ -8,7 +8,7 @@
             <valueBoolean value="false" />
         </extension>
         <extension url="LegallyCapableComment">
-            <valueBoolean value="Kan eigen situatie niet beoordelen" />
+            <valueString value="Kan eigen situatie niet beoordelen" />
         </extension>
     </extension>
     <extension url="http://nictiz.nl/fhir/StructureDefinition/zib-FreedomRestrictingIntervention-Assent">
