@@ -586,7 +586,6 @@
     <element id="Composition.section:generalPatientContext.section:legalSituation.entry">
       <path value="Composition.section.section.entry" />
       <min value="1" />
-      <max value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-LegalStatus" />
