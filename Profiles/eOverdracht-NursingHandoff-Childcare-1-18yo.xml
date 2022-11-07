@@ -436,7 +436,6 @@
       <path value="Composition.section.section.entry" />
       <sliceName value="practitioner" />
       <short value="Practitioner" />
-      <min value="1" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -452,7 +451,6 @@
       <path value="Composition.section.section.entry" />
       <sliceName value="practitionerRole" />
       <short value="Practitioner Role" />
-      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole" />
