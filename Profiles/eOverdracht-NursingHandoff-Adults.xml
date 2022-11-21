@@ -583,6 +583,29 @@
       <path value="Composition.section.section.title" />
       <defaultValueString value="Legal situation" />
     </element>
+    <element id="Composition.section:generalPatientContext.section:legalSituation.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:generalPatientContext.section:legalSituation.code.coding">
+      <path value="Composition.section.section.code.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Composition.section:generalPatientContext.section:legalSituation.code.coding.system">
+      <path value="Composition.section.section.code.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
+    </element>
+    <element id="Composition.section:generalPatientContext.section:legalSituation.code.coding.code">
+      <path value="Composition.section.section.code.coding.code" />
+      <min value="1" />
+      <fixedCode value="365867006" />
+    </element>
+    <element id="Composition.section:generalPatientContext.section:legalSituation.code.coding.display">
+      <path value="Composition.section.section.code.coding.display" />
+      <defaultValueString value="bevinding betreffende wettelijke status van patiënt" />
+    </element>
     <element id="Composition.section:generalPatientContext.section:legalSituation.entry">
       <path value="Composition.section.section.entry" />
       <min value="1" />
