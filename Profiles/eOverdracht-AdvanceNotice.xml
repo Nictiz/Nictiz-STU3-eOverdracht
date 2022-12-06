@@ -32,6 +32,13 @@
   <differential>
     <element id="Composition.type.coding">
       <path value="Composition.type.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
     </element>
     <element id="Composition.type.coding.system">
@@ -135,6 +142,13 @@
     </element>
     <element id="Composition.section:administrativeData.code.coding">
       <path value="Composition.section.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <max value="1" />
     </element>
@@ -190,6 +204,13 @@
     </element>
     <element id="Composition.section:administrativeData.section:personalData.code.coding">
       <path value="Composition.section.section.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <max value="1" />
     </element>
@@ -268,6 +289,13 @@
     </element>
     <element id="Composition.section:generalPatientContext.code.coding">
       <path value="Composition.section.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <max value="1" />
     </element>
@@ -376,6 +404,13 @@
     </element>
     <element id="Composition.section:medicalContext.code.coding">
       <path value="Composition.section.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <max value="1" />
     </element>
@@ -426,6 +461,13 @@
     </element>
     <element id="Composition.section:medicalContext.section:medicalDiagnosis.code.coding">
       <path value="Composition.section.section.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <max value="1" />
     </element>
@@ -479,6 +521,13 @@
     </element>
     <element id="Composition.section:medicalContext.section:medicalHistory.code.coding">
       <path value="Composition.section.section.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <max value="1" />
     </element>
@@ -532,6 +581,13 @@
     </element>
     <element id="Composition.section:medicalContext.section:payAttention.code.coding">
       <path value="Composition.section.section.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <max value="1" />
     </element>
@@ -585,6 +641,13 @@
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.code.coding">
       <path value="Composition.section.section.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <max value="1" />
     </element>
@@ -666,6 +729,13 @@
     </element>
     <element id="Composition.section:carePlan.code.coding">
       <path value="Composition.section.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <max value="1" />
     </element>
@@ -728,6 +798,13 @@
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.code.coding">
       <path value="Composition.section.section.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <max value="1" />
     </element>
@@ -812,6 +889,13 @@
     </element>
     <element id="Composition.section:healthState.code.coding">
       <path value="Composition.section.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <max value="1" />
     </element>
@@ -865,6 +949,13 @@
     </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid.code.coding">
       <path value="Composition.section.section.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <max value="1" />
     </element>
@@ -946,6 +1037,13 @@
     </element>
     <element id="Composition.section:healthState.section:excretion.code.coding">
       <path value="Composition.section.section.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
       <max value="1" />
     </element>
@@ -982,3 +1080,4 @@
     </element>
   </differential>
 </StructureDefinition>
+==== BASE ====
