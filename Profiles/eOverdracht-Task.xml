@@ -70,29 +70,38 @@
       <min value="1" />
     </element>
     <element id="Task.code.coding">
-      <path value="Task.code.coding" />
+      <path value="Task.code.coding"/>
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code" />
+          <type value="value"/>
+          <path value="code"/>
         </discriminator>
-        <rules value="open" />
+        <discriminator>
+          <type value="value"/>
+          <path value="system"/>
+        </discriminator>
+        <rules value="open"/>
       </slicing>
-      <min value="1" />
+      <min value="1"/>
     </element>
-    <element id="Task.code.coding.system">
-      <path value="Task.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
+    <element id="Task.code.coding:taskCode">
+      <path value="Task.code.coding"/>
+      <sliceName value="taskCode"/>
+      <min value="1"/>
     </element>
-    <element id="Task.code.coding.code">
-      <path value="Task.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="308292007" />
+    <element id="Task.code.coding:taskCode.system">
+      <path value="Task.code.coding.system"/>
+      <min value="1"/>
+      <fixedUri value="http://snomed.info/sct"/>
     </element>
-    <element id="Task.code.coding.display">
-      <path value="Task.code.coding.display" />
-      <defaultValueString value="Overdracht van zorg" />
+    <element id="Task.code.coding:taskCode.code">
+      <path value="Task.code.coding.code"/>
+      <min value="1"/>
+      <fixedCode value="308292007"/>
+    </element>
+    <element id="Task.code.coding:taskCode.display">
+      <path value="Task.code.coding.display"/>
+      <defaultValueString value=""/>
     </element>
     <element id="Task.for">
       <path value="Task.for" />
