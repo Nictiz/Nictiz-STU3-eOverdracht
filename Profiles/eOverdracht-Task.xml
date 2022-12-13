@@ -192,13 +192,36 @@
         <comment value="eOverdracht transaction &quot;Sturen aanmeldbericht&quot;" />
       </mapping>
     </element>
-    <element id="Task.input:advanceNotice.type.coding.system">
+    <element id="Task.input:advanceNotice.type.coding">
+      <path value="Task.input.type.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Task.input:advanceNotice.type.coding:advanceNoticeCode">
+      <path value="Task.input.type.coding" />
+      <sliceName value="advanceNoticeCode" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:advanceNotice.type.coding:advanceNoticeCode.system">
       <path value="Task.input.type.coding.system" />
+      <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Task.input:advanceNotice.type.coding.code">
-      <path value="Task.input.type.coding.code" />
-      <fixedCode value="721915006" />
+    <element id="Task.input:advanceNotice.type.coding:advanceNoticeCode.version">
+      <path value="Task.input.type.coding.version" />
+      <min value="1" />
+      <fixedString value="721915006" />
     </element>
     <element id="Task.input:advanceNotice.value[x]:valueReference">
       <path value="Task.input.valueReference" />
@@ -213,13 +236,36 @@
       <sliceName value="nursingHandoff" />
       <max value="1" />
     </element>
-    <element id="Task.input:nursingHandoff.type.coding.system">
+    <element id="Task.input:nursingHandoff.type.coding">
+      <path value="Task.input.type.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Task.input:nursingHandoff.type.coding:nursingHandoffCode">
+      <path value="Task.input.type.coding" />
+      <sliceName value="nursingHandoffCode" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Task.input:nursingHandoff.type.coding:nursingHandoffCode.system">
       <path value="Task.input.type.coding.system" />
+      <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Task.input:nursingHandoff.type.coding.code">
-      <path value="Task.input.type.coding.code" />
-      <fixedCode value="11171000146100" />
+    <element id="Task.input:nursingHandoff.type.coding:nursingHandoffCode.version">
+      <path value="Task.input.type.coding.version" />
+      <min value="1" />
+      <fixedString value="11171000146100" />
     </element>
     <element id="Task.input:nursingHandoff.value[x]:valueReference">
       <path value="Task.input.value[x]" />
@@ -259,20 +305,36 @@
     </element>
     <element id="Task.output:alternativeDate.type.coding">
       <path value="Task.output.type.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <discriminator>
+          <type value="value" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Task.output:alternativeDate.type.coding:alternativeDateCode">
+      <path value="Task.output.type.coding" />
+      <sliceName value="alternativeDateCode" />
       <min value="1" />
       <max value="1" />
     </element>
-    <element id="Task.output:alternativeDate.type.coding.system">
+    <element id="Task.output:alternativeDate.type.coding:alternativeDateCode.system">
       <path value="Task.output.type.coding.system" />
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Task.output:alternativeDate.type.coding.code">
-      <path value="Task.output.type.coding.code" />
+    <element id="Task.output:alternativeDate.type.coding:alternativeDateCode.version">
+      <path value="Task.output.type.coding.version" />
       <min value="1" />
-      <fixedCode value="146851000146105" />
+      <fixedString value="146851000146105" />
     </element>
-    <element id="Task.output:alternativeDate.type.coding.display">
+    <element id="Task.output:alternativeDate.type.coding:alternativeDateCode.display">
       <path value="Task.output.type.coding.display" />
       <defaultValueString value="Alternative date for transfer of care (waarneembare entiteit)" />
     </element>
