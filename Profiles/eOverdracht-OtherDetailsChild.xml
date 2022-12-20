@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="eOverdracht-OtherDetailsChild" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-OtherDetailsChild" />
-  <version value="1.0.0-rc8" />
+  <version value="1.0.0-rc9" />
   <name value="eOverdrachtOtherDetailsChild" />
   <title value="eOverdracht OtherDetailsChild" />
   <status value="active" />
