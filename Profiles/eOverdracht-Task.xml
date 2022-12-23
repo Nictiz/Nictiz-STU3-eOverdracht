@@ -218,8 +218,8 @@
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Task.input:advanceNotice.type.coding:advanceNoticeCode.version">
-      <path value="Task.input.type.coding.version" />
+    <element id="Task.input:advanceNotice.type.coding:advanceNoticeCode.code">
+      <path value="Task.input.type.coding.code" />
       <min value="1" />
       <fixedString value="721915006" />
     </element>
@@ -262,8 +262,8 @@
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Task.input:nursingHandoff.type.coding:nursingHandoffCode.version">
-      <path value="Task.input.type.coding.version" />
+    <element id="Task.input:nursingHandoff.type.coding:nursingHandoffCode.code">
+      <path value="Task.input.type.coding.code" />
       <min value="1" />
       <fixedString value="11171000146100" />
     </element>
@@ -329,8 +329,8 @@
       <min value="1" />
       <fixedUri value="http://snomed.info/sct" />
     </element>
-    <element id="Task.output:alternativeDate.type.coding:alternativeDateCode.version">
-      <path value="Task.output.type.coding.version" />
+    <element id="Task.output:alternativeDate.type.coding:alternativeDateCode.code">
+      <path value="Task.output.type.coding.code" />
       <min value="1" />
       <fixedString value="146851000146105" />
     </element>
