@@ -221,7 +221,7 @@
     <element id="Task.input:advanceNotice.type.coding:advanceNoticeCode.code">
       <path value="Task.input.type.coding.code" />
       <min value="1" />
-      <fixedString value="721915006" />
+      <fixedCode value="721915006" />
     </element>
     <element id="Task.input:advanceNotice.value[x]:valueReference">
       <path value="Task.input.valueReference" />
@@ -265,7 +265,7 @@
     <element id="Task.input:nursingHandoff.type.coding:nursingHandoffCode.code">
       <path value="Task.input.type.coding.code" />
       <min value="1" />
-      <fixedString value="11171000146100" />
+      <fixedCode value="11171000146100" />
     </element>
     <element id="Task.input:nursingHandoff.value[x]:valueReference">
       <path value="Task.input.value[x]" />
@@ -332,7 +332,7 @@
     <element id="Task.output:alternativeDate.type.coding:alternativeDateCode.code">
       <path value="Task.output.type.coding.code" />
       <min value="1" />
-      <fixedString value="146851000146105" />
+      <fixedCode value="146851000146105" />
     </element>
     <element id="Task.output:alternativeDate.type.coding:alternativeDateCode.display">
       <path value="Task.output.type.coding.display" />
