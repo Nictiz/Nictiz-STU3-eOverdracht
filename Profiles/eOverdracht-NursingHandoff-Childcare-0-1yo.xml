@@ -85,8 +85,32 @@
     </element>
     <element id="Composition.author">
       <path value="Composition.author" />
-      <short value="Who or what initiated the nursing handoff" />
-      <definition value="The person that initiated the sending of the nursing handoff. Alternatively, this may be the sending XIS." />
+      <short value="Who or what authored the nursing handoff" />
+      <definition value="The person responsible for the content of the nursing handoff. Alternatively, this may be the sending XIS." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDeviceProduct" />
+      </type>
     </element>
     <element id="Composition.title">
       <path value="Composition.title" />
