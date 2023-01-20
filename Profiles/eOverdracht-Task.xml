@@ -120,6 +120,7 @@
     <element id="Task.requester.agent">
       <path value="Task.requester.agent" />
       <definition value="The practitioner or organisation who initiated the task." />
+      <comment value="This element is usually populated with the sending organization (Sturende organisatie::Zorgaanbieder in the eOverdracht dataset). However, if there is a need by the sending organization to communicate the health professional who initiated the transfer request, this element can be populated with this person and the sending organization is communicated using `.onBehalfOf`.&#xD;&#xA;&#xD;&#xA;A health professional communicated here pertains the practical act of initiating the transfer request. The health profession who is responsible for the content is communicated using `Composition.author`. These two persons can be the same person." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-organization" />
@@ -154,6 +155,23 @@
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
       </type>
+    </element>
+    <element id="Task.requester.onBehalfOf">
+      <path value="Task.requester.onBehalfOf" />
+      <comment value="This element is populated with the sending organization (Sturende organisatie::Zorgaanbieder in the eOverdracht dataset) only when `.agent` contains a reference to a health professional. If this is not the case, the sending organization is communicated using `.agent`." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-AdvanceNotice" />
+        <map value="e-overdracht-dataelement-v4-102" />
+        <comment value="Sturende organisatie::Zorgaanbieder" />
+      </mapping>
     </element>
     <element id="Task.owner">
       <path value="Task.owner" />
