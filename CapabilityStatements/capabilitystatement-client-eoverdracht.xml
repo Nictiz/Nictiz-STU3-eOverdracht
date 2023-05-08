@@ -33,6 +33,8 @@
             <documentation value="Task resource to negotiate the transfer of a patient and track the subsequent nursing handoff"/>
             <interaction>
                 <code value="search-type"/>
+            </interaction>
+             <interaction>
                 <code value="read"/>
             </interaction>
             <searchParam>
