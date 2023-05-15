@@ -2344,7 +2344,7 @@
       <sliceName value="abilityToPerformMouthcareActivities-Prosthesis" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToPerformMouthcareActivities-MedicalDeviceProduct" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToPerformMouthcareActivities-MedicalDevice" />
       </type>
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Adults" />
@@ -2495,6 +2495,22 @@
     </element>
     <element id="Composition.section:healthState.section:mobility.entry">
       <path value="Composition.section.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+    <element id="Composition.section:healthState.section:mobility.entry:mobility">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="mobility" />
+      <short value="Mobility" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -2505,6 +2521,20 @@
         <identity value="eOverdracht-NursingHandoff-Adults" />
         <map value="e-overdracht-dataelement-v4-764" />
         <comment value="Mobiliteit" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:mobility.entry:medicalDevice">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="medicalDevice" />
+      <short value="Medical Device" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-770" />
+        <comment value="MedischHulpmiddel" />
       </mapping>
     </element>
     <element id="Composition.section:healthState.section:mobility.section">
@@ -2770,6 +2800,19 @@
         <comment value="Blaasfunctie" />
       </mapping>
     </element>
+    <element id="Composition.section:healthState.section:excretion.entry:bladderFunction-UrineCatheter">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="bladderFunction-UrineCatheter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-BladderFunction-UrineCatheter" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-943" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+    </element>
     <element id="Composition.section:healthState.section:excretion.entry:bowelFunction">
       <path value="Composition.section.section.entry" />
       <sliceName value="bowelFunction" />
@@ -2797,6 +2840,26 @@
         <identity value="eOverdracht-NursingHandoff-Adults" />
         <map value="e-overdracht-dataelement-v4-985" />
         <comment value="Stoma" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:excretion.entry:medicalDevice">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="medicalDevice" />
+      <short value="Medical Device"/>
+      <definition value="Used for the MedicalDevice relating to zib BowelFunction and zib Stoma." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-983" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-988" />
+        <comment value="MedischHulpmiddel" />
       </mapping>
     </element>
     <element id="Composition.section:healthState.section:excretion.section">
@@ -2931,6 +2994,19 @@
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/WoundCharacteristics" />
       </type>
+    </element>
+    <element id="Composition.section:healthState.section:skin.entry:woundDrain">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="woundDrain" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Wound-MedicalDevice" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1035" />
+        <comment value="Drain" />
+      </mapping>
     </element>
     <element id="Composition.section:healthState.section:skin.section">
       <path value="Composition.section.section.section" />
