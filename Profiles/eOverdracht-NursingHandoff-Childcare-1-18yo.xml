@@ -2545,6 +2545,26 @@
         <comment value="VermogenTotVerpleegtechnischeHandelingen" />
       </mapping>
     </element>
+    <element id="Composition.section:healthState.section:selfCare.entry:medicalDevice">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="medicalDevice" />
+      <short value="MedicalDevice" />
+      <definition value="Use this slice to register zib MedicalDevice used in the instances of zib NursingIntervention resulting from zib AbilityToPerformNursingActivities and zib AbilityToManageMedication"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
+        <map value="e-overdracht-dataelement-v4-704" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
+        <map value="e-overdracht-dataelement-v4-1602" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+    </element>
     <element id="Composition.section:healthState.section:mobility">
       <path value="Composition.section.section" />
       <sliceName value="mobility" />
