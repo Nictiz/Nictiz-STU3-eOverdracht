@@ -234,7 +234,7 @@
       <path value="Composition.section.section" />
       <sliceName value="personalData" />
       <short value="Personal data" />
-      <definition value="Subsection listing personal data of the payer and contact persons that are legal representatives of the patient." />
+      <definition value="Subsection listing personal data of the payer and contact persons of the patient." />
       <min value="1" />
       <max value="1" />
       <mapping>
@@ -316,7 +316,6 @@
       <path value="Composition.section.section.entry" />
       <sliceName value="relatedPerson" />
       <short value="Legal Representative" />
-      <comment value="Use only if the relatedPerson is a legal representative. Use the contact element in the Patient resource to define contactpersons whom are not legal representatives." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />

@@ -224,7 +224,7 @@
       <path value="Composition.section.section" />
       <sliceName value="personalData" />
       <short value="Personal data" />
-      <definition value="Subsection listing personal data of the payer and contact persons that are legal representatives of the patient." />
+      <definition value="Subsection listing personal data of the payer and contact persons of the patient." />
       <min value="1" />
       <max value="1" />
       <mapping>
