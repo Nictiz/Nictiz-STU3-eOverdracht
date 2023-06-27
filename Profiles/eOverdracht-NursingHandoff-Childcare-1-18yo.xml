@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Childcare-1-18yo" />
-  <version value="1.0.0-rc14" />
+  <version value="1.0.0-rc15" />
   <name value="eOverdrachtNursingHandoffChildcare1-18yo" />
   <title value="eOverdracht nursing handoff childcare 1-18 yo" />
   <status value="active" />
@@ -235,7 +235,7 @@
       <path value="Composition.section.section" />
       <sliceName value="personalData" />
       <short value="Personal data" />
-      <definition value="Subsection listing personal data of the payer and contact persons that are legal representatives of the patient." />
+      <definition value="Subsection listing personal data of the payer and contact persons of the patient." />
       <min value="1" />
       <max value="1" />
       <mapping>
@@ -318,7 +318,6 @@
       <path value="Composition.section.section.entry" />
       <sliceName value="relatedPerson" />
       <short value="Legal Representative" />
-      <comment value="Use only if the relatedPerson is a legal representative. Use the contact element in the Patient resource to define contactpersons whom are not legal representatives." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-relatedperson" />
