@@ -30,36 +30,15 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
   <derivation value="constraint" />
   <differential>
-    <element id="Composition.type.coding">
-      <path value="Composition.type.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
+    <element id="Composition.type">
+      <path value="Composition.type" />
       <min value="1" />
-    </element>
-    <element id="Composition.type.coding:nursingHandoffCode">
-      <path value="Composition.type.coding" />
-      <sliceName value="nursingHandoffCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.type.coding:nursingHandoffCode.system">
-      <path value="Composition.type.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.type.coding:nursingHandoffCode.code">
-      <path value="Composition.type.coding.code" />
-      <min value="1" />
-      <fixedCode value="11171000146100" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="11171000146100"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.subject">
       <path value="Composition.subject" />
@@ -121,7 +100,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code.coding.code" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -179,42 +158,12 @@
     <element id="Composition.section:administrativeData.code">
       <path value="Composition.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.code.coding">
-      <path value="Composition.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.code.coding:administrativeDataCode">
-      <path value="Composition.section.code.coding" />
-      <sliceName value="administrativeDataCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.code.coding:administrativeDataCode.system">
-      <path value="Composition.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:administrativeData.code.coding:administrativeDataCode.code">
-      <path value="Composition.section.code.coding.code" />
-      <short value="Administrative documentation (record artifact)" />
-      <min value="1" />
-      <fixedCode value="405624007" />
-    </element>
-    <element id="Composition.section:administrativeData.code.coding:administrativeDataCode.display">
-      <path value="Composition.section.code.coding.display" />
-      <defaultValueString value="Administrative documentation (record artifact )" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="405624007"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:administrativeData.entry">
       <path value="Composition.section.entry" />
@@ -225,7 +174,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code.coding.code" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -250,42 +199,12 @@
     <element id="Composition.section:administrativeData.section:personalData.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.section:personalData.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.section:personalData.code.coding:personalDataCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="personalDataCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.section:personalData.code.coding:personalDataCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:administrativeData.section:personalData.code.coding:personalDataCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <short value="Demographic history detail (observable entity)" />
-      <min value="1" />
-      <fixedCode value="302147001" />
-    </element>
-    <element id="Composition.section:administrativeData.section:personalData.code.coding:personalDataCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Demographic history detail (observable entity)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="302147001"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:administrativeData.section:personalData.entry">
       <path value="Composition.section.section.entry" />
@@ -350,41 +269,12 @@
     <element id="Composition.section:administrativeData.section:sendingOrganization.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.section:sendingOrganization.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.section:sendingOrganization.code.coding:sendingOrganizationCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="sendingOrganizationCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.section:sendingOrganization.code.coding:sendingOrganizationCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:administrativeData.section:sendingOrganization.code.coding:sendingOrganizationCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="185362004" />
-    </element>
-    <element id="Composition.section:administrativeData.section:sendingOrganization.code.coding:sendingOrganizationCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Referred by nurse (finding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="185362004"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:administrativeData.section:sendingOrganization.entry">
       <path value="Composition.section.section.entry" />
@@ -469,41 +359,12 @@
     <element id="Composition.section:administrativeData.section:receivingOrganization.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization.code.coding:receivingOrganizationCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="receivingOrganizationCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization.code.coding:receivingOrganizationCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization.code.coding:receivingOrganizationCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="275645009" />
-    </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization.code.coding:receivingOrganizationCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Nurse: referred to (finding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="275645009"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:administrativeData.section:receivingOrganization.entry">
       <path value="Composition.section.section.entry" />
@@ -583,42 +444,12 @@
     <element id="Composition.section:generalPatientContext.code">
       <path value="Composition.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.code.coding">
-      <path value="Composition.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.code.coding:generalPatientContextCode">
-      <path value="Composition.section.code.coding" />
-      <sliceName value="generalPatientContextCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.code.coding:generalPatientContextCode.system">
-      <path value="Composition.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:generalPatientContext.code.coding:generalPatientContextCode.code">
-      <path value="Composition.section.code.coding.code" />
-      <short value="Administrative documentation (record artifact)" />
-      <min value="1" />
-      <fixedCode value="109481000146101" />
-    </element>
-    <element id="Composition.section:generalPatientContext.code.coding:generalPatientContextCode.display">
-      <path value="Composition.section.code.coding.display" />
-      <defaultValueString value="Personal and social history section (record artifact)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="109481000146101"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:generalPatientContext.entry">
       <path value="Composition.section.entry" />
@@ -629,7 +460,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code.coding.code" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -652,41 +483,12 @@
     <element id="Composition.section:generalPatientContext.section:familySituation.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:familySituation.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:familySituation.code.coding:familySituationCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="familySituationCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:familySituation.code.coding:familySituationCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:familySituation.code.coding:familySituationCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="365474007" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:familySituation.code.coding:familySituationCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Finding of details of family (finding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="365474007"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:generalPatientContext.section:familySituation.entry">
       <path value="Composition.section.section.entry" />
@@ -721,41 +523,12 @@
     <element id="Composition.section:generalPatientContext.section:legalSituation.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:legalSituation.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:legalSituation.code.coding:legalSituationCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="legalSituationCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:legalSituation.code.coding:legalSituationCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:legalSituation.code.coding:legalSituationCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="365867006" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:legalSituation.code.coding:legalSituationCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="bevinding betreffende wettelijke status van patiënt" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="365867006"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:generalPatientContext.section:legalSituation.entry">
       <path value="Composition.section.section.entry" />
@@ -792,41 +565,12 @@
     <element id="Composition.section:generalPatientContext.section:livingSituation.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:livingSituation.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:livingSituation.code.coding:livingSituationCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="livingSituationCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:livingSituation.code.coding:livingSituationCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:livingSituation.code.coding:livingSituationCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="365512000" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:livingSituation.code.coding:livingSituationCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Finding of characteristics of home environment (finding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="365512000"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:generalPatientContext.section:livingSituation.entry">
       <path value="Composition.section.section.entry" />
@@ -863,41 +607,12 @@
     <element id="Composition.section:generalPatientContext.section:lifeStance.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.code.coding:lifeStanceCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="lifeStanceCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.code.coding:lifeStanceCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.code.coding:lifeStanceCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="108329005" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.code.coding:lifeStanceCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Social context finding (finding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="108329005"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:generalPatientContext.section:lifeStance.entry">
       <path value="Composition.section.section.entry" />
@@ -945,41 +660,12 @@
     <element id="Composition.section:generalPatientContext.section:socialEnvironment.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:socialEnvironment.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:socialEnvironment.code.coding:socialEnvironmentCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="socialEnvironmentCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:socialEnvironment.code.coding:socialEnvironmentCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:socialEnvironment.code.coding:socialEnvironmentCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="365448001" />
-    </element>
-    <element id="Composition.section:generalPatientContext.section:socialEnvironment.code.coding:socialEnvironmentCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Social and personal history finding (finding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="365448001"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:generalPatientContext.section:socialEnvironment.entry">
       <path value="Composition.section.section.entry" />
@@ -1028,42 +714,12 @@
     <element id="Composition.section:medicalContext.code">
       <path value="Composition.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.code.coding">
-      <path value="Composition.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.code.coding:medicalContextCode">
-      <path value="Composition.section.code.coding" />
-      <sliceName value="medicalContextCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.code.coding:medicalContextCode.system">
-      <path value="Composition.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:medicalContext.code.coding:medicalContextCode.code">
-      <path value="Composition.section.code.coding.code" />
-      <short value="Administrative documentation (record artifact)" />
-      <min value="1" />
-      <fixedCode value="371524004" />
-    </element>
-    <element id="Composition.section:medicalContext.code.coding:medicalContextCode.display">
-      <path value="Composition.section.code.coding.display" />
-      <defaultValueString value="Clinical report (record artifact)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="371524004"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:medicalContext.entry">
       <path value="Composition.section.entry" />
@@ -1074,7 +730,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code.coding.code" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -1099,41 +755,12 @@
     <element id="Composition.section:medicalContext.section:practitioner.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:practitioner.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:practitioner.code.coding:practitionerCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="practitionerCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:practitioner.code.coding:practitionerCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:medicalContext.section:practitioner.code.coding:practitionerCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="405623001" />
-    </element>
-    <element id="Composition.section:medicalContext.section:practitioner.code.coding:practitionerCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Assigned practitioner (occupation)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="405623001"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:medicalContext.section:practitioner.entry">
       <path value="Composition.section.section.entry" />
@@ -1199,41 +826,12 @@
     <element id="Composition.section:medicalContext.section:medicalDiagnosis.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:medicalDiagnosis.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:medicalDiagnosis.code.coding:medicalDiagnosisCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="medicalDiagnosisCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:medicalDiagnosis.code.coding:medicalDiagnosisCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:medicalContext.section:medicalDiagnosis.code.coding:medicalDiagnosisCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="52870002" />
-    </element>
-    <element id="Composition.section:medicalContext.section:medicalDiagnosis.code.coding:medicalDiagnosisCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Referral diagnosis (qualifier value)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="52870002"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:medicalContext.section:medicalDiagnosis.entry">
       <path value="Composition.section.section.entry" />
@@ -1270,41 +868,12 @@
     <element id="Composition.section:medicalContext.section:medicalHistory.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:medicalHistory.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:medicalHistory.code.coding:medicalHistoryCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="medicalHistoryCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:medicalHistory.code.coding:medicalHistoryCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:medicalContext.section:medicalHistory.code.coding:medicalHistoryCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="417662000" />
-    </element>
-    <element id="Composition.section:medicalContext.section:medicalHistory.code.coding:medicalHistoryCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="klinische bevinding in voorgeschiedenis (situatie)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="417662000"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:medicalContext.section:medicalHistory.entry">
       <path value="Composition.section.section.entry" />
@@ -1341,41 +910,12 @@
     <element id="Composition.section:medicalContext.section:allergy.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:allergy.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:allergy.code.coding:allergyCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="allergyCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:allergy.code.coding:allergyCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:medicalContext.section:allergy.code.coding:allergyCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="420134006" />
-    </element>
-    <element id="Composition.section:medicalContext.section:allergy.code.coding:allergyCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="neiging tot ongewenste reactie (bevinding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="420134006"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:medicalContext.section:allergy.entry">
       <path value="Composition.section.section.entry" />
@@ -1412,41 +952,12 @@
     <element id="Composition.section:medicalContext.section:payAttention.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:payAttention.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:payAttention.code.coding:payAttentionCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="payAttentionCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:payAttention.code.coding:payAttentionCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:medicalContext.section:payAttention.code.coding:payAttentionCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="308813009" />
-    </element>
-    <element id="Composition.section:medicalContext.section:payAttention.code.coding:payAttentionCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Notification status (finding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="308813009"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:medicalContext.section:payAttention.entry">
       <path value="Composition.section.section.entry" />
@@ -1483,41 +994,12 @@
     <element id="Composition.section:medicalContext.section:freedomRestriction.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:freedomRestriction.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:freedomRestriction.code.coding:freedomRestrictionCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="freedomRestrictionCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:freedomRestriction.code.coding:freedomRestrictionCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:medicalContext.section:freedomRestriction.code.coding:freedomRestrictionCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="225317005" />
-    </element>
-    <element id="Composition.section:medicalContext.section:freedomRestriction.code.coding:freedomRestrictionCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="beperking van bewegingsvrijheid (regime/therapie)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="225317005"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:medicalContext.section:freedomRestriction.entry">
       <path value="Composition.section.section.entry" />
@@ -1555,41 +1037,12 @@
     <element id="Composition.section:medicalContext.section:measurements.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:measurements.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:measurements.code.coding:measurementsCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="measurementsCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:measurements.code.coding:measurementsCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:medicalContext.section:measurements.code.coding:measurementsCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="363788007" />
-    </element>
-    <element id="Composition.section:medicalContext.section:measurements.code.coding:measurementsCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Clinical history/examination observable (observable entity)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="363788007"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:medicalContext.section:measurements.entry">
       <path value="Composition.section.section.entry" />
@@ -1752,41 +1205,12 @@
     <element id="Composition.section:medicalContext.section:painScore.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:painScore.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:painScore.code.coding:painScoreCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="painScoreCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:medicalContext.section:painScore.code.coding:painScoreCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:medicalContext.section:painScore.code.coding:painScoreCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="11011000146108" />
-    </element>
-    <element id="Composition.section:medicalContext.section:painScore.code.coding:painScoreCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Score list pain (record artifact)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="11011000146108"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:medicalContext.section:painScore.entry">
       <path value="Composition.section.section.entry" />
@@ -1911,41 +1335,12 @@
     <element id="Composition.section:carePlan.code">
       <path value="Composition.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:carePlan.code.coding">
-      <path value="Composition.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:carePlan.code.coding:carePlanCode">
-      <path value="Composition.section.code.coding" />
-      <sliceName value="carePlanCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:carePlan.code.coding:carePlanCode.system">
-      <path value="Composition.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:carePlan.code.coding:carePlanCode.code">
-      <path value="Composition.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="773130005" />
-    </element>
-    <element id="Composition.section:carePlan.code.coding:carePlanCode.display">
-      <path value="Composition.section.code.coding.display" />
-      <defaultValueString value="Nursing care plan (record artifact)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="773130005"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:carePlan.text">
       <path value="Composition.section.text" />
@@ -1965,7 +1360,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code.coding.code" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -1987,41 +1382,12 @@
     <element id="Composition.section:carePlan.section:currentPatientProblems.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:currentPatientProblems.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:currentPatientProblems.code.coding:currentPatientProblemsCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="currentPatientProblemsCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:currentPatientProblems.code.coding:currentPatientProblemsCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:carePlan.section:currentPatientProblems.code.coding:currentPatientProblemsCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="86644006" />
-    </element>
-    <element id="Composition.section:carePlan.section:currentPatientProblems.code.coding:currentPatientProblemsCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Nursing diagnosis (finding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="86644006"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.entry">
       <path value="Composition.section.section.entry" />
@@ -2086,41 +1452,12 @@
     <element id="Composition.section:carePlan.section:outcomeOfCare.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:outcomeOfCare.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:outcomeOfCare.code.coding:outcomeOfCareCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="outcomeOfCareCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:outcomeOfCare.code.coding:outcomeOfCareCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:carePlan.section:outcomeOfCare.code.coding:outcomeOfCareCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="722091001" />
-    </element>
-    <element id="Composition.section:carePlan.section:outcomeOfCare.code.coding:outcomeOfCareCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Conclusion interpretation document (record artifact)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="722091001"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:carePlan.section:outcomeOfCare.entry">
       <path value="Composition.section.section.entry" />
@@ -2157,41 +1494,12 @@
     <element id="Composition.section:carePlan.section:patientAppointments.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.code.coding:patientAppointmentsCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="patientAppointmentsCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.code.coding:patientAppointmentsCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.code.coding:patientAppointmentsCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="308335008" />
-    </element>
-    <element id="Composition.section:carePlan.section:patientAppointments.code.coding:patientAppointmentsCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Patient encounter procedure" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="308335008"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:carePlan.section:patientAppointments.entry">
       <path value="Composition.section.section.entry" />
@@ -2257,48 +1565,19 @@
     <element id="Composition.section:healthState.code">
       <path value="Composition.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.code.coding">
-      <path value="Composition.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.code.coding:healthStateCode">
-      <path value="Composition.section.code.coding" />
-      <sliceName value="healthStateCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:healthState.code.coding:healthStateCode.system">
-      <path value="Composition.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:healthState.code.coding:healthStateCode.code">
-      <path value="Composition.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="5531000179105" />
-    </element>
-    <element id="Composition.section:healthState.code.coding:healthStateCode.display">
-      <path value="Composition.section.code.coding.display" />
-      <defaultValueString value="Nursing report (record artifact)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="5531000179105"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:healthState.section">
       <path value="Composition.section.section" />
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="code.coding.code" />
+          <path value="code" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -2351,41 +1630,12 @@
     <element id="Composition.section:healthState.section:selfCare.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.code.coding:selfCareCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="selfCareCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.code.coding:selfCareCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.code.coding:selfCareCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="365178001" />
-    </element>
-    <element id="Composition.section:healthState.section:selfCare.code.coding:selfCareCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="Finding related to ability to perform personal care activity (finding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="365178001"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:healthState.section:selfCare.entry">
       <path value="Composition.section.section.entry" />
@@ -2444,41 +1694,12 @@
     <element id="Composition.section:healthState.section:nutritionOrFluid.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:nutritionOrFluid.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:nutritionOrFluid.code.coding:nutritionOrFluidCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="nutritionOrFluidCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:nutritionOrFluid.code.coding:nutritionOrFluidCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:healthState.section:nutritionOrFluid.code.coding:nutritionOrFluidCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="300893006" />
-    </element>
-    <element id="Composition.section:healthState.section:nutritionOrFluid.code.coding:nutritionOrFluidCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="bevinding betreffende nutritie (bevinding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="300893006"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid.entry">
       <path value="Composition.section.section.entry" />
@@ -2593,41 +1814,12 @@
     <element id="Composition.section:healthState.section:excretion.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:excretion.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:excretion.code.coding:excretionCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="excretionCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:excretion.code.coding:excretionCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:healthState.section:excretion.code.coding:excretionCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="106019003" />
-    </element>
-    <element id="Composition.section:healthState.section:excretion.code.coding:excretionCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="bevinding betreffende uitscheidingspatroon (bevinding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="106019003"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:healthState.section:excretion.entry">
       <path value="Composition.section.section.entry" />
@@ -2738,41 +1930,12 @@
     <element id="Composition.section:healthState.section:skin.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:skin.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:skin.code.coding:skinCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="skinCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:skin.code.coding:skinCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:healthState.section:skin.code.coding:skinCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="106076001" />
-    </element>
-    <element id="Composition.section:healthState.section:skin.code.coding:skinCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="bevinding betreffende huid (bevinding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="106076001"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:healthState.section:skin.entry">
       <path value="Composition.section.section.entry" />
@@ -2884,41 +2047,12 @@
     <element id="Composition.section:healthState.section:senses.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:senses.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:senses.code.coding:sensesCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="sensesCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:senses.code.coding:sensesCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:healthState.section:senses.code.coding:sensesCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="106147001" />
-    </element>
-    <element id="Composition.section:healthState.section:senses.code.coding:sensesCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="bevinding betreffende sensorisch zenuwstelsel (bevinding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="106147001"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:healthState.section:senses.entry">
       <path value="Composition.section.section.entry" />
@@ -3008,41 +2142,12 @@
     <element id="Composition.section:healthState.section:illnessPerception.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:illnessPerception.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:illnessPerception.code.coding:illnessPerceptionCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="illnessPerceptionCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:illnessPerception.code.coding:illnessPerceptionCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:healthState.section:illnessPerception.code.coding:illnessPerceptionCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="284465006" />
-    </element>
-    <element id="Composition.section:healthState.section:illnessPerception.code.coding:illnessPerceptionCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="bevinding betreffende psychosociaal functioneren (bevinding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="284465006"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:healthState.section:illnessPerception.entry">
       <path value="Composition.section.section.entry" />
@@ -3080,41 +2185,12 @@
     <element id="Composition.section:healthState.section:mentalStatus.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:mentalStatus.code.coding">
-      <path value="Composition.section.section.code.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:mentalStatus.code.coding:mentalStatusCode">
-      <path value="Composition.section.section.code.coding" />
-      <sliceName value="mentalStatusCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Composition.section:healthState.section:mentalStatus.code.coding:mentalStatusCode.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Composition.section:healthState.section:mentalStatus.code.coding:mentalStatusCode.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="36456004" />
-    </element>
-    <element id="Composition.section:healthState.section:mentalStatus.code.coding:mentalStatusCode.display">
-      <path value="Composition.section.section.code.coding.display" />
-      <defaultValueString value="bevinding betreffende mentale toestand (bevinding)" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="36456004"/>
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:healthState.section:mentalStatus.entry">
       <path value="Composition.section.section.entry" />
