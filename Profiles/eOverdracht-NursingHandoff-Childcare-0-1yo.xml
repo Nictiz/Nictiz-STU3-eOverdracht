@@ -532,35 +532,6 @@
         <comment value="Ontvangende organisatie::Zorgaanbieder" />
       </mapping>
     </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization.entry:practitioner">
-      <path value="Composition.section.section.entry" />
-      <sliceName value="practitioner" />
-      <short value="Practitioner" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitioner" />
-      </type>
-      <mapping>
-        <identity value="eOverdracht-NursingHandoff-Childcare-0-1yo" />
-        <map value="e-overdracht-dataelement-v4-181" />
-        <comment value="Ontvangende organisatie::Zorgverlener" />
-      </mapping>
-    </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization.entry:practitionerRole">
-      <path value="Composition.section.section.entry" />
-      <sliceName value="practitionerRole" />
-      <short value="Practitioner Role" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://fhir.nl/fhir/StructureDefinition/nl-core-practitionerrole" />
-      </type>
-      <mapping>
-        <identity value="eOverdracht-NursingHandoff-Childcare-0-1yo" />
-        <map value="e-overdracht-dataelement-v4-181" />
-        <comment value="Ontvangende organisatie::Zorgverlener" />
-      </mapping>
-    </element>
     <element id="Composition.section:administrativeData.section:receivingOrganization.section">
       <path value="Composition.section.section.section" />
       <max value="0" />
