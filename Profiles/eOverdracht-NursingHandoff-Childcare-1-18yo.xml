@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="eOverdracht-NursingHandoff-Childcare-1-18yo" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Childcare-1-18yo" />
-  <version value="1.0.0-rc.21" />
+  <version value="1.0.0-rc.22" />
   <name value="eOverdrachtNursingHandoffChildcare1-18yo" />
   <title value="eOverdracht nursing handoff childcare 1-18 yo" />
   <status value="active" />
