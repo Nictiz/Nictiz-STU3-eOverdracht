@@ -41,7 +41,7 @@
   <differential>
     <element id="Task.status">
       <path value="Task.status" />
-      <definition value="The current state of the Task. States that can be used:&#xD;&#xA;&#xD;&#xA;* _requested_: placer has made the advance notice available&#xD;&#xA;* _received_: filler has received the request and is assessing the request&#xD;&#xA;* _accepted_: filler accepts the registration, and can provide the care that is being requested&#xD;&#xA;* _on-hold_: filler proposes an alternative date&#xD;&#xA;* _in-progress_: placer confirms to the filler that it will proceed with the transfer&#xD;&#xA;* _rejected_: filler rejects the registration&#xD;&#xA;* _cancelled_: placer or filler has cancelled the transfer&#xD;&#xA;* _completed_: filler recieved the nursing handoff&#xD;&#xA;&#xD;&#xA;Note: _ready_ and _failed_ will not be used" />
+      <definition value="The current state of the Task. States that can be used:&#xD;&#xA;&#xD;&#xA;* _requested_: placer has made the advance notice available&#xD;&#xA;* _received_: filler has received the request and is assessing the request&#xD;&#xA;* _accepted_: filler accepts the registration, and can provide the care that is being requested&#xD;&#xA;* _on-hold_: filler proposes an alternative date&#xD;&#xA;* _in-progress_: placer confirms to the filler that it will proceed with the transfer&#xD;&#xA;* _rejected_: filler rejects the registration&#xD;&#xA;* _cancelled_: placer or filler has cancelled the transfer&#xD;&#xA;* _completed_: filler received the nursing handoff&#xD;&#xA;&#xD;&#xA;Note: _ready_ and _failed_ will not be used" />
       <mapping>
         <identity value="eOverdracht-AdvanceNotice-Answer" />
         <map value="e-overdracht-dataelement-v4-1166" />
