@@ -360,19 +360,7 @@
     </element>
     <element id="Composition.section:administrativeData.section:receivingOrganization.entry">
       <path value="Composition.section.section.entry" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <short value="A reference to data about the receiving organization" />
-    </element>
-    <element id="Composition.section:administrativeData.section:receivingOrganization.entry:organization">
-      <path value="Composition.section.section.entry" />
-      <sliceName value="organization" />
-      <short value="Organization" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -497,18 +485,6 @@
     </element>
     <element id="Composition.section:generalPatientContext.section:lifeStance.entry">
       <path value="Composition.section.section.entry" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.entry:advanceDirective">
-      <path value="Composition.section.section.entry" />
-      <sliceName value="advanceDirective" />
-      <short value="Advance directive" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective" />
@@ -884,49 +860,6 @@
         <comment value="Lichaamslengte" />
       </mapping>
     </element>
-    <element id="Composition.section:medicalContext.section:painScore">
-      <path value="Composition.section.section" />
-      <sliceName value="painScore" />
-      <short value="Pain Score" />
-      <max value="1" />
-      <mapping>
-        <identity value="eOverdracht-NursingHandoff-Adults" />
-        <map value="e-overdracht-dataelement-v4-487" />
-        <comment value="Pijnscore" />
-      </mapping>
-    </element>
-    <element id="Composition.section:medicalContext.section:painScore.title">
-      <path value="Composition.section.section.title" />
-      <defaultValueString value="Pain score" />
-    </element>
-    <element id="Composition.section:medicalContext.section:painScore.code">
-      <path value="Composition.section.section.code" />
-      <min value="1" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="11011000146108" />
-        </coding>
-      </patternCodeableConcept>
-    </element>
-    <element id="Composition.section:medicalContext.section:painScore.entry">
-      <path value="Composition.section.section.entry" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-PainScore" />
-      </type>
-      <mapping>
-        <identity value="eOverdracht-NursingHandoff-Adults" />
-        <map value="e-overdracht-dataelement-v4-487" />
-        <comment value="PijnScore" />
-      </mapping>
-    </element>
-    <element id="Composition.section:medicalContext.section:painScore.section">
-      <path value="Composition.section.section.section" />
-      <max value="0" />
-    </element>
     <element id="Composition.section:carePlan">
       <path value="Composition.section" />
       <sliceName value="carePlan" />
@@ -1120,18 +1053,6 @@
     </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid.entry">
       <path value="Composition.section.section.entry" />
-      <slicing>
-        <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Composition.section:healthState.section:nutritionOrFluid.entry:nutritionAdvice">
-      <path value="Composition.section.section.entry" />
-      <sliceName value="nutritionAdvice" />
-      <short value="Nutrition Advice" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice" />
