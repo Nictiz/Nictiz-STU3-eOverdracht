@@ -135,26 +135,18 @@
         <comment value="Sturende organisatie::Zorgaanbieder" />
       </mapping>
     </element>
-    <element id="Task.requester.agent.extension">
-      <path value="Task.requester.agent.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
     <element id="Task.requester.agent.extension:practitionerRole">
       <path value="Task.requester.agent.extension" />
       <sliceName value="practitionerRole" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
       </type>
+    </element>
+    <element id="Task.requester.agent.extension:practitionerRole.url">
+      <path value="Task.requester.agent.extension.url" />
+      <fixedUri value="http://nictiz.nl/fhir/StructureDefinition/practitionerrole-reference" />
     </element>
     <element id="Task.requester.onBehalfOf">
       <path value="Task.requester.onBehalfOf" />
@@ -199,55 +191,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-    </element>
-    <element id="Task.input:advanceNotice">
-      <path value="Task.input" />
-      <sliceName value="advanceNotice" />
-      <max value="1" />
-      <mapping>
-        <identity value="eOverdracht-AdvanceNotice" />
-        <map value="e-overdracht-transaction-63" />
-        <comment value="eOverdracht transaction &quot;Sturen aanmeldbericht&quot;" />
-      </mapping>
-    </element>
-    <element id="Task.input:advanceNotice.type.coding">
-      <path value="Task.input.type.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <discriminator>
-          <type value="value" />
-          <path value="code" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Task.input:advanceNotice.type.coding:advanceNoticeCode">
-      <path value="Task.input.type.coding" />
-      <sliceName value="advanceNoticeCode" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Task.input:advanceNotice.type.coding:advanceNoticeCode.system">
-      <path value="Task.input.type.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-    </element>
-    <element id="Task.input:advanceNotice.type.coding:advanceNoticeCode.code">
-      <path value="Task.input.type.coding.code" />
-      <min value="1" />
-      <fixedCode value="721915006" />
-    </element>
-    <element id="Task.input:advanceNotice.value[x]:valueReference">
-      <path value="Task.input.valueReference" />
-      <sliceName value="valueReference" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-AdvanceNotice" />
-      </type>
     </element>
     <element id="Task.input:nursingHandoff">
       <path value="Task.input" />
