@@ -36,7 +36,7 @@
   <differential>
     <element id="Task.status">
       <path value="Task.status" />
-      <definition value="The current state of the Task. States that can be used:&#xD;&#xA;&#xD;&#xA;* _in-progress_: placer confirms to the filler that it will proceed with the transfer&#xD;&#xA;* _completed_: filler received the nursing handoff&#xD;&#xA;&#xD;&#xA;Note: _ready_ and _failed_ will not be used" />
+      <definition value="The current state of the Task. States that can be used:&#xD;&#xA;&#xD;&#xA;* _in-progress_: placer has prepared the transfer of the patient&#xD;&#xA;* _completed_: filler received the nursing handoff&#xD;&#xA;&#xD;&#xA;Note: other statuses may be used in the future for the advance notice of the patient transfer." />
       <mapping>
         <identity value="eOverdracht-NursingHandoffAdults-Answer" />
         <map value="e-overdracht-dataelement-v4-1166" />
