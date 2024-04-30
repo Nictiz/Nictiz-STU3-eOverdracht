@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="eOverdracht-NursingHandoff-Adults" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Adults" />
-  <version value="1.0.0-rc.23" />
+  <version value="4.1.alpha-1" />
   <name value="eOverdrachtNursingHandoffAdults" />
   <title value="eOverdracht nursing handoff adults" />
   <status value="active" />
@@ -22,7 +22,7 @@
   <mapping>
     <identity value="eOverdracht-NursingHandoff-Adults" />
     <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.68" />
-    <name value="eOverdracht 4.0 transaction &quot;Sturen overdrachtsbericht volwassenen&quot;" />
+    <name value="eOverdracht 4.1-alpha-1 transaction &quot;Sturen overdrachtsbericht volwassenen&quot;" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
