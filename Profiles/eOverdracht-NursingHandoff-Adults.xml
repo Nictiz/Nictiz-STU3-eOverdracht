@@ -416,6 +416,47 @@
         <rules value="open" />
       </slicing>
     </element>
+     <element id="Composition.section:generalPatientContext.section:familySituation">
+      <path value="Composition.section.section" />
+      <sliceName value="familySituation" />
+      <short value="Family Situation" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-204" />
+        <comment value="Gezinssituatie" />
+      </mapping>
+    </element>
+    <element id="Composition.section:generalPatientContext.section:familySituation.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Family situation" />
+    </element>
+    <element id="Composition.section:generalPatientContext.section:familySituation.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="365474007"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:generalPatientContext.section:familySituation.entry">
+      <path value="Composition.section.section.entry" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FamilySituation" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-205" />
+        <comment value="Gezinssituatie" />
+      </mapping>
+    </element>
+    <element id="Composition.section:generalPatientContext.section:familySituation.section">
+      <path value="Composition.section.section.section" />
+      <max value="0" />
+    </element>
     <element id="Composition.section:generalPatientContext.section:livingSituation">
       <path value="Composition.section.section" />
       <sliceName value="livingSituation" />
