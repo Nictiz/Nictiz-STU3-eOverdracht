@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CapabilityStatement xmlns="http://hl7.org/fhir">
     <url value="http://nictiz.nl/fhir/CapabilityStatement/eOverdracht-servercapabilities"/>
-    <version value="4.1-alpha.1"/>
+    <version value="4.0.0"/>
     <name value="eOverdrachtServer"/>
     <status value="draft"/>
-    <date value="2023-05-31"/>
+    <date value="2025-03-10"/>
     <publisher value="Nictiz"/>
     <contact>
         <name value="Nictiz"/>

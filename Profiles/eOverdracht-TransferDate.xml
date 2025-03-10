@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="eOverdracht-TransferDate" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate" />
-  <version value="4.1-alpha.1" />
+  <version value="4.0.0" />
   <name value="eOverdrachtTransferDate" />
   <title value="eOverdracht TransferDate" />
   <status value="active" />
