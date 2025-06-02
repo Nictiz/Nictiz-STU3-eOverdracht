@@ -1132,6 +1132,20 @@
         <rules value="open" />
       </slicing>
     </element>
+    <element id="Composition.section:healthState.section:selfCare.entry:abilityToWashOneSelf">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="abilityToWashOneSelf" />
+      <short value="Ability To Wash One Self" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToWashOneSelf" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-670" />
+        <comment value="VermogenTotWassen" />
+      </mapping>
+    </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid">
       <path value="Composition.section.section" />
       <sliceName value="nutritionOrFluid" />
