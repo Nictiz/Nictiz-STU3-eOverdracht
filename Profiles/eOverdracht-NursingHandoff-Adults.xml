@@ -15,18 +15,14 @@
       <use value="work" />
     </telecom>
   </contact>
-  <description
-    value="Profile on the Composition resource which represents the nursing handoff for adults (Overdrachtsbericht Volwassenen) for eOverdracht conform information standard ['Verpleegkundige zorg'](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Verpleegkundige_Zorg)" />
-  <purpose
-    value="The purpose of this nursing handoff is to enable the health organization that receives it to continue the care for patients/clients of 18 years and older." />
+  <description value="Profile on the Composition resource which represents the nursing handoff for adults (Overdrachtsbericht Volwassenen) for eOverdracht conform information standard ['Verpleegkundige zorg'](https://informatiestandaarden.nictiz.nl/wiki/Landingspagina_Verpleegkundige_Zorg)" />
+  <purpose value="The purpose of this nursing handoff is to enable the health organization that receives it to continue the care for patients/clients of 18 years and older." />
   <copyright value="CC0" />
   <fhirVersion value="3.0.2" />
   <mapping>
     <identity value="eOverdracht-NursingHandoff-Adults" />
-    <uri
-      value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.68" />
-    <name
-      value="eOverdracht 4.1-alpha-1 transaction &quot;Sturen overdrachtsbericht volwassenen&quot;" />
+    <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.68" />
+    <name value="eOverdracht 4.1-alpha-1 transaction &quot;Sturen overdrachtsbericht volwassenen&quot;" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -68,8 +64,7 @@
     <element id="Composition.author">
       <path value="Composition.author" />
       <short value="Who or what authored the nursing handoff" />
-      <definition
-        value="The person responsible for the content of the nursing handoff. Alternatively, this may be the sending XIS." />
+      <definition value="The person responsible for the content of the nursing handoff. Alternatively, this may be the sending XIS." />
       <type>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
@@ -114,8 +109,7 @@
       <path value="Composition.section" />
       <sliceName value="administrativeData" />
       <short value="Administrative data" />
-      <definition
-        value="Section for administrative data, including date of transfer, contact person and payer details, and details of the sending and receiving organizations." />
+      <definition value="Section for administrative data, including date of transfer, contact person and payer details, and details of the sending and receiving organizations." />
       <min value="1" />
       <max value="1" />
       <mapping>
@@ -132,8 +126,7 @@
       <path value="Composition.section.extension" />
       <sliceName value="transferDate" />
       <short value="Planned transfer date" />
-      <definition
-        value="Captures the planned transfer date, which can change in the actual transfer phase." />
+      <definition value="Captures the planned transfer date, which can change in the actual transfer phase." />
       <min value="1" />
       <max value="1" />
       <type>
@@ -141,8 +134,7 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-TransferDate" />
       </type>
     </element>
-    <element
-      id="Composition.section:administrativeData.extension:transferDate.valueDateTime:valueDateTime">
+    <element id="Composition.section:administrativeData.extension:transferDate.valueDateTime:valueDateTime">
       <path value="Composition.section.extension.valueDateTime" />
       <sliceName value="valueDateTime" />
       <mapping>
@@ -183,8 +175,7 @@
       <path value="Composition.section.section" />
       <sliceName value="personalData" />
       <short value="Personal data" />
-      <definition
-        value="Subsection listing personal data of the payer and contact persons of the patient." />
+      <definition value="Subsection listing personal data of the payer and contact persons of the patient." />
       <min value="1" />
       <max value="1" />
       <mapping>
@@ -289,8 +280,7 @@
       <short value="A reference to data about the sending organization" />
       <min value="1" />
     </element>
-    <element
-      id="Composition.section:administrativeData.section:sendingOrganization.entry:organization">
+    <element id="Composition.section:administrativeData.section:sendingOrganization.entry:organization">
       <path value="Composition.section.section.entry" />
       <sliceName value="organization" />
       <short value="Organization" />
@@ -306,8 +296,7 @@
         <comment value="Zorgaanbieder" />
       </mapping>
     </element>
-    <element
-      id="Composition.section:administrativeData.section:sendingOrganization.entry:practitioner">
+    <element id="Composition.section:administrativeData.section:sendingOrganization.entry:practitioner">
       <path value="Composition.section.section.entry" />
       <sliceName value="practitioner" />
       <short value="Practitioner" />
@@ -323,8 +312,7 @@
         <comment value="Sturende organisatie::Zorgverlener" />
       </mapping>
     </element>
-    <element
-      id="Composition.section:administrativeData.section:sendingOrganization.entry:practitionerRole">
+    <element id="Composition.section:administrativeData.section:sendingOrganization.entry:practitionerRole">
       <path value="Composition.section.section.entry" />
       <sliceName value="practitionerRole" />
       <short value="Practitioner Role" />
@@ -448,8 +436,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="365474007" />
+          <system value="http://snomed.info/sct"/>
+          <code value="365474007"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -941,8 +929,7 @@
     </element>
     <element id="Composition.section:carePlan.text">
       <path value="Composition.section.text" />
-      <comment
-        value="This element can be used to communicate an unstructured care plan by setting `.section:carePlan:text.status` to _additional_. If the unstructured care plan is communicated, there should be no structred data in `.section:carePlan:.section`." />
+      <comment value="This element can be used to communicate an unstructured care plan by setting `.section:carePlan:text.status` to _additional_. If the unstructured care plan is communicated, there should be no structred data in `.section:carePlan:.section`." />
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Adults" />
         <map value="e-overdracht-dataelement-v4-1162" />
@@ -1112,8 +1099,7 @@
         <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-CommentOnSelfCare" />
       </type>
     </element>
-    <element
-      id="Composition.section:healthState.section:selfCare.extension:commentOnSelfCare.valueString:valueString">
+    <element id="Composition.section:healthState.section:selfCare.extension:commentOnSelfCare.valueString:valueString">
       <path value="Composition.section.section.extension.valueString" />
       <sliceName value="valueString" />
       <mapping>
