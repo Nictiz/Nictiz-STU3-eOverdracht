@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="eOverdracht-NursingHandoff-Adults" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Adults" />
-  <version value="4.1.0-alpha.3" />
+  <version value="4.1.0-alpha.5" />
   <name value="eOverdrachtNursingHandoffAdults" />
   <title value="eOverdracht nursing handoff adults" />
   <status value="active" />
@@ -416,7 +416,7 @@
         <rules value="open" />
       </slicing>
     </element>
-     <element id="Composition.section:generalPatientContext.section:familySituation">
+    <element id="Composition.section:generalPatientContext.section:familySituation">
       <path value="Composition.section.section" />
       <sliceName value="familySituation" />
       <short value="Family Situation" />
@@ -1066,6 +1066,86 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare">
+      <path value="Composition.section.section" />
+      <sliceName value="selfCare" />
+      <short value="Self Care" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-645" />
+        <comment value="Zelfzorg" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.extension">
+      <path value="Composition.section.section.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.extension:commentOnSelfCare">
+      <path value="Composition.section.section.extension" />
+      <sliceName value="commentOnSelfCare" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-CommentOnSelfCare" />
+      </type>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.extension:commentOnSelfCare.valueString:valueString">
+      <path value="Composition.section.section.extension.valueString" />
+      <sliceName value="valueString" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-762" />
+        <comment value="Toelichting zelfzorg" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Self care" />
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="365178001" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.entry">
+      <path value="Composition.section.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.entry:abilityToGroome">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="abilityToGroome" />
+      <short value="Ability To Groome" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToGroome" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-676" />
+        <comment value="VermogenTotUiterlijkeVerzorging" />
+      </mapping>
     </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid">
       <path value="Composition.section.section" />
