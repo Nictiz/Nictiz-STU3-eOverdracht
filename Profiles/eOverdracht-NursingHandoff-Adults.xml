@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="eOverdracht-NursingHandoff-Adults" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Adults" />
-  <version value="4.1.0-alpha.5" />
+  <version value="1.0.0-rc.23" />
   <name value="eOverdrachtNursingHandoffAdults" />
   <title value="eOverdracht nursing handoff adults" />
   <status value="active" />
@@ -22,7 +22,7 @@
   <mapping>
     <identity value="eOverdracht-NursingHandoff-Adults" />
     <uri value="https://decor.nictiz.nl/art-decor/decor-scenarios--e-overdracht-?id=2.16.840.1.113883.2.4.3.11.60.30.4.68" />
-    <name value="eOverdracht 4.1-alpha-1 transaction &quot;Sturen overdrachtsbericht volwassenen&quot;" />
+    <name value="eOverdracht 4.0 transaction &quot;Sturen overdrachtsbericht volwassenen&quot;" />
   </mapping>
   <kind value="resource" />
   <abstract value="false" />
@@ -32,10 +32,11 @@
   <differential>
     <element id="Composition.type">
       <path value="Composition.type" />
+      <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="11171000146100" />
+          <system value="http://snomed.info/sct"/>
+          <code value="11171000146100"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -120,6 +121,13 @@
     </element>
     <element id="Composition.section:administrativeData.extension">
       <path value="Composition.section.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
     </element>
     <element id="Composition.section:administrativeData.extension:transferDate">
@@ -152,8 +160,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="405624007" />
+          <system value="http://snomed.info/sct"/>
+          <code value="405624007"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -193,8 +201,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="302147001" />
+          <system value="http://snomed.info/sct"/>
+          <code value="302147001"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -263,8 +271,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="185362004" />
+          <system value="http://snomed.info/sct"/>
+          <code value="185362004"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -353,14 +361,26 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="275645009" />
+          <system value="http://snomed.info/sct"/>
+          <code value="275645009"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:administrativeData.section:receivingOrganization.entry">
       <path value="Composition.section.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <short value="A reference to data about the receiving organization" />
+    </element>
+    <element id="Composition.section:administrativeData.section:receivingOrganization.entry:organization">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="organization" />
+      <short value="Organization" />
       <min value="1" />
       <max value="1" />
       <type>
@@ -397,8 +417,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="109481000146101" />
+          <system value="http://snomed.info/sct"/>
+          <code value="109481000146101"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -457,6 +477,47 @@
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>
+    <element id="Composition.section:generalPatientContext.section:legalSituation">
+      <path value="Composition.section.section" />
+      <sliceName value="legalSituation" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1140" />
+        <comment value="Juridische situatie" />
+      </mapping>
+    </element>
+    <element id="Composition.section:generalPatientContext.section:legalSituation.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Legal situation" />
+    </element>
+    <element id="Composition.section:generalPatientContext.section:legalSituation.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="365867006"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:generalPatientContext.section:legalSituation.entry">
+      <path value="Composition.section.section.entry" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-LegalStatus" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-LegalSituation-Representation" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1141" />
+        <comment value="JuridischeSituatie" />
+      </mapping>
+    </element>
     <element id="Composition.section:generalPatientContext.section:livingSituation">
       <path value="Composition.section.section" />
       <sliceName value="livingSituation" />
@@ -477,8 +538,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="365512000" />
+          <system value="http://snomed.info/sct"/>
+          <code value="365512000"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -519,13 +580,25 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="108329005" />
+          <system value="http://snomed.info/sct"/>
+          <code value="108329005"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:generalPatientContext.section:lifeStance.entry">
       <path value="Composition.section.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:generalPatientContext.section:lifeStance.entry:advanceDirective">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="advanceDirective" />
+      <short value="Advance directive" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AdvanceDirective" />
@@ -537,6 +610,73 @@
       </mapping>
     </element>
     <element id="Composition.section:generalPatientContext.section:lifeStance.section">
+      <path value="Composition.section.section.section" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:generalPatientContext.section:socialEnvironment">
+      <path value="Composition.section.section" />
+      <sliceName value="socialEnvironment" />
+      <short value="Social Environment" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-283" />
+        <comment value="Sociale omgeving" />
+      </mapping>
+    </element>
+    <element id="Composition.section:generalPatientContext.section:socialEnvironment.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Life stance" />
+    </element>
+    <element id="Composition.section:generalPatientContext.section:socialEnvironment.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="365448001"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:generalPatientContext.section:socialEnvironment.entry">
+      <path value="Composition.section.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:generalPatientContext.section:socialEnvironment.entry:participationInSociety">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="participationInSociety" />
+      <short value="Participation In Society" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-ParticipationInSociety" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-284" />
+        <comment value="Participatie in maatschappij" />
+      </mapping>
+    </element>
+    <element id="Composition.section:generalPatientContext.section:socialEnvironment.entry:helpFromOthers">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="helpFromOthers" />
+      <short value="Help From Others" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HelpFromOthers" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-289" />
+        <comment value="Hulp van anderen" />
+      </mapping>
+    </element>
+    <element id="Composition.section:generalPatientContext.section:socialEnvironment.section">
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>
@@ -561,8 +701,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="371524004" />
+          <system value="http://snomed.info/sct"/>
+          <code value="371524004"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -602,8 +742,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="405623001" />
+          <system value="http://snomed.info/sct"/>
+          <code value="405623001"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -673,8 +813,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="52870002" />
+          <system value="http://snomed.info/sct"/>
+          <code value="52870002"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -715,8 +855,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="417662000" />
+          <system value="http://snomed.info/sct"/>
+          <code value="417662000"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -757,8 +897,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="420134006" />
+          <system value="http://snomed.info/sct"/>
+          <code value="420134006"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -799,8 +939,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="308813009" />
+          <system value="http://snomed.info/sct"/>
+          <code value="308813009"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -818,6 +958,49 @@
       </mapping>
     </element>
     <element id="Composition.section:medicalContext.section:payAttention.section">
+      <path value="Composition.section.section.section" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:medicalContext.section:freedomRestriction">
+      <path value="Composition.section.section" />
+      <sliceName value="freedomRestriction" />
+      <short value="Freedom Restriction" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-395" />
+        <comment value="Vrijheidsbeperking" />
+      </mapping>
+    </element>
+    <element id="Composition.section:medicalContext.section:freedomRestriction.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Freedom restriction" />
+    </element>
+    <element id="Composition.section:medicalContext.section:freedomRestriction.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="225317005"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:medicalContext.section:freedomRestriction.entry">
+      <path value="Composition.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FreedomRestrictingIntervention" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1130" />
+        <comment value="VrijheidsbeperkendeInterventie" />
+      </mapping>
+    </element>
+    <element id="Composition.section:medicalContext.section:freedomRestriction.section">
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>
@@ -841,8 +1024,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="363788007" />
+          <system value="http://snomed.info/sct"/>
+          <code value="363788007"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -869,6 +1052,65 @@
         <identity value="eOverdracht-NursingHandoff-Adults" />
         <map value="e-overdracht-dataelement-v4-406" />
         <comment value="Bloeddruk" />
+      </mapping>
+    </element>
+    <element id="Composition.section:medicalContext.section:measurements.entry:pulseRate">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="pulseRate" />
+      <short value="Pulse Rate" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-PulseRate" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-417" />
+        <comment value="Polsfrequentie" />
+      </mapping>
+    </element>
+    <element id="Composition.section:medicalContext.section:measurements.entry:bodyTemperature">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="bodyTemperature" />
+      <short value="Body Temperature" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-BodyTemperature" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-422" />
+        <comment value="Lichaamstemperatuur" />
+      </mapping>
+    </element>
+    <element id="Composition.section:medicalContext.section:measurements.entry:respiration">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="respiration" />
+      <short value="Respiration" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Respiration" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-427" />
+        <comment value="Ademhaling" />
+      </mapping>
+    </element>
+    <element id="Composition.section:medicalContext.section:measurements.entry:respiration-AdministrationDevice">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="respiration-AdministrationDevice" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Respiration-AdministeredOxygen-AdministrationDevice" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-438" />
+        <comment value="Ademhaling:ToegediendeZuurstof:ToedieningHulpmiddel" />
       </mapping>
     </element>
     <element id="Composition.section:medicalContext.section:measurements.entry:bodyWeight">
@@ -901,6 +1143,49 @@
         <comment value="Lichaamslengte" />
       </mapping>
     </element>
+    <element id="Composition.section:medicalContext.section:painScore">
+      <path value="Composition.section.section" />
+      <sliceName value="painScore" />
+      <short value="Pain Score" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-487" />
+        <comment value="Pijnscore" />
+      </mapping>
+    </element>
+    <element id="Composition.section:medicalContext.section:painScore.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Pain score" />
+    </element>
+    <element id="Composition.section:medicalContext.section:painScore.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="11011000146108"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:medicalContext.section:painScore.entry">
+      <path value="Composition.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-PainScore" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-487" />
+        <comment value="PijnScore" />
+      </mapping>
+    </element>
+    <element id="Composition.section:medicalContext.section:painScore.section">
+      <path value="Composition.section.section.section" />
+      <max value="0" />
+    </element>
     <element id="Composition.section:carePlan">
       <path value="Composition.section" />
       <sliceName value="carePlan" />
@@ -913,6 +1198,35 @@
         <comment value="Verpleegkundige context: zorgplan" />
       </mapping>
     </element>
+    <element id="Composition.section:carePlan.extension">
+      <path value="Composition.section.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons">
+      <path value="Composition.section.extension" />
+      <sliceName value="needsOfPatientAndRelatedPersons" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NeedsOfPatientAndRelatedPersons" />
+      </type>
+    </element>
+    <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons.valueString:valueString">
+      <path value="Composition.section.extension.valueString" />
+      <sliceName value="valueString" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-643" />
+        <comment value="Wensen en behoeften patiënt en/of naasten" />
+      </mapping>
+    </element>
     <element id="Composition.section:carePlan.title">
       <path value="Composition.section.title" />
       <defaultValueString value="Careplan" />
@@ -922,8 +1236,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="773130005" />
+          <system value="http://snomed.info/sct"/>
+          <code value="773130005"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -969,13 +1283,26 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="86644006" />
+          <system value="http://snomed.info/sct"/>
+          <code value="86644006"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.entry">
       <path value="Composition.section.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Composition.section:carePlan.section:currentPatientProblems.entry:problem">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="problem" />
+      <short value="Problem" />
       <min value="1" />
       <type>
         <code value="Reference" />
@@ -987,7 +1314,64 @@
         <comment value="Probleem" />
       </mapping>
     </element>
+    <element id="Composition.section:carePlan.section:currentPatientProblems.entry:nursingIntervention">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="nursingIntervention" />
+      <short value="Nursing Intervention" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-NursingIntervention" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-542" />
+        <comment value="VerpleegkundigeInterventie" />
+      </mapping>
+    </element>
     <element id="Composition.section:carePlan.section:currentPatientProblems.section">
+      <path value="Composition.section.section.section" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:carePlan.section:outcomeOfCare">
+      <path value="Composition.section.section" />
+      <sliceName value="outcomeOfCare" />
+      <short value="Outcome Of Care" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-586" />
+        <comment value="Zorgresultaat" />
+      </mapping>
+    </element>
+    <element id="Composition.section:carePlan.section:outcomeOfCare.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Outcome of care" />
+    </element>
+    <element id="Composition.section:carePlan.section:outcomeOfCare.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="722091001"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:carePlan.section:outcomeOfCare.entry">
+      <path value="Composition.section.section.entry" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-OutcomeOfCare" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-587" />
+        <comment value="UitkomstVanZorg" />
+      </mapping>
+    </element>
+    <element id="Composition.section:carePlan.section:outcomeOfCare.section">
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>
@@ -1011,8 +1395,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="308335008" />
+          <system value="http://snomed.info/sct"/>
+          <code value="308335008"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -1052,8 +1436,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="5531000179105" />
+          <system value="http://snomed.info/sct"/>
+          <code value="5531000179105"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -1117,8 +1501,8 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="365178001" />
+          <system value="http://snomed.info/sct"/>
+          <code value="365178001"/>
         </coding>
       </patternCodeableConcept>
     </element>
@@ -1131,6 +1515,90 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.entry:abilityToDrink">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="abilityToDrink" />
+      <short value="Ability To Drink" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToDrink" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-646" />
+        <comment value="VermogenTotDrinken" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.entry:abilityToEat">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="abilityToEat" />
+      <short value="Ability To Eat" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToEat" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-649" />
+        <comment value="VermogenTotEten" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.entry:abilityToPerformMouthcareActivities">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="abilityToPerformMouthcareActivities" />
+      <short value="Ability To Perform Mouthcare Activities" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToPerformMouthcareActivities" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-652" />
+        <comment value="VermogenTotMondVerzorging" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.entry:abilityToPerformMouthcareActivities-Prosthesis">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="abilityToPerformMouthcareActivities-Prosthesis" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToPerformMouthcareActivities-MedicalDevice" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-654" />
+        <comment value="VermogenTotMonderverzorging:Prothese" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.entry:abilityToWashOneSelf">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="abilityToWashOneSelf" />
+      <short value="Ability To Wash One Self" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToWashOneSelf" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-670" />
+        <comment value="VermogenTotWassen" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.entry:abilityToDressOneSelf">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="abilityToDressOneSelf" />
+      <short value="Ability To Dress One Self" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToDressOneself" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-673" />
+        <comment value="VermogenTotKleden" />
+      </mapping>
     </element>
     <element id="Composition.section:healthState.section:selfCare.entry:abilityToGroome">
       <path value="Composition.section.section.entry" />
@@ -1146,6 +1614,143 @@
         <map value="e-overdracht-dataelement-v4-676" />
         <comment value="VermogenTotUiterlijkeVerzorging" />
       </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.entry:abilityToUseToilet">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="abilityToUseToilet" />
+      <short value="Ability To Use Toilet" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToUseToilet" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-678" />
+        <comment value="VermogenTotToiletgang" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.entry:abilityToManageMedication">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="abilityToManageMedication" />
+      <short value="Ability To Manage Medication" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToManageMedication" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-681" />
+        <comment value="VermogenTotZelfstandigMedicatieGebruik" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.entry:AbilityToPerformNursingActivities">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="AbilityToPerformNursingActivities" />
+      <short value="Ability To Perform Nursing Activities" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-AbilityToPerformNursingActivities" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-685" />
+        <comment value="VermogenTotVerpleegtechnischeHandelingen" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:selfCare.entry:medicalDevice">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="medicalDevice" />
+      <short value="MedicalDevice" />
+      <definition value="Use this slice to register zib MedicalDevice used in the instances of zib NursingIntervention resulting from zib AbilityToPerformNursingActivities and zib AbilityToManageMedication"/>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-704" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1602" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:mobility">
+      <path value="Composition.section.section" />
+      <sliceName value="mobility" />
+      <short value="Mobility" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-763" />
+        <comment value="Mobiliteit" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:mobility.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Mobility" />
+    </element>
+    <element id="Composition.section:healthState.section:mobility.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="364832000"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:healthState.section:mobility.entry">
+      <path value="Composition.section.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+      </type>
+    </element>
+    <element id="Composition.section:healthState.section:mobility.entry:mobility">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="mobility" />
+      <short value="Mobility" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Mobility" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-764" />
+        <comment value="Mobiliteit" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:mobility.entry:medicalDevice">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="medicalDevice" />
+      <short value="Medical Device" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-770" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:mobility.section">
+      <path value="Composition.section.section.section" />
+      <max value="0" />
     </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid">
       <path value="Composition.section.section" />
@@ -1167,13 +1772,25 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://snomed.info/sct" />
-          <code value="300893006" />
+          <system value="http://snomed.info/sct"/>
+          <code value="300893006"/>
         </coding>
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:healthState.section:nutritionOrFluid.entry">
       <path value="Composition.section.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:healthState.section:nutritionOrFluid.entry:nutritionAdvice">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="nutritionAdvice" />
+      <short value="Nutrition Advice" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-NutritionAdvice" />
@@ -1183,6 +1800,587 @@
         <map value="e-overdracht-dataelement-v4-788" />
         <comment value="Voedingsadvies" />
       </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:nutritionOrFluid.entry:SNAQScore">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="SNAQScore" />
+      <short value="SNAQScore" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-SNAQScore" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-802" />
+        <comment value="SNAQScore" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:nutritionOrFluid.entry:SNAQrcScore">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="SNAQrcScore" />
+      <short value="SNAQrcScore" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-SNAQrcScore" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-809" />
+        <comment value="SNAQrcScore" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:nutritionOrFluid.entry:SNAQ65plusScore">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="SNAQ65plusScore" />
+      <short value="SNAQ65plusScore" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-SNAQ65plusScore" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-817" />
+        <comment value="SNAQ65+Score" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:nutritionOrFluid.entry:MUSTScore">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="MUSTScore" />
+      <short value="MUSTScore" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MUSTScore" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-825" />
+        <comment value="MUSTScore" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:nutritionOrFluid.entry:fluidBalance">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="fluidBalance" />
+      <short value="Fluid Balance" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FluidBalance" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-840" />
+        <comment value="Vochtbalans" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:nutritionOrFluid.entry:feedingTubeSystem">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="feedingTubeSystem" />
+      <short value="Feeding Tube System" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-FeedingTubeSystem" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-846" />
+        <comment value="SondeSysteem" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:nutritionOrFluid.entry:infusion">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="infusion" />
+      <short value="Infusion" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Infusion" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-883" />
+        <comment value="Infuus" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:excretion">
+      <path value="Composition.section.section" />
+      <sliceName value="excretion" />
+      <short value="Excretion" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-937" />
+        <comment value="Uitscheiding" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:excretion.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Excretion" />
+    </element>
+    <element id="Composition.section:healthState.section:excretion.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="106019003"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:healthState.section:excretion.entry">
+      <path value="Composition.section.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:healthState.section:excretion.entry:bladderFunction">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="bladderFunction" />
+      <short value="Bladder Function" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-BladderFunction" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-938" />
+        <comment value="Blaasfunctie" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:excretion.entry:bladderFunction-UrineCatheter">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="bladderFunction-UrineCatheter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-BladderFunction-UrineCatheter" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-943" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:excretion.entry:bowelFunction">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="bowelFunction" />
+      <short value="Bowel Function" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-BowelFunction" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-975" />
+        <comment value="Darmfunctie" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:excretion.entry:stoma">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="stoma" />
+      <short value="Stoma" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Stoma" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-985" />
+        <comment value="Stoma" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:excretion.entry:medicalDevice">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="medicalDevice" />
+      <short value="Medical Device"/>
+      <definition value="Used for the MedicalDevice relating to zib BowelFunction and zib Stoma." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-MedicalDevice" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-983" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-988" />
+        <comment value="MedischHulpmiddel" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:excretion.section">
+      <path value="Composition.section.section.section" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:healthState.section:skin">
+      <path value="Composition.section.section" />
+      <sliceName value="skin" />
+      <short value="Skin" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-993" />
+        <comment value="Huid" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:skin.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Skin" />
+    </element>
+    <element id="Composition.section:healthState.section:skin.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="106076001"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:healthState.section:skin.entry">
+      <path value="Composition.section.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:healthState.section:skin.entry:burnWound">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="burnWound" />
+      <short value="Burn Wound" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-BurnWound" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-994" />
+        <comment value="BrandWond" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:skin.entry:pressureUlcer">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="pressureUlcer" />
+      <short value="Pressure Ulcer" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-PressureUlcer" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1003" />
+        <comment value="DecubitusWond" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:skin.entry:skinDisorder">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="skinDisorder" />
+      <short value="Skin Disorder" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-SkinDisorder" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1014" />
+        <comment value="Huidaandoening" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:skin.entry:wound">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="wound" />
+      <short value="Wound" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Wound" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1022" />
+        <comment value="Wond" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:skin.entry:woundCharacteristics">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="woundCharacteristics" />
+      <comment value="Note: this profile is to be used together with the zib-Wound and zib-PressureUlcer profiles." />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/WoundCharacteristics" />
+      </type>
+    </element>
+    <element id="Composition.section:healthState.section:skin.entry:woundDrain">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="woundDrain" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Wound-MedicalDevice" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1035" />
+        <comment value="Drain" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:skin.section">
+      <path value="Composition.section.section.section" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:healthState.section:senses">
+      <path value="Composition.section.section" />
+      <sliceName value="senses" />
+      <short value="Senses" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1053" />
+        <comment value="Zintuigen" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:senses.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Senses" />
+    </element>
+    <element id="Composition.section:healthState.section:senses.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="106147001"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:healthState.section:senses.entry">
+      <path value="Composition.section.section.entry" />
+      <slicing>
+        <discriminator>
+          <type value="profile" />
+          <path value="resolve()" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.section:healthState.section:senses.entry:hearingFunction">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="hearingFunction" />
+      <short value="Hearing Function" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HearingFunction" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1054" />
+        <comment value="FunctieHoren" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:senses.entry:hearingFunction-HearingAid">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="hearingFunction-HearingAid" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-HearingFunction-HearingAid" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1056" />
+        <comment value="FunctieHoren:HorenHulpmiddel" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:senses.entry:visualFunction">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="visualFunction" />
+      <short value="Visual Function" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-VisualFunction" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1073" />
+        <comment value="FunctieZien" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:senses.entry:visualFunction-VisualAid">
+      <path value="Composition.section.section.entry" />
+      <sliceName value="visualFunction-VisualAid" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-VisualFunction-VisualAid" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1075" />
+        <comment value="FunctieZien:ZienHulpmiddel" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:senses.section">
+      <path value="Composition.section.section.section" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:healthState.section:illnessPerception">
+      <path value="Composition.section.section" />
+      <sliceName value="illnessPerception" />
+      <short value="Illness Perception" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1092" />
+        <comment value="Ziektebeleving" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:illnessPerception.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Illness perception" />
+    </element>
+    <element id="Composition.section:healthState.section:illnessPerception.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="284465006"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:healthState.section:illnessPerception.entry">
+      <path value="Composition.section.section.entry" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-IllnessPerception" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1093" />
+        <comment value="Ziektebeleving" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:illnessPerception.section">
+      <path value="Composition.section.section.section" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:healthState.section:mentalStatus">
+      <path value="Composition.section.section" />
+      <sliceName value="mentalStatus" />
+      <short value="Mental Status" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1097" />
+        <comment value="Mentale status" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:mentalStatus.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Mental status" />
+    </element>
+    <element id="Composition.section:healthState.section:mentalStatus.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="36456004"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:healthState.section:mentalStatus.entry">
+      <path value="Composition.section.section.entry" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Problem" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1098" />
+        <comment value="Mentale status::Probleem" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:mentalStatus.section">
+      <path value="Composition.section.section.section" />
+      <max value="0" />
+    </element>
+    <element id="Composition.section:healthState.section:reproduction">
+      <path value="Composition.section.section" />
+      <sliceName value="reproduction" />
+      <short value="Reproduction" />
+      <max value="1" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1119" />
+        <comment value="Voortplanting" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:reproduction.title">
+      <path value="Composition.section.section.title" />
+      <defaultValueString value="Reproduction" />
+    </element>
+    <element id="Composition.section:healthState.section:reproduction.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct"/>
+          <code value="118232004"/>
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Composition.section:healthState.section:reproduction.entry">
+      <path value="Composition.section.section.entry" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-PregnancyStatus" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-TermDate" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-PregnancyDuration" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-Parity" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-Gravidity" />
+      </type>
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://nictiz.nl/fhir/StructureDefinition/zib-Pregnancy-DateLastMenstruation" />
+      </type>
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-1120" />
+        <comment value="Zwangerschap" />
+      </mapping>
+    </element>
+    <element id="Composition.section:healthState.section:reproduction.section">
+      <path value="Composition.section.section.section" />
+      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>
