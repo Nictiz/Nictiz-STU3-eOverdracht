@@ -53,11 +53,6 @@
       </mapping>
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Adults" />
-        <map value="e-overdracht-dataelement-v4-272" />
-        <comment value="LevensovertuigingRC (extension in Patient resource)" />
-      </mapping>
-      <mapping>
-        <identity value="eOverdracht-NursingHandoff-Adults" />
         <map value="e-overdracht-dataelement-v4-320" />
         <comment value="Taalvaardigheid (on Patient.communication)" />
       </mapping>
