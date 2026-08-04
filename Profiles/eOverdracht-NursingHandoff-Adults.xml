@@ -601,7 +601,7 @@
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Adults" />
         <map value="e-overdracht-dataelement-v4-274" />
-        <comment value="Levensovertuiging::Wilsverklaring" />
+        <comment value="Wilsverklaring::Wilsverklaring" />
       </mapping>
     </element>
     <element id="Composition.section:generalPatientContext.section:lifeStance.section">
