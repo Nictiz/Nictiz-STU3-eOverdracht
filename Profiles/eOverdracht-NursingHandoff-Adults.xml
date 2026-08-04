@@ -555,10 +555,10 @@
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance">
+    <element id="Composition.section:generalPatientContext.section:advanceDirective">
       <path value="Composition.section.section" />
-      <sliceName value="lifeStance" />
-      <short value="Life Stance" />
+      <sliceName value="advanceDirective" />
+      <short value="Advance Directive" />
       <max value="1" />
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Adults" />
@@ -566,11 +566,11 @@
         <comment value="Wilsverklaring" />
       </mapping>
     </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.title">
+    <element id="Composition.section:generalPatientContext.section:advanceDirective.title">
       <path value="Composition.section.section.title" />
-      <defaultValueString value="Life stance" />
+      <defaultValueString value="Advance Directive" />
     </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.code">
+    <element id="Composition.section:generalPatientContext.section:advanceDirective.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
       <patternCodeableConcept>
@@ -580,7 +580,7 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.entry">
+    <element id="Composition.section:generalPatientContext.section:advanceDirective.entry">
       <path value="Composition.section.section.entry" />
       <slicing>
         <discriminator>
@@ -590,7 +590,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.entry:advanceDirective">
+    <element id="Composition.section:generalPatientContext.section:advanceDirective.entry:advanceDirective">
       <path value="Composition.section.section.entry" />
       <sliceName value="advanceDirective" />
       <short value="Advance directive" />
@@ -604,7 +604,7 @@
         <comment value="Wilsverklaring::Wilsverklaring" />
       </mapping>
     </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.section">
+    <element id="Composition.section:generalPatientContext.section:advanceDirective.section">
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>
@@ -621,7 +621,7 @@
     </element>
     <element id="Composition.section:generalPatientContext.section:socialEnvironment.title">
       <path value="Composition.section.section.title" />
-      <defaultValueString value="Life stance" />
+      <defaultValueString value="Social Environment" />
     </element>
     <element id="Composition.section:generalPatientContext.section:socialEnvironment.code">
       <path value="Composition.section.section.code" />
