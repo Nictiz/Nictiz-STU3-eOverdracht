@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="eOverdracht-Task" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-Task" />
-  <version value="4.2.0-beta.1" />
+  <version value="4.2.0-beta.2" />
   <name value="eOverdrachtTask" />
   <title value="eOverdracht Task" />
   <status value="active" />

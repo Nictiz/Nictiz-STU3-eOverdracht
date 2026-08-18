@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="eOverdracht-NursingHandoff-Adults" />
   <url value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NursingHandoff-Adults" />
-  <version value="4.2.0-beta.1" />
+  <version value="4.2.0-beta.2" />
   <name value="eOverdrachtNursingHandoffAdults" />
   <title value="eOverdracht nursing handoff adults" />
   <status value="active" />
@@ -408,6 +408,35 @@
         <comment value="Algemene patiënten context" />
       </mapping>
     </element>
+    <element id="Composition.section:generalPatientContext.extension">
+      <path value="Composition.section.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="0" />
+    </element>
+    <element id="Composition.section:generalPatientContext.extension:needsOfPatientAndRelatedPersons">
+      <path value="Composition.section.extension" />
+      <sliceName value="needsOfPatientAndRelatedPersons" />
+      <min value="0" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NeedsOfPatientAndRelatedPersons" />
+      </type>
+    </element>
+    <element id="Composition.section:generalPatientContext.extension:needsOfPatientAndRelatedPersons.valueString:valueString">
+      <path value="Composition.section.extension.valueString" />
+      <sliceName value="valueString" />
+      <mapping>
+        <identity value="eOverdracht-NursingHandoff-Adults" />
+        <map value="e-overdracht-dataelement-v4-643" />
+        <comment value="Wensen en behoeften patiënt en/of naasten" />
+      </mapping>
+    </element>
     <element id="Composition.section:generalPatientContext.title">
       <path value="Composition.section.title" />
       <defaultValueString value="General patient context" />
@@ -560,10 +589,10 @@
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance">
+    <element id="Composition.section:generalPatientContext.section:advanceDirective">
       <path value="Composition.section.section" />
-      <sliceName value="lifeStance" />
-      <short value="Life Stance" />
+      <sliceName value="advanceDirective" />
+      <short value="Advance Directive" />
       <max value="1" />
       <mapping>
         <identity value="eOverdracht-NursingHandoff-Adults" />
@@ -571,11 +600,11 @@
         <comment value="Levensovertuiging" />
       </mapping>
     </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.title">
+    <element id="Composition.section:generalPatientContext.section:advanceDirective.title">
       <path value="Composition.section.section.title" />
-      <defaultValueString value="Life stance" />
+      <defaultValueString value="Advance directive" />
     </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.code">
+    <element id="Composition.section:generalPatientContext.section:advanceDirective.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
       <patternCodeableConcept>
@@ -585,7 +614,7 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.entry">
+    <element id="Composition.section:generalPatientContext.section:advanceDirective.entry">
       <path value="Composition.section.section.entry" />
       <slicing>
         <discriminator>
@@ -595,7 +624,7 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.entry:advanceDirective">
+    <element id="Composition.section:generalPatientContext.section:advanceDirective.entry:advanceDirective">
       <path value="Composition.section.section.entry" />
       <sliceName value="advanceDirective" />
       <short value="Advance directive" />
@@ -609,7 +638,7 @@
         <comment value="Levensovertuiging::Wilsverklaring" />
       </mapping>
     </element>
-    <element id="Composition.section:generalPatientContext.section:lifeStance.section">
+    <element id="Composition.section:generalPatientContext.section:advanceDirective.section">
       <path value="Composition.section.section.section" />
       <max value="0" />
     </element>
@@ -626,7 +655,7 @@
     </element>
     <element id="Composition.section:generalPatientContext.section:socialEnvironment.title">
       <path value="Composition.section.section.title" />
-      <defaultValueString value="Life stance" />
+      <defaultValueString value="Social Environment" />
     </element>
     <element id="Composition.section:generalPatientContext.section:socialEnvironment.code">
       <path value="Composition.section.section.code" />
@@ -1196,35 +1225,6 @@
         <identity value="eOverdracht-NursingHandoff-Adults" />
         <map value="e-overdracht-dataelement-v4-529" />
         <comment value="Verpleegkundige context: zorgplan" />
-      </mapping>
-    </element>
-    <element id="Composition.section:carePlan.extension">
-      <path value="Composition.section.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <min value="0" />
-    </element>
-    <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons">
-      <path value="Composition.section.extension" />
-      <sliceName value="needsOfPatientAndRelatedPersons" />
-      <min value="0" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://nictiz.nl/fhir/StructureDefinition/eOverdracht-NeedsOfPatientAndRelatedPersons" />
-      </type>
-    </element>
-    <element id="Composition.section:carePlan.extension:needsOfPatientAndRelatedPersons.valueString:valueString">
-      <path value="Composition.section.extension.valueString" />
-      <sliceName value="valueString" />
-      <mapping>
-        <identity value="eOverdracht-NursingHandoff-Adults" />
-        <map value="e-overdracht-dataelement-v4-643" />
-        <comment value="Wensen en behoeften patiënt en/of naasten" />
       </mapping>
     </element>
     <element id="Composition.section:carePlan.title">
